@@ -1,9 +1,62 @@
 "use client";
 
 import { ContactForm } from "@/components/ContactForm";
-import { Mail, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
 
 export function ContactView() {
   const { lang } = useLanguage();
@@ -62,8 +115,8 @@ export function ContactView() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Direct Info & FAQs */}
           <div className="lg:col-span-5 space-y-8">
-            {/* Availability Box */}
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-4">
+            {/* Availability Box & Direct Channels */}
+            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400">
                 <Clock className="w-4 h-4" />
                 <span>{t.statusTitle}</span>
@@ -71,15 +124,65 @@ export function ContactView() {
               <p className="text-xs text-zinc-300 leading-relaxed">
                 {t.statusText}
               </p>
-              <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-500 font-mono">
-                <span>{t.directEmailLabel}</span>
-                <a
-                  href="mailto:contact@hasbyeditor.com"
-                  className="text-white hover:underline flex items-center gap-1 font-mono"
-                >
-                  <Mail className="w-3 h-3" />
-                  <span>contact@hasbyeditor.com</span>
-                </a>
+
+              {/* Direct Communication Channels */}
+              <div className="pt-4 border-t border-white/[0.06] space-y-3">
+                {/* Email */}
+                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                  <span className="text-zinc-500 shrink-0">{t.directEmailLabel}</span>
+                  <a
+                    href="mailto:hasbyassyadiqi@gmail.com"
+                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group truncate"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
+                    <span className="truncate group-hover:underline">hasbyassyadiqi@gmail.com</span>
+                  </a>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                  <span className="text-zinc-500 shrink-0">WhatsApp:</span>
+                  <a
+                    href="https://wa.me/6288286509211"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
+                  >
+                    <WhatsAppIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
+                    <span className="group-hover:underline">+62 882-8650-9211</span>
+                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+                  </a>
+                </div>
+
+                {/* Instagram */}
+                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                  <span className="text-zinc-500 shrink-0">Instagram:</span>
+                  <a
+                    href="https://www.instagram.com/hasbyassyadiqi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
+                  >
+                    <InstagramIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
+                    <span className="group-hover:underline">@hasbyassyadiqi</span>
+                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+                  </a>
+                </div>
+
+                {/* LinkedIn */}
+                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                  <span className="text-zinc-500 shrink-0">LinkedIn:</span>
+                  <a
+                    href="https://www.linkedin.com/in/hasby-assyadiqi-8b56332b5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
+                  >
+                    <LinkedInIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
+                    <span className="group-hover:underline">Hasby Assyadiqi</span>
+                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+                  </a>
+                </div>
               </div>
             </div>
 

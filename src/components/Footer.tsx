@@ -64,10 +64,43 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:contact@hasbyeditor.com"
+                  href="mailto:hasbyassyadiqi@gmail.com"
                   className="inline-flex items-center gap-1 hover:text-white transition-colors group"
                 >
-                  <span>{t.emailDirect}</span>
+                  <span>hasbyassyadiqi@gmail.com</span>
+                  <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/6288286509211"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors group"
+                >
+                  <span>WhatsApp (+62 882-8650-9211)</span>
+                  <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/hasbyassyadiqi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors group"
+                >
+                  <span>Instagram (@hasbyassyadiqi)</span>
+                  <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/hasby-assyadiqi-8b56332b5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors group"
+                >
+                  <span>LinkedIn (Hasby Assyadiqi)</span>
                   <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </li>

@@ -28,7 +28,7 @@ export function ContactForm() {
       `Scope: ${formData.scope}\n\n` +
       `Creative Objectives & Message:\n${formData.message}\n`
     );
-    return `mailto:contact@hasbyeditor.com?subject=${subject}&body=${body}`;
+    return `mailto:hasbyassyadiqi@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,7 +41,7 @@ export function ContactForm() {
 
   const handleCopyBrief = () => {
     const text =
-      `To: contact@hasbyeditor.com\n` +
+      `To: hasbyassyadiqi@gmail.com\n` +
       `Subject: Project Brief - ${formData.brand || formData.name}\n\n` +
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
