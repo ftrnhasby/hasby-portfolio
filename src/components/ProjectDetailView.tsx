@@ -23,7 +23,7 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
     <div className="space-y-16 sm:space-y-24 pb-24">
       {/* Top Breadcrumb & Return Link */}
       <section className="pt-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-6 pb-12 space-y-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 space-y-8">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-white transition-colors group"
@@ -57,27 +57,27 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
           </div>
 
           {/* Primary High-Impact Craft Highlights Ribbon */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/[0.06]">
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-white/[0.06]">
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
+              <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider truncate">
                 {project.primaryHighlight.label[lang]}
               </div>
-              <div className="text-2xl sm:text-3xl font-semibold text-white tracking-tight mt-1">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white tracking-tight mt-1 truncate">
                 {project.primaryHighlight.value}
               </div>
               {project.primaryHighlight.subtext && (
-                <div className="text-[10px] font-mono text-emerald-400 mt-1">
+                <div className="text-[10px] font-mono text-emerald-400 mt-1 break-words">
                   {project.primaryHighlight.subtext[lang]}
                 </div>
               )}
             </div>
 
             {project.secondaryHighlights.map((sec, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-                <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
+              <div key={idx} className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
+                <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider truncate">
                   {sec.label[lang]}
                 </div>
-                <div className="text-2xl sm:text-3xl font-semibold text-zinc-200 tracking-tight mt-1">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-200 tracking-tight mt-1 truncate">
                   {sec.value}
                 </div>
               </div>
@@ -87,7 +87,7 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
       </section>
 
       {/* Main Content Body */}
-      <div className="max-w-6xl mx-auto px-6 space-y-16 sm:space-y-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16 sm:space-y-20">
         {/* Section 1: The Creative Brief & Strategic Foundation */}
         <section className="space-y-6">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400">
@@ -95,7 +95,7 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
             <span>01 / {t.objectiveHeading}</span>
           </div>
 
-          <div className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-6 sm:p-8 space-y-8">
+          <div className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-5 sm:p-8 space-y-8 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
               {/* Left Column: Objective & Problem */}
               <div className="md:col-span-7 space-y-6">

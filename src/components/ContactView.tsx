@@ -93,7 +93,7 @@ export function ContactView() {
     <div className="space-y-20 sm:space-y-28 pb-24">
       {/* Header */}
       <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-6 space-y-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span>{t.eyebrow}</span>
@@ -111,12 +111,12 @@ export function ContactView() {
       </section>
 
       {/* Main Grid: Info / FAQs + Form */}
-      <section className="max-w-6xl mx-auto px-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Direct Info & FAQs */}
           <div className="lg:col-span-5 space-y-8">
             {/* Availability Box & Direct Channels */}
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400">
                 <Clock className="w-4 h-4" />
                 <span>{t.statusTitle}</span>
@@ -126,21 +126,21 @@ export function ContactView() {
               </p>
 
               {/* Direct Communication Channels */}
-              <div className="pt-4 border-t border-white/[0.06] space-y-3">
+              <div className="pt-4 border-t border-white/[0.06] space-y-3.5">
                 {/* Email */}
-                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
                   <span className="text-zinc-500 shrink-0">{t.directEmailLabel}</span>
                   <a
                     href="mailto:hasbyassyadiqi@gmail.com"
-                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group truncate"
+                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group break-all"
                   >
                     <Mail className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
-                    <span className="truncate group-hover:underline">hasbyassyadiqi@gmail.com</span>
+                    <span className="group-hover:underline">hasbyassyadiqi@gmail.com</span>
                   </a>
                 </div>
 
                 {/* WhatsApp */}
-                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
                   <span className="text-zinc-500 shrink-0">WhatsApp:</span>
                   <a
                     href="https://wa.me/6288286509211"
@@ -155,7 +155,7 @@ export function ContactView() {
                 </div>
 
                 {/* Instagram */}
-                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
                   <span className="text-zinc-500 shrink-0">Instagram:</span>
                   <a
                     href="https://www.instagram.com/hasbyassyadiqi/"
@@ -170,7 +170,7 @@ export function ContactView() {
                 </div>
 
                 {/* LinkedIn */}
-                <div className="flex items-center justify-between gap-3 text-xs font-mono">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
                   <span className="text-zinc-500 shrink-0">LinkedIn:</span>
                   <a
                     href="https://www.linkedin.com/in/hasby-assyadiqi-8b56332b5"

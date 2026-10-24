@@ -47,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Performance / Highlights Callout Banner */}
-      <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] mb-6 flex items-baseline justify-between">
+      <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] mb-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
         <div>
           <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
             {project.primaryHighlight.label[lang]}
@@ -57,8 +57,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
         {project.primaryHighlight.subtext && (
-          <div className="text-right">
-            <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-2 py-0.5 rounded">
+          <div className="text-left sm:text-right">
+            <span className="inline-block text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-2 py-0.5 rounded break-words">
               {project.primaryHighlight.subtext[lang]}
             </span>
           </div>
@@ -67,7 +67,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Secondary Highlights & Tools footer */}
       <div className="pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-3 text-xs">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
           {project.secondaryHighlights.slice(0, 3).map((m, idx) => (
             <div key={idx} className="flex items-center gap-1.5 font-mono text-[11px]">
               <span className="text-white font-medium">{m.value}</span>
@@ -76,7 +76,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-1.5 text-[11px] font-mono text-zinc-400">
+        <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-zinc-400 break-words">
           <span>{project.toolsUsed.slice(0, 2).join(" • ")}</span>
         </div>
       </div>

@@ -68,7 +68,7 @@ export function AboutView() {
     <div className="space-y-20 sm:space-y-28 pb-24">
       {/* Header & Portrait Profile Section */}
       <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-6 space-y-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
             <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
             <span>{t.eyebrow}</span>
@@ -119,7 +119,7 @@ export function AboutView() {
       </section>
 
       {/* Main Narrative & Philosophy */}
-      <section className="max-w-6xl mx-auto px-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Narrative */}
           <div className="lg:col-span-7 space-y-8 text-sm text-zinc-400 leading-relaxed">
@@ -203,8 +203,8 @@ export function AboutView() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="max-w-6xl mx-auto px-6">
-        <div className="p-8 sm:p-12 rounded-2xl bg-[#09090b] border border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="p-6 sm:p-12 rounded-2xl bg-[#09090b] border border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-6 overflow-hidden">
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-white tracking-tight">
               {t.readyHeading}

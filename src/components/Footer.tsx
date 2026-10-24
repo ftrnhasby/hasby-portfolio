@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-white/[0.08] bg-[#050506] text-zinc-400 text-xs">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-16">
           {/* Column 1: Editorial Vision */}
           <div className="md:col-span-2 space-y-4">

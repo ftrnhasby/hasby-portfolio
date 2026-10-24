@@ -49,7 +49,7 @@ export function StoryboardGrid({ storyboard }: StoryboardGridProps) {
   };
 
   return (
-    <div className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-6 sm:p-8 space-y-6">
+    <div className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-4 sm:p-6 md:p-8 space-y-6 overflow-hidden">
       {/* Header */}
       <div className="border-b border-white/[0.06] pb-6">
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 uppercase tracking-wider">
@@ -68,27 +68,27 @@ export function StoryboardGrid({ storyboard }: StoryboardGridProps) {
           return (
             <div
               key={item.id}
-              className="rounded-xl bg-[#0e0e11] border border-white/[0.06] p-5 space-y-4 hover:border-white/[0.12] transition-colors flex flex-col justify-between"
+              className="rounded-xl bg-[#0e0e11] border border-white/[0.06] p-4 sm:p-5 space-y-4 hover:border-white/[0.12] transition-colors flex flex-col justify-between overflow-hidden"
             >
               <div className="space-y-3">
                 {/* Scene Meta Row */}
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-semibold text-sm text-white tracking-tight">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <span className="font-semibold text-sm text-white tracking-tight break-words">
                     {item.scene[lang]}
                   </span>
-                  <span className="text-[11px] font-mono text-zinc-400 px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.05]">
+                  <span className="text-[11px] font-mono text-zinc-400 px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.05] shrink-0">
                     {item.timecode}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-zinc-300 leading-relaxed font-sans">
+                <p className="text-xs text-zinc-300 leading-relaxed font-sans break-words">
                   {item.visualDescription[lang]}
                 </p>
 
                 {/* Technical / Remotion Note */}
                 {item.technicalNote && (
-                  <div className="p-3 rounded-lg bg-black/60 border border-white/[0.06] font-mono text-[11px] text-zinc-400 leading-normal break-words">
+                  <div className="p-3 rounded-lg bg-black/60 border border-white/[0.06] font-mono text-[11px] text-zinc-400 leading-normal break-words overflow-hidden">
                     <span className="text-[10px] uppercase text-zinc-500 block mb-1">
                       {lang === "id" ? "Catatan Teknis / SFX" : "Technical Spec & SFX"}
                     </span>
@@ -98,14 +98,14 @@ export function StoryboardGrid({ storyboard }: StoryboardGridProps) {
               </div>
 
               {/* Bottom Tags */}
-              <div className="pt-3 border-t border-white/[0.04] flex items-center justify-between text-xs">
-                <div className="flex items-center gap-1.5 font-mono text-[11px] text-zinc-500">
-                  <span>Tool:</span>
-                  <span className="text-zinc-200">{item.toolUsed}</span>
+              <div className="pt-3 border-t border-white/[0.04] flex flex-wrap items-center justify-between gap-2 text-xs">
+                <div className="flex flex-wrap items-center gap-1.5 font-mono text-[11px] text-zinc-500 min-w-0">
+                  <span className="shrink-0">Tool:</span>
+                  <span className="text-zinc-200 break-all">{item.toolUsed}</span>
                 </div>
 
                 <div
-                  className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono border ${badge.style}`}
+                  className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono border shrink-0 ${badge.style}`}
                 >
                   {badge.icon}
                   <span>{item.assetType}</span>

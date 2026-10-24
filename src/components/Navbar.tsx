@@ -22,18 +22,18 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#070708]/80 backdrop-blur-xl transition-all">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand Wordmark */}
         <Link 
           href="/" 
-          className="group flex items-center gap-3 text-sm font-medium tracking-tight text-white hover:text-white/90 transition-colors"
+          className="group flex items-center gap-2.5 sm:gap-3 text-sm font-medium tracking-tight text-white hover:text-white/90 transition-colors shrink-0"
         >
           <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse" />
           <span className="font-semibold tracking-wider text-xs uppercase text-zinc-100">
             Hasby
           </span>
-          <span className="text-zinc-600">/</span>
-          <span className="text-xs text-zinc-400 font-mono tracking-normal">
+          <span className="text-zinc-600 hidden sm:inline">/</span>
+          <span className="text-xs text-zinc-400 font-mono tracking-normal hidden sm:inline">
             {t.roleSubtitle}
           </span>
         </Link>

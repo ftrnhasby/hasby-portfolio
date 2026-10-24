@@ -50,7 +50,7 @@ export function ProcessView() {
     <div className="space-y-20 sm:space-y-28 pb-24">
       {/* Page Header */}
       <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-6 space-y-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
             <Zap className="w-3.5 h-3.5 text-amber-400" />
             <span>{t.eyebrow}</span>
@@ -68,7 +68,7 @@ export function ProcessView() {
       </section>
 
       {/* The 5-Step Pipeline */}
-      <section className="max-w-6xl mx-auto px-6 space-y-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         <div className="border-b border-white/[0.06] pb-4 flex items-center justify-between">
           <h2 className="text-xl font-semibold text-white tracking-tight">
             {t.pipelineHeading}
@@ -125,7 +125,7 @@ export function ProcessView() {
       </section>
 
       {/* Comparison: Traditional vs Programmatic Direct Response */}
-      <section className="max-w-6xl mx-auto px-6 space-y-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         <div className="border-b border-white/[0.06] pb-4">
           <h2 className="text-xl font-semibold text-white tracking-tight">
             {t.comparisonHeading}
@@ -173,7 +173,7 @@ export function ProcessView() {
       </section>
 
       {/* Software Toolchain Breakdown */}
-      <section className="max-w-6xl mx-auto px-6 space-y-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         <div className="border-b border-white/[0.06] pb-4">
           <h2 className="text-xl font-semibold text-white tracking-tight">
             {t.toolsuiteHeading}
@@ -205,8 +205,8 @@ export function ProcessView() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="max-w-6xl mx-auto px-6">
-        <div className="p-8 sm:p-12 rounded-2xl bg-gradient-to-b from-[#111114] to-[#0a0a0c] border border-white/[0.08] text-center space-y-4">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="p-6 sm:p-12 rounded-2xl bg-gradient-to-b from-[#111114] to-[#0a0a0c] border border-white/[0.08] text-center space-y-4 overflow-hidden">
           <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
             {t.ctaBoxHeadline}
           </h3>
