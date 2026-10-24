@@ -18,21 +18,23 @@ export async function generateMetadata({
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return { title: "Case Study Not Found" };
 
-  const title = `${project.title} — Direct Response Video Spec Ad | Fathan Hasby`;
+  const pageTitle = `${project.title} — Direct Response Video Spec Ad | Fitran Hasby`;
   const description = project.heroSummary.en;
   const canonicalUrl = `/projects/${slug}`;
 
   return {
-    title,
+    title: {
+      absolute: pageTitle,
+    },
     description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title,
+      title: pageTitle,
       description,
       url: canonicalUrl,
-      siteName: "Fathan Hasby Portfolio",
+      siteName: "Fitran Hasby Portfolio",
       locale: "id_ID",
       type: "article",
       images: [
@@ -46,7 +48,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
       images: ["/og-image.png"],
     },

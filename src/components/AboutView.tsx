@@ -97,19 +97,19 @@ export function AboutView() {
 
             {/* Right: Portrait Image */}
             <div className="lg:col-span-4 flex flex-col items-center lg:items-end">
-              <div className="relative rounded-2xl overflow-hidden border border-white/[0.1] bg-[#0c0c0e] shadow-[0_20px_50px_rgba(0,0,0,0.6)] w-full max-w-[280px] aspect-[430/506]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/[0.1] bg-[#0c0c0e] shadow-[0_20px_50px_rgba(0,0,0,0.6)] w-full max-w-[280px] aspect-[425/531]">
                 <Image
                   src="/images/hasby-formal.png"
                   alt={t.portraitAlt}
-                  width={430}
-                  height={506}
+                  width={425}
+                  height={531}
                   priority
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-3 inset-x-3 text-center">
                   <span className="inline-block px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono text-zinc-300">
-                    Hasby • Bandar Lampung, ID
+                    Fitran Hasby • Bandar Lampung, ID
                   </span>
                 </div>
               </div>

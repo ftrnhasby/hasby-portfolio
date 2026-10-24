@@ -5,11 +5,13 @@ async function createOgImage() {
   const width = 1200;
   const height = 630;
 
-  // Portrait dimensions: resize hasby-formal.png preserving aspect ratio
-  // target height = 440, so target width = Math.round(440 * (430 / 506)) = 374
-  const portraitW = 374;
+  // Portrait dimensions: resize hasby-formal.png (425x531) preserving aspect ratio
+  // target height = 440, so target width = Math.round(440 * (425 / 531)) = 352
+  const portraitW = 352;
   const portraitH = 440;
-  
+  const portraitX = 760;
+  const portraitY = 95;
+
   // Resize portrait with rounded corners mask
   const portraitResized = await sharp('public/images/hasby-formal.png')
     .resize(portraitW, portraitH, { fit: 'cover' })
@@ -54,8 +56,8 @@ async function createOgImage() {
         <text x="32" y="22" font-family="ui-monospace, monospace, sans-serif" font-size="11" font-weight="600" fill="#d4d4d8" letter-spacing="1.5">AI &amp; DIRECT RESPONSE VIDEO</text>
       </g>
 
-      <!-- Main Heading: Hasby -->
-      <text x="80" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2.5">HASBY</text>
+      <!-- Main Heading: FITRAN HASBY -->
+      <text x="80" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff" letter-spacing="-2">FITRAN HASBY</text>
 
       <!-- Subheadline -->
       <text x="80" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#a1a1aa" letter-spacing="-0.5">High-Retention Video Ads &amp; Motion Storytelling</text>
@@ -83,7 +85,7 @@ async function createOgImage() {
       </g>
 
       <!-- Portrait Frame Backdrop -->
-      <g transform="translate(745, 95)">
+      <g transform="translate(${portraitX}, ${portraitY})">
         <rect x="-6" y="-6" width="${portraitW + 12}" height="${portraitH + 12}" rx="26" fill="#111114" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
       </g>
     </svg>
@@ -94,14 +96,14 @@ async function createOgImage() {
     .composite([
       {
         input: roundedPortrait,
-        top: 95,
-        left: 745,
-      }
+        top: portraitY,
+        left: portraitX,
+      },
     ])
     .png()
     .toFile('public/og-image.png');
 
-  console.log('Successfully created public/og-image.png');
+  console.log('Successfully created public/og-image.png with new portrait & Fitran Hasby branding!');
 }
 
 createOgImage().catch(console.error);

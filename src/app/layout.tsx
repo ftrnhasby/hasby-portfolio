@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasby-portfolio.pages.dev"),
   title: {
-    default: "Hasby — AI & Direct Response Video Editor",
-    template: "%s | Hasby",
+    default: "Fitran Hasby — AI & Direct Response Video Editor",
+    template: "%s | Fitran Hasby",
   },
   description:
-    "Portfolio of Hasby, an AI-assisted Direct Response Video Editor creating high-retention vertical video ads, creative variations, and programmatic motion storytelling.",
+    "Portfolio of Fitran Hasby, an AI-assisted Direct Response Video Editor creating high-retention vertical video ads, creative variations, and programmatic motion storytelling.",
   alternates: {
     canonical: "https://hasby-portfolio.pages.dev/",
   },
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Hasby — AI & Direct Response Video Editor",
+    title: "Fitran Hasby — AI & Direct Response Video Editor",
     description:
       "High-retention vertical video ads, creative variations, and programmatic motion storytelling.",
     url: "https://hasby-portfolio.pages.dev/",
-    siteName: "Hasby Portfolio",
+    siteName: "Fitran Hasby Portfolio",
     locale: "id_ID",
     alternateLocale: ["en_US"],
     type: "website",
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "https://hasby-portfolio.pages.dev/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hasby — AI & Direct Response Video Editor",
+        alt: "Fitran Hasby — AI & Direct Response Video Editor",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hasby — AI & Direct Response Video Editor",
+    title: "Fitran Hasby — AI & Direct Response Video Editor",
     description:
       "High-retention vertical video ads, creative variations, and programmatic motion storytelling.",
     images: ["https://hasby-portfolio.pages.dev/og-image.png"],
