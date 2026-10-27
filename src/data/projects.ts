@@ -115,6 +115,244 @@ export const PROJECTS: Project[] = [
         },
       ],
     },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Portofolio Transformatif Independen",
+        en: "Spec Ad / Independent Transformative Portfolio Project",
+      },
+      objective: {
+        id: "Merancang rangkaian video iklan direct response format vertikal (9:16) untuk memperkenalkan Katama Coffee & Space Way Halim sebagai 'All-in-One Productivity Hub' bagi mahasiswa kampus (Unila, ITERA, UBL, Teknokrat) dan pekerja remote di Bandar Lampung.",
+        en: "Develop a direct response vertical video ad series (9:16) establishing Katama Coffee & Space Way Halim as Bandar Lampung's premier 'All-in-One Productivity Hub' for university students and remote professionals.",
+      },
+      targetAudience: {
+        id: "Mahasiswa tingkat akhir (sedang skripsi/tugas kelompok) dan pekerja jarak jauh (remote worker/freelancer) berusia 19–32 tahun yang membutuhkan ruang kerja fungsional dengan stop kontak berlimpah, koneksi WiFi stabil, dan makanan berat.",
+        en: "Senior university students (thesis/group assignments) and remote workers aged 19–32 in Bandar Lampung needing functional workspaces with abundant outlets, fast WiFi, and hot meals.",
+      },
+      audienceInsight: {
+        id: "Banyak kafe kekinian di Lampung hanya mengutamakan estetika visual untuk foto (meja sempit, colokan rebutan, tutup jam 22.00–24.00), sementara mahasiswa panik saat butuh cetak dokumen fisik tengah malam karena toko fotokopi luar sudah tutup.",
+        en: "Most aesthetic cafes prioritize photogenic decor over function (cramped tables, scarce plugs, early midnight closing), while students face panic when needing physical document prints late at night when external shops are closed.",
+      },
+      coreAngle: {
+        id: "Pengujian 3 variasi pesan: Kontras Realitas WFC (Bukan Cuma Estetik), Eksplorasi Fitur Langka (Free Print Dokumen), dan Penyelamat Panik Deadline Larut Malam (24 Jam Non-Stop).",
+        en: "Testing 3 distinct message angles: WFC Reality Contrast (Not Just Aesthetic), Rare Feature Discovery (Free Document Printing), and Midnight Deadline Relief (24/7 Non-Stop).",
+      },
+      hookStrategy: {
+        id: "Pattern-interrupt 0–3 detik: memvalidasi kejengkelan nyata (meja bulat semen sempit, colokan rebutan) dan jam darurat 23:45 untuk menghentikan scrolling penonton sebelum drop-off.",
+        en: "0–3 second pattern-interrupt: validating authentic audience friction (cramped circular concrete tables, fighting for plugs) and 11:45 PM panic to arrest scrolling habits before drop-off.",
+      },
+      valueProposition: {
+        id: "All-in-One Productivity Hub: Fasilitas Free Print gratis di dalam kafe (kertas disediakan), buka 24 jam non-stop tanpa batas jam tutup, colokan di tiap sudut meja, dan pilihan makanan berat hangat pendukung fokus.",
+        en: "All-in-One Productivity Hub: Free physical document printing (paper provided), open 24/7 non-stop with no closing cut-offs, outlets at every desk zone, and hot heavy meals fueling deep work.",
+      },
+      callToAction: {
+        id: "Wajib simpan video ini buat jaga-jaga pas deadline mepet atau tag teman nugas kamu sekarang!",
+        en: "Save this video for your next emergency deadline or tag your study buddy right now!",
+      },
+      creativeRationale: {
+        id: "Audiens mahasiswa dan remote worker di media sosial kebal terhadap iklan kafe konvensional yang hanya memamerkan latte art. Dengan memusatkan narasi pada 'Free Print Dokumen' dan '24 Jam Non-Stop', video langsung menjawab friksi fungsional mendesak yang tidak dapat diselesaikan oleh kafe kompetitor di Bandar Lampung.",
+        en: "Student and remote worker audiences are immune to conventional cafe ads showcasing generic latte art. Centering the narrative on 'Free Document Printing' and '24/7 Access' addresses high-urgency functional friction that competing aesthetic cafes in Bandar Lampung cannot resolve.",
+      },
+    },
+    assetBreakdown: [
+      {
+        id: "katama-shot-01",
+        name: {
+          id: "Layar HP / Jam Digital 23:45",
+          en: "Phone Screen / Digital Clock 23:45",
+        },
+        category: "Self-shot / original footage",
+        sourceOrTool: "Kamera Smartphone (Original Capture)",
+        myContribution: {
+          id: "Perekaman mandiri dengan pencahayaan redup, koreksi warna dingin, dan animasi micro push-in.",
+          en: "Original self-capture in low light, cool color grading, and micro push-in animation.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Dibuat mandiri untuk memicu urgensi detik pertama.",
+          en: "Original capture engineered to trigger opening-second urgency.",
+        },
+      },
+      {
+        id: "katama-shot-02",
+        name: {
+          id: "Jari Mengetik Panik di Keyboard Laptop",
+          en: "Panicked Laptop Keyboard Typing",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Pexels (Stock B-roll)",
+        myContribution: {
+          id: "Kurasi visual, pemotongan ritmis, speed-ramp 120%, dan sinkronisasi audio ketikan keyboard kacau.",
+          en: "Visual curation, rhythmic cutting, 120% speed ramp, and chaotic keyboard typing foley sync.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Lisensi bebas royalti komersial Pexels.",
+          en: "Commercial royalty-free Pexels license.",
+        },
+      },
+      {
+        id: "katama-shot-03",
+        name: {
+          id: "Rolling Door Ruko Fotokopi Gelap Terkunci",
+          en: "Dark Locked Print Shop Steel Shutter",
+        },
+        category: "Self-shot / original footage",
+        sourceOrTool: "Kamera Smartphone (Original Night B-roll)",
+        myContribution: {
+          id: "Perekaman jalanan malam mandiri, penyesuaian kontras bayangan, dan foley pintu besi dibanting.",
+          en: "Original night street capture, shadow contrast grading, and metal shutter slam foley.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Dokumentasi visual ruko fotokopi tutup di malam hari.",
+          en: "Original visual documentation of closed night print shops.",
+        },
+      },
+      {
+        id: "katama-shot-04",
+        name: {
+          id: "Plang CLOSED Kafe Dibalik & Lampu Dimatikan",
+          en: "Cafe CLOSED Sign Flipped at Night",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Pexels (Stock Footage)",
+        myContribution: {
+          id: "Kurasi klip, filter warna dingin (blue-grey tint), dan penambahan SFX papan kayu berderit.",
+          en: "Footage curation, cool blue-grey color tint, and creaking wooden sign SFX.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Lisensi komersial bebas royalti.",
+          en: "Commercial royalty-free license.",
+        },
+      },
+      {
+        id: "katama-shot-05",
+        name: {
+          id: "Fasad Neon Sign Katama Menyala Malam Hari",
+          en: "Katama Illuminated Neon Sign Facade",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Instagram/TikTok Publik Resmi Katama (@katama_id)",
+        myContribution: {
+          id: "Kurasi rekaman publik, stabilisasi gerakan, crop vertikal 9:16, saturasi neon boost, dan whip-pan transition.",
+          en: "Public footage curation, motion stabilization, 9:16 vertical crop, neon saturation boost, and whip-pan transition.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Materi publik akun resmi kafe; digunakan untuk keperluan studi kasus spec ad portofolio transformatif non-komersial.",
+          en: "Public cafe footage; utilized under transformative non-commercial portfolio spec ad conventions.",
+        },
+      },
+      {
+        id: "katama-shot-06",
+        name: {
+          id: "Mesin Printer Katama Mencetak Kertas Fisik",
+          en: "Katama Free Print Machine Dispensing Paper",
+        },
+        category: "Self-shot / original footage",
+        sourceOrTool: "Rekaman Close-up Mandiri & UGC Publik",
+        myContribution: {
+          id: "Perekaman macro tray printer, motion graphic highlight 'Kertas Disediakan!', dan layering SFX mesin cetak.",
+          en: "Macro printer tray capture, 'Paper Provided!' motion callout, and mechanical printing SFX layering.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Bukti visual konkret fasilitas Free Print dokumen di dalam kafe.",
+          en: "Concrete visual proof for the in-cafe free document printing facility.",
+        },
+      },
+      {
+        id: "katama-shot-07",
+        name: {
+          id: "Area Indoor: Meja Kayu Lapang & Colokan",
+          en: "Indoor Zone: Spacious Desks & Power Plugs",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Instagram/TikTok Publik Resmi Katama (@katama_id)",
+        myContribution: {
+          id: "Reframing 9:16, stabilisasi handheld, koreksi warna hangat, dan sinkronisasi audio ambient kafe.",
+          en: "9:16 reframing, handheld stabilization, warm color grade, and cafe ambient sound design.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Menampilkan ketersediaan colokan dan kenyamanan area kerja indoor ber-AC.",
+          en: "Demonstrating power outlet density and air-conditioned indoor comfort.",
+        },
+      },
+      {
+        id: "katama-shot-08",
+        name: {
+          id: "Bakmi Mietama Hangat & Butterscotch Latte",
+          en: "Hot Mietama Noodles & Butterscotch Latte",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Katalog Menu & Video Publik Katama",
+        myContribution: {
+          id: "Food color grading (vibrance boost +8), penataan teks pill rating GoFood 4.8, dan foley denting mangkuk keramik.",
+          en: "Food color grading (vibrance boost +8), GoFood 4.8 rating pill badge, and ceramic tableware foley.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Menjawab kebutuhan makan malam pejuang deadline tanpa harus keluar kafe.",
+          en: "Answering night study hunger without requiring patrons to leave the venue.",
+        },
+      },
+      {
+        id: "katama-shot-09",
+        name: {
+          id: "Pengunjung Tersenyum Lega Merapikan Berkas",
+          en: "Relieved Visitor Organizing Printed Thesis",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Materi Publik Katama / Pexels B-roll",
+        myContribution: {
+          id: "Framing aman (profile shot tanpa menampakkan wajah depan secara langsung demi privasi), timing transisi lega, dan SFX nafas lega.",
+          en: "Privacy-compliant profile framing, relief transition timing, and sigh-of-relief audio cue.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Visualisasi kondisi akhir (after-state) yang tenang dan puas.",
+          en: "Visualizing the calm and accomplished after-state.",
+        },
+      },
+      {
+        id: "katama-shot-10",
+        name: {
+          id: "Kinetic Safe-Zone Typography & End Card UI",
+          en: "Kinetic Safe-Zone Typography & End Card UI",
+        },
+        category: "Motion graphics and compositing",
+        sourceOrTool: "Remotion Studio (React + TypeScript + Tailwind CSS)",
+        myContribution: {
+          id: "Desain dan rekayasa kode komponen animasi teks kinetik, safe zone compliance TikTok, dan End Card lokasi.",
+          en: "Design and code engineering of kinetic caption components, TikTok safe zone compliance, and location End Card.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "100% diprogram secara programmatic di Remotion Studio.",
+          en: "100% programmatically coded in Remotion Studio.",
+        },
+      },
+      {
+        id: "katama-shot-11",
+        name: {
+          id: "Narasi Vokal Natural Kasual 'Bian'",
+          en: "Neural AI Voiceover Narration ('Bian')",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "ElevenLabs Neural Audio Engine",
+        myContribution: {
+          id: "Prompt scripting, pacing calibration (~135 WPM), audio de-essing, EQ compression, dan penyelarasan beat audio.",
+          en: "Prompt scripting, pacing calibration (~135 WPM), audio de-essing, EQ compression, and beat audio alignment.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Dihasilkan melalui lisensi resmi ElevenLabs AI Voice.",
+          en: "Generated via licensed ElevenLabs AI Voice engine.",
+        },
+      },
+    ],
     scriptAngles: [
       {
         id: "angle-v1",
@@ -879,6 +1117,262 @@ export const PROJECTS: Project[] = [
         },
       ],
     },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Portofolio Transformatif Independen",
+        en: "Spec Ad / Independent Transformative Portfolio Project",
+      },
+      objective: {
+        id: "Merancang rangkaian video iklan direct response format vertikal (9:16) untuk Nespresso Vertuo Pop di media sosial (TikTok & Reels). Menghubungkan kecepatan seduh 30 detik, pengenalan barcode otomatis, dan kapasitas mug 230ml dengan crema tebal langsung di meja kerja para profesional WFH.",
+        en: "Develop a direct response vertical video ad series (9:16) for Nespresso Vertuo Pop on paid social (TikTok & Reels), highlighting 30-second brewing speed, auto-barcode recognition, and a full 230ml mug size with dense crema directly at the desk for WFH professionals.",
+      },
+      targetAudience: {
+        id: "Profesional WFH, software engineer, pekerja agency, dan freelancer berusia 24–38 tahun yang menghabiskan 8+ jam di depan laptop dengan jadwal meeting online padat. Membutuhkan kopi kafe porsi besar setiap pagi tanpa kerepotan seduh manual atau keterlambatan pesanan ojol.",
+        en: "WFH professionals, software engineers, agency workers, and freelancers aged 24–38 spending 8+ hours at laptops with tight online meeting schedules. Demanding large-cup cafe coffee every morning without manual brew friction or delivery delays.",
+      },
+      audienceInsight: {
+        id: "Pagi hari pekerja WFH adalah waktu paling krusial: 5 menit sebelum meeting jam 09:00 otak masih lemas/loading, seduh manual butuh 15 menit dan meninggalkan ampas kotor di meja, sementara pesanan ojol memakan waktu 30 menit dengan ongkir mahal dan es mencair.",
+        en: "Remote workers face morning friction: 5 minutes before a 9:00 AM meeting the brain is still groggy, manual brew takes 15 minutes leaving messy grounds, while delivery takes 30 minutes with high fees and melted ice.",
+      },
+      coreAngle: {
+        id: "Pengujian 2 sudut pandang pesan kontras: (1) Urgensi kepanikan waktu 'The 08:55 AM Meeting Emergency' (solusi 30 detik sebelum daily standup), dan (2) Kontras sensori visual 'The 30-Second Desk Barista' (macro crema ASMR mematahkan mitos kopi kafe mahal vs meja kerja).",
+        en: "Testing 2 contrasting message angles: (1) Time-urgency panic 'The 08:55 AM Meeting Emergency' (30-second fix before daily standup), and (2) Sensory visual contrast 'The 30-Second Desk Barista' (macro crema ASMR debunking the expensive cafe coffee myth).",
+      },
+      hookStrategy: {
+        id: "Jam digital 08:55 berkedip notifikasi 'Daily Standup in 5 mins' (V1) atau macro slow-motion sendok menyibak busa crema tebal keemasan (V2) sebagai visual pattern-interrupt di 3 detik awal.",
+        en: "Flashing 8:55 AM clock with 'Daily Standup in 5 mins' popup (V1) or macro slow-motion spoon dipping into velvety golden crema (V2) as an immediate 3-second pattern-interrupt.",
+      },
+      valueProposition: {
+        id: "Barista-Quality Mug in 30 Seconds with Zero Clean-Up: Teknologi Centrifusion™ 4.000 RPM memindai barcode kapsul dan menyeduh 1 mug penuh 230ml dengan crema tebal secara otomatis via 1 sentuhan tombol.",
+        en: "Barista-Quality Mug in 30 Seconds with Zero Clean-Up: Centrifusion™ 4,000 RPM technology scans the capsule barcode and automatically brews a full 230ml mug with dense crema via a single button press.",
+      },
+      callToAction: {
+        id: "Upgrade ritual kopi WFH kamu sekarang. Cek promo Nespresso Vertuo Pop di link bio!",
+        en: "Upgrade your daily WFH coffee ritual. Check out Nespresso Vertuo Pop promotions at the link in bio!",
+      },
+      creativeRationale: {
+        id: "Pekerja remote memiliki sensitivitas tinggi terhadap waktu dan kebersihan meja kerja. Menghubungkan kepanikan waktu nyata (08:55 AM) atau sensori rasa kafe Rp50.000 dengan kemudahan mesin satu tombol menghasilkan alasan emosional dan rasional yang kuat untuk membeli tanpa merasa digurui.",
+        en: "Remote workers are highly sensitive to time friction and desk cleanliness. Connecting real morning panic (8:55 AM) or Rp50,000 cafe sensory desire to a 1-button desk appliance provides compelling emotional and rational purchase triggers without sounding preachy.",
+      },
+    },
+    assetBreakdown: [
+      {
+        id: "nespresso-shot-01",
+        name: {
+          id: "Layar Laptop 08:55 AM & Notifikasi Standup",
+          en: "Laptop Screen 08:55 AM & Standup Notification",
+        },
+        category: "Motion graphics and compositing",
+        sourceOrTool: "Remotion (Scene1Hook.tsx / Motion UI Mockup)",
+        myContribution: {
+          id: "Desain motion UI Google Calendar popup, animasi detak jam digital, glitch effect, dan SFX calendar chime.",
+          en: "Motion UI design for Google Calendar popup, digital clock animation, glitch effect, and calendar chime SFX.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Dibuat secara terprogram di Remotion sebagai visual pattern-interrupt detik ke-0.",
+          en: "Programmatically created in Remotion as a 0-second visual pattern-interrupt.",
+        },
+      },
+      {
+        id: "nespresso-shot-02",
+        name: {
+          id: "Pekerja WFH Lemas & Mengantuk di Depan Laptop",
+          en: "Exhausted WFH Worker at Desk",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Pexels (Stock B-roll)",
+        myContribution: {
+          id: "Kurasi ekspresi kantuk, pemberian cool blue-grey color tint (5200K) mencerminkan suasana lemas pagi hari.",
+          en: "Expression curation, cool blue-grey color tint (5200K) reflecting morning lethargy.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Lisensi stok bebas royalti Pexels (100% aman hak cipta komersial).",
+          en: "Royalty-free commercial stock license from Pexels.",
+        },
+      },
+      {
+        id: "nespresso-shot-03",
+        name: {
+          id: "Layar HP Ojol 35 Menit & Grinder Manual",
+          en: "Delivery App 35-Min Wait & Manual Grinder",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Screen Recording UI & Stock B-roll",
+        myContribution: {
+          id: "Penyusunan perbandingan visual split/cut, teks silang merah, dan SFX akselerasi detak jam panik.",
+          en: "Split comparison editing, red cross text badge, and accelerating panic clock foley.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Mengagitasikan dua alternatif yang gagal menyelesaikan masalah waktu pekerja WFH.",
+          en: "Agitating two alternatives that fail to solve remote workers' morning time crunch.",
+        },
+      },
+      {
+        id: "nespresso-shot-04",
+        name: {
+          id: "Tangan Memasukkan Kapsul & Mengunci Tuas",
+          en: "Hand Inserting Capsule & Locking Lever",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Review Publik / UGC Vertuo Pop",
+        myContribution: {
+          id: "Crop vertikal 9:16 rapat pada tuas (tanpa menampilkan wajah reviewer), dan penambahan SFX solid mechanical 'clack'.",
+          en: "Tight 9:16 crop on machine lever (excluding reviewer faces), and solid mechanical 'clack' SFX layering.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Footage publik ulasan produk untuk keperluan spec ad edukasi mekanisme mesin.",
+          en: "Public product review footage used under transformative spec ad educational conventions.",
+        },
+      },
+      {
+        id: "nespresso-shot-05",
+        name: {
+          id: "Jari Menekan 1 Tombol & Ring LED Berputar",
+          en: "Finger Pressing Top Button & Rotating LED",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Review Publik / B-roll Resmi Nespresso",
+        myContribution: {
+          id: "Macro punch-in, peningkatan saturasi lampu indikator LED, dan sinkronisasi audio mechanical button click.",
+          en: "Macro punch-in, LED ring saturation boost, and tactile mechanical button click sync.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Menunjukkan kemudahan sistem barcode otomatis dengan satu sentuhan.",
+          en: "Demonstrating the simplicity of 1-touch auto-barcode recognition.",
+        },
+      },
+      {
+        id: "nespresso-shot-06",
+        name: {
+          id: "Aliran Kopi & Crema Tebal ke Mug Kaca 230ml",
+          en: "Rich Coffee & Thick Crema Pouring into Mug",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "B-roll Resmi Vertuo / UGC Showcase",
+        myContribution: {
+          id: "Slow-motion (optical flow) 60%, color grading warm golden-amber (6200K, Vibrance +12), dan rich coffee pour ASMR.",
+          en: "60% optical flow slow-motion, warm golden-amber grade (6200K, Vibrance +12), and rich coffee pour ASMR.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Bukti visual sensori untuk membuktikan klaim crema 4.000 RPM dan kapasitas porsi mug 230ml.",
+          en: "Sensory visual proof for 4,000 RPM Centrifusion crema and full 230ml mug capacity.",
+        },
+      },
+      {
+        id: "nespresso-shot-07",
+        name: {
+          id: "Sendok Menyibak Lapisan Busa Crema Tebal",
+          en: "Spoon Dipping into Thick Velvety Crema",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "UGC / Review Kopi Vertuo",
+        myContribution: {
+          id: "Extreme macro framing, penyesuaian kontras busa mikro, dan audio layering denting sendok kaca halus.",
+          en: "Extreme macro framing, microfoam contrast enhancement, and delicate glass spoon clink audio layering.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Komponen utama hook pembuka pada Variasi 2 (The Sensory Crema Contrast).",
+          en: "Core component of opening hook in Variation 2 (The Sensory Crema Contrast).",
+        },
+      },
+      {
+        id: "nespresso-shot-08",
+        name: {
+          id: "Tuas Terbuka & Kapsul Jatuh ke Tangki Internal",
+          en: "Lever Opens & Capsule Auto-Drops to Bin",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Review Publik Vertuo Pop",
+        myContribution: {
+          id: "Editing cut 1.5 detik tepat saat kapsul terlontar, dan SFX 'pluk' kapsul jatuh ke wadah tertutup.",
+          en: "Precision 1.5s cut on capsule ejection, and tactile container drop 'pluk' SFX.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Membuktikan janji Zero-Mess: meja kerja tetap rapi tanpa ampas kopi berceceran.",
+          en: "Proving Zero-Mess claim: pristine workspace with zero scattered grounds.",
+        },
+      },
+      {
+        id: "nespresso-shot-09",
+        name: {
+          id: "Pekerja Menyeruput Kopi & Kamera Zoom Aktif",
+          en: "Worker Sipping Coffee as Zoom Activates",
+        },
+        category: "Publicly sourced / third-party footage",
+        sourceOrTool: "Pexels (Stock B-roll)",
+        myContribution: {
+          id: "Transisi match-cut, grading warna hangat natural, SFX nafas lega, dan chime notifikasi Zoom join.",
+          en: "Match-cut transition, natural warm grade, sigh-of-relief foley, and Zoom join chime SFX.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Menghadirkan rasa kepuasan (relief): tepat waktu jam 08:59 dan fokus siap kerja.",
+          en: "Delivering emotional relief: punctual at 8:59 AM with energized work focus.",
+        },
+      },
+      {
+        id: "nespresso-shot-10",
+        name: {
+          id: "Jajaran 5 Warna Nespresso Vertuo Pop",
+          en: "5-Colorway Nespresso Vertuo Pop Lineup",
+        },
+        category: "Product images or external assets",
+        sourceOrTool: "Press Kit Resmi Nespresso (Vektorisasi / PNG)",
+        myContribution: {
+          id: "Penghapusan latar belakang, penataan layout 2.5D floating, dan integrasi komponen Remotion HeroProductLineup.",
+          en: "Background removal, 2.5D floating layout staging, and Remotion HeroProductLineup code integration.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+        notes: {
+          id: "Materi press kit resmi brand untuk tampilan End Card varian warna produk.",
+          en: "Official brand press kit material for End Card product color options.",
+        },
+      },
+      {
+        id: "nespresso-shot-11",
+        name: {
+          id: "Tipografi Kinetik & Pill Badge Safe Zone",
+          en: "Kinetic Safe-Zone Typography & Badges",
+        },
+        category: "Motion graphics and compositing",
+        sourceOrTool: "Remotion Studio (MotionBadge.tsx & SafeZoneContainer.tsx)",
+        myContribution: {
+          id: "Rekayasa kode komponen pill badge dengan kontras tinggi, animasi pop-in, dan kepatuhan margin aman TikTok.",
+          en: "Code engineering of high-contrast pill badges, pop-in animation, and TikTok safe zone compliance.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Diprogram menggunakan React & Tailwind CSS untuk keterbacaan optimal tanpa suara (sound-off).",
+          en: "Programmatically coded using React & Tailwind CSS for optimal sound-off readability.",
+        },
+      },
+      {
+        id: "nespresso-shot-12",
+        name: {
+          id: "Voiceover Narasi Kasual Cepat WFH",
+          en: "Neural AI Voiceover Narration (Casual WFH)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "ElevenLabs Neural Audio Engine",
+        myContribution: {
+          id: "Penulisan naskah percakapan natural (~146 WPM & ~156 WPM), penyesuaian pitch, EQ kompresi, dan ducking musik.",
+          en: "Conversational scriptwriting (~146 & ~156 WPM), pitch shaping, EQ compression, and dynamic music ducking.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Dihasilkan melalui lisensi resmi ElevenLabs AI Voice Engine.",
+          en: "Generated via licensed ElevenLabs AI Voice Engine.",
+        },
+      },
+    ],
     scriptAngles: [
       {
         id: "angle-v1-emergency",

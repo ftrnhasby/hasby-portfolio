@@ -1,17 +1,26 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Play, Pause, RotateCcw, Volume2, VolumeX, Sparkles, Smartphone, Monitor, ExternalLink } from "lucide-react";
-import { VideoVariation } from "@/types/project";
+import { Play, Pause, RotateCcw, Volume2, VolumeX, Sparkles, Smartphone, Monitor, ExternalLink, AlertOctagon } from "lucide-react";
+import { VideoVariation, LocalizedString } from "@/types/project";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
 interface VideoPlayerMockProps {
   variations: VideoVariation[];
   clientName: string;
+  projectTitle?: string;
+  projectType?: LocalizedString;
+  toolsUsed?: string[];
 }
 
-export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps) {
+export function VideoPlayerMock({
+  variations,
+  clientName,
+  projectTitle,
+  projectType,
+  toolsUsed,
+}: VideoPlayerMockProps) {
   const { lang } = useLanguage();
   const t = TRANSLATIONS[lang].player;
 
@@ -21,23 +30,29 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [aspectMode, setAspectMode] = useState<"9:16" | "16:9">("9:16");
+  const [hasError, setHasError] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const currentVar = variations[selectedVarIndex] || variations[0];
 
-  // When selected variation changes, update video element
+  const handleSelectVariation = (idx: number) => {
+    setSelectedVarIndex(idx);
+    setHasError(false);
+    setCurrentTime(0);
+    setIsPlaying(false);
+  };
+
+  // When selected variation changes, reload video element
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
-      setCurrentTime(0);
-      setIsPlaying(false);
       videoRef.current.load();
     }
   }, [selectedVarIndex]);
 
   const togglePlay = () => {
-    if (!videoRef.current) return;
+    if (!videoRef.current || hasError) return;
     if (isPlaying) {
       videoRef.current.pause();
       setIsPlaying(false);
@@ -57,7 +72,7 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
   };
 
   const handleRestart = () => {
-    if (!videoRef.current) return;
+    if (!videoRef.current || hasError) return;
     videoRef.current.currentTime = 0;
     setCurrentTime(0);
     videoRef.current.play().then(() => {
@@ -81,7 +96,7 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
   };
 
   const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!videoRef.current || !duration) return;
+    if (!videoRef.current || !duration || hasError) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const ratio = Math.max(0, Math.min(1, clickX / rect.width));
@@ -100,17 +115,35 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
   };
 
   return (
-    <div className="rounded-2xl bg-[#09090b] border border-white/[0.08] p-6 sm:p-8 space-y-8">
-      {/* Header Bar */}
+    <div className="rounded-2xl bg-[#09090b] border border-white/[0.08] p-5 sm:p-8 space-y-6 sm:space-y-8 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+      {/* Header Bar with prominent metadata */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.06] pb-6">
-        <div>
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
-            <span>{t.title}</span>
+        <div className="space-y-1.5">
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400">
+            <span className="flex items-center gap-1.5 text-zinc-300 uppercase tracking-wider font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{t.title}</span>
+            </span>
+            {projectType && (
+              <>
+                <span className="text-zinc-600">•</span>
+                <span className="px-2 py-0.5 rounded text-[10px] bg-purple-950/40 text-purple-300 border border-purple-500/25">
+                  {projectType[lang]}
+                </span>
+              </>
+            )}
+            {toolsUsed && toolsUsed.length > 0 && (
+              <>
+                <span className="text-zinc-600 hidden sm:inline">•</span>
+                <span className="text-[11px] text-zinc-400 hidden sm:inline">
+                  {toolsUsed.slice(0, 3).join(" • ")}
+                </span>
+              </>
+            )}
           </div>
-          <h4 className="text-lg font-semibold text-white tracking-tight mt-1">
-            {t.subtitle}
-          </h4>
+          <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight">
+            {projectTitle ? `${projectTitle} — ${t.subtitle}` : t.subtitle}
+          </h3>
         </div>
 
         {/* Aspect Ratio Switcher */}
@@ -145,7 +178,7 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
         {variations.map((v, idx) => (
           <button
             key={v.id}
-            onClick={() => setSelectedVarIndex(idx)}
+            onClick={() => handleSelectVariation(idx)}
             className={`text-left px-4 py-3 rounded-xl border text-xs transition-all duration-200 ${
               selectedVarIndex === idx
                 ? "bg-white/[0.08] border-white/20 text-white shadow-sm"
@@ -172,23 +205,36 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
             }`}
           >
             {/* Real HTML5 Video Element */}
-            <video
-              ref={videoRef}
-              src={currentVar.videoSrc}
-              playsInline
-              preload="metadata"
-              muted={isMuted}
-              onTimeUpdate={handleTimeUpdate}
-              onLoadedMetadata={handleLoadedMetadata}
-              onEnded={() => setIsPlaying(false)}
-              onClick={togglePlay}
-              className={`h-full w-full object-contain cursor-pointer ${
-                aspectMode === "16:9" ? "max-h-[500px]" : ""
-              }`}
-            />
+            {!hasError ? (
+              <video
+                ref={videoRef}
+                src={currentVar.videoSrc}
+                playsInline
+                preload="metadata"
+                muted={isMuted}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+                onError={() => setHasError(true)}
+                onEnded={() => setIsPlaying(false)}
+                onClick={togglePlay}
+                className={`h-full w-full object-contain cursor-pointer ${
+                  aspectMode === "16:9" ? "max-h-[500px]" : ""
+                }`}
+              />
+            ) : (
+              <div className="p-6 text-center space-y-3 flex flex-col items-center justify-center h-full">
+                <AlertOctagon className="w-8 h-8 text-amber-400" />
+                <div className="text-xs text-white font-medium">
+                  {lang === "id" ? "Berkas Video Tidak Ditemukan" : "Video File Not Found"}
+                </div>
+                <div className="text-[11px] font-mono text-zinc-400 break-all max-w-xs">
+                  {currentVar.videoSrc}
+                </div>
+              </div>
+            )}
 
             {/* Play/Pause Overlay indicator when paused */}
-            {!isPlaying && (
+            {!isPlaying && !hasError && (
               <button
                 onClick={togglePlay}
                 className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/60 border border-white/20 backdrop-blur-md flex items-center justify-center text-white hover:scale-105 transition-all shadow-xl z-20"
@@ -209,63 +255,65 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
             </div>
 
             {/* Bottom Controls Bar */}
-            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/85 to-transparent p-4 z-20 space-y-2">
-              {/* Scrubber Bar */}
-              <div
-                className="w-full h-2 bg-white/20 hover:h-2.5 rounded-full overflow-hidden cursor-pointer relative transition-all"
-                onClick={handleSeek}
-              >
+            {!hasError && (
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/85 to-transparent p-4 z-20 space-y-2">
+                {/* Scrubber Bar */}
                 <div
-                  className="h-full bg-emerald-400 transition-all duration-100"
-                  style={{ width: `${progressPercent}%` }}
-                />
-              </div>
-
-              {/* Bottom Buttons */}
-              <div className="flex items-center justify-between text-zinc-300 pt-1">
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={togglePlay}
-                    className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-white"
-                    aria-label={isPlaying ? t.paused : t.playing}
-                  >
-                    {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
-                  </button>
-
-                  <button
-                    onClick={handleRestart}
-                    className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
-                    aria-label={t.loop}
-                  >
-                    <RotateCcw className="w-3.5 h-3.5" />
-                  </button>
-
-                  <button
-                    onClick={toggleMute}
-                    className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
-                    aria-label={isMuted ? t.unmute : t.mute}
-                  >
-                    {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-                  </button>
+                  className="w-full h-2 bg-white/20 hover:h-2.5 rounded-full overflow-hidden cursor-pointer relative transition-all"
+                  onClick={handleSeek}
+                >
+                  <div
+                    className="h-full bg-emerald-400 transition-all duration-100"
+                    style={{ width: `${progressPercent}%` }}
+                  />
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <a
-                    href={currentVar.videoSrc}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] font-mono text-zinc-400 hover:text-white flex items-center gap-1"
-                    title="Buka file video di tab baru"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    <span>MP4 File</span>
-                  </a>
-                  <div className="text-[11px] font-mono text-zinc-400">
-                    {formatTime(currentTime)} / {formatTime(duration)}
+                {/* Bottom Buttons */}
+                <div className="flex items-center justify-between text-zinc-300 pt-1">
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={togglePlay}
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-white"
+                      aria-label={isPlaying ? t.paused : t.playing}
+                    >
+                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
+                    </button>
+
+                    <button
+                      onClick={handleRestart}
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
+                      aria-label={t.loop}
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                      onClick={toggleMute}
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
+                      aria-label={isMuted ? t.unmute : t.mute}
+                    >
+                      {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={currentVar.videoSrc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-mono text-zinc-400 hover:text-white flex items-center gap-1"
+                      title="Buka file video di tab baru"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      <span>MP4 File</span>
+                    </a>
+                    <div className="text-[11px] font-mono text-zinc-400">
+                      {formatTime(currentTime)} / {formatTime(duration)}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
@@ -276,15 +324,15 @@ export function VideoPlayerMock({ variations, clientName }: VideoPlayerMockProps
               <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
                 {t.angleBadge}
               </div>
-              <h5 className="text-base font-semibold text-white tracking-tight mt-1">
+              <h4 className="text-base font-semibold text-white tracking-tight mt-1">
                 {currentVar.label[lang]}
-              </h5>
+              </h4>
               <p className="text-xs text-zinc-300 leading-relaxed mt-1 italic">
                 {currentVar.hookHeadline[lang]}
               </p>
             </div>
 
-            {/* Technical Specifications Grid (Factual, no fabricated ROAS) */}
+            {/* Technical Specifications Grid */}
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
                 <div className="text-[10px] font-mono text-zinc-400 uppercase">{t.durationLabel}</div>

@@ -55,6 +55,42 @@ export interface CreativeBrief {
   deliverables: LocalizedString[];
 }
 
+export type AssetCategory =
+  | 'AI-generated footage or audio'
+  | 'Self-shot / original footage'
+  | 'Publicly sourced / third-party footage'
+  | 'Motion graphics and compositing'
+  | 'Product images or external assets';
+
+export type LicenseStatus =
+  | 'Verified Commercial'
+  | 'Public Content (Spec Ad Use)'
+  | 'Needs Permission'
+  | 'Self-Created / Original'
+  | 'Not documented';
+
+export interface AssetBreakdownItem {
+  id: string;
+  name: LocalizedString;
+  category: AssetCategory;
+  sourceOrTool?: string;
+  myContribution: LocalizedString;
+  licenseStatus: LicenseStatus;
+  notes?: LocalizedString;
+}
+
+export interface CreativeStrategy {
+  projectType: LocalizedString;
+  objective: LocalizedString;
+  targetAudience: LocalizedString;
+  audienceInsight: LocalizedString;
+  coreAngle: LocalizedString;
+  hookStrategy: LocalizedString;
+  valueProposition: LocalizedString;
+  callToAction: LocalizedString;
+  creativeRationale: LocalizedString;
+}
+
 export interface ProductionPhase {
   phase: string;
   title: LocalizedString;
@@ -96,6 +132,8 @@ export interface Project {
 
   // Deep dive sections
   creativeBrief: CreativeBrief;
+  creativeStrategy: CreativeStrategy;
+  assetBreakdown: AssetBreakdownItem[];
   scriptAngles: ScriptAngle[];
   storyboard: StoryboardItem[];
   videoVariations: VideoVariation[];
