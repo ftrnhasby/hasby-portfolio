@@ -769,6 +769,648 @@ export const PROJECTS: Project[] = [
       },
     },
   },
+  {
+    id: "nespresso-vertuo",
+    slug: "nespresso-vertuo",
+    title: "Nespresso Vertuo Pop",
+    client: "Nespresso (Spec Ad / Portfolio Case Study)",
+    category: {
+      id: "F&B / Smart Coffee Appliances",
+      en: "F&B / Smart Coffee Appliances",
+    },
+    year: "2026",
+    tagline: {
+      id: "Rangkaian video iklan direct response TikTok (9:16) berbasis Remotion & ElevenLabs untuk segmen pekerja WFH yang butuh kopi kafe cepat tanpa friksi.",
+      en: "A 9:16 vertical direct response video ad system engineered with Remotion & ElevenLabs for remote professionals needing fast, frictionless cafe-quality coffee.",
+    },
+    heroSummary: {
+      id: "Studi kasus spec ad komprehensif untuk Nespresso Vertuo Pop. Menghubungkan friksi pagi pekerja remote (meeting maraton, otak loading, keterbatasan waktu seduh) dengan 2 variasi angle teruji: The 08:55 AM Meeting Emergency dan The 30-Second Desk Barista (Sensory Crema Contrast).",
+      en: "A comprehensive direct-response spec ad case study for Nespresso Vertuo Pop. Translating remote-worker morning friction into high-converting hooks across 2 tested angles: The 08:55 AM Meeting Emergency and The 30-Second Desk Barista (Sensory Crema Contrast).",
+    },
+    featured: true,
+    primaryHighlight: {
+      value: "2 Video Cuts",
+      label: {
+        id: "Variasi Angle Kreatif",
+        en: "Creative Angle Variations",
+      },
+      subtext: {
+        id: "30s Vertikal 9:16 (Render Nyata Remotion)",
+        en: "30s 9:16 Vertical (Actual Remotion Renders)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Media Sosial",
+          en: "Native Social Vertical Format",
+        },
+      },
+      {
+        value: "4.000 RPM",
+        label: {
+          id: "Teknologi Centrifusion™",
+          en: "Centrifusion™ Extraction",
+        },
+      },
+      {
+        value: "ElevenLabs",
+        label: {
+          id: "Voiceover Neural AI Terkurasi",
+          en: "Neural AI Voiceover Pipeline",
+        },
+      },
+    ],
+    toolsUsed: [
+      "Remotion (React & TypeScript)",
+      "ElevenLabs Neural Voice",
+      "Adobe Premiere Pro",
+      "Tailwind CSS",
+      "Audacity / Audio EQ",
+    ],
+    creativeBrief: {
+      clientObjective: {
+        id: "Merancang rangkaian video iklan direct response format vertikal (9:16) untuk Nespresso Vertuo Pop di media sosial (TikTok & Reels). Menghubungkan kecepatan seduh 30 detik, pengenalan barcode otomatis, dan kapasitas mug 230ml dengan crema tebal langsung di meja kerja para profesional WFH.",
+        en: "Develop a direct response vertical video ad series (9:16) for Nespresso Vertuo Pop on paid social (TikTok & Reels), highlighting 30-second brewing speed, auto-barcode recognition, and a full 230ml mug size with dense crema directly at the desk for WFH professionals.",
+      },
+      targetAudience: {
+        id: "Profesional WFH, software engineer, pekerja agency, dan freelancer berusia 24–38 tahun yang menghabiskan 8+ jam di depan laptop dengan jadwal meeting online padat. Membutuhkan kopi kafe porsi besar setiap pagi tanpa kerepotan seduh manual atau keterlambatan pesanan ojol.",
+        en: "WFH professionals, software engineers, agency workers, and freelancers aged 24–38 spending 8+ hours at laptops with tight online meeting schedules. Demanding large-cup cafe coffee every morning without manual brew friction or delivery delays.",
+      },
+      coreProblem: {
+        id: "Seduh manual butuh 15 menit dan meninggalkan ampas berantakan; pesan kopi kafe via ojol memakan waktu 30 menit dengan ongkir mahal dan es mencair; sementara kopi saset instan rasanya datar tanpa lapisan crema.",
+        en: "Manual brewing takes 15 minutes with messy clean-up; ordering delivery takes 30 minutes with high fees and melted ice; while instant sachet coffee tastes flat and lacks crema.",
+      },
+      angleHookStrategy: {
+        id: "Menguji 2 sudut pandang pesan kontras: (1) Urgensi kepanikan waktu 'The 08:55 AM Meeting Emergency' (solusi 30 detik sebelum daily standup), dan (2) Kontras sensori visual 'The 30-Second Desk Barista' (ASMR spoon crema tebal mematahkan mitos kopi kafe mahal vs meja kerja).",
+        en: "Testing 2 contrasting message angles: (1) Time-urgency panic 'The 08:55 AM Meeting Emergency' (30-second fix before daily standup), and (2) Sensory visual contrast 'The 30-Second Desk Barista' (macro crema ASMR debunking the expensive cafe coffee myth).",
+      },
+      keyDifferentiators: [
+        {
+          id: "Teknologi Centrifusion™ 4.000 RPM menghasilkan crema alami super tebal",
+          en: "Centrifusion™ 4,000 RPM extraction producing exceptionally rich natural crema",
+        },
+        {
+          id: "Sistem barcode cerdas memindai kapsul dan mengatur parameter seduh dengan 1 sentuhan tombol",
+          en: "Smart barcode system scanning capsule and optimizing brew parameters with a single button press",
+        },
+        {
+          id: "Dukungan porsi 1 Mug Penuh (230 ml) untuk menemani sesi kerja panjang",
+          en: "Full 1-Mug capacity (230 ml) engineered to power extended remote work sessions",
+        },
+        {
+          id: "Zero-Mess: Kapsul bekas otomatis masuk ke kontainer internal, meja kerja bebas ampas",
+          en: "Zero-Mess: Spent capsules automatically eject into an internal bin, keeping desks pristine",
+        },
+      ],
+      deliverables: [
+        {
+          id: "Variasi 1: Video Vertikal 'The 08:55 AM Meeting Emergency' (30 Detik, 900 frame @ 30fps)",
+          en: "Variation 1: Vertical Video 'The 08:55 AM Meeting Emergency' (30s, 900 frames @ 30fps)",
+        },
+        {
+          id: "Variasi 2: Video Vertikal 'The 30-Second Desk Barista / Crema Contrast' (30 Detik, 900 frame @ 30fps)",
+          en: "Variation 2: Vertical Video 'The 30-Second Desk Barista / Crema Contrast' (30s, 900 frames @ 30fps)",
+        },
+        {
+          id: "Komposisi Remotion modular (NespressoVideo & NespressoVideoV2) dengan sinkronisasi vokal ElevenLabs",
+          en: "Modular Remotion composition repository (NespressoVideo & NespressoVideoV2) with ElevenLabs neural voice sync",
+        },
+      ],
+    },
+    scriptAngles: [
+      {
+        id: "angle-v1-emergency",
+        name: {
+          id: "Variasi 1: The 08:55 AM Meeting Emergency",
+          en: "Variation 1: The 08:55 AM Meeting Emergency",
+        },
+        hookType: {
+          id: "Urgensi Waktu / Problem-Agitation-Solution",
+          en: "Time Urgency / Problem-Agitation-Solution",
+        },
+        duration: "30s",
+        concept: {
+          id: "Mengangkat kepanikan nyata 5 menit sebelum meeting online jam 09:00 ketika otak masih lemas, seduh manual terlalu lama, dan ojol terlambat.",
+          en: "Depicting the real panic of 5 minutes before a 9:00 AM meeting when the brain is groggy, manual brew takes too long, and delivery is delayed.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:04",
+            visual: {
+              id: "Zoom-in layar laptop jam 08:55 pagi & notifikasi Daily Standup 09:00, cut ekspresi lemas, cut tangan buka tuas Vertuo Pop.",
+              en: "Zoom-in on laptop clock at 8:55 AM with Daily Standup popup, cut to tired face, cut to hand opening Vertuo Pop lever.",
+            },
+            audio: {
+              id: "“Jam 08.55 pagi, meeting mulai lima menit lagi, dan otak kamu masih loading total?”",
+              en: "“8:55 AM, meeting starts in five minutes, and your brain is still completely loading?”",
+            },
+            psychologyIntent: {
+              id: "Pattern-interrupt visual jam 08:55 dan validasi friksi pagi hari pekerja WFH untuk menghentikan scroll di 3 detik awal.",
+              en: "Visual pattern-interrupt with 8:55 AM clock validating WFH morning friction to secure 3-second thumbstop retention.",
+            },
+          },
+          {
+            time: "00:04 - 00:08",
+            visual: {
+              id: "Cut layar aplikasi delivery estimasi 35 menit, cut tangan mendorong grinder manual ke samping meja dengan frustrasi.",
+              en: "Cut to delivery app showing 35-minute wait, cut to hand pushing manual grinder aside in frustration.",
+            },
+            audio: {
+              id: "“Mau pesan ojol kelamaan, seduh manual juga ga bakal sempat.”",
+              en: "“Delivery takes way too long, and manual brewing is out of the question.”",
+            },
+            psychologyIntent: {
+              id: "Agitasi dilema alternatif: ojol terlalu lambat dan seduh manual terlalu merepotkan di sela meeting.",
+              en: "Agitating alternative dilemmas: delivery is sluggish and manual brewing is impractical between meetings.",
+            },
+          },
+          {
+            time: "00:08 - 00:15",
+            visual: {
+              id: "Tangan memasukkan kapsul Vertuo Pop, tuas dikunci bunyi 'clack', jari menekan 1 tombol atas (LED berputar), kopi mengucur.",
+              en: "Hand inserts Vertuo Pop capsule, lever locks with satisfying clack, finger presses 1 top button (rotating LED), coffee begins pouring.",
+            },
+            audio: {
+              id: "“Untung ada Nespresso Vertuo Pop. Cukup masukin kapsul, pencet satu tombol, mesinnya langsung nyiapin kopi otomatis.”",
+              en: "“Good thing there's Nespresso Vertuo Pop. Just pop in a capsule, press one button, and it automatically brews your coffee.”",
+            },
+            psychologyIntent: {
+              id: "Pengenalan solusi instan (mechanism reveal): 1-touch button dan pemindaian barcode otomatis menghilangkan semua friksi.",
+              en: "Instant mechanism reveal: 1-touch button and auto barcode scanning eliminate all operational friction.",
+            },
+          },
+          {
+            time: "00:15 - 00:21",
+            visual: {
+              id: "Macro slow-motion crema tebal naik berlapis di mug kaca 230 ml bening, sendok mencolek busa mikro beludru.",
+              en: "Macro slow-motion of thick crema layering up in a clear 230 ml mug, spoon dipping into velvety microfoam.",
+            },
+            audio: {
+              id: "“Putaran 4.000 RPM Centrifusion bikin crema-nya setebal ini, dan ukurannya beneran satu mug penuh 230 ml.”",
+              en: "“Centrifusion's 4,000 RPM spin creates crema this rich, filling a generous full 230 ml mug.”",
+            },
+            psychologyIntent: {
+              id: "Bukti visual sensori konkret: membuktikan kualitas crema kafe dan mematahkan mitos mesin kapsul cuma sloki kecil.",
+              en: "Concrete sensory proof: proving cafe-grade crema and debunking the myth that capsule machines only brew tiny espresso shots.",
+            },
+          },
+          {
+            time: "00:21 - 00:25",
+            visual: {
+              id: "Tuas dibuka, kapsul bekas otomatis terlontar ke tangki internal. Jam di laptop 08:59, menyeruput kopi santai saat kamera Zoom menyala.",
+              en: "Lever opens, used capsule auto-ejects into internal bin. Laptop clock shows 8:59 AM, smiling and sipping coffee as Zoom camera turns on.",
+            },
+            audio: {
+              id: "“Nol ampas berantakan, jam sembilan pas kamera Zoom nyala, kamu udah fokus total.”",
+              en: "“Zero messy grounds, and right at 9 sharp as your Zoom camera lights up, you're in total focus.”",
+            },
+            psychologyIntent: {
+              id: "Kelegaan kognitif (relief) dan visualisasi kondisi sukses (after-state): meja bersih, tepat waktu, dan siap kerja.",
+              en: "Cognitive relief and successful after-state visualization: pristine desk, punctual readiness, and energized focus.",
+            },
+          },
+          {
+            time: "00:25 - 00:30",
+            visual: {
+              id: "End Card dinamis: 5 varian warna Nespresso Vertuo Pop di atas meja kerja minimalis + badge promo penawaran + panah mengarah ke link bio.",
+              en: "Dynamic End Card: 5 color variants of Nespresso Vertuo Pop on a minimal desk + promo offer badge + arrow pointing to link in bio.",
+            },
+            audio: {
+              id: "“Bikin ritual WFH kamu jauh lebih simpel. Cek promo Nespresso Vertuo Pop di link bio sekarang!”",
+              en: "“Simplify your WFH coffee ritual. Check out Nespresso Vertuo Pop offers at the link in bio now!”",
+            },
+            psychologyIntent: {
+              id: "Call to action langsung dan tegas dengan penawaran promo yang memicu tindakan klik segera.",
+              en: "Direct and assertive call to action with promo framing driving immediate link click behavior.",
+            },
+          },
+        ],
+      },
+      {
+        id: "angle-v2-sensory",
+        name: {
+          id: "Variasi 2: The 30s Desk Barista",
+          en: "Variation 2: The 30s Desk Barista",
+        },
+        hookType: {
+          id: "Kontras Sensori & Rasa / Visual ASMR",
+          en: "Sensory & Taste Contrast / Visual ASMR",
+        },
+        duration: "30s",
+        concept: {
+          id: "Menantang persepsi bahwa crema setebal kafe hanya bisa didapat dari kafe mahal Rp50.000 atau mesin manual yang mengotori meja.",
+          en: "Challenging the assumption that dense velvety crema requires expensive cafe drinks or messy manual machines.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:04",
+            visual: {
+              id: "Extreme macro shot sendok menyibak lapisan crema tebal keemasan di mug kaca bening, disusul zoom-out cepat ke meja kerja di samping laptop.",
+              en: "Extreme macro shot of spoon parting golden crema in a clear mug, followed by quick zoom-out revealing a desk setup next to a laptop.",
+            },
+            audio: {
+              id: "“Ini bukan kopi kafe lima puluh ribuan, dan dibikinnya cuma tiga puluh detik di meja kerja.”",
+              en: "“This isn't a fifty-thousand rupiah cafe drink, and it was brewed in just thirty seconds at a work desk.”",
+            },
+            psychologyIntent: {
+              id: "Sensory hook ASMR dipadukan dengan pematahan harga kopi kafe untuk memicu rasa ingin tahu (curiosity gap).",
+              en: "Sensory ASMR hook paired with cafe price debunking to spark instant curiosity gap.",
+            },
+          },
+          {
+            time: "00:04 - 00:08",
+            visual: {
+              id: "Cut cup plastik kopi ojol berembun es mencair disingkirkan, cut alat kopi manual dengan bubuk ampas basah mengotori meja.",
+              en: "Cut to watery iced delivery plastic cup pushed aside, cut to manual coffee gear with wet coffee grounds dirtying the desk.",
+            },
+            audio: {
+              id: "“Biasanya crema sepadat ini cuma ada di kafe mahal atau mesin manual ribet.”",
+              en: "“Usually crema this dense only exists in pricey cafes or messy manual machines.”",
+            },
+            psychologyIntent: {
+              id: "Menegaskan dua friksi utama yang biasa dialami audiens: mahal & lama nunggu vs ribet ampas berserakan.",
+              en: "Reinforcing two prevalent audience pain points: expensive & slow delivery vs messy manual grounds.",
+            },
+          },
+          {
+            time: "00:08 - 00:15",
+            visual: {
+              id: "Tangan memasukkan kapsul Vertuo Pop setengah kubah, tuas dikunci clack mantap, jari tekan 1 tombol atas membaca barcode.",
+              en: "Hand inserts hemispherical Vertuo Pop capsule, lever locks with solid clack, finger presses single top button reading barcode.",
+            },
+            audio: {
+              id: "“Tapi Nespresso Vertuo Pop beda. Cukup pencet satu tombol, sistem barcodenya bekerja otomatis memutar kapsul.”",
+              en: "“Nespresso Vertuo Pop is different. Just press one button, and its smart barcode system automatically spins the capsule.”",
+            },
+            psychologyIntent: {
+              id: "Membuka teknologi barcode otomatis sebagai alasan mengapa mesin ini begitu mudah digunakan tanpa keahlian barista.",
+              en: "Revealing auto-barcode technology as the mechanism for barista-quality coffee without barista training." }
+          },
+          {
+            time: "00:15 - 00:21",
+            visual: {
+              id: "Slow-motion macro aliran kopi kaya crema keemasan mengucur deras ke mug kaca 230 ml, lapisan crema tebal naik bertingkat.",
+              en: "Slow-motion macro of rich golden crema flowing into a 230 ml glass mug, thick foam rising smoothly."
+            },
+            audio: {
+              id: "“Putaran 4.000 RPM Centrifusion ngehasilin crema super tebal, langsung penuh satu mug 230 ml.”",
+              en: "“Centrifusion's 4,000 RPM rotation extracts super thick crema, filling an entire 230 ml mug instantly.”"
+            },
+            psychologyIntent: {
+              id: "Validasi sensori putaran 4.000 RPM dan porsi besar 230 ml sebagai alasan konversi nilai rasional dan emosional.",
+              en: "Sensory validation of 4,000 RPM extraction and 230 ml capacity supporting both rational and emotional desire."
+            }
+          },
+          {
+            time: "00:21 - 00:25",
+            visual: {
+              id: "Tuas dibuka, kapsul bekas otomatis terlontar ke kontainer internal (meja tetap bersih). Pekerja tersenyum menyeruput kopi, fokus kerja aktif.",
+              en: "Lever opens, used capsule drops cleanly into internal container. Worker smiles sipping warm coffee, productivity activated."
+            },
+            audio: {
+              id: "“Meja tetap bersih tanpa ampas, fokus kerja kamu langsung on total.”",
+              en: "“Desks stay spotless with zero grounds, and your work focus turns completely on.”"
+            },
+            psychologyIntent: {
+              id: "Menghadirkan rasa kepuasan kerja (lifestyle relief): ritual ngopi mewah tanpa beban ampas kotor di meja.",
+              en: "Delivering lifestyle relief: a luxury coffee ritual with zero mess burdening the workspace."
+            }
+          },
+          {
+            time: "00:25 - 00:30",
+            visual: {
+              id: "Hero shot display 5 varian warna Nespresso Vertuo Pop + badge promo paket bundling / voucher kapsul + tombol CTA berkedip dinamis.",
+              en: "Hero shot displaying 5 vibrant Vertuo Pop colorways + bundling voucher promo badge + dynamic pulsing CTA button."
+            },
+            audio: {
+              id: "“Upgrade ritual ngopi kamu sekarang. Cek promo Nespresso Vertuo Pop di link bio!”",
+              en: "“Upgrade your daily coffee ritual now. Check out Nespresso Vertuo Pop promotions at the link in bio!”"
+            },
+            psychologyIntent: {
+              id: "Call to action yang memposisikan pembelian sebagai upgrade kualitas hidup kerja dari rumah.",
+              en: "Call to action positioning purchase as an upgrade to everyday work-from-home quality of life."
+            }
+          }
+        ]
+      }
+    ],
+    storyboard: [
+      {
+        id: "sb-1",
+        scene: {
+          id: "Adegan 1: The Emergency Hook (08:55 AM)",
+          en: "Scene 1: The Emergency Hook (08:55 AM)",
+        },
+        timecode: "00:00 - 00:04",
+        visualDescription: {
+          id: "Zoom-in jam 08:55 & notifikasi Daily Standup Google Calendar, cut cepat ekspresi lemas pekerja WFH, cut tangan membuka tuas Vertuo Pop.",
+          en: "Zoom-in on 8:55 AM clock and Daily Standup Google Calendar notification, rapid cuts of tired WFH worker and hand opening Vertuo Pop lever.",
+        },
+        technicalNote: {
+          id: "Pacing cepat (1.3s per cut), micro punch-in (100% -> 108%), SFX calendar pop chime + clock tick + glitch buzz.",
+          en: "Rapid pacing (1.3s per cut), micro punch-in (100% -> 108%), calendar pop chime + clock tick + glitch buzz SFX.",
+        },
+        toolUsed: "Remotion (Scene1Hook.tsx)",
+        assetType: "Remotion Component",
+      },
+      {
+        id: "sb-2",
+        scene: {
+          id: "Adegan 2: Morning Agitation (Ojol vs Manual)",
+          en: "Scene 2: Morning Agitation (Delivery vs Manual)",
+        },
+        timecode: "00:04 - 00:08",
+        visualDescription: {
+          id: "Layar HP menampilkan estimasi delivery ojol 35 menit, disusul tangan menyingkirkan grinder kopi manual dari meja kerja.",
+          en: "Smartphone screen showing 35-minute delivery estimate, followed by hand pushing manual coffee grinder aside.",
+        },
+        technicalNote: {
+          id: "Transisi directional whip-whoosh, SFX whoosh dinamis berpadu suara detak jam berakselerasi.",
+          en: "Directional whip-whoosh transitions, dynamic whoosh SFX blended with accelerating panic clock ticking.",
+        },
+        toolUsed: "Remotion (Scene2Agitation.tsx)",
+        assetType: "Remotion Component",
+      },
+      {
+        id: "sb-3",
+        scene: {
+          id: "Adegan 3: 1-Touch Centrifusion Brewing",
+          en: "Scene 3: 1-Touch Centrifusion Brewing",
+        },
+        timecode: "00:08 - 00:15",
+        visualDescription: {
+          id: "Kapsul Vertuo dimasukkan ke chamber, tuas dikunci ke kanan (clack), jari menekan 1 tombol atas (LED berputar), kucuran kopi pertama mengalir deras.",
+          en: "Vertuo capsule inserted into chamber, lever locked right (clack), finger presses 1 top button (rotating LED), initial coffee stream flows into mug.",
+        },
+        technicalNote: {
+          id: "SFX tuas mekanikal 'clack' + tombol klik taktil + desingan motor 4.000 RPM. Beat musik modern upbeat masuk penuh.",
+          en: "Mechanical lever 'clack' + tactile button click + 4,000 RPM motor whir. Upbeat modern beat drops fully.",
+        },
+        toolUsed: "Remotion (Scene3Brewing.tsx)",
+        assetType: "Brand Footage",
+      },
+      {
+        id: "sb-4",
+        scene: {
+          id: "Adegan 4: Sensory Proof (Crema & Mug 230ml)",
+          en: "Scene 4: Sensory Proof (Crema & Mug 230ml)",
+        },
+        timecode: "00:15 - 00:21",
+        visualDescription: {
+          id: "Macro slow-motion aliran kopi kaya crema keemasan memenuhi mug kaca 230 ml bening, sendok mencolek busa tebal bertekstur beludru.",
+          en: "Macro slow-motion of golden crema filling a 230 ml clear mug, small spoon dipping into dense velvety microfoam.",
+        },
+        technicalNote: {
+          id: "Slow vertical tracking pan, SFX rich coffee pour ASMR + denting sendok kaca halus menyentuh mug.",
+          en: "Slow vertical tracking pan, rich coffee pour ASMR + subtle glass spoon chime SFX.",
+        },
+        toolUsed: "Remotion (Scene4Sensory.tsx)",
+        assetType: "Brand Footage",
+      },
+      {
+        id: "sb-5",
+        scene: {
+          id: "Adegan 5: Relief & Meeting Ready",
+          en: "Scene 5: Relief & Meeting Ready",
+        },
+        timecode: "00:21 - 00:25",
+        visualDescription: {
+          id: "Tuas dibuka dan kapsul bekas jatuh otomatis ke wadah internal (meja rapi). Jam laptop 08:59, menyeruput kopi santai saat kamera Zoom menyala.",
+          en: "Lever opens and used capsule auto-drops into internal container (clean desk). Laptop clock shows 8:59 AM, smiling and sipping coffee as Zoom connects.",
+        },
+        technicalNote: {
+          id: "SFX kapsul jatuh ('pluk') + desah nafas lega ('ahhh') + mug clink ditaruh di meja + chime notifikasi Zoom join.",
+          en: "Capsule eject SFX + sigh of relief + mug desk clink + Zoom join chime SFX.",
+        },
+        toolUsed: "Remotion (Scene5Relief.tsx)",
+        assetType: "Remotion Component",
+      },
+      {
+        id: "sb-6",
+        scene: {
+          id: "Adegan 6: CTA & Colorway Lineup",
+          en: "Scene 6: CTA & Colorway Lineup",
+        },
+        timecode: "00:25 - 00:30",
+        visualDescription: {
+          id: "Motion Graphic End Card: Hero shot 5 varian warna Nespresso Vertuo Pop di meja kerja + badge promo paket bundling + tombol CTA berkedip dinamis.",
+          en: "Motion Graphic End Card: Hero shot of 5 Vertuo Pop colorways on desk + bundling promo badge + dynamic pulsing CTA button.",
+        },
+        technicalNote: {
+          id: "Komposisi HeroProductLineup.tsx dengan floating effect, SFX punchy bass drop penutup + melodic chime + musik fade out.",
+          en: "HeroProductLineup.tsx composition with floating effect, punchy bass drop + melodic chime + gentle audio fade out.",
+        },
+        toolUsed: "Remotion (Scene6CTA.tsx)",
+        assetType: "Motion Graphic",
+      },
+    ],
+    videoVariations: [
+      {
+        id: "v1-meeting-emergency",
+        label: {
+          id: "Variasi 1: The 08:55 AM Emergency",
+          en: "Variation 1: The 08:55 AM Emergency",
+        },
+        hookHeadline: {
+          id: "“Jam 08.55 pagi, meeting mulai 5 menit lagi... otak masih loading?!”",
+          en: "“8:55 AM, standup meeting in 5 minutes... brain still loading?!”",
+        },
+        angleDescription: {
+          id: "Urgensi kepanikan pagi WFH: friksi ojol 35 menit & seduh manual 15 menit diselesaikan dalam 30 detik dengan satu sentuhan Nespresso Vertuo Pop.",
+          en: "High-urgency WFH morning friction: delivery delays and messy manual prep solved in 30 seconds with one-touch Centrifusion brewing.",
+        },
+        videoSrc: "/videos/nespresso/nespresso-vertuo-v1.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080 × 1920 (9:16)",
+          voiceModel: "ElevenLabs Neural Voice (Natural WFH Cadence ~146 WPM)",
+        },
+        keyTakeaway: {
+          id: "Hook jam 08:55 dan pop-up Google Calendar berfungsi sebagai visual pattern-interrupt instan bagi pekerja WFH. Pacing dinamis beralih dari kepanikan di detik 0–8 ke ritme sensori yang menenangkan saat kopi mengucur.",
+          en: "The 8:55 AM clock and Google Calendar popup trigger instant pattern interruption for remote workers. Dynamic pacing shifts smoothly from panic to sensory relief as rich crema pours into the mug.",
+        },
+      },
+      {
+        id: "v2-sensory-contrast",
+        label: {
+          id: "Variasi 2: The 30s Desk Barista",
+          en: "Variation 2: The 30s Desk Barista",
+        },
+        hookHeadline: {
+          id: "“Crema setebal ini cuma 30 detik di meja kerja?!”",
+          en: "“Crema this thick in just 30 seconds at your work desk?!”",
+        },
+        angleDescription: {
+          id: "Kontras sensori visual: macro shot sendok menyibak busa crema tebal mematahkan anggapan bahwa kopi kafe bintang lima harus mahal atau ribet.",
+          en: "Visual sensory contrast: macro spoon dips into velvety crema, debunking the myth that cafe-quality coffee requires expensive runs or messy manual espresso.",
+        },
+        videoSrc: "/videos/nespresso/nespresso-vertuo-v2.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080 × 1920 (9:16)",
+          voiceModel: "ElevenLabs Neural Voice (Confident & Sensory Pacing ~156 WPM)",
+        },
+        keyTakeaway: {
+          id: "Pilihan hook alternatif yang memprioritaskan coffee aesthetic ASMR untuk audiens solution-aware. Menyoroti perbandingan biaya kopi kafe Rp50.000 vs kemudahan satu tombol di samping laptop.",
+          en: "Alternative hook variant prioritizing coffee aesthetic ASMR for solution-aware audiences. Highlights the financial and time contrast between Rp50,000 cafe cups and a 30-second one-touch desk solution.",
+        },
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "Tahap 01",
+        title: {
+          id: "Riset Brand, Audiens, & Voice of Customer (VOC)",
+          en: "Brand, Audience, & Voice of Customer (VOC) Research",
+        },
+        turnaroundTime: {
+          id: "Hari ke-1",
+          en: "Day 1",
+        },
+        tools: ["Dokumentasi Nespresso", "Sintesis Komunitas WFH", "VOC Review E-Commerce"],
+        summary: {
+          id: "Membedah spesifikasi mesin Vertuo Pop (Centrifusion 4.000 RPM, barcode system, mug 230ml) dan keresahan utama pekerja remote (waktu seduh manual 15 menit, pesanan ojol terlambat, kopi saset hambar).",
+          en: "Deconstructed Vertuo Pop technical specs (Centrifusion 4,000 RPM, barcode system, 230ml mug) and core remote worker frictions (15-minute manual brew, delayed delivery, flavorless instant sachets).",
+        },
+        keyDeliverable: {
+          id: "Dokumen Riset Brand & Peta VOC Pekerja WFH",
+          en: "Brand Research & Remote Worker VOC Document",
+        },
+      },
+      {
+        phase: "Tahap 02",
+        title: {
+          id: "Matriks Sudut Pandang Kreatif & Creative Brief",
+          en: "Creative Angles Matrix & Strategic Brief",
+        },
+        turnaroundTime: {
+          id: "Hari ke-2",
+          en: "Day 2",
+        },
+        tools: ["Notion", "Creative Angles Matrix Framework"],
+        summary: {
+          id: "Merumuskan matriks 4 sudut pandang dan memprioritaskan 2 angle terkuat: (1) The 08:55 AM Meeting Emergency untuk pengujian urgensi waktu, dan (2) The 30-Second Desk Barista untuk pengujian kontras sensori rasa.",
+          en: "Formulated a 4-angle matrix and prioritized the top 2 testable concepts: (1) The 08:55 AM Meeting Emergency for time urgency testing, and (2) The 30-Second Desk Barista for sensory taste contrast.",
+        },
+        keyDeliverable: {
+          id: "Matriks 4 Sudut Pandang & Brief Kreatif Disetujui",
+          en: "4-Angle Matrix & Approved Creative Brief",
+        },
+      },
+      {
+        phase: "Tahap 03",
+        title: {
+          id: "Penulisan Naskah & Storyboard Frame-by-Frame",
+          en: "Scriptwriting & Frame-by-Frame Storyboard",
+        },
+        turnaroundTime: {
+          id: "Hari ke-3",
+          en: "Day 3",
+        },
+        tools: ["Markdown", "ElevenLabs Script Editor"],
+        summary: {
+          id: "Menulis naskah percakapan natural berbahasa Indonesia kasual (~146 WPM) dengan 6 adegan terstruktur. Memastikan sinkronisasi ketat antara voice-over, tindakan visual, on-screen text, dan cue SFX.",
+          en: "Drafted natural Indonesian conversational scripts (~146 WPM) across 6 structured scenes. Ensured frame-accurate sync between voice-over, visual action, on-screen captions, and tactile SFX cues.",
+        },
+        keyDeliverable: {
+          id: "Naskah 2 Versi & Tabel Storyboard 6 Adegan",
+          en: "2 Script Versions & 6-Scene Storyboard Tables",
+        },
+      },
+      {
+        phase: "Tahap 04",
+        title: {
+          id: "Rekayasa Animasi Programmatic di Remotion Studio",
+          en: "Programmatic Animation in Remotion Studio",
+        },
+        turnaroundTime: {
+          id: "Hari ke-4",
+          en: "Day 4",
+        },
+        tools: ["Remotion (React + TypeScript)", "Tailwind CSS", "ElevenLabs Neural Audio"],
+        summary: {
+          id: "Membangun komponen modular di Remotion: Scene1Hook (animasi kalender & jam digital), MotionBadge, SafeZoneContainer, dan HeroProductLineup 5 warna. Mengintegrasikan voiceover ElevenLabs per frame sequence.",
+          en: "Built modular Remotion components: Scene1Hook (calendar & digital clock animation), MotionBadge, SafeZoneContainer, and HeroProductLineup 5 colorways. Integrated ElevenLabs audio per frame sequence.",
+        },
+        keyDeliverable: {
+          id: "Komposisi React Remotion (NespressoVideo & NespressoVideoV2)",
+          en: "Remotion React Compositions (NespressoVideo & NespressoVideoV2)",
+        },
+      },
+      {
+        phase: "Tahap 05",
+        title: {
+          id: "Mastering Audio & Ekspor Video Final",
+          en: "Audio Mastering & Final Multi-Variation Export",
+        },
+        turnaroundTime: {
+          id: "Hari ke-5",
+          en: "Day 5",
+        },
+        tools: ["Remotion CLI (npx remotion render)", "Audacity / Audio EQ"],
+        summary: {
+          id: "Merender video vertikal 1080×1920 30fps (900 frame) langsung dari CLI Remotion. Menyeimbangkan audio loudness (-14 LUFS) dengan perpaduan VO vokal jernih, background music modern lofi-groove, dan SFX mekanikal mesin presisi.",
+          en: "Rendered 1080×1920 30fps vertical video (900 frames) directly via Remotion CLI. Balanced audio loudness (-14 LUFS) combining clear voiceover, modern lofi-groove BGM, and tactile mechanical SFX.",
+        },
+        keyDeliverable: {
+          id: "2 File Video MP4 Final (V1 Emergency 30s & V2 Sensory 30s)",
+          en: "2 Final MP4 Video Files (V1 Emergency 30s & V2 Sensory 30s)",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Transisi emosional dari kepanikan jam 08:55 ke rasa lega di jam 08:59 menciptakan resolusi narasi yang sangat kuat bagi pekerja remote.",
+          en: "The emotional pacing transition from 8:55 AM panic to 8:59 AM calm relief establishes a compelling narrative resolution for remote professionals.",
+        },
+        {
+          id: "Macro shot sendok menyibak busa crema pada Variasi 2 memberikan thumb-stop rate instan melalui daya pikat sensori ASMR kopi yang memuaskan.",
+          en: "The macro crema spoon dip in Variation 2 delivers immediate thumb-stop retention through satisfying coffee ASMR appeal.",
+        },
+        {
+          id: "Penerapan batas TikTok Safe Zone yang disiplin memastikan tipografi pill badge bebas dari tabrakan dengan antarmuka native aplikasi.",
+          en: "Disciplined TikTok Safe Zone enforcement ensures high-contrast pill badge captions never collide with native UI overlays.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Variasi 2 memerlukan penekanan edukasi lebih eksplisit mengenai teknologi barcode agar penonton tidak menyamakannya dengan mesin kapsul pompa biasa.",
+          en: "Variation 2 requires more explicit educational emphasis on barcode scanning so viewers clearly distinguish it from ordinary pump capsule machines.",
+        },
+        {
+          id: "Ketergantungan pada rekaman b-roll publik memerlukan kurasi grading warna yang cermat agar saturasi crema tetap konsisten di layar smartphone modern.",
+          en: "Reliance on public B-roll requires meticulous color grading curation to keep crema saturation consistent across modern mobile displays.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Evaluasi ini difokuskan pada analisis keputusan ritme editing, sinkronisasi audio-visual, dan efektivitas struktur direct response. Karena berstatus spec ad portofolio independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim performa ROAS atau konversi semu yang dibuat.",
+        en: "This evaluation focuses strictly on editorial rhythm, audio-visual synchronization, and direct response pacing. As an independent portfolio spec ad case study not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
+      },
+      creativeLearnings: [
+        {
+          id: "Pacing kontras (cut cepat 1.2s saat fase panik, melambat ke 3s saat fase sensori crema) menjaga momentum retensi penonton secara signifikan.",
+          en: "Contrasting pacing (rapid 1.2s cuts during panic scenes slowing down to 3s for sensory crema) substantially preserves viewer retention.",
+        },
+        {
+          id: "Integrasi SFX mekanikal mesin (tuas terkunci, klik tombol, desingan rotasi) yang disinkronkan per frame di Remotion memberikan kepuasan taktil yang memperkuat persepsi produk premium.",
+          en: "Frame-accurate mechanical SFX integration in Remotion (lever lock, button click, spin whir) provides tactile satisfaction that elevates premium appliance perception.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Menyiapkan pengujian A/B live testing di TikTok Ads dengan membandingkan hook jam 08:55 (urgensi waktu) melawan macro crema ASMR (sensori rasa) secara terisolasi untuk mengukur rasio thumb-stop 3 detik pertama.",
+        en: "Prepare an A/B live test in TikTok Ads pitting the 8:55 AM clock hook (time urgency) against the macro crema ASMR hook (sensory taste) in isolation to measure real-world 3-second thumbstop rates.",
+      },
+    },
+  },
 ];
 
 export const PRODUCTION_PIPELINE = [

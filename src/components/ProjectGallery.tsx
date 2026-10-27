@@ -24,7 +24,7 @@ export function ProjectGallery() {
         <div className="flex items-center gap-2">
           <span className="px-3 py-1 rounded-full text-xs font-mono bg-white/[0.06] text-white border border-white/[0.08] flex items-center gap-1.5">
             <Sparkles className="w-3 h-3 text-emerald-400" />
-            <span>Katama Coffee & Space (3 Angles)</span>
+            <span>Katama Coffee • Nespresso Vertuo</span>
           </span>
         </div>
       </div>
