@@ -2,7 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Check, Award, BrainCircuit, Sparkles, Terminal } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  BrainCircuit,
+  Sparkles,
+  Compass,
+  Film,
+  Code2,
+  CheckCircle2,
+} from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
@@ -10,65 +19,20 @@ export function AboutView() {
   const { lang } = useLanguage();
   const t = TRANSLATIONS[lang].about;
 
-  const principles = [
-    {
-      title: lang === "id" ? "Algoritma menyaring, tetapi manusia yang memutuskan." : "Algorithms filter, but humans decide.",
-      description: lang === "id"
-        ? "Meskipun algoritma TikTok dan Meta menentukan distribusi tayangan, psikologi audiens yang menentukan tindakan. Setiap video dirancang untuk memicu emosi yang tepat di detik awal."
-        : "While social media algorithms control impression distribution, human psychology drives action. Every video is engineered to trigger the right emotion in the opening seconds.",
-    },
-    {
-      title: lang === "id" ? "Visual estetik tanpa diferensiasi fungsional adalah sia-sia." : "Aesthetic visuals without functional differentiators fall flat.",
-      description: lang === "id"
-        ? "Banyak video kafe atau produk yang secara visual indah tetapi gagal menarik pelanggan karena tidak menjawab masalah nyata seperti colokan, jam buka, atau fasilitas darurat."
-        : "Many product videos look visually stunning yet fail to convert because they ignore real audience anxieties like opening hours, outlets, or emergency utility.",
-    },
-    {
-      title: lang === "id" ? "Kode dan AI adalah akselerator eksekusi." : "Code and AI serve as execution accelerators.",
-      description: lang === "id"
-        ? "Remotion dan ElevenLabs memungkinkan pengujian berbagai sudut naskah secara modular tanpa proses rekaman ulang yang lambat dan mahal."
-        : "Remotion and ElevenLabs allow rapid multi-angle testing without the latency and prohibitive costs of traditional reshoots.",
-    },
-    {
-      title: lang === "id" ? "Presisi per frame tidak bisa dikompromikan." : "Frame-by-frame precision is non-negotiable.",
-      description: lang === "id"
-        ? "Satu detik jeda tanpa informasi visual dapat memicu penonton melakukan swipe-away. Pemotongan adegan harus efisien dan langsung ke pokok pesan."
-        : "A single dead second in social feeds triggers an instant swipe-away. Scene cuts must be purposeful, rhythmic, and content-dense.",
-    },
-  ];
-
-  const workstationSpecs = [
-    {
-      label: lang === "id" ? "Framework Video Programmatic" : "Programmatic Video Framework",
-      value: "Remotion 4.0 (React, TypeScript, Tailwind CSS)",
-    },
-    {
-      label: lang === "id" ? "Neural Voiceover AI" : "Neural Voiceover AI",
-      value: "ElevenLabs (Model Multilingual v2 / Bian)",
-    },
-    {
-      label: lang === "id" ? "NLE & Footage Prep" : "NLE & Footage Preparation",
-      value: "Adobe Premiere Pro (9:16 Vertical Assembly)",
-    },
-    {
-      label: lang === "id" ? "Audio Mastering" : "Audio Mastering & Loudness",
-      value: "Standard -14 LUFS Broadcast Mobile EQ",
-    },
-    {
-      label: lang === "id" ? "Kecepatan Iterasi Naskah" : "Script Iteration Turnaround",
-      value: lang === "id" ? "36–48 jam per batch variasi hook" : "36–48 hours per hook variation batch",
-    },
-    {
-      label: lang === "id" ? "Basis Operasi" : "Operating Base",
-      value: "Bandar Lampung, Indonesia (WIB / GMT+7)",
-    },
+  // Icons for 3 skill capability groups
+  const skillIcons = [
+    <Compass key="strat" className="w-4 h-4 text-emerald-400" />,
+    <Film key="prod" className="w-4 h-4 text-sky-400" />,
+    <Code2 key="prog" className="w-4 h-4 text-violet-400" />,
   ];
 
   return (
-    <div className="space-y-20 sm:space-y-28 pb-24">
-      {/* Header & Portrait Profile Section */}
-      <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+    <div className="space-y-24 sm:space-y-32 pb-24">
+      {/* 1. Header & Portrait Profile Section */}
+      <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08] relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-64 bg-white/[0.02] blur-3xl pointer-events-none rounded-full" />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
             <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
             <span>{t.eyebrow}</span>
@@ -85,8 +49,8 @@ export function AboutView() {
               </p>
 
               {/* Profile Intro Callout */}
-              <div className="p-5 rounded-2xl bg-[#0d0d10] border border-white/[0.08] space-y-2">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 block">
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#0d0d10] border border-white/[0.08] space-y-2">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 block font-medium">
                   {t.profileRole}
                 </span>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
@@ -118,109 +82,156 @@ export function AboutView() {
         </div>
       </section>
 
-      {/* Main Narrative & Philosophy */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Narrative */}
-          <div className="lg:col-span-7 space-y-8 text-sm text-zinc-400 leading-relaxed">
-            <div className="space-y-4">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
-                {t.storyHeading}
-              </h2>
-              <p>{t.storyP1}</p>
-              <p>{t.storyP2}</p>
-              <p>{t.storyP3}</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-4">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase text-zinc-300">
-                <BrainCircuit className="w-4 h-4 text-emerald-400" />
-                <span>{t.thesisBoxTitle}</span>
-              </div>
-              <p className="text-xs text-zinc-400 leading-relaxed">
-                {t.thesisBoxText}
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white tracking-tight">
-                {t.targetClientsHeading}
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-emerald-400 mt-1 shrink-0" />
-                  <span>{t.target1}</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-emerald-400 mt-1 shrink-0" />
-                  <span>{t.target2}</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-emerald-400 mt-1 shrink-0" />
-                  <span>{t.target3}</span>
-                </li>
-              </ul>
-            </div>
+      {/* 2. Creative Philosophy & 5 Guiding Principles */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+        {/* Narrative & Core Rule */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-7 space-y-5 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            <h2 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
+              {t.storyHeading}
+            </h2>
+            <p>{t.storyP1}</p>
+            <p>{t.storyP2}</p>
+            <p>{t.storyP3}</p>
           </div>
 
-          {/* Right Column: Workstation & Principles */}
-          <div className="lg:col-span-5 space-y-8">
-            {/* Workstation Specs Card */}
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400">
-                <Terminal className="w-3.5 h-3.5 text-zinc-300" />
-                <span>{t.studioHeading}</span>
-              </div>
-
-              <div className="space-y-3">
-                {workstationSpecs.map((spec, idx) => (
-                  <div key={idx} className="pb-3 border-b border-white/[0.04] last:border-b-0 space-y-0.5">
-                    <span className="text-[10px] font-mono uppercase text-zinc-500 block">{spec.label}</span>
-                    <span className="text-xs font-medium text-zinc-200">{spec.value}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="lg:col-span-5 p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-3.5">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase text-emerald-400 font-medium">
+              <BrainCircuit className="w-4 h-4 text-emerald-400" />
+              <span>{t.thesisBoxTitle}</span>
             </div>
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+              {t.thesisBoxText}
+            </p>
+          </div>
+        </div>
 
-            {/* Core Values Card */}
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-4">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400">
-                <Award className="w-3.5 h-3.5 text-emerald-400" />
-                <span>{t.rulesHeading}</span>
-              </div>
+        {/* 5 Practical Principles */}
+        <div className="rounded-3xl bg-[#09090b] border border-white/[0.08] p-6 sm:p-10 space-y-6">
+          <div className="border-b border-white/[0.06] pb-4 space-y-1">
+            <h3 className="text-lg sm:text-xl font-semibold text-white tracking-tight">
+              {t.principlesHeading}
+            </h3>
+            <p className="text-xs text-zinc-400">
+              {t.principlesSub}
+            </p>
+          </div>
 
-              <div className="space-y-3">
-                {principles.map((p, idx) => (
-                  <div key={idx} className="space-y-1">
-                    <h4 className="text-xs font-semibold text-white">{p.title}</h4>
-                    <p className="text-[11px] text-zinc-400 leading-relaxed">{p.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {t.principles.map((p, idx) => (
+              <div
+                key={idx}
+                className="p-5 rounded-2xl bg-[#0e0e11] border border-white/[0.06] hover:border-white/[0.12] transition-colors space-y-2.5 flex flex-col justify-between"
+              >
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono font-semibold text-zinc-500 uppercase tracking-wider">
+                      Principle 0{idx + 1}
+                    </span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                   </div>
-                ))}
+                  <h4 className="text-sm font-semibold text-white tracking-tight">
+                    {p.title}
+                  </h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* 3. Skills & Tech Stack — Organized by Capability (3 Groups) */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div className="border-b border-white/[0.06] pb-6 space-y-1">
+          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400">
+            <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
+            <span>{t.skillsHeading}</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+            {t.skillsSub}
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {t.skills.map((group, idx) => (
+            <div
+              key={idx}
+              className="p-6 sm:p-7 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] hover:border-white/[0.14] transition-all flex flex-col justify-between space-y-6"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center">
+                    {skillIcons[idx % skillIcons.length]}
+                  </div>
+                  <span className="text-[10px] font-mono text-zinc-400 bg-white/[0.03] border border-white/[0.06] px-2.5 py-0.5 rounded-md">
+                    {group.tag}
+                  </span>
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-base font-semibold text-white tracking-tight">
+                    {group.category}
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    {group.summary}
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 pt-2 border-t border-white/[0.04] text-xs text-zinc-300">
+                  {group.items.map((item, iIdx) => (
+                    <li key={iIdx} className="flex items-start gap-2.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. Simplified Closing CTA Banner */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="p-6 sm:p-12 rounded-2xl bg-[#09090b] border border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-6 overflow-hidden">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-white tracking-tight">
-              {t.readyHeading}
+        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-b from-[#111114] to-[#0a0a0c] border border-white/[0.08] text-center space-y-6 overflow-hidden relative">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-32 bg-emerald-500/[0.03] blur-3xl pointer-events-none rounded-full" />
+
+          {/* Availability Status Pill */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>{t.cta.status}</span>
+          </div>
+
+          <div className="max-w-xl mx-auto space-y-3">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              {t.cta.heading}
             </h3>
-            <p className="text-xs text-zinc-400">
-              {t.readySub}
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              {t.cta.subheadline}
             </p>
           </div>
 
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all self-start sm:self-auto shadow-md"
-          >
-            <span>{t.readyBtn}</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
+          {/* Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-md"
+            >
+              <span>{t.cta.primaryBtn}</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+
+            <Link
+              href="/#work"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all"
+            >
+              <span>{t.cta.secondaryBtn}</span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

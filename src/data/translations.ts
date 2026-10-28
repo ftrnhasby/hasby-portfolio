@@ -353,27 +353,106 @@ export const TRANSLATIONS = {
       },
     },
     about: {
-      eyebrow: "Tesis & Latar Belakang",
-      headline: "Menghubungkan estetika visual dengan psikologi direct response.",
-      subheadline: "Saya Hasby — editor video direct response yang memanfaatkan Remotion (React) dan generative audio untuk menghasilkan video iklan berperforma tinggi.",
+      eyebrow: "Filosofi & Latar Belakang",
+      headline: "Menghubungkan strategi direct response dengan eksekusi visual yang terarah.",
+      subheadline: "Saya Hasby — video editor direct response yang memadukan storytelling strategis, editing terstruktur, dan komponen programmatic Remotion untuk menghasilkan video iklan pendek yang relevan.",
       portraitAlt: "Potret profesional Hasby — AI & Direct Response Video Editor",
-      profileRole: "AI & Programmatic Video Editor",
-      profileBio: "Hasby adalah seorang AI-assisted Direct Response Video Editor yang berfokus menciptakan video iklan berperforma tinggi, variasi kreatif teruji, dan visual storytelling berbasis motion.",
-      storyHeading: "Filosofi & Pendekatan Kerja",
-      storyP1: "Di era vertical feed (TikTok & Instagram Reels), iklan video yang terlihat seperti iklan televisi konvensional justru diabaikan penonton dalam 2 detik pertama.",
-      storyP2: "Banyak video kafe atau produk yang secara visual estetik, tetapi gagal menyampaikan proposisi nilai unik secara jelas dan cepat. Di sinilah pendekatan direct response berperan: membedah masalah nyata audiens dan memberikan solusi yang tak terbantahkan.",
-      storyP3: "Dengan menggunakan Remotion, saya memprogram video layaknya software: komponen animasi dapat diubah secara instan, teks kinetik tersinkronisasi frame-by-frame dengan audio, dan berbagai angle naskah dapat diekspor secara modular.",
-      thesisBoxTitle: "Prinsip Direct Response",
-      thesisBoxText: "Setiap detik dan frame harus memiliki alasan psikologis yang jelas: menarik perhatian di awal, memvalidasi keresahan audiens, membuktikan keunggulan produk, dan mengarahkan tindakan nyata.",
+      profileRole: "Remote AI & Direct Response Video Editor",
+      profileBio: "Fokus pada pembuatan video iklan vertikal (9:16) untuk media sosial. Menggabungkan riset friksi audiens, variasi sudut pandang kreatif, dan alur kerja berbasis kode untuk mendukung proses iterasi yang efisien.",
+      storyHeading: "Filosofi Kreatif: Setiap Elemen Memiliki Tujuan",
+      storyP1: "Di tengah feed media sosial yang bergerak cepat, video iklan membutuhkan kejelasan sejak detik pertama. Perhatian penonton tidak didapatkan lewat dekorasi berlebihan, melainkan dengan segera menunjukkan mengapa pesan tersebut relevan bagi kehidupan atau masalah mereka.",
+      storyP2: "Banyak video promosi terlihat estetik, namun kurang efektif karena tidak menonjolkan proposisi nilai yang jelas dan fungsional. Pendekatan direct response menempatkan audiens sebagai pusat: mengidentifikasi friksi nyata, menyusun naskah yang to the point, dan memandu penonton menuju tindakan yang jelas.",
+      storyP3: "Dengan memanfaatkan alur kerja berbantuan AI dan Remotion, proses produksi menjadi lebih terstruktur: komponen animasi teks dan layout dapat digunakan kembali, sinkronisasi audio terkunci presisi, dan pengujian variasi naskah dapat dilakukan tanpa harus membangun ulang seluruh proyek dari nol.",
+      thesisBoxTitle: "Prinsip Utama: Visual yang Bekerja untuk Pesan",
+      thesisBoxText: "Setiap potongan gambar, baris tipografi, dan efek suara harus memiliki alasan: menarik perhatian dengan relevansi, memvalidasi friksi konsumen, membuktikan nilai produk, dan mengarahkan tindakan yang masuk akal.",
+
+      // 5 Practical Principles
+      principlesHeading: "Prinsip Kerja Kreatif",
+      principlesSub: "Pedoman praktis dalam merancang dan mengedit setiap video iklan.",
+      principles: [
+        {
+          title: "Hook yang Relevan",
+          desc: "Menangkap perhatian penonton dengan segera menunjukkan mengapa pesan ini penting bagi mereka, bukan sekadar trik visual tanpa konteks.",
+        },
+        {
+          title: "Visual Pendukung Pesan",
+          desc: "Memanfaatkan footage, tipografi kinetik, motion, dan komposisi untuk memperkuat pesan utama, bukan sekadar hiasan tanpa fungsi.",
+        },
+        {
+          title: "Kejelasan Pesan",
+          desc: "Menyampaikan masalah audiens, proposisi nilai, dan solusi produk secara lugas agar mudah dipahami tanpa kebingungan.",
+        },
+        {
+          title: "Pacing yang Terarah",
+          desc: "Mengatur ritme pemotongan adegan dan transisi suara untuk menjaga dinamika tontonan yang nyaman dan fokus pada pesan.",
+        },
+        {
+          title: "Call-to-Action yang Terarah",
+          desc: "Menyelaraskan ajakan bertindak dengan tujuan periklanan dan langkah nyata yang wajar bagi penonton.",
+        },
+      ],
+
+      // Skills & Capabilities (3 Groups)
+      skillsHeading: "Keahlian & Kapabilitas Kerja",
+      skillsSub: "Diorganisasikan berdasarkan fungsi nyata dalam alur produksi video iklan.",
+      skills: [
+        {
+          category: "A. Strategi Kreatif",
+          tag: "Creative Strategy",
+          summary: "Fondasi riset dan perumusan pesan sebelum produksi dimulai.",
+          items: [
+            "Konsep iklan direct response",
+            "Pengembangan hook & variasi sudut pandang (Angles Matrix)",
+            "Penulisan naskah percakapan & storyboard adegan",
+            "Penyusunan pesan berbasis masalah audiens (VOC)",
+            "Perencanaan variasi kreatif untuk pengujian",
+          ],
+        },
+        {
+          category: "B. Produksi Video",
+          tag: "Video Production",
+          summary: "Eksekusi editing visual, audio, dan penyelarasan format media sosial.",
+          items: [
+            "Produksi audio & visual berbantuan AI",
+            "Editing video sinematik & motion graphics",
+            "Tipografi kinetik & komposisi visual rasio 9:16",
+            "Finishing audio & kalibrasi loudness (-14 LUFS)",
+            "Ekspor standar broadcast media sosial (TikTok & Reels)",
+          ],
+        },
+        {
+          category: "C. Editing Programmatic",
+          tag: "Programmatic Editing",
+          summary: "Workflow berbasis kode untuk komponen modular dan iterasi yang efisien.",
+          items: [
+            "Framework video Remotion (React & TypeScript)",
+            "Komponen video modular & template motion terstruktur",
+            "Sinkronisasi audio dan animasi teks frame-accurate",
+            "Kemudahan revisi dan ekspor variasi kreatif",
+            "Alur kerja terorganisir untuk pengujian multi-angle",
+          ],
+        },
+      ],
+
+      // Simplified Final CTA
+      cta: {
+        status: "Tersedia untuk Proyek Video Pendek Terpilih",
+        heading: "Punya Proyek Video Iklan?",
+        subheadline: "Saya terbuka untuk berdiskusi tentang proyek video pendek yang menggabungkan strategi kreatif, editing yang terarah, dan workflow produksi yang terstruktur.",
+        primaryBtn: "Diskusikan Proyek",
+        secondaryBtn: "Lihat Portfolio",
+      },
+
+      // Backward compatibility aliases
       targetClientsHeading: "Kategori Kolaborasi Ideal",
-      target1: "Brand F&B & Lifestyle Lokal: Ingin membedakan diri dari kompetitor dengan mengangkat keunikan fasilitas fungsional (seperti Katama Coffee & Space).",
-      target2: "Produk Digital & SaaS: Membutuhkan video penjelasan cepat berkecepatan tinggi dengan grafik kinetik yang rapi.",
-      target3: "Tim Growth & Performance Marketing: Memerlukan editor yang mengerti metrik retensi 3 detik, drop-off rate, dan pengujian hook dinamis.",
-      studioHeading: "Lingkungan Studio & Tech Stack",
-      rulesHeading: "Pedoman Kerja Kreatif",
-      readyHeading: "Tertarik berkolaborasi untuk proyek berikutnya?",
-      readySub: "Kirim pesan langsung atau tinjau ketersediaan jadwal pengerjaan.",
-      readyBtn: "Hubungi Sekarang",
+      target1: "Brand F&B & Lifestyle: Mengangkat nilai fungsional pembeda produk.",
+      target2: "Produk Digital & SaaS: Video vertikal penjelas produk yang ringkas.",
+      target3: "Tim Performance & Growth: Eksplorasi hook dinamis dan variasi kreatif.",
+      studioHeading: "Keahlian & Kapabilitas Kerja",
+      rulesHeading: "Prinsip Kerja Kreatif",
+      readyHeading: "Punya Proyek Video Iklan?",
+      readySub: "Saya terbuka untuk berdiskusi tentang proyek video pendek yang menggabungkan strategi kreatif, editing yang terarah, dan workflow produksi yang terstruktur.",
+      readyBtn: "Diskusikan Proyek",
     },
     contact: {
       eyebrow: "Penerimaan Brief Proyek",
@@ -834,27 +913,108 @@ export const TRANSLATIONS = {
       },
     },
     about: {
-      eyebrow: "Creative Thesis & Background",
-      headline: "Bridging the gap between brand elegance and aggressive direct response.",
-      subheadline: "I am Hasby — a direct response video editor leveraging Remotion (React) and generative audio to build high-performance social video ads.",
+      eyebrow: "Creative Philosophy & Background",
+      headline: "Connecting direct-response strategy with purposeful visual execution.",
+      subheadline: "I am Hasby — a direct response video editor combining strategic storytelling, disciplined editing, and programmatic Remotion components to craft relevant short-form video ads.",
       portraitAlt: "Professional portrait of Hasby — AI & Direct Response Video Editor",
-      profileRole: "AI & Programmatic Video Editor",
-      profileBio: "Hasby is an AI-assisted Direct Response Video Editor creating performance-focused video ads, creative variations, and motion-driven storytelling.",
-      storyHeading: "Philosophy & Editorial Craft",
-      storyP1: "In modern vertical social feeds (TikTok & Instagram Reels), ads that mimic conventional corporate television commercials get swiped away within the first two seconds.",
-      storyP2: "Many cafe and product videos look aesthetically pleasant, yet fail to communicate functional value propositions with speed and clarity. That is where direct response principles matter: dissecting customer pain points and presenting an immediate, compelling solution.",
-      storyP3: "By leveraging Remotion, I treat video editing like software engineering: visual components can be styled dynamically, kinetic typography is locked to audio frame-by-frame, and multiple angle variations can be compiled programmatically.",
-      thesisBoxTitle: "The Direct Response Rule",
-      thesisBoxText: "Every second and frame must justify its presence: demand attention early, validate real customer frustrations, demonstrate proof, and direct explicit action.",
+      profileRole: "Remote AI & Direct Response Video Editor",
+      profileBio: "Focused on crafting high-clarity 9:16 vertical video ads for social feeds. Combining audience friction research, creative angle variations, and code-driven workflows to support efficient iteration.",
+      
+      // Creative Philosophy
+      storyHeading: "Creative Philosophy: Every Element Serves a Purpose",
+      storyP1: "In fast-paced social media feeds, video ads need immediate clarity. Attention isn't won through decorative excess, but by helping viewers understand right away why the message matters to their real-world needs.",
+      storyP2: "Many promotional videos look pleasant yet struggle to communicate functional value propositions with speed and clarity. A direct-response approach places audience problems front and center: identifying genuine friction, writing conversational copy, and directing viewers toward clear action.",
+      storyP3: "By leveraging AI-assisted tools and Remotion, production becomes more structured: typography components and split layouts can be reused, audio timing remains frame-accurate, and message variations can be iterated without rebuilding projects from scratch.",
+      thesisBoxTitle: "The Core Rule: Visuals That Work for the Message",
+      thesisBoxText: "Every cut, line of typography, and sound effect must serve a distinct purpose: hook with relevance, validate customer friction, demonstrate value, and direct an intentional next step.",
+
+      // 5 Practical Principles
+      principlesHeading: "Guiding Creative Principles",
+      principlesSub: "Practical guidelines applied across every advertising video project.",
+      principles: [
+        {
+          title: "Hook with Relevance",
+          desc: "Capture attention by making viewers immediately understand why the message matters to them, rather than relying on gimmicks without context.",
+        },
+        {
+          title: "Visuals That Support the Message",
+          desc: "Use footage, typography, motion, and composition to strengthen the core message rather than add decoration without purpose.",
+        },
+        {
+          title: "Clear Messaging",
+          desc: "Present customer problems, value propositions, and product solutions clearly so they are easy to understand without friction.",
+        },
+        {
+          title: "Purposeful Pacing",
+          desc: "Use editing rhythm and sound design to support the narrative arc and provide a comfortable, engaging viewing experience.",
+        },
+        {
+          title: "Intentional CTA",
+          desc: "Align the call to action with the advertising objective and the audience's natural next step.",
+        },
+      ],
+
+      // Skills & Capabilities (3 Groups)
+      skillsHeading: "Skills & Capabilities",
+      skillsSub: "Structured by operational capability across the short-form video workflow.",
+      skills: [
+        {
+          category: "A. Creative Strategy",
+          tag: "Creative Strategy",
+          summary: "Research foundation and messaging architecture developed prior to editing.",
+          items: [
+            "Direct-response creative concepts",
+            "Hook development & creative angles matrix",
+            "Scriptwriting & scene-by-scene storyboard choreography",
+            "Audience-focused messaging & pain point mining (VOC)",
+            "Creative variation planning for audience testing",
+          ],
+        },
+        {
+          category: "B. Video Production",
+          tag: "Video Production",
+          summary: "Hands-on visual and audio editing tailored for native vertical platforms.",
+          items: [
+            "AI-assisted video & synthetic audio production",
+            "Cinematic video editing & motion graphics",
+            "Kinetic typography & 9:16 vertical composition",
+            "Audio finishing & loudness calibration (-14 LUFS)",
+            "Exporting & quality control for TikTok & Instagram Reels",
+          ],
+        },
+        {
+          category: "C. Programmatic Editing",
+          tag: "Programmatic Editing",
+          summary: "Code-driven workflows enabling modular assets and efficient iteration.",
+          items: [
+            "Remotion video framework (React & TypeScript)",
+            "Reusable video components & structured motion templates",
+            "Frame-accurate audio synchronization & kinetic text timing",
+            "Frictionless revisions & multi-angle export pipelines",
+            "Organized component architectures for testing variations",
+          ],
+        },
+      ],
+
+      // Simplified Final CTA
+      cta: {
+        status: "Available for Select Short-Form Video Projects",
+        heading: "Have a Video Ad Project in Mind?",
+        subheadline: "I'm open to discussing short-form video projects that combine thoughtful creative strategy, purposeful editing, and structured production workflows.",
+        primaryBtn: "Discuss a Project",
+        secondaryBtn: "View My Work",
+      },
+
+      // Backward compatibility aliases
       targetClientsHeading: "Ideal Collaboration Profiles",
-      target1: "Local F&B & Lifestyle Brands: Seeking to stand out from competitors by highlighting high-value functional differentiators (e.g., Katama Coffee & Space).",
-      target2: "Digital Products & SaaS: Requiring crisp, high-velocity explainer and social ads with polished kinetic motion.",
-      target3: "Growth & Performance Marketing Teams: Needing an editor who natively understands 3-second hold rates, drop-off curves, and iterative hook matrices.",
-      studioHeading: "Studio Environment & Tech Stack",
-      rulesHeading: "Guiding Editorial Principles",
-      readyHeading: "Interested in collaborating on your next campaign?",
-      readySub: "Reach out directly or review current sprint availability.",
-      readyBtn: "Get in Touch",
+      target1: "F&B & Lifestyle Brands: Elevating functional differentiators.",
+      target2: "Digital Products & SaaS: Fast, clean visual explainer videos.",
+      target3: "Performance & Growth Teams: Iterative hook and angle variations.",
+      studioHeading: "Skills & Capabilities",
+      rulesHeading: "Guiding Creative Principles",
+      readyHeading: "Have a Video Ad Project in Mind?",
+      readySub: "I'm open to discussing short-form video projects that combine thoughtful creative strategy, purposeful editing, and structured production workflows.",
+      readyBtn: "Discuss a Project",
     },
     contact: {
       eyebrow: "Project Intake Portal",
