@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
@@ -10,8 +10,18 @@ import { TRANSLATIONS } from "@/data/translations";
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { lang, setLang } = useLanguage();
   const t = TRANSLATIONS[lang].nav;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 15);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "/", label: t.work },
@@ -21,7 +31,14 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#070708]/80 backdrop-blur-xl transition-all">
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-nav-in ${
+          scrolled
+            ? "border-b border-white/[0.12] bg-[#070708]/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+            : "border-b border-white/[0.08] bg-[#070708]/75 backdrop-blur-md"
+        }`}
+      >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand Wordmark */}
         <Link 
@@ -163,5 +180,9 @@ export function Navbar() {
         </div>
       )}
     </header>
+
+    {/* Spacer matching exact header height so content flow is 100% preserved */}
+    <div className="h-16 shrink-0" aria-hidden="true" />
+  </>
   );
 }

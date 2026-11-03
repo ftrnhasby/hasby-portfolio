@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasby-portfolio.pages.dev"),
   title: {
-    default: "Fitran Hasby — AI & Direct Response Video Editor",
+    default: "Fitran Hasby — AI Direct Response Creative Specialist",
     template: "%s | Fitran Hasby",
   },
   description:
-    "Portfolio of Fitran Hasby, an AI-assisted Direct Response Video Editor creating high-retention vertical video ads, creative variations, and programmatic motion storytelling.",
+    "Portfolio of Fitran Hasby, an AI Direct Response Creative Specialist turning customer research into testable video ads for TikTok and Instagram Reels.",
   alternates: {
     canonical: "https://hasby-portfolio.pages.dev/",
   },
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Fitran Hasby — AI & Direct Response Video Editor",
+    title: "Fitran Hasby — AI Direct Response Creative Specialist",
     description:
-      "High-retention vertical video ads, creative variations, and programmatic motion storytelling.",
+      "Turning customer research into high-retention video ads ready for testing on TikTok and Instagram Reels.",
     url: "https://hasby-portfolio.pages.dev/",
     siteName: "Fitran Hasby Portfolio",
     locale: "id_ID",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "https://hasby-portfolio.pages.dev/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fitran Hasby — AI & Direct Response Video Editor",
+        alt: "Fitran Hasby — AI Direct Response Creative Specialist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fitran Hasby — AI & Direct Response Video Editor",
+    title: "Fitran Hasby — AI Direct Response Creative Specialist",
     description:
-      "High-retention vertical video ads, creative variations, and programmatic motion storytelling.",
+      "Turning customer research into high-retention video ads ready for testing on TikTok and Instagram Reels.",
     images: ["https://hasby-portfolio.pages.dev/og-image.png"],
   },
   robots: {
@@ -83,7 +83,26 @@ export default function RootLayout({
     <html
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var saved = localStorage.getItem('hasby_portfolio_lang');
+                if (saved === 'en') {
+                  document.documentElement.classList.add('lang-loading');
+                  document.documentElement.lang = 'en';
+                }
+                setTimeout(function() {
+                  document.documentElement.classList.remove('lang-loading');
+                }, 400);
+              } catch(e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#070708] text-[#f5f5f7]">
         <LanguageProvider>
           <Navbar />

@@ -117,8 +117,8 @@ export const PROJECTS: Project[] = [
     },
     creativeStrategy: {
       projectType: {
-        id: "Spec Ad / Portofolio Transformatif Independen",
-        en: "Spec Ad / Independent Transformative Portfolio Project",
+        id: "Spec ad independen",
+        en: "Independent spec ad",
       },
       objective: {
         id: "Merancang rangkaian video iklan direct response format vertikal (9:16) untuk memperkenalkan Katama Coffee & Space Way Halim sebagai 'All-in-One Productivity Hub' bagi mahasiswa kampus (Unila, ITERA, UBL, Teknokrat) dan pekerja remote di Bandar Lampung.",
@@ -988,8 +988,8 @@ export const PROJECTS: Project[] = [
         },
       ],
       creativeAssessment: {
-        id: "Evaluasi ini difokuskan pada analisis keputusan kreatif, ritme pacing, dan kekuatan narasi naskah. Karena ini merupakan spec ad portofolio independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim ROAS atau konversi semu yang dibuat.",
-        en: "This evaluation focuses strictly on creative decision-making, editorial pacing, and narrative strength. As an independent portfolio spec ad not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
+        id: "Evaluasi ini difokuskan pada analisis keputusan kreatif, ritme pacing, dan kekuatan narasi naskah. Karena ini merupakan spec ad independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim ROAS atau konversi semu yang dibuat.",
+        en: "This evaluation focuses strictly on creative decision-making, editorial pacing, and narrative strength. As an independent spec ad not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
       },
       creativeLearnings: [
         {
@@ -1033,8 +1033,8 @@ export const PROJECTS: Project[] = [
         en: "Creative Angle Variations",
       },
       subtext: {
-        id: "30s Vertikal 9:16 (Render Nyata Remotion)",
-        en: "30s 9:16 Vertical (Actual Remotion Renders)",
+        id: "45s & 41s Vertikal 9:16 (Render Nyata Remotion)",
+        en: "45s & 41s 9:16 Vertical (Actual Remotion Renders)",
       },
     },
     secondaryHighlights: [
@@ -1104,12 +1104,12 @@ export const PROJECTS: Project[] = [
       ],
       deliverables: [
         {
-          id: "Variasi 1: Video Vertikal 'The 08:55 AM Meeting Emergency' (30 Detik, 900 frame @ 30fps)",
-          en: "Variation 1: Vertical Video 'The 08:55 AM Meeting Emergency' (30s, 900 frames @ 30fps)",
+          id: "Variasi 1: Video Vertikal 'The 08:55 AM Meeting Emergency' (Durasi Final 45s / Storyboard Awal 30s, 1080×1920 @ 30fps)",
+          en: "Variation 1: Vertical Video 'The 08:55 AM Meeting Emergency' (Final 45s / Initial Storyboard 30s, 1080×1920 @ 30fps)",
         },
         {
-          id: "Variasi 2: Video Vertikal 'The 30-Second Desk Barista / Crema Contrast' (30 Detik, 900 frame @ 30fps)",
-          en: "Variation 2: Vertical Video 'The 30-Second Desk Barista / Crema Contrast' (30s, 900 frames @ 30fps)",
+          id: "Variasi 2: Video Vertikal 'The 30-Second Desk Barista / Crema Contrast' (Durasi Final 41s / Storyboard Awal 30s, 1080×1920 @ 30fps)",
+          en: "Variation 2: Vertical Video 'The 30-Second Desk Barista / Crema Contrast' (Final 41s / Initial Storyboard 30s, 1080×1920 @ 30fps)",
         },
         {
           id: "Komposisi Remotion modular (NespressoVideo & NespressoVideoV2) dengan sinkronisasi vokal ElevenLabs",
@@ -1119,8 +1119,8 @@ export const PROJECTS: Project[] = [
     },
     creativeStrategy: {
       projectType: {
-        id: "Spec Ad / Portofolio Transformatif Independen",
-        en: "Spec Ad / Independent Transformative Portfolio Project",
+        id: "Spec ad independen",
+        en: "Independent spec ad",
       },
       objective: {
         id: "Merancang rangkaian video iklan direct response format vertikal (9:16) untuk Nespresso Vertuo Pop di media sosial (TikTok & Reels). Menghubungkan kecepatan seduh 30 detik, pengenalan barcode otomatis, dan kapasitas mug 230ml dengan crema tebal langsung di meja kerja para profesional WFH.",
@@ -1384,7 +1384,7 @@ export const PROJECTS: Project[] = [
           id: "Urgensi Waktu / Problem-Agitation-Solution",
           en: "Time Urgency / Problem-Agitation-Solution",
         },
-        duration: "30s",
+        duration: "45s (Storyboard awal: 30s)",
         concept: {
           id: "Mengangkat kepanikan nyata 5 menit sebelum meeting online jam 09:00 ketika otak masih lemas, seduh manual terlalu lama, dan ojol terlambat.",
           en: "Depicting the real panic of 5 minutes before a 9:00 AM meeting when the brain is groggy, manual brew takes too long, and delivery is delayed.",
@@ -1492,7 +1492,7 @@ export const PROJECTS: Project[] = [
           id: "Kontras Sensori & Rasa / Visual ASMR",
           en: "Sensory & Taste Contrast / Visual ASMR",
         },
-        duration: "30s",
+        duration: "41s (Storyboard awal: 30s)",
         concept: {
           id: "Menantang persepsi bahwa crema setebal kafe hanya bisa didapat dari kafe mahal Rp50.000 atau mesin manual yang mengotori meja.",
           en: "Challenging the assumption that dense velvety crema requires expensive cafe drinks or messy manual machines.",
@@ -1717,9 +1717,9 @@ export const PROJECTS: Project[] = [
         },
         videoSrc: "/videos/nespresso/nespresso-vertuo-v1.mp4",
         aspectRatio: "9:16",
-        duration: "30s",
+        duration: "45s",
         specs: {
-          durationFrames: "900 Frames",
+          durationFrames: "Storyboard awal: 30s • Render final: 44.5s",
           fps: "30.00 FPS",
           resolution: "1080 × 1920 (9:16)",
           voiceModel: "ElevenLabs Neural Voice (Natural WFH Cadence ~146 WPM)",
@@ -1745,9 +1745,9 @@ export const PROJECTS: Project[] = [
         },
         videoSrc: "/videos/nespresso/nespresso-vertuo-v2.mp4",
         aspectRatio: "9:16",
-        duration: "30s",
+        duration: "41s",
         specs: {
-          durationFrames: "900 Frames",
+          durationFrames: "Storyboard awal: 30s • Render final: 40.9s",
           fps: "30.00 FPS",
           resolution: "1080 × 1920 (9:16)",
           voiceModel: "ElevenLabs Neural Voice (Confident & Sensory Pacing ~156 WPM)",
@@ -1851,12 +1851,12 @@ export const PROJECTS: Project[] = [
         },
         tools: ["Remotion CLI (npx remotion render)", "Audacity / Audio EQ"],
         summary: {
-          id: "Merender video vertikal 1080×1920 30fps (900 frame) langsung dari CLI Remotion. Menyeimbangkan audio loudness (-14 LUFS) dengan perpaduan VO vokal jernih, background music modern lofi-groove, dan SFX mekanikal mesin presisi.",
-          en: "Rendered 1080×1920 30fps vertical video (900 frames) directly via Remotion CLI. Balanced audio loudness (-14 LUFS) combining clear voiceover, modern lofi-groove BGM, and tactile mechanical SFX.",
+          id: "Merender video vertikal 1080×1920 30fps langsung dari CLI Remotion. Menyeimbangkan audio loudness (-14 LUFS) dengan perpaduan VO vokal jernih, background music modern lofi-groove, dan SFX mekanikal mesin presisi.",
+          en: "Rendered 1080×1920 30fps vertical video directly via Remotion CLI. Balanced audio loudness (-14 LUFS) combining clear voiceover, modern lofi-groove BGM, and tactile mechanical SFX.",
         },
         keyDeliverable: {
-          id: "2 File Video MP4 Final (V1 Emergency 30s & V2 Sensory 30s)",
-          en: "2 Final MP4 Video Files (V1 Emergency 30s & V2 Sensory 30s)",
+          id: "2 File Video MP4 Final (V1 Emergency 45s & V2 Sensory 41s)",
+          en: "2 Final MP4 Video Files (V1 Emergency 45s & V2 Sensory 41s)",
         },
       },
     ],
@@ -1867,8 +1867,8 @@ export const PROJECTS: Project[] = [
           en: "The emotional pacing transition from 8:55 AM panic to 8:59 AM calm relief establishes a compelling narrative resolution for remote professionals.",
         },
         {
-          id: "Macro shot sendok menyibak busa crema pada Variasi 2 memberikan thumb-stop rate instan melalui daya pikat sensori ASMR kopi yang memuaskan.",
-          en: "The macro crema spoon dip in Variation 2 delivers immediate thumb-stop retention through satisfying coffee ASMR appeal.",
+          id: "Macro shot sendok menyibak busa crema pada Variasi 2 difungsikan sebagai visual hook untuk memikat perhatian penonton lewat detail sensori ASMR kopi.",
+          en: "The macro crema spoon dip in Variation 2 serves as a sensory visual hook designed to capture viewer attention through tactile coffee ASMR details.",
         },
         {
           id: "Penerapan batas TikTok Safe Zone yang disiplin memastikan tipografi pill badge bebas dari tabrakan dengan antarmuka native aplikasi.",
@@ -1886,13 +1886,13 @@ export const PROJECTS: Project[] = [
         },
       ],
       creativeAssessment: {
-        id: "Evaluasi ini difokuskan pada analisis keputusan ritme editing, sinkronisasi audio-visual, dan efektivitas struktur direct response. Karena berstatus spec ad portofolio independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim performa ROAS atau konversi semu yang dibuat.",
-        en: "This evaluation focuses strictly on editorial rhythm, audio-visual synchronization, and direct response pacing. As an independent portfolio spec ad case study not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
+        id: "Evaluasi ini difokuskan pada analisis keputusan ritme editing, sinkronisasi audio-visual, dan efektivitas struktur direct response. Karena berstatus spec ad independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim performa ROAS atau konversi semu yang dibuat.",
+        en: "This evaluation focuses strictly on editorial rhythm, audio-visual synchronization, and direct response pacing. As an independent spec ad case study not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
       },
       creativeLearnings: [
         {
-          id: "Pacing kontras (cut cepat 1.2s saat fase panik, melambat ke 3s saat fase sensori crema) menjaga momentum retensi penonton secara signifikan.",
-          en: "Contrasting pacing (rapid 1.2s cuts during panic scenes slowing down to 3s for sensory crema) substantially preserves viewer retention.",
+          id: "Saya memakai cut cepat saat adegan panik, lalu menahan shot crema lebih lama agar detail produk sempat terlihat.",
+          en: "I used fast cuts during the panic scene, then held the crema shot longer so product details could register.",
         },
         {
           id: "Integrasi SFX mekanikal mesin (tuas terkunci, klik tombol, desingan rotasi) yang disinkronkan per frame di Remotion memberikan kepuasan taktil yang memperkuat persepsi produk premium.",

@@ -3,17 +3,17 @@ import { ContactView } from "@/components/ContactView";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact & Project Intake — Fitran Hasby",
+    absolute: "Contact & Project Intake — Fitran Hasby | AI Direct Response Creative Specialist",
   },
   description:
-    "Initiate a video engineering sprint or explore direct-response creative collaboration with Fitran Hasby.",
+    "Discuss video ads, hook testing sprints, or direct-response creative collaboration with Fitran Hasby, AI Direct Response Creative Specialist.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact & Project Intake — Fitran Hasby",
+    title: "Contact & Project Intake — Fitran Hasby | AI Direct Response Creative Specialist",
     description:
-      "Initiate a video engineering sprint or explore direct-response creative collaboration with Fitran Hasby.",
+      "Discuss video ads, hook testing sprints, or direct-response creative collaboration with Fitran Hasby, AI Direct Response Creative Specialist.",
     url: "/contact",
     siteName: "Fitran Hasby Portfolio",
     locale: "id_ID",
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fitran Hasby — Creative Technologist & Video Engineer",
+        alt: "Fitran Hasby — AI Direct Response Creative Specialist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact & Project Intake — Fitran Hasby",
+    title: "Contact & Project Intake — Fitran Hasby | AI Direct Response Creative Specialist",
     description:
-      "Initiate a video engineering sprint or explore direct-response creative collaboration with Fitran Hasby.",
+      "Discuss video ads, hook testing sprints, or direct-response creative collaboration with Fitran Hasby, AI Direct Response Creative Specialist.",
     images: ["/og-image.png"],
   },
 };

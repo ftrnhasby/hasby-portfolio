@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useSyncExternalStore,
+  useCallback,
+  useEffect,
+} from "react";
 
 export type Language = "id" | "en";
 
@@ -17,26 +23,52 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 const STORAGE_KEY = "hasby_portfolio_lang";
+const listeners = new Set<() => void>();
 
-function getInitialLanguage(): Language {
-  if (typeof window !== "undefined") {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY) as Language | null;
-      if (saved === "id" || saved === "en") {
-        return saved;
-      }
-    } catch {
-      // LocalStorage unavailable in certain environments
+function emitChange() {
+  for (const listener of listeners) {
+    listener();
+  }
+}
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  window.addEventListener("storage", callback);
+  return () => {
+    listeners.delete(callback);
+    window.removeEventListener("storage", callback);
+  };
+}
+
+function getSnapshot(): Language {
+  if (typeof window === "undefined") return "id";
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "id" || saved === "en") {
+      return saved;
     }
+  } catch {
+    // LocalStorage unavailable in certain environments
   }
   return "id";
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>(getInitialLanguage);
+function getServerSnapshot(): Language {
+  return "id";
+}
 
-  const setLang = (newLang: Language) => {
-    setLangState(newLang);
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  // Synchronize document attributes & release anti-flash lock once client resolves language
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.remove("lang-loading");
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
+
+  const setLang = useCallback((newLang: Language) => {
     if (typeof window !== "undefined") {
       try {
         localStorage.setItem(STORAGE_KEY, newLang);
@@ -44,12 +76,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         // Ignore storage errors
       }
     }
-  };
+    emitChange();
+  }, []);
 
-  const toggleLang = () => {
+  const toggleLang = useCallback(() => {
     const next = lang === "id" ? "en" : "id";
     setLang(next);
-  };
+  }, [lang, setLang]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, toggleLang }}>

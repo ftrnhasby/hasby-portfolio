@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { Mail, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -72,8 +73,8 @@ export function ContactView() {
     {
       q: lang === "id" ? "Berapa lama estimasi pengerjaan satu batch video?" : "What is the typical turnaround timeline for a video batch?",
       a: lang === "id"
-        ? "Satu batch berisi 3 variasi hook naskah dengan durasi 30–45 detik biasanya selesai dalam 36 hingga 48 jam kerja setelah brief disetujui."
-        : "A testing batch consisting of 3 distinct hook variations (30–45s) is typically finalized within 36 to 48 business hours following brief confirmation.",
+        ? "Satu konsep iklan dengan tiga pembuka berbeda. Kamu menerima tiga file video vertikal berdurasi 30–45 detik, siap diuji di TikTok atau Instagram Reels. Estimasi pengerjaan 36–48 jam kerja setelah brief disetujui."
+        : "One ad concept with three different hooks. You receive three vertical video files (30–45 seconds), ready for testing on TikTok or Instagram Reels. Estimated turnaround 36–48 business hours once the brief is approved.",
     },
     {
       q: lang === "id" ? "Mengapa menggunakan Remotion dibanding NLE konvensional?" : "Why use Remotion over conventional video editing software?",
@@ -218,7 +219,15 @@ export function ContactView() {
 
           {/* Right Column: Contact Intake Form */}
           <div className="lg:col-span-7">
-            <ContactForm />
+            <Suspense
+              fallback={
+                <div className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-6 sm:p-10 h-96 animate-pulse flex items-center justify-center">
+                  <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                </div>
+              }
+            >
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </section>

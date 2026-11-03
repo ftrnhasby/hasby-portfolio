@@ -1,13 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, ArrowRight, Mail, Copy, Check } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { CheckCircle2, ArrowRight, Mail, Copy, Check, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
 export function ContactForm() {
   const { lang } = useLanguage();
   const t = TRANSLATIONS[lang].contact;
+  const searchParams = useSearchParams();
+
+  const pkg = searchParams.get("package");
+  const scopeParam = searchParams.get("scope");
+  const isPackagePreselected = pkg === "3-hook" || scopeParam === "hook-testing";
+  const defaultScope = isPackagePreselected ? t.scopeOptions[1] : t.scopeOptions[0];
 
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -15,7 +22,7 @@ export function ContactForm() {
     name: "",
     email: "",
     brand: "",
-    scope: t.scopeOptions[0],
+    scope: defaultScope,
     message: "",
   });
 
@@ -165,9 +172,17 @@ export function ContactForm() {
 
         {/* Project Scope */}
         <div className="space-y-2">
-          <label className="text-xs font-mono text-zinc-300 block">
-            {t.scopeLabel}
-          </label>
+          <div className="flex items-center justify-between">
+            <label className="text-xs font-mono text-zinc-300 block">
+              {t.scopeLabel}
+            </label>
+            {isPackagePreselected && (
+              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 px-2 py-0.5 rounded">
+                <Sparkles className="w-3 h-3" />
+                <span>{lang === "id" ? "Paket 3 Hook Terpilih" : "3-Hook Sprint Selected"}</span>
+              </span>
+            )}
+          </div>
           <select
             value={formData.scope}
             onChange={(e) => setFormData({ ...formData, scope: e.target.value })}

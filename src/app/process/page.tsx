@@ -6,14 +6,14 @@ export const metadata: Metadata = {
     absolute: "Production System — Fitran Hasby",
   },
   description:
-    "Less Time Researching. Faster Creative Iteration. A structured, AI-assisted direct response video production workflow reducing repetitive research and editing work.",
+    "Less Time Researching. Faster Creative Iteration. AI Direct Response Creative Specialist production system reducing repetitive research and editing work.",
   alternates: {
     canonical: "/process",
   },
   openGraph: {
     title: "Production System — Fitran Hasby",
     description:
-      "Less Time Researching. Faster Creative Iteration. A structured, AI-assisted direct response video production workflow reducing repetitive research and editing work.",
+      "Less Time Researching. Faster Creative Iteration. AI Direct Response Creative Specialist production system reducing repetitive research and editing work.",
     url: "/process",
     siteName: "Fitran Hasby Portfolio",
     locale: "id_ID",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fitran Hasby — AI & Direct Response Video Editor",
+        alt: "Fitran Hasby — AI Direct Response Creative Specialist",
       },
     ],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Production System — Fitran Hasby",
     description:
-      "Less Time Researching. Faster Creative Iteration. A structured, AI-assisted direct response video production workflow reducing repetitive research and editing work.",
+      "Less Time Researching. Faster Creative Iteration. AI Direct Response Creative Specialist production system reducing repetitive research and editing work.",
     images: ["/og-image.png"],
   },
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Compass, Code2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Compass, Code2, ShieldCheck } from "lucide-react";
 import { Project } from "@/types/project";
 import { VideoPlayerMock } from "@/components/VideoPlayerMock";
 import { CreativeStrategySection } from "@/components/CreativeStrategySection";
@@ -56,6 +56,12 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
             <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
               {project.tagline[lang]}
             </p>
+
+            {/* Independent Spec Ad Notice */}
+            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-mono text-amber-200">
+              <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>{t.specAdNotice}</span>
+            </div>
           </div>
 
           {/* Primary High-Impact Craft Highlights Ribbon */}
@@ -141,6 +147,31 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
         {/* Section 06: Honest Creative Evaluation */}
         <section className="space-y-4">
           <HonestEvaluationSection evaluation={project.honestEvaluation} />
+        </section>
+
+        {/* Case Study Bottom CTA Card */}
+        <section className="pt-8 border-t border-white/[0.08]">
+          <div className="p-6 sm:p-10 rounded-2xl bg-gradient-to-br from-indigo-950/25 via-[#0d0d12] to-[#0a0a0c] border border-indigo-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-2">
+              <span className="text-[11px] font-mono text-indigo-400 uppercase tracking-wider">
+                {lang === "id" ? "Kolaborasi Kreatif" : "Creative Collaboration"}
+              </span>
+              <h4 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
+                {t.caseStudyCtaHeading}
+              </h4>
+              <p className="text-xs sm:text-sm text-zinc-400 max-w-xl leading-relaxed">
+                {t.caseStudyCtaSub}
+              </p>
+            </div>
+
+            <Link
+              href="/contact?package=3-hook"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-zinc-200 transition-all self-start sm:self-auto shadow-lg shrink-0"
+            >
+              <span>{t.caseStudyCtaBtn}</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </section>
 
         {/* Explore More Banner */}

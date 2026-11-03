@@ -20,8 +20,13 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
+}
+
+/* Anti-flash mechanism: prevents flash of default language if user previously selected English */
+html.lang-loading body {
+  opacity: 0 !important;
 }
 
 body {
@@ -29,8 +34,9 @@ body {
   color: #f5f5f7;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.011em;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
+  transition: opacity 0.15s ease-out;
 }
 
 ::selection {
@@ -55,4 +61,85 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
+}
+
+/* ==========================================================================
+   Smooth Elegant Motion System (Apple & Linear Easing)
+   ========================================================================== */
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-nav-in {
+  animation: heroFadeIn 0.9s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.animate-hero-up {
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+}
+
+.animate-hero-scale {
+  animation: heroFadeUp 1.05s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+}
+
+/* Stagger delay utilities (Tighter & seamless cascade) */
+.animation-delay-60 {
+  animation-delay: 60ms;
+}
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-120 {
+  animation-delay: 120ms;
+}
+.animation-delay-180 {
+  animation-delay: 180ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-240 {
+  animation-delay: 240ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Respect user's system preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
