@@ -97,26 +97,28 @@ export function HomeView() {
             </div>
           </div>
 
-          {/* Production Standards Strip (Sleek, integrated bar) */}
+          {/* Production Standards Cards (4 distinct standalone cards) */}
           <div className="animate-hero-up animation-delay-240 pt-8 border-t border-white/[0.06]">
-            <div className="rounded-2xl border border-white/[0.08] bg-[#0c0c0e]/80 backdrop-blur-sm divide-y sm:divide-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-white/[0.08] overflow-hidden shadow-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {t.standards.map((std, idx) => (
                 <div
                   key={idx}
-                  className="p-4 sm:p-5 space-y-2 hover:bg-white/[0.02] transition-colors"
+                  className="p-4 sm:p-5 rounded-2xl border border-white/[0.08] bg-[#0c0c0e]/80 backdrop-blur-sm hover:border-white/[0.16] hover:bg-[#121216] transition-all duration-200 space-y-2 flex flex-col justify-between"
                 >
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-zinc-400">
-                    {standardIcons[idx % standardIcons.length]}
-                    <span>{std.tag}</span>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-zinc-400">
+                      {standardIcons[idx % standardIcons.length]}
+                      <span>{std.tag}</span>
+                    </div>
+
+                    <h4 className="text-sm sm:text-base font-semibold text-white tracking-tight">
+                      {std.title}
+                    </h4>
+
+                    <p className="text-xs text-zinc-400 leading-relaxed">
+                      {std.desc}
+                    </p>
                   </div>
-
-                  <h4 className="text-sm font-semibold text-white tracking-tight">
-                    {std.title}
-                  </h4>
-
-                  <p className="text-xs text-zinc-400 leading-relaxed">
-                    {std.desc}
-                  </p>
                 </div>
               ))}
             </div>
