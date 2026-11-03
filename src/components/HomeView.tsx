@@ -17,7 +17,6 @@ import {
   Smartphone,
 } from "lucide-react";
 import { ProjectGallery } from "@/components/ProjectGallery";
-import { FeaturedAdPlayer } from "@/components/FeaturedAdPlayer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
@@ -44,56 +43,48 @@ export function HomeView() {
 
   return (
     <div className="space-y-24 sm:space-y-32 pb-24">
-      {/* Editorial Hero Section with 2-column layout on desktop, stacked on mobile */}
+      {/* Editorial Hero Section */}
       <section className="pt-16 sm:pt-24 pb-12 border-b border-white/[0.08] relative overflow-hidden">
         {/* Subtle background glow - minimal & restrained */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-64 bg-indigo-500/[0.03] blur-3xl pointer-events-none rounded-full" />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Hero Column (Text & Main CTA Buttons) */}
-            <div className="order-1 lg:order-none lg:col-span-7 space-y-6">
-              {/* Eyebrow Pill */}
-              <div className="animate-hero-up inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span>{t.eyebrow}</span>
-                <span className="text-zinc-600">•</span>
-                <span className="text-zinc-500">{t.eyebrowTag}</span>
-              </div>
-
-              {/* Main Headline */}
-              <div className="space-y-4">
-                <h1 className="animate-hero-up animation-delay-60 text-3xl sm:text-5xl lg:text-5xl font-medium tracking-tight text-white leading-[1.15]">
-                  {t.heroHeadline}
-                </h1>
-                <p className="animate-hero-up animation-delay-120 text-base sm:text-lg text-zinc-400 font-normal leading-relaxed pt-1">
-                  {t.heroSubheadline}
-                </p>
-              </div>
-
-              {/* Clear Call-To-Action Row */}
-              <div className="animate-hero-up animation-delay-180 flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href="#work"
-                  className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-md"
-                >
-                  <span>{t.watchSampleBtn}</span>
-                  <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" />
-                </a>
-
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all"
-                >
-                  <span>{t.discussProjectBtn}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
+          <div className="max-w-3xl space-y-6">
+            {/* Eyebrow Pill */}
+            <div className="animate-hero-up inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span>{t.eyebrow}</span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-zinc-500">{t.eyebrowTag}</span>
             </div>
 
-            {/* Vertical Featured Sample Ad Player */}
-            <div className="order-2 lg:order-none lg:col-span-5 w-full flex justify-center lg:justify-end animate-hero-scale animation-delay-100">
-              <FeaturedAdPlayer />
+            {/* Main Headline */}
+            <div className="space-y-4">
+              <h1 className="animate-hero-up animation-delay-60 text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.12]">
+                {t.heroHeadline}
+              </h1>
+              <p className="animate-hero-up animation-delay-120 text-base sm:text-lg text-zinc-400 font-normal leading-relaxed pt-1 max-w-2xl">
+                {t.heroSubheadline}
+              </p>
+            </div>
+
+            {/* Clear Call-To-Action Row */}
+            <div className="animate-hero-up animation-delay-180 flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="#work"
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-md"
+              >
+                <span>{t.watchSampleBtn}</span>
+                <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" />
+              </a>
+
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all"
+              >
+                <span>{t.discussProjectBtn}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
             </div>
           </div>
 
@@ -131,6 +122,11 @@ export function HomeView() {
         <ProjectGallery />
       </div>
 
+      {/* Section Divider */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="w-full border-t border-white/[0.08]" />
+      </div>
+
       {/* What I Do: Core Capabilities Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <ScrollReveal>
@@ -151,10 +147,13 @@ export function HomeView() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {t.capabilities.pillars.map((pillar, idx) => (
                 <ScrollReveal key={idx} delay={idx * 100}>
-                  <div className="p-6 sm:p-7 rounded-2xl bg-[#0e0e11] border border-white/[0.06] hover:border-white/[0.14] transition-all duration-200 flex flex-col justify-between space-y-4 h-full">
+                  <Link
+                    href={pillar.link}
+                    className="group p-6 sm:p-7 rounded-2xl bg-[#0e0e11] border border-white/[0.06] hover:border-emerald-500/30 hover:bg-[#121216] transition-all duration-300 flex flex-col justify-between space-y-5 h-full hover:translate-y-[-2px] hover:shadow-[0_12px_36px_rgba(0,0,0,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#09090b]"
+                  >
                     <div className="space-y-3.5">
                       <div className="flex items-center justify-between gap-3">
-                        <div className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center">
+                        <div className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 transition-colors">
                           {capabilityIcons[idx % capabilityIcons.length]}
                         </div>
                         <span className="text-[11px] font-mono text-zinc-400 bg-white/[0.03] border border-white/[0.06] px-2.5 py-0.5 rounded-md">
@@ -162,30 +161,27 @@ export function HomeView() {
                         </span>
                       </div>
 
-                      <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight">
+                      <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight group-hover:text-emerald-400 transition-colors">
                         {pillar.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
                         {pillar.desc}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-white/[0.04] flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-zinc-400 truncate">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                        <span className="truncate">{pillar.evidence}</span>
+                    <div className="pt-4 border-t border-white/[0.04] space-y-2.5">
+                      <div className="flex items-start gap-2 text-[11px] font-mono text-zinc-400">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{pillar.evidence}</span>
                       </div>
 
-                      <Link
-                        href={pillar.link}
-                        className="inline-flex items-center gap-1 text-[11px] font-mono text-white hover:text-emerald-400 transition-colors shrink-0"
-                      >
+                      <div className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
                         <span>{pillar.actionLabel}</span>
-                        <ArrowUpRight className="w-3 h-3" />
-                      </Link>
+                        <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
