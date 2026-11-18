@@ -130,6 +130,31 @@ body {
   animation-delay: 500ms;
 }
 
+/* ==========================================================================
+   Filmstrip / Infinite Video Reel Animation
+   ========================================================================== */
+
+@keyframes filmstripMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-filmstrip-reel {
+  display: flex;
+  width: max-content;
+  animation: filmstripMarquee 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-filmstrip-reel:hover,
+.animate-filmstrip-reel-paused {
+  animation-play-state: paused !important;
+}
+
 /* Respect user's system preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -1,8 +1,9 @@
 "use client";
 
 import { Suspense } from "react";
+import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
-import { Mail, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Mail, Clock, ShieldCheck, ArrowUpRight, ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
@@ -67,26 +68,26 @@ export function ContactView() {
     {
       q: lang === "id" ? "Bahan rekaman apa yang perlu disediakan klien?" : "What footage or assets need to be provided?",
       a: lang === "id"
-        ? "Jika Anda memiliki rekaman B-roll kafe, produk, atau foto arsitektur, Anda dapat mengirimkannya via Google Drive atau Frame.io. Grafis teks kinetik, ilustrasi vektor, dan voiceover AI dapat dirancang langsung di Remotion."
-        : "If you have existing raw cafe B-roll, product clips, or photos, you can share them via Google Drive or Frame.io. Kinetic captions, vector graphics, and AI voiceover can be built directly in Remotion.",
+        ? "Jika Anda memiliki rekaman B-roll produk, footage kreator, atau aset brand, Anda dapat mengirimkannya via Google Drive atau Frame.io. Grafis gerak, sound design, dan alur kerja AI dapat dirancang langsung sesuai brief."
+        : "If you have existing raw product footage, creator B-roll, or brand assets, you can share them via Google Drive or Frame.io. Motion graphics, sound design, and AI-assisted creative workflows will be integrated seamlessly based on your brief.",
     },
     {
       q: lang === "id" ? "Berapa lama estimasi pengerjaan satu batch video?" : "What is the typical turnaround timeline for a video batch?",
       a: lang === "id"
-        ? "Satu konsep iklan dengan tiga pembuka berbeda. Kamu menerima tiga file video vertikal berdurasi 30–45 detik, siap diuji di TikTok atau Instagram Reels. Estimasi pengerjaan 36–48 jam kerja setelah brief disetujui."
-        : "One ad concept with three different hooks. You receive three vertical video files (30–45 seconds), ready for testing on TikTok or Instagram Reels. Estimated turnaround 36–48 business hours once the brief is approved.",
+        ? "Satu konsep iklan dengan tiga pembuka (hook) berbeda. Anda menerima tiga file video siap uji performa di TikTok, Reels, atau Shorts. Estimasi pengerjaan 36–48 jam kerja setelah brief disetujui."
+        : "One core ad concept with three distinct opening hooks. You receive three high-retention video files ready for conversion testing on TikTok, Reels, or Shorts. Estimated turnaround 36–48 business hours once the brief is approved.",
     },
     {
-      q: lang === "id" ? "Mengapa menggunakan Remotion dibanding NLE konvensional?" : "Why use Remotion over conventional video editing software?",
+      q: lang === "id" ? "Software dan teknologi apa yang Anda gunakan?" : "What software and production stack do you use?",
       a: lang === "id"
-        ? "Remotion memungkinkan kami memprogram animasi teks dan komponen visual secara presisi dengan kode (React). Ketika perlu mengganti teks penawaran atau menyesuaikan durasi suara vokal baru, render multi-variasi dapat dilakukan dalam hitungan menit."
-        : "Remotion enables programmatic component-driven video synthesis in React. Updating offer copy, swapping audio clips, or re-exporting multiple hook cuts takes minutes instead of hours of manual timeline tweaking.",
+        ? "Saya mengedit menggunakan Adobe Premiere Pro, After Effects, dan CapCut Desktop untuk presisi timeline, dikombinasikan dengan alur kerja AI modern untuk eksplorasi hook dan iterasi cepat. Pendekatan hybrid ini menghasilkan video berkualitas komersial tinggi dengan efisiensi maksimal."
+        : "I edit with Adobe Premiere Pro, After Effects, and CapCut Desktop for timeline precision, paired with modern AI-powered workflows for rapid hook testing and asset iteration. This hybrid approach ensures premium commercial finish with maximum agility.",
     },
     {
-      q: lang === "id" ? "Apakah video sudah siap untuk TikTok Ads & Meta Ads?" : "Are deliverables ready for direct upload to TikTok & Meta Ads?",
+      q: lang === "id" ? "Apakah format video siap tayang langsung di TikTok, Meta, dan platform lain?" : "Are deliverables ready for direct deployment on TikTok, Meta, and YouTube?",
       a: lang === "id"
-        ? "Ya, seluruh video diekspor dalam format MP4 rasio 9:16 vertikal (1080×1920 30fps) dengan audio termaster -14 LUFS, teks terbaca jelas dalam mode sound-off, dan komposisi modular untuk Dynamic Creative."
-        : "Yes, all assets are exported as 1080×1920 30fps vertical MP4s mastered to -14 LUFS, featuring sound-off legibility and modular structure suitable for Dynamic Creative testing.",
+        ? "Ya, seluruh video diekspor sesuai standar platform (rasio vertikal 9:16 untuk TikTok/Reels, atau 16:9 untuk VSL/YouTube) dengan audio termaster -14 LUFS, teks dengan keterbacaan tinggi dalam mode sound-off, dan komposisi modular untuk pengujian performa."
+        : "Yes, all assets are exported to platform specifications (vertical 9:16 for TikTok/Reels, or 16:9 for VSL/YouTube) mastered to -14 LUFS, featuring sound-off legibility and modular structure engineered for performance creative testing.",
     },
   ];
 
@@ -94,13 +95,27 @@ export function ContactView() {
     <div className="space-y-20 sm:space-y-28 pb-24">
       {/* Header */}
       <section className="pt-20 sm:pt-28 pb-12 border-b border-white/[0.08]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>{t.eyebrow}</span>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+          {/* Breadcrumb / Back to Home */}
+          <div>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-white transition-colors group"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
+              <span>{lang === "id" ? "Kembali ke Beranda" : "Back to Home"}</span>
+            </Link>
           </div>
 
           <div className="max-w-3xl space-y-4">
+            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/[0.08] border border-emerald-500/20 text-[11px] font-mono text-emerald-400">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+              </span>
+              <span>{t.eyebrow}</span>
+            </div>
+
             <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white leading-tight">
               {t.headline}
             </h1>
@@ -111,113 +126,115 @@ export function ContactView() {
         </div>
       </section>
 
-      {/* Main Grid: Info / FAQs + Form */}
+      {/* Main Grid: Info Cards + Form */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Direct Info & FAQs */}
-          <div className="lg:col-span-5 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          {/* Left Column: Direct Info & Standards (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             {/* Availability Box & Direct Channels */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400">
-                <Clock className="w-4 h-4" />
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-5 shadow-xl relative overflow-hidden">
+              <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-emerald-400">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                </span>
                 <span>{t.statusTitle}</span>
               </div>
-              <p className="text-xs text-zinc-300 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed font-normal">
                 {t.statusText}
               </p>
 
               {/* Direct Communication Channels */}
-              <div className="pt-4 border-t border-white/[0.06] space-y-3.5">
+              <div className="pt-4 border-t border-white/[0.06] space-y-2.5">
                 {/* Email */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
-                  <span className="text-zinc-500 shrink-0">{t.directEmailLabel}</span>
-                  <a
-                    href="mailto:hasbyassyadiqi@gmail.com"
-                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group break-all"
-                  >
-                    <Mail className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
-                    <span className="group-hover:underline">hasbyassyadiqi@gmail.com</span>
-                  </a>
-                </div>
+                <a
+                  href="mailto:hasbyassyadiqi@gmail.com"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-emerald-500/30 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.04] border border-white/[0.08] group-hover:border-emerald-500/35 group-hover:bg-emerald-500/10 flex items-center justify-center transition-colors shrink-0">
+                      <Mail className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block leading-none mb-1">{t.directEmailLabel}</span>
+                      <span className="text-xs font-medium text-zinc-200 group-hover:text-white truncate block">hasbyassyadiqi@gmail.com</span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 ml-2" />
+                </a>
 
                 {/* WhatsApp */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
-                  <span className="text-zinc-500 shrink-0">WhatsApp:</span>
-                  <a
-                    href="https://wa.me/6288286509211"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
-                  >
-                    <WhatsAppIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
-                    <span className="group-hover:underline">+62 882-8650-9211</span>
-                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
-                  </a>
-                </div>
+                <a
+                  href="https://wa.me/6288286509211"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-emerald-500/30 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.04] border border-white/[0.08] group-hover:border-emerald-500/35 group-hover:bg-emerald-500/10 flex items-center justify-center transition-colors shrink-0">
+                      <WhatsAppIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block leading-none mb-1">WhatsApp:</span>
+                      <span className="text-xs font-medium text-zinc-200 group-hover:text-white truncate block">+62 882-8650-9211</span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 ml-2" />
+                </a>
 
                 {/* Instagram */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
-                  <span className="text-zinc-500 shrink-0">Instagram:</span>
-                  <a
-                    href="https://www.instagram.com/hasbyassyadiqi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
-                  >
-                    <InstagramIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
-                    <span className="group-hover:underline">@hasbyassyadiqi</span>
-                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
-                  </a>
-                </div>
+                <a
+                  href="https://www.instagram.com/hasbyassyadiqi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-emerald-500/30 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.04] border border-white/[0.08] group-hover:border-emerald-500/35 group-hover:bg-emerald-500/10 flex items-center justify-center transition-colors shrink-0">
+                      <InstagramIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block leading-none mb-1">Instagram:</span>
+                      <span className="text-xs font-medium text-zinc-200 group-hover:text-white truncate block">@hasbyassyadiqi</span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 ml-2" />
+                </a>
 
                 {/* LinkedIn */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 text-xs font-mono">
-                  <span className="text-zinc-500 shrink-0">LinkedIn:</span>
-                  <a
-                    href="https://www.linkedin.com/in/hasby-assyadiqi-8b56332b5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-200 hover:text-white flex items-center gap-1.5 transition-colors group"
-                  >
-                    <LinkedInIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 shrink-0 transition-colors" />
-                    <span className="group-hover:underline">Hasby Assyadiqi</span>
-                    <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
-                  </a>
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/hasby-assyadiqi-8b56332b5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-emerald-500/30 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.04] border border-white/[0.08] group-hover:border-emerald-500/35 group-hover:bg-emerald-500/10 flex items-center justify-center transition-colors shrink-0">
+                      <LinkedInIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-emerald-400 transition-colors" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-mono text-zinc-500 uppercase block leading-none mb-1">LinkedIn:</span>
+                      <span className="text-xs font-medium text-zinc-200 group-hover:text-white truncate block">Hasby Assyadiqi</span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 ml-2" />
+                </a>
               </div>
             </div>
 
             {/* Quality Standards */}
-            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-3">
+            <div className="p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.08] space-y-3 shadow-xl">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-300">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 <span>{t.qualityGuaranteeTitle}</span>
               </div>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed font-normal">
                 {t.qualityGuaranteeText}
               </p>
             </div>
-
-            {/* FAQs */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white uppercase font-mono tracking-wider">
-                {t.faqHeading}
-              </h3>
-              <div className="space-y-3">
-                {faqs.map((faq, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl bg-[#0c0c0e] border border-white/[0.05] space-y-1.5"
-                  >
-                    <h4 className="text-xs font-semibold text-zinc-200">{faq.q}</h4>
-                    <p className="text-[11px] text-zinc-400 leading-relaxed">{faq.a}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Right Column: Contact Intake Form */}
+          {/* Right Column: Contact Intake Form (7 cols) */}
           <div className="lg:col-span-7">
             <Suspense
               fallback={
@@ -229,6 +246,49 @@ export function ContactView() {
               <ContactForm />
             </Suspense>
           </div>
+        </div>
+      </section>
+
+      {/* Subtle Section Divider */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="border-t border-white/[0.08]" />
+      </div>
+
+      {/* Full-Width FAQ Section (Balanced 2-Column Grid) */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div className="max-w-2xl space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/[0.08] border border-emerald-500/20 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+            <span>{t.faqHeading}</span>
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            {lang === "id" ? "Hal yang Sering Ditanyakan Sebelum Memulai" : "Frequently Asked Questions Before Starting"}
+          </h3>
+          <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
+            {lang === "id"
+              ? "Jawaban transparan mengenai alur kerja, spesifikasi materi, dan estimasi waktu pengerjaan."
+              : "Transparent answers regarding creative workflows, asset specifications, and turnaround timelines."}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          {faqs.map((faq, idx) => (
+            <div
+              key={idx}
+              className="p-5 sm:p-6 rounded-2xl bg-[#0a0a0c] border border-white/[0.07] hover:border-emerald-500/25 transition-all space-y-3 group shadow-lg"
+            >
+              <div className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-md bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-mono text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                  0{idx + 1}
+                </span>
+                <h4 className="text-sm font-semibold text-white tracking-tight group-hover:text-emerald-400/90 transition-colors leading-snug">
+                  {faq.q}
+                </h4>
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed pl-9 font-normal">
+                {faq.a}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

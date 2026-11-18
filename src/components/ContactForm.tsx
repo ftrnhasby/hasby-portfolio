@@ -112,11 +112,11 @@ export function ContactForm() {
       className="rounded-2xl bg-[#0a0a0c] border border-white/[0.08] p-6 sm:p-10 space-y-6"
     >
       <div className="border-b border-white/[0.06] pb-6">
-        <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-1">
+        <span className="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">
           {t.formTitle}
         </span>
         <h3 className="text-xl font-semibold text-white tracking-tight">
-          {t.headline}
+          {t.formHeading}
         </h3>
         <p className="text-xs text-zinc-400 mt-1">
           {t.formSub}
@@ -155,46 +155,44 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {/* Brand / Offer URL */}
-        <div className="space-y-2">
-          <label className="text-xs font-mono text-zinc-300 block">
-            {t.brandLabel}
-          </label>
-          <input
-            type="text"
-            value={formData.brand}
-            onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-            placeholder={t.brandPlaceholder}
-            className="w-full px-4 py-3 rounded-xl bg-[#111114] border border-white/[0.08] text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 transition-colors"
-          />
-        </div>
+      {/* Brand / Offer URL */}
+      <div className="space-y-2">
+        <label className="text-xs font-mono text-zinc-300 block">
+          {t.brandLabel}
+        </label>
+        <input
+          type="text"
+          value={formData.brand}
+          onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
+          placeholder={t.brandPlaceholder}
+          className="w-full px-4 py-3 rounded-xl bg-[#111114] border border-white/[0.08] text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 transition-colors"
+        />
+      </div>
 
-        {/* Project Scope */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-mono text-zinc-300 block">
-              {t.scopeLabel}
-            </label>
-            {isPackagePreselected && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 px-2 py-0.5 rounded">
-                <Sparkles className="w-3 h-3" />
-                <span>{lang === "id" ? "Paket 3 Hook Terpilih" : "3-Hook Sprint Selected"}</span>
-              </span>
-            )}
-          </div>
-          <select
-            value={formData.scope}
-            onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl bg-[#111114] border border-white/[0.08] text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
-          >
-            {t.scopeOptions.map((opt, idx) => (
-              <option key={idx} value={opt}>
-                {opt}
-              </option>
-            ))}
-          </select>
+      {/* Project Scope (Full Width for clean option display) */}
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <label className="text-xs font-mono text-zinc-300 block">
+            {t.scopeLabel}
+          </label>
+          {isPackagePreselected && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
+              <Sparkles className="w-3 h-3" />
+              <span>{lang === "id" ? "Paket 3 Hook Terpilih" : "3-Hook Sprint Selected"}</span>
+            </span>
+          )}
         </div>
+        <select
+          value={formData.scope}
+          onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
+          className="w-full px-4 py-3 rounded-xl bg-[#111114] border border-white/[0.08] text-xs text-white focus:outline-none focus:border-white/30 transition-colors cursor-pointer"
+        >
+          {t.scopeOptions.map((opt, idx) => (
+            <option key={idx} value={opt} className="bg-[#111114] text-white py-1">
+              {opt}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* Creative Message */}

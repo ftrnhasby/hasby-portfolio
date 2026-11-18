@@ -27,7 +27,7 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
       <section className="pt-10 sm:pt-12 border-b border-white/[0.08]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-10 space-y-6 sm:space-y-8">
           <Link
-            href="/"
+            href="/work"
             className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-white transition-colors group"
           >
             <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
@@ -62,34 +62,6 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
               <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
               <span>{t.specAdNotice}</span>
             </div>
-          </div>
-
-          {/* Primary High-Impact Craft Highlights Ribbon */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-white/[0.06]">
-            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
-              <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider truncate">
-                {project.primaryHighlight.label[lang]}
-              </div>
-              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white tracking-tight mt-1 truncate">
-                {project.primaryHighlight.value}
-              </div>
-              {project.primaryHighlight.subtext && (
-                <div className="text-[10px] font-mono text-emerald-400 mt-1 break-words">
-                  {project.primaryHighlight.subtext[lang]}
-                </div>
-              )}
-            </div>
-
-            {project.secondaryHighlights.map((sec, idx) => (
-              <div key={idx} className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
-                <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider truncate">
-                  {sec.label[lang]}
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-200 tracking-tight mt-1 truncate">
-                  {sec.value}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -192,7 +164,7 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
             </div>
 
             <Link
-              href="/process"
+              href="/#workflow"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all self-start sm:self-auto shadow-md"
             >
               <span>{lang === "id" ? "Buka Alur Kerja" : "View Production Pipeline"}</span>

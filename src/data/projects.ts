@@ -1905,6 +1905,1091 @@ export const PROJECTS: Project[] = [
       },
     },
   },
+
+  {
+    id: "aura-botanicals-ai",
+    slug: "aura-botanicals-ai",
+    title: "Aura Botanicals",
+    client: "Aura Botanicals (Spec Ad / AI Narrative)",
+    category: {
+      id: "Skincare / AI Narrative Ad",
+      en: "Skincare / AI Narrative Ad",
+    },
+    year: "2026",
+    tagline: {
+      id: "Format cerita naratif berbasis karakter AI terarah untuk menguji retensi audiens skincare natural.",
+      en: "Character-driven AI story format designed to hold attention for natural skincare audiences.",
+    },
+    heroSummary: {
+      id: "Eksplorasi pembuatan video iklan vertikal (9:16) berbasis karakter dan visual sinematik AI yang diedit dengan pacing iklan komersial direct-response.",
+      en: "Exploration of AI-generated characters and visuals cut with commercial direct-response ad pacing.",
+    },
+    featured: false,
+    primaryHighlight: {
+      value: "1 Video Cut",
+      label: {
+        id: "Variasi Angle Kreatif",
+        en: "Creative Angle Variations",
+      },
+      subtext: {
+        id: "45s Vertikal 9:16 (CapCut & Premiere Pro)",
+        en: "45s 9:16 Vertical (CapCut & Premiere Pro)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Media Sosial",
+          en: "Native Social Vertical Format",
+        },
+      },
+      {
+        value: "AI Narrative",
+        label: {
+          id: "Model Karakter Terkalibrasi",
+          en: "Calibrated Character Model",
+        },
+      },
+      {
+        value: "ElevenLabs",
+        label: {
+          id: "Voiceover Neural AI Terkurasi",
+          en: "Neural AI Voiceover Pipeline",
+        },
+      },
+    ],
+    toolsUsed: [
+      "CapCut",
+      "Adobe Premiere Pro",
+      "ElevenLabs Neural AI",
+    ],
+    creativeBrief: {
+      clientObjective: {
+        id: "Menguji format storytelling sinematik AI untuk produk serum natural agar terlihat premium dan feed-native.",
+        en: "Test cinematic AI storytelling for natural serum products to look premium and feed-native.",
+      },
+      targetAudience: {
+        id: "Wanita 22–35 tahun yang memperhatikan bahan organik dan rutinitas perawatan kulit.",
+        en: "Women aged 22–35 mindful of clean ingredients and skincare routines.",
+      },
+      coreProblem: {
+        id: "Iklan skincare umum terasa repetitif dan cepat di-skip dalam 2 detik pertama.",
+        en: "Generic skincare ads feel repetitive and get skipped within the first 2 seconds.",
+      },
+      angleHookStrategy: {
+        id: "Naratif drama pagi (The Morning Ritual Drama) yang mengisolasi momen frustrasi kulit kusam.",
+        en: "Morning ritual drama isolating the moment of dull skin frustration.",
+      },
+      keyDifferentiators: [
+        {
+          id: "Visual estetika sinematik dengan color grading lembut.",
+          en: "Cinematic visual aesthetic with soft organic color grading.",
+        },
+        {
+          id: "Pacing direct-response dengan subtitle sound-off.",
+          en: "Direct-response pacing with sound-off captions.",
+        },
+      ],
+      deliverables: [
+        {
+          id: "1 Video Cut 9:16 (45 Detik).",
+          en: "1 Video Cut 9:16 (45 Seconds).",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Template Eksplorasi",
+        en: "Spec Ad / Template Exploration",
+      },
+      objective: {
+        id: "Membangun thumbstop rate tinggi menggunakan visual AI yang diedit secara disiplin.",
+        en: "Build high thumbstop rate using disciplined editorial pacing on AI visuals.",
+      },
+      targetAudience: {
+        id: "Penggemar skincare DTC dan pembeli produk kecantikan online.",
+        en: "DTC skincare enthusiasts and online beauty shoppers.",
+      },
+      audienceInsight: {
+        id: "Konsumen bosan dengan testimoni palsu dan merespons positif narasi estetik yang jujur.",
+        en: "Consumers fatigue easily on fake testimonials and respond to honest aesthetic storytelling.",
+      },
+      coreAngle: {
+        id: "The Morning Ritual Drama",
+        en: "The Morning Ritual Drama",
+      },
+      hookStrategy: {
+        id: "Visual close-up emosional di depan cermin dalam 3 detik pertama.",
+        en: "Emotional mirror close-up visual in the first 3 seconds.",
+      },
+      valueProposition: {
+        id: "Serum botani murni yang mengembalikan kilau alami kulit tanpa rasa lengket.",
+        en: "Pure botanical serum restoring natural glow without greasiness.",
+      },
+      callToAction: {
+        id: "Dapatkan penawaran peluncuran eksklusif hari ini.",
+        en: "Claim your exclusive launch offer today.",
+      },
+      creativeRationale: {
+        id: "Menggabungkan daya tarik visual AI dengan ritme editing direct response untuk membuktikan kelayakan feed-native.",
+        en: "Combining AI visual appeal with direct-response editing rhythm to prove feed-native viability.",
+      },
+    },
+    videoVariations: [
+      {
+        id: "aura-ai-v1",
+        label: {
+          id: "Cut 01: The Morning Ritual Drama",
+          en: "Cut 01: The Morning Ritual Drama",
+        },
+        hookHeadline: {
+          id: "Naratif Mini Drama AI",
+          en: "AI Mini-Drama Narrative",
+        },
+        angleDescription: {
+          id: "Format cerita naratif berbasis karakter AI terarah untuk menarik atensi audiens skincare natural.",
+          en: "Character-driven AI story format designed to hold attention for natural skincare audiences.",
+        },
+        videoSrc: "/videos/nespresso/nespresso-vertuo-v1.mp4",
+        aspectRatio: "9:16",
+        duration: "45s",
+        specs: {
+          durationFrames: "1350",
+          fps: "30",
+          resolution: "1080×1920",
+          voiceModel: "ElevenLabs Neural Audio",
+        },
+        keyTakeaway: {
+          id: "Karakter AI konsisten dengan pacing cepat dan subtitle kontras.",
+          en: "Consistent AI character with fast pacing and high-contrast captions.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "script-aura-v1",
+        name: {
+          id: "Angle 01: The Morning Ritual Drama",
+          en: "Angle 01: The Morning Ritual Drama",
+        },
+        hookType: {
+          id: "Visual Emosional & Pola Interupsi",
+          en: "Emotional Visual & Pattern Interrupt",
+        },
+        duration: "45s",
+        concept: {
+          id: "Menampilkan kontras antara kulit kusam saat bangun pagi dengan kesegaran ekstrak botani.",
+          en: "Contrasting morning dullness with botanical extract refreshment.",
+        },
+        lines: [
+          {
+            time: "0:00 - 0:03",
+            visual: {
+              id: "Close-up ekspresi wajah di depan cermin pagi.",
+              en: "Mirror reflection close-up with morning light.",
+            },
+            audio: {
+              id: "'Pernah ngerasa kulit kusam padahal udah tidur cukup?'",
+              en: "'Ever wake up feeling like your skin didn't get the memo?'",
+            },
+            psychologyIntent: {
+              id: "Memvalidasi frustrasi sehari-hari audiens sasaran.",
+              en: "Validating the target audience's everyday frustration.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "aura-sc-1",
+        scene: {
+          id: "Adegan 01: Hook Cermin",
+          en: "Scene 01: The Mirror Hook",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "Close-up dramatis wajah dengan pencahayaan pagi.",
+          en: "Dramatic facial close-up with morning daylight.",
+        },
+        toolUsed: "CapCut & AI Visual Engine",
+        assetType: "Motion Graphic",
+      },
+    ],
+    assetBreakdown: [
+      {
+        id: "aura-asset-1",
+        name: {
+          id: "AI Generated Footage & Product Mockup",
+          en: "AI Generated Footage & Product Mockup",
+        },
+        category: "AI-generated footage or audio",
+        myContribution: {
+          id: "Prompting, seleksi visual, editing ritme, dan sound design.",
+          en: "Prompting, visual curation, rhythm editing, and sound design.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "01",
+        title: {
+          id: "Generasi Visual AI & Kurasi Footage",
+          en: "AI Visual Generation & Footage Curation",
+        },
+        turnaroundTime: {
+          id: "1 Hari Kerja",
+          en: "1 Working Day",
+        },
+        tools: ["AI Visual Suite", "Premiere Pro"],
+        summary: {
+          id: "Menghasilkan variasi shot dan memilih klip dengan pergerakan paling natural.",
+          en: "Generating shot variations and curating clips with natural motion.",
+        },
+        keyDeliverable: {
+          id: "Asset Library Terkurasi",
+          en: "Curated Asset Library",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Pacing video cepat menjaga watch time di 5 detik pertama.",
+          en: "Brisk editorial pacing secures high 5-second watch time.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Variasi hook suara UGC asli dapat diuji untuk komparasi konversi.",
+          en: "Authentic UGC voiceover hooks could be tested for conversion comparison.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Proyek spec ad untuk demonstrasi kapabilitas editing AI direct-response.",
+        en: "Spec ad project demonstrating AI direct-response video editing capabilities.",
+      },
+      creativeLearnings: [
+        {
+          id: "Visual AI membutuhkan sound design yang sangat grounded agar terasa realistis.",
+          en: "AI visuals require highly grounded tactile sound design to feel real.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Membuat variasi 15 detik untuk retargeting ads.",
+        en: "Produce 15s cutdowns for retargeting campaigns.",
+      },
+    },
+  },
+  {
+    id: "lumina-skin-ugc",
+    slug: "lumina-skin-ugc",
+    title: "Lumina Skin",
+    client: "Lumina Skin (Spec Ad / UGC Native)",
+    category: {
+      id: "Skincare / UGC Native Testimonial",
+      en: "Skincare / UGC Native Testimonial",
+    },
+    year: "2026",
+    tagline: {
+      id: "Format iklan kreator native vertikal dengan hook pembuka masalah 0–3 detik dan social proof berdurasi padat.",
+      en: "Native vertical creator ad format featuring 0–3s problem agitation and rapid social proof.",
+    },
+    heroSummary: {
+      id: "Studi kasus iklan vertikal gaya kreator native (UGC) untuk produk perawatan kulit harian, menguji pola pembuka interupsi 'Don't Buy Until You Know This'.",
+      en: "A creator-style native UGC vertical ad case study testing the 'Don't Buy Until You Know This' curiosity hook.",
+    },
+    featured: false,
+    primaryHighlight: {
+      value: "1 Video Cut",
+      label: {
+        id: "Format Iklan UGC",
+        en: "UGC Native Cut",
+      },
+      subtext: {
+        id: "30s Vertikal 9:16 (CapCut & Premiere Pro)",
+        en: "30s 9:16 Vertical (CapCut & Premiere Pro)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Media Sosial",
+          en: "Native Social Vertical Format",
+        },
+      },
+      {
+        value: "UGC Native",
+        label: {
+          id: "Gaya Kreator Organik",
+          en: "Organic Creator Style",
+        },
+      },
+      {
+        value: "CapCut & PR",
+        label: {
+          id: "Workflow Editing Cepat",
+          en: "Rapid Turnaround Workflow",
+        },
+      },
+    ],
+    toolsUsed: ["CapCut", "Adobe Premiere Pro"],
+    creativeBrief: {
+      clientObjective: {
+        id: "Meningkatkan rasio klik (CTR) dengan tampilan video yang terasa seperti konten organik TikTok.",
+        en: "Increase CTR using video styling that mimics organic TikTok content.",
+      },
+      targetAudience: {
+        id: "Remaja & dewasa muda pengguna aktif TikTok dan Reels.",
+        en: "Teens & young adults active on TikTok and Reels.",
+      },
+      coreProblem: {
+        id: "Iklan komersial tradisional langsung diskip karena terlihat seperti jualan.",
+        en: "Traditional commercial ads get skipped instantly for looking like hard selling.",
+      },
+      angleHookStrategy: {
+        id: "Hook peringatan 'Don't Buy Until You Know This' memicu rasa penasaran alami.",
+        en: "Curiosity warning hook 'Don't Buy Until You Know This'.",
+      },
+      keyDifferentiators: [
+        {
+          id: "Pencahayaan natural dan teks dinamis gaya TikTok.",
+          en: "Natural lighting and TikTok-native kinetic captions.",
+        },
+      ],
+      deliverables: [
+        {
+          id: "1 Video Cut 9:16 (30 Detik).",
+          en: "1 Video Cut 9:16 (30 Seconds).",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Template UGC",
+        en: "Spec Ad / Template UGC",
+      },
+      objective: {
+        id: "Mencapai thumbstop rate maksimal pada feed media sosial.",
+        en: "Achieve maximum thumbstop rate on social feeds.",
+      },
+      targetAudience: {
+        id: "Konsumen digital yang mengutamakan rekomendasi teman sebaya.",
+        en: "Digital consumers prioritizing peer recommendations.",
+      },
+      audienceInsight: {
+        id: "Audiens lebih percaya review kasual tanpa filter ketimbang studio ad glamor.",
+        en: "Audiences trust unfiltered casual reviews over polished studio ads.",
+      },
+      coreAngle: {
+        id: "Don't Buy Until You Know This",
+        en: "Don't Buy Until You Know This",
+      },
+      hookStrategy: {
+        id: "Teks tebal di layar dengan ekspresi bicara langsung ke kamera.",
+        en: "Bold onscreen text with direct camera-facing delivery.",
+      },
+      valueProposition: {
+        id: "Hasil nyata dalam 7 hari tanpa iritasi kulit.",
+        en: "Noticeable results in 7 days without skin irritation.",
+      },
+      callToAction: {
+        id: "Cek keranjang kuning atau link di bio sebelum kehabisan.",
+        en: "Check link in bio before the batch sells out.",
+      },
+      creativeRationale: {
+        id: "Menyamarkan iklan sebagai tips personal untuk menurunkan resistensi audiens.",
+        en: "Framing ad as personal advice to reduce buyer friction.",
+      },
+    },
+    videoVariations: [
+      {
+        id: "lumina-ugc-v1",
+        label: {
+          id: "Cut 01: Don't Buy Until You Know This",
+          en: "Cut 01: Don't Buy Until You Know This",
+        },
+        hookHeadline: {
+          id: "Pattern Interrupt & Curiosity Hook",
+          en: "Pattern Interrupt & Curiosity Hook",
+        },
+        angleDescription: {
+          id: "Pola interupsi rasa ingin tahu dengan penataan split-screen dan teks tebal kontras.",
+          en: "Curiosity pattern interrupt with split-screen pacing and high-contrast captions.",
+        },
+        videoSrc: "/videos/katama/katama_v1_editorial.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900",
+          fps: "30",
+          resolution: "1080×1920",
+          voiceModel: "Native Creator Voice",
+        },
+        keyTakeaway: {
+          id: "Hook 3 detik pertama sangat menentukan retensi video UGC.",
+          en: "First 3-second hook dictates UGC retention.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "script-lumina-v1",
+        name: {
+          id: "Angle 01: Pattern Interrupt Warning",
+          en: "Angle 01: Pattern Interrupt Warning",
+        },
+        hookType: {
+          id: "Curiosity Warning",
+          en: "Curiosity Warning",
+        },
+        duration: "30s",
+        concept: {
+          id: "Membuka video dengan gestur tangan berhenti dan teks peringatan.",
+          en: "Opening with a hand stop gesture and warning text.",
+        },
+        lines: [
+          {
+            time: "0:00 - 0:03",
+            visual: {
+              id: "Kreator memegang produk di depan kamera dengan gestur stop.",
+              en: "Creator holds product with a subtle stop gesture.",
+            },
+            audio: {
+              id: "'Stop scrolling kalau kalian lagi mikir mau checkout serum ini...'",
+              en: "'Stop scrolling if you were about to checkout this serum...'",
+            },
+            psychologyIntent: {
+              id: "Menghentikan jempol penonton dengan rasa penasaran mendesak.",
+              en: "Interrupting scrolling with urgent curiosity.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "lumina-sc-1",
+        scene: {
+          id: "Adegan 01: Hook Peringatan",
+          en: "Scene 01: Stop Warning Hook",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "Ekspresi serius kreator menatap kamera.",
+          en: "Creator direct-to-camera candid expression.",
+        },
+        toolUsed: "CapCut Native Cut",
+        assetType: "Motion Graphic",
+      },
+    ],
+    assetBreakdown: [
+      {
+        id: "lumina-asset-1",
+        name: {
+          id: "Creator Footage & In-App Captions",
+          en: "Creator Footage & In-App Captions",
+        },
+        category: "Self-shot / original footage",
+        myContribution: {
+          id: "Pacing edit, teks kinetik, audio level balancing.",
+          en: "Pacing edit, kinetic text overlays, audio level balancing.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "01",
+        title: {
+          id: "Assembly Cut & Hook Tuning",
+          en: "Assembly Cut & Hook Tuning",
+        },
+        turnaroundTime: {
+          id: "4 Jam",
+          en: "4 Hours",
+        },
+        tools: ["CapCut", "Premiere Pro"],
+        summary: {
+          id: "Memotong jeda napas mati dan mempercepat tempo percakapan.",
+          en: "Trimming dead air and accelerating conversational tempo.",
+        },
+        keyDeliverable: {
+          id: "Rough Cut Tight Pacing",
+          en: "Rough Cut Tight Pacing",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Editing rapat tanpa jeda hening menjaga tempo video tetap bertenaga.",
+          en: "Seamless edit without pauses keeps momentum energetic.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Menambahkan split screen di detik ke-10 untuk demo tekstur.",
+          en: "Add a split-screen at second 10 for texture demonstration.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Proyek spec ad untuk format iklan UGC direct-response.",
+        en: "Spec ad demonstrating direct-response UGC ad formatting.",
+      },
+      creativeLearnings: [
+        {
+          id: "Format vertikal native membutuhkan subtitle besar dengan warna kontras.",
+          en: "Native vertical format demands large, high-contrast subtitles.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Uji 3 hook pembuka berbeda dengan bagian isi yang sama.",
+        en: "Test 3 distinct hooks with identical body creative.",
+      },
+    },
+  },
+  {
+    id: "focusbrew-hook-sprint",
+    slug: "focusbrew-hook-sprint",
+    title: "FocusBrew Nootropics",
+    client: "FocusBrew (Spec Ad / Hook Sprint)",
+    category: {
+      id: "Beverage / Hook Variations Sprint",
+      en: "Beverage / Hook Variations Sprint",
+    },
+    year: "2026",
+    tagline: {
+      id: "3-Angle Hook Variations Sprint untuk menguji retensi 3 detik pertama pada minuman penambah fokus.",
+      en: "3-Angle Hook Variations Sprint testing the first 3-second retention on focus beverages.",
+    },
+    heroSummary: {
+      id: "Studi kasus iterasi sudut pandang iklan performa (Hook Sprint). Memproduksi 3 pembuka berbeda (Skripsi, Zoom fatigue, Kafein crash) dengan penawaran inti yang sama.",
+      en: "A performance creative iteration study (Hook Sprint) testing 3 isolated opening hooks against a single core offer.",
+    },
+    featured: false,
+    primaryHighlight: {
+      value: "1 Video Cut",
+      label: {
+        id: "Variasi Angle Kreatif",
+        en: "Creative Angle Variations",
+      },
+      subtext: {
+        id: "44s Vertikal 9:16 (CapCut & Premiere Pro)",
+        en: "44s 9:16 Vertical (CapCut & Premiere Pro)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Media Sosial",
+          en: "Native Social Vertical Format",
+        },
+      },
+      {
+        value: "Hook Sprint",
+        label: {
+          id: "Iterasi Sudut Pandang",
+          en: "Angle Iteration System",
+        },
+      },
+      {
+        value: "CapCut & PR",
+        label: {
+          id: "Editing Multi-Variasi",
+          en: "Multi-Variation Editing",
+        },
+      },
+    ],
+    toolsUsed: ["CapCut", "Adobe Premiere Pro"],
+    creativeBrief: {
+      clientObjective: {
+        id: "Menemukan hook pembuka pemenang (winning angle) dengan biaya produksi minimum.",
+        en: "Identify winning opening hooks with minimal production friction.",
+      },
+      targetAudience: {
+        id: "Pekerja kreatif, developer, dan mahasiswa dengan beban tugas intensif.",
+        en: "Creative pros, devs, and students under heavy workload.",
+      },
+      coreProblem: {
+        id: "Kopi biasa sering menyebabkan jitter dan crash energi di jam 2 siang.",
+        en: "Regular coffee causes jitters and an afternoon 2 PM energy crash.",
+      },
+      angleHookStrategy: {
+        id: "Menggambarkan sensasi '2 PM energy crash' dengan efek visual dramatis.",
+        en: "Depicting the '2 PM energy crash' with dramatic visual cues.",
+      },
+      keyDifferentiators: [
+        {
+          id: "Fokus stabil 6 jam tanpa rasa cemas atau jantung berdebar.",
+          en: "6-hour calm focus without jitters or palpitations.",
+        },
+      ],
+      deliverables: [
+        {
+          id: "1 Video Cut 9:16 (44 Detik).",
+          en: "1 Video Cut 9:16 (44 Seconds).",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Hook Variations Sprint",
+        en: "Spec Ad / Hook Variations Sprint",
+      },
+      objective: {
+        id: "Mengidentifikasi hook dengan thumbstop tertinggi untuk kampanye berbayar.",
+        en: "Identify highest-thumbstop angle for paid ad campaigns.",
+      },
+      targetAudience: {
+        id: "Pekerja meja dan pembelajar yang membutuhkan stamina mental berkelanjutan.",
+        en: "Desk workers and learners requiring sustained mental stamina.",
+      },
+      audienceInsight: {
+        id: "Audiens menyadari masalah drop energi mereka tetapi belum tahu solusi nootropik.",
+        en: "Audiences know their energy crash problem but lack awareness of nootropics.",
+      },
+      coreAngle: {
+        id: "The 2 PM Energy Crash",
+        en: "The 2 PM Energy Crash",
+      },
+      hookStrategy: {
+        id: "Jam dinding menunjukkan pukul 14:00 disusul kepala jatuh ke meja.",
+        en: "Wall clock hitting 2:00 PM followed by desk slump.",
+      },
+      valueProposition: {
+        id: "Kombinasi jamur adaptogen dan nootropik alami untuk energi konstan.",
+        en: "Adaptogenic mushrooms and natural nootropics for constant energy.",
+      },
+      callToAction: {
+        id: "Coba starter pack dengan garansi uang kembali 30 hari.",
+        en: "Try the starter kit with a 30-day money-back guarantee.",
+      },
+      creativeRationale: {
+        id: "Mengisolasi rasa sakit jam 2 siang membuat penonton langsung merasa 'ini tentang saya'.",
+        en: "Isolating the 2 PM pain point generates instant viewer self-identification.",
+      },
+    },
+    videoVariations: [
+      {
+        id: "focusbrew-v1",
+        label: {
+          id: "Cut 01: The 2 PM Energy Crash",
+          en: "Cut 01: The 2 PM Energy Crash",
+        },
+        hookHeadline: {
+          id: "Urgensi Kelelahan Kerja Jam 14:00",
+          en: "Midday Work Fatigue Urgency",
+        },
+        angleDescription: {
+          id: "Hook visual dramatis saat energi mendadak drop di tengah deadline padat.",
+          en: "Dramatic visual hook opening at the exact moment energy drops during tight deadlines.",
+        },
+        videoSrc: "/videos/katama/katama_v3_deadline_emergency.mp4",
+        aspectRatio: "9:16",
+        duration: "44s",
+        specs: {
+          durationFrames: "1320",
+          fps: "30",
+          resolution: "1080×1920",
+          voiceModel: "Conversational Pro Voice",
+        },
+        keyTakeaway: {
+          id: "Hook berbasis jam spesifik terbukti meningkatkan keterhubungan emosional penonton.",
+          en: "Specific-time hooks elevate emotional viewer relevance.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "script-focus-v1",
+        name: {
+          id: "Angle 01: Midday Energy Crash",
+          en: "Angle 01: Midday Energy Crash",
+        },
+        hookType: {
+          id: "Situational Friction",
+          en: "Situational Friction",
+        },
+        duration: "44s",
+        concept: {
+          id: "Menangkap momen saat mata mulai berat di depan laptop.",
+          en: "Capturing the moment eyes glaze over in front of the screen.",
+        },
+        lines: [
+          {
+            time: "0:00 - 0:03",
+            visual: {
+              id: "Tampilan jam 14:00 dan layar laptop penuh tab terbuka.",
+              en: "Clock showing 2:00 PM and browser tabs overload.",
+            },
+            audio: {
+              id: "'Jam 2 siang, kerjaan masih numpuk, tapi otak udah mogok kerja?'",
+              en: "'2 PM, inbox full, but brain already checked out?'",
+            },
+            psychologyIntent: {
+              id: "Membangun empati instan dengan realitas kerja penonton.",
+              en: "Instantly empathizing with the viewer's work reality.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "focus-sc-1",
+        scene: {
+          id: "Adegan 01: Jam 14:00 Drop",
+          en: "Scene 01: The 2 PM Slump",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "Tampilan jam dinding bergerak cepat ke 14:00.",
+          en: "Clock timelapse ticking swiftly to 2:00 PM.",
+        },
+        toolUsed: "Premiere Pro Speed Ramp",
+        assetType: "Motion Graphic",
+      },
+    ],
+    assetBreakdown: [
+      {
+        id: "focus-asset-1",
+        name: {
+          id: "B-Roll Workflow & Beverage Pour",
+          en: "B-Roll Workflow & Beverage Pour",
+        },
+        category: "Self-shot / original footage",
+        myContribution: {
+          id: "Speed ramping, sound design klik keyboard, dan koreksi warna.",
+          en: "Speed ramping, keyboard tactile sound design, and color grading.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "01",
+        title: {
+          id: "Variasi Modular Hook Timeline",
+          en: "Modular Hook Timeline Assembly",
+        },
+        turnaroundTime: {
+          id: "6 Jam",
+          en: "6 Hours",
+        },
+        tools: ["Premiere Pro"],
+        summary: {
+          id: "Menyusun timeline dengan 3 variasi 3 detik pertama yang dapat diekspor secara mandiri.",
+          en: "Building timelines with 3 swappable first 3-second segments for independent export.",
+        },
+        keyDeliverable: {
+          id: "Multi-Hook Export Batch",
+          en: "Multi-Hook Export Batch",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Struktur modular mempermudah pengujian A/B cepat di ad manager.",
+          en: "Modular architecture streamlines rapid A/B testing in ad managers.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Membuat hook visual ketiga dengan peraga demonstrasi produk langsung.",
+          en: "Produce a third visual hook featuring live product demonstration.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Proyek spec ad untuk demonstrasi metodologi hook sprint.",
+        en: "Spec ad demonstrating hook sprint production methodology.",
+      },
+      creativeLearnings: [
+        {
+          id: "Menukar 3 detik pertama menghasilkan biaya pengujian yang jauh lebih hemat.",
+          en: "Swapping only the first 3 seconds dramatically lowers production testing costs.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Menguji 2 CTA penutup yang berbeda (diskon vs gratis ongkir).",
+        en: "Test 2 distinct closing CTAs (discount vs free shipping).",
+      },
+    },
+  },
+  {
+    id: "ergodesk-review-stack",
+    slug: "ergodesk-review-stack",
+    title: "ErgoDesk Pro",
+    client: "ErgoDesk (Spec Ad / Review Stack)",
+    category: {
+      id: "Furniture & Workspaces / Review-Stack Ads",
+      en: "Furniture & Workspaces / Review-Stack Ads",
+    },
+    year: "2026",
+    tagline: {
+      id: "Menyusun kutipan ulasan pelanggan nyata (VOC) ke dalam narasi visual bertingkat untuk mengatasi keraguan pembeli sebelum checkout.",
+      en: "Stacking authentic customer quotes (VOC) into a sequential vertical proof arc to eliminate hesitation.",
+    },
+    heroSummary: {
+      id: "Studi kasus iklan vertikal berbasis ulasan pelanggan terverifikasi (Review-Stack). Mengubah ulasan bintang lima menjadi bukti sosial kinetik berkecepatan tinggi.",
+      en: "A verified review-stack vertical ad study transforming authentic 5-star customer reviews into rapid kinetic social proof.",
+    },
+    featured: false,
+    primaryHighlight: {
+      value: "1 Video Cut",
+      label: {
+        id: "Format Review-Stack",
+        en: "Review-Stack Cut",
+      },
+      subtext: {
+        id: "41s Vertikal 9:16 (CapCut & Premiere Pro)",
+        en: "41s 9:16 Vertical (CapCut & Premiere Pro)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Media Sosial",
+          en: "Native Social Vertical Format",
+        },
+      },
+      {
+        value: "Review Stack",
+        label: {
+          id: "Arsitektur Social Proof",
+          en: "Social Proof Architecture",
+        },
+      },
+      {
+        value: "CapCut & PR",
+        label: {
+          id: "Animasi Teks Kinetik",
+          en: "Kinetic Text Animation",
+        },
+      },
+    ],
+    toolsUsed: ["CapCut", "Adobe Premiere Pro"],
+    creativeBrief: {
+      clientObjective: {
+        id: "Mengatasi keraguan harga tinggi pada standing desk dengan rentetan ulasan pembeli nyata.",
+        en: "Eliminate price hesitation for standing desks through rapid real buyer reviews.",
+      },
+      targetAudience: {
+        id: "Pekerja remote dengan masalah sakit punggung setelah duduk seharian.",
+        en: "Remote workers suffering back pain from prolonged sitting.",
+      },
+      coreProblem: {
+        id: "Pembeli ragu apakah meja berdiri elektrik sepadan dengan harganya.",
+        en: "Buyers hesitate over whether electric standing desks justify their premium price.",
+      },
+      angleHookStrategy: {
+        id: "Menampilkan kutipan review paling tajam: 'Pinggang gue akhirnya nggak teriak lagi'.",
+        en: "Opening with the sharpest review quote: 'My lower back finally stopped screaming'.",
+      },
+      keyDifferentiators: [
+        {
+          id: "Motor ganda senyap dan garansi rangka 5 tahun.",
+          en: "Dual silent motors with 5-year frame warranty.",
+        },
+      ],
+      deliverables: [
+        {
+          id: "1 Video Cut 9:16 (41 Detik).",
+          en: "1 Video Cut 9:16 (41 Seconds).",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / Review-Stack Ads",
+        en: "Spec Ad / Review-Stack Ads",
+      },
+      objective: {
+        id: "Membangun kepercayaan transaksi instan menggunakan bukti ulasan nyata.",
+        en: "Build instant transactional trust using authentic review proof.",
+      },
+      targetAudience: {
+        id: "Profesional WFH yang memprioritaskan ergonomi ruang kerja.",
+        en: "WFH professionals prioritizing ergonomic workspace health.",
+      },
+      audienceInsight: {
+        id: "Klaim brand sendiri diabaikan, namun kata-kata pembeli lain yang spesifik sangat dipercaya.",
+        en: "Brand self-claims get ignored; specific peer review wording converts.",
+      },
+      coreAngle: {
+        id: "5-Star Review Breakdown",
+        en: "5-Star Review Breakdown",
+      },
+      hookStrategy: {
+        id: "Pop-up grafis bintang 5 dan screenshot ulasan di detik pertama.",
+        en: "5-star graphic pop-up with review snippet in second one.",
+      },
+      valueProposition: {
+        id: "Meja ergonomis stabil dengan penyesuaian tinggi sentuhan satu tombol.",
+        en: "Rock-solid ergonomic desk with one-touch height presets.",
+      },
+      callToAction: {
+        id: "Upgrade meja kerja hari ini dengan cicilan 0% dan free delivery.",
+        en: "Upgrade your desk today with 0% installment and free delivery.",
+      },
+      creativeRationale: {
+        id: "Mendobrak keraguan harga dengan membuktikan kepuasan ratusan pelanggan terdahulu.",
+        en: "Countering price friction by showcasing hundreds of satisfied customer outcomes.",
+      },
+    },
+    videoVariations: [
+      {
+        id: "ergodesk-v1",
+        label: {
+          id: "Cut 01: 5-Star Review Breakdown",
+          en: "Cut 01: 5-Star Review Breakdown",
+        },
+        hookHeadline: {
+          id: "Social Proof Stack",
+          en: "Social Proof Stack",
+        },
+        angleDescription: {
+          id: "Membuka video dengan kutipan ulasan paling tajam untuk membangun kredibilitas instan.",
+          en: "Opening with the sharpest verified review quote to establish instant credibility.",
+        },
+        videoSrc: "/videos/nespresso/nespresso-vertuo-v2.mp4",
+        aspectRatio: "9:16",
+        duration: "41s",
+        specs: {
+          durationFrames: "1230",
+          fps: "30",
+          resolution: "1080×1920",
+          voiceModel: "Conversational Review Voice",
+        },
+        keyTakeaway: {
+          id: "Kutipan spesifik mengatasi keberatan harga jauh lebih baik dari klaim abstrak.",
+          en: "Specific quotes overcome price objections better than generic slogans.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "script-ergo-v1",
+        name: {
+          id: "Angle 01: Back Pain Relief Review",
+          en: "Angle 01: Back Pain Relief Review",
+        },
+        hookType: {
+          id: "Social Proof Hook",
+          en: "Social Proof Hook",
+        },
+        duration: "41s",
+        concept: {
+          id: "Membaca ulasan pembeli yang paling emosional tentang hilangnya sakit pinggang.",
+          en: "Reading the most emotional customer quote about back pain relief.",
+        },
+        lines: [
+          {
+            time: "0:00 - 0:03",
+            visual: {
+              id: "Grafis kartu ulasan bintang 5 muncul dengan efek suara ding.",
+              en: "5-star rating badge pops up with clean chime sound.",
+            },
+            audio: {
+              id: "'Awalnya ragu beli meja semahal ini... tapi ulasan ini yang bikin gue yakin.'",
+              en: "'I hesitated spending this much on a desk... until this review.'",
+            },
+            psychologyIntent: {
+              id: "Membuka rasa ingin tahu seputar keputusan pembelian.",
+              en: "Piquing curiosity around a high-ticket purchase decision.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "ergo-sc-1",
+        scene: {
+          id: "Adegan 01: Pop-up Rating Bintang 5",
+          en: "Scene 01: 5-Star Rating Pop",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "Animasi kinetik 5 bintang emas bersinar.",
+          en: "Kinetic animation of 5 gold glowing stars.",
+        },
+        toolUsed: "CapCut Motion Graphics",
+        assetType: "Motion Graphic",
+      },
+    ],
+    assetBreakdown: [
+      {
+        id: "ergo-asset-1",
+        name: {
+          id: "Desk Footage & Kinetic Review Badges",
+          en: "Desk Footage & Kinetic Review Badges",
+        },
+        category: "Product images or external assets",
+        myContribution: {
+          id: "Motion graphics kartu ulasan, audio leveling, pacing cuts.",
+          en: "Review card motion graphics, audio mastering, pacing cuts.",
+        },
+        licenseStatus: "Public Content (Spec Ad Use)",
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "01",
+        title: {
+          id: "Ekstraksi Review & Desain Typografi",
+          en: "Review Extraction & Kinetic Typography",
+        },
+        turnaroundTime: {
+          id: "5 Jam",
+          en: "5 Hours",
+        },
+        tools: ["Premiere Pro", "CapCut"],
+        summary: {
+          id: "Memilih kalimat ulasan paling kuat dan membuat animasi teks dinamis.",
+          en: "Selecting potent customer soundbites and creating dynamic typography.",
+        },
+        keyDeliverable: {
+          id: "Review Card Animation Assets",
+          en: "Review Card Animation Assets",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Format social proof langsung menurunkan skeptisisme penonton.",
+          en: "Direct social proof formatting immediately reduces skepticism.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Menambahkan split-screen b-roll penyesuaian tinggi meja di detik ke-5.",
+          en: "Include a split-screen height adjustment b-roll at second 5.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Proyek spec ad untuk demonstrasi format review-stacking.",
+        en: "Spec ad demonstrating review-stacking framework.",
+      },
+      creativeLearnings: [
+        {
+          id: "Kutipan ulasan yang jujur memiliki daya dorong konversi yang sangat tinggi.",
+          en: "Candid customer quotes provide exceptionally high conversion momentum.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Menguji variasi pembuka dengan format unboxing cepat.",
+        en: "Test opening variations featuring a rapid unboxing format.",
+      },
+    },
+  },
 ];
 
 export const PRODUCTION_PIPELINE = [

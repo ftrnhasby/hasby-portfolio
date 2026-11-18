@@ -24,9 +24,9 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: t.work },
-    { href: "/process", label: t.process },
-    { href: "/about", label: t.about },
+    { href: "/work", label: t.work },
+    { href: "/#workflow", label: t.process },
+    { href: "/#about", label: t.about },
     { href: "/contact", label: t.contact },
   ];
 
@@ -47,11 +47,7 @@ export function Navbar() {
         >
           <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse" />
           <span className="font-semibold tracking-wider text-xs uppercase text-zinc-100">
-            Hasby
-          </span>
-          <span className="text-zinc-600 hidden sm:inline">/</span>
-          <span className="text-xs text-zinc-400 font-mono tracking-normal hidden sm:inline">
-            {t.roleSubtitle}
+            FITRAN HASBY
           </span>
         </Link>
 
