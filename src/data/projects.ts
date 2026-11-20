@@ -1907,283 +1907,6 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: "aura-botanicals-ai",
-    slug: "aura-botanicals-ai",
-    title: "Aura Botanicals",
-    client: "Aura Botanicals (Spec Ad / AI Narrative)",
-    category: {
-      id: "Skincare / AI Narrative Ad",
-      en: "Skincare / AI Narrative Ad",
-    },
-    year: "2026",
-    tagline: {
-      id: "Format cerita naratif berbasis karakter AI terarah untuk menguji retensi audiens skincare natural.",
-      en: "Character-driven AI story format designed to hold attention for natural skincare audiences.",
-    },
-    heroSummary: {
-      id: "Eksplorasi pembuatan video iklan vertikal (9:16) berbasis karakter dan visual sinematik AI yang diedit dengan pacing iklan komersial direct-response.",
-      en: "Exploration of AI-generated characters and visuals cut with commercial direct-response ad pacing.",
-    },
-    featured: false,
-    primaryHighlight: {
-      value: "1 Video Cut",
-      label: {
-        id: "Variasi Angle Kreatif",
-        en: "Creative Angle Variations",
-      },
-      subtext: {
-        id: "45s Vertikal 9:16 (CapCut & Premiere Pro)",
-        en: "45s 9:16 Vertical (CapCut & Premiere Pro)",
-      },
-    },
-    secondaryHighlights: [
-      {
-        value: "9:16",
-        label: {
-          id: "Format Vertikal Media Sosial",
-          en: "Native Social Vertical Format",
-        },
-      },
-      {
-        value: "AI Narrative",
-        label: {
-          id: "Model Karakter Terkalibrasi",
-          en: "Calibrated Character Model",
-        },
-      },
-      {
-        value: "ElevenLabs",
-        label: {
-          id: "Voiceover Neural AI Terkurasi",
-          en: "Neural AI Voiceover Pipeline",
-        },
-      },
-    ],
-    toolsUsed: [
-      "CapCut",
-      "Adobe Premiere Pro",
-      "ElevenLabs Neural AI",
-    ],
-    creativeBrief: {
-      clientObjective: {
-        id: "Menguji format storytelling sinematik AI untuk produk serum natural agar terlihat premium dan feed-native.",
-        en: "Test cinematic AI storytelling for natural serum products to look premium and feed-native.",
-      },
-      targetAudience: {
-        id: "Wanita 22–35 tahun yang memperhatikan bahan organik dan rutinitas perawatan kulit.",
-        en: "Women aged 22–35 mindful of clean ingredients and skincare routines.",
-      },
-      coreProblem: {
-        id: "Iklan skincare umum terasa repetitif dan cepat di-skip dalam 2 detik pertama.",
-        en: "Generic skincare ads feel repetitive and get skipped within the first 2 seconds.",
-      },
-      angleHookStrategy: {
-        id: "Naratif drama pagi (The Morning Ritual Drama) yang mengisolasi momen frustrasi kulit kusam.",
-        en: "Morning ritual drama isolating the moment of dull skin frustration.",
-      },
-      keyDifferentiators: [
-        {
-          id: "Visual estetika sinematik dengan color grading lembut.",
-          en: "Cinematic visual aesthetic with soft organic color grading.",
-        },
-        {
-          id: "Pacing direct-response dengan subtitle sound-off.",
-          en: "Direct-response pacing with sound-off captions.",
-        },
-      ],
-      deliverables: [
-        {
-          id: "1 Video Cut 9:16 (45 Detik).",
-          en: "1 Video Cut 9:16 (45 Seconds).",
-        },
-      ],
-    },
-    creativeStrategy: {
-      projectType: {
-        id: "Spec Ad / Template Eksplorasi",
-        en: "Spec Ad / Template Exploration",
-      },
-      objective: {
-        id: "Membangun thumbstop rate tinggi menggunakan visual AI yang diedit secara disiplin.",
-        en: "Build high thumbstop rate using disciplined editorial pacing on AI visuals.",
-      },
-      targetAudience: {
-        id: "Penggemar skincare DTC dan pembeli produk kecantikan online.",
-        en: "DTC skincare enthusiasts and online beauty shoppers.",
-      },
-      audienceInsight: {
-        id: "Konsumen bosan dengan testimoni palsu dan merespons positif narasi estetik yang jujur.",
-        en: "Consumers fatigue easily on fake testimonials and respond to honest aesthetic storytelling.",
-      },
-      coreAngle: {
-        id: "The Morning Ritual Drama",
-        en: "The Morning Ritual Drama",
-      },
-      hookStrategy: {
-        id: "Visual close-up emosional di depan cermin dalam 3 detik pertama.",
-        en: "Emotional mirror close-up visual in the first 3 seconds.",
-      },
-      valueProposition: {
-        id: "Serum botani murni yang mengembalikan kilau alami kulit tanpa rasa lengket.",
-        en: "Pure botanical serum restoring natural glow without greasiness.",
-      },
-      callToAction: {
-        id: "Dapatkan penawaran peluncuran eksklusif hari ini.",
-        en: "Claim your exclusive launch offer today.",
-      },
-      creativeRationale: {
-        id: "Menggabungkan daya tarik visual AI dengan ritme editing direct response untuk membuktikan kelayakan feed-native.",
-        en: "Combining AI visual appeal with direct-response editing rhythm to prove feed-native viability.",
-      },
-    },
-    videoVariations: [
-      {
-        id: "aura-ai-v1",
-        label: {
-          id: "Cut 01: The Morning Ritual Drama",
-          en: "Cut 01: The Morning Ritual Drama",
-        },
-        hookHeadline: {
-          id: "Naratif Mini Drama AI",
-          en: "AI Mini-Drama Narrative",
-        },
-        angleDescription: {
-          id: "Format cerita naratif berbasis karakter AI terarah untuk menarik atensi audiens skincare natural.",
-          en: "Character-driven AI story format designed to hold attention for natural skincare audiences.",
-        },
-        videoSrc: "/videos/nespresso/nespresso-vertuo-v1.mp4",
-        aspectRatio: "9:16",
-        duration: "45s",
-        specs: {
-          durationFrames: "1350",
-          fps: "30",
-          resolution: "1080×1920",
-          voiceModel: "ElevenLabs Neural Audio",
-        },
-        keyTakeaway: {
-          id: "Karakter AI konsisten dengan pacing cepat dan subtitle kontras.",
-          en: "Consistent AI character with fast pacing and high-contrast captions.",
-        },
-      },
-    ],
-    scriptAngles: [
-      {
-        id: "script-aura-v1",
-        name: {
-          id: "Angle 01: The Morning Ritual Drama",
-          en: "Angle 01: The Morning Ritual Drama",
-        },
-        hookType: {
-          id: "Visual Emosional & Pola Interupsi",
-          en: "Emotional Visual & Pattern Interrupt",
-        },
-        duration: "45s",
-        concept: {
-          id: "Menampilkan kontras antara kulit kusam saat bangun pagi dengan kesegaran ekstrak botani.",
-          en: "Contrasting morning dullness with botanical extract refreshment.",
-        },
-        lines: [
-          {
-            time: "0:00 - 0:03",
-            visual: {
-              id: "Close-up ekspresi wajah di depan cermin pagi.",
-              en: "Mirror reflection close-up with morning light.",
-            },
-            audio: {
-              id: "'Pernah ngerasa kulit kusam padahal udah tidur cukup?'",
-              en: "'Ever wake up feeling like your skin didn't get the memo?'",
-            },
-            psychologyIntent: {
-              id: "Memvalidasi frustrasi sehari-hari audiens sasaran.",
-              en: "Validating the target audience's everyday frustration.",
-            },
-          },
-        ],
-      },
-    ],
-    storyboard: [
-      {
-        id: "aura-sc-1",
-        scene: {
-          id: "Adegan 01: Hook Cermin",
-          en: "Scene 01: The Mirror Hook",
-        },
-        timecode: "00:00 - 00:03",
-        visualDescription: {
-          id: "Close-up dramatis wajah dengan pencahayaan pagi.",
-          en: "Dramatic facial close-up with morning daylight.",
-        },
-        toolUsed: "CapCut & AI Visual Engine",
-        assetType: "Motion Graphic",
-      },
-    ],
-    assetBreakdown: [
-      {
-        id: "aura-asset-1",
-        name: {
-          id: "AI Generated Footage & Product Mockup",
-          en: "AI Generated Footage & Product Mockup",
-        },
-        category: "AI-generated footage or audio",
-        myContribution: {
-          id: "Prompting, seleksi visual, editing ritme, dan sound design.",
-          en: "Prompting, visual curation, rhythm editing, and sound design.",
-        },
-        licenseStatus: "Public Content (Spec Ad Use)",
-      },
-    ],
-    productionWorkflow: [
-      {
-        phase: "01",
-        title: {
-          id: "Generasi Visual AI & Kurasi Footage",
-          en: "AI Visual Generation & Footage Curation",
-        },
-        turnaroundTime: {
-          id: "1 Hari Kerja",
-          en: "1 Working Day",
-        },
-        tools: ["AI Visual Suite", "Premiere Pro"],
-        summary: {
-          id: "Menghasilkan variasi shot dan memilih klip dengan pergerakan paling natural.",
-          en: "Generating shot variations and curating clips with natural motion.",
-        },
-        keyDeliverable: {
-          id: "Asset Library Terkurasi",
-          en: "Curated Asset Library",
-        },
-      },
-    ],
-    honestEvaluation: {
-      topPerformers: [
-        {
-          id: "Pacing video cepat menjaga watch time di 5 detik pertama.",
-          en: "Brisk editorial pacing secures high 5-second watch time.",
-        },
-      ],
-      underperformers: [
-        {
-          id: "Variasi hook suara UGC asli dapat diuji untuk komparasi konversi.",
-          en: "Authentic UGC voiceover hooks could be tested for conversion comparison.",
-        },
-      ],
-      creativeAssessment: {
-        id: "Proyek spec ad untuk demonstrasi kapabilitas editing AI direct-response.",
-        en: "Spec ad project demonstrating AI direct-response video editing capabilities.",
-      },
-      creativeLearnings: [
-        {
-          id: "Visual AI membutuhkan sound design yang sangat grounded agar terasa realistis.",
-          en: "AI visuals require highly grounded tactile sound design to feel real.",
-        },
-      ],
-      nextIterationStrategy: {
-        id: "Membuat variasi 15 detik untuk retargeting ads.",
-        en: "Produce 15s cutdowns for retargeting campaigns.",
-      },
-    },
-  },
-  {
     id: "lumina-skin-ugc",
     slug: "lumina-skin-ugc",
     title: "Lumina Skin",
@@ -2987,6 +2710,1508 @@ export const PROJECTS: Project[] = [
       nextIterationStrategy: {
         id: "Menguji variasi pembuka dengan format unboxing cepat.",
         en: "Test opening variations featuring a rapid unboxing format.",
+      },
+    },
+  },
+  {
+    id: "oximus-hydra-zdp1118",
+    slug: "oximus-hydra-zdp1118",
+    title: "Oximus Hydra ZDP1118",
+    client: "Oximus Indonesia (Spec Ad / Creative Sprint)",
+    category: {
+      id: "Tech & Workstation Ergonomics / AI Ads",
+      en: "Tech & Workstation Ergonomics / AI Ads",
+    },
+    year: "2026",
+    tagline: {
+      id: "Rangkaian 2 video iklan direct response vertikal 30 detik (9:16) berbasis AI Creative Pipeline untuk segmen pekerja WFH, programmer, & workstation enthusiast.",
+      en: "A 2-part direct response vertical video ad system (30s, 9:16) engineered with an AI Creative Pipeline for remote professionals, developers, and workstation enthusiasts.",
+    },
+    heroSummary: {
+      id: "Studi kasus creative advertising multi-variasi untuk Oximus Hydra ZDP1118 Gas Spring Monitor Arm. Menguji 2 sudut pandang narasi: (1) Spatial Relief & Cluttered Desk Friction ('Meja Lu Sempit Bukan Karena Kurang Lebar'), dan (2) Say Goodbye to Tech-Neck ('Lehermu Kaku Tiap Sore Karena Monitormu Kurang Tinggi') yang diselesaikan mekanisme counterbalance gas spring satu jari dan 5 sudut kamera sinematik dinamis.",
+      en: "A comprehensive multi-variation creative advertising case study for Oximus Hydra ZDP1118 Gas Spring Monitor Arm. Testing 2 distinct narrative angles: (1) Spatial Relief & Cluttered Desk Friction ('Your desk isn't too small, the stand eats your space'), and (2) Say Goodbye to Tech-Neck ('Your neck is stiff every afternoon because your monitor sits too low') solved by one-finger gas spring counterbalance across 5 dynamic cinematic POVs.",
+    },
+    featured: true,
+    primaryHighlight: {
+      value: "2 Video Cuts",
+      label: {
+        id: "Variasi Angle Kreatif",
+        en: "Creative Angle Variations",
+      },
+      subtext: {
+        id: "30s Vertikal 9:16 (Meja Sempit vs. Goodbye Tech-Neck)",
+        en: "30s 9:16 Vertical (Cluttered Desk vs. Goodbye Tech-Neck)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "2–9 kg",
+        label: {
+          id: "Kapasitas Beban Gas Spring (19\"–34\")",
+          en: "Gas Spring Load Capacity (19\"–34\")",
+        },
+      },
+      {
+        value: "+40%",
+        label: {
+          id: "Area Meja Bebas (Spatial Relief)",
+          en: "Reclaimed Usable Desk Surface",
+        },
+      },
+      {
+        value: "7 SFX Cues",
+        label: {
+          id: "Desain Audio Taktil ASMR & Lo-Fi 95 BPM",
+          en: "Tactile ASMR Foley & 95 BPM Chillhop",
+        },
+      },
+    ],
+    toolsUsed: [
+      "Midjourney v6.1 (Visual Keyframes)",
+      "Kling AI (Motion Diffusion)",
+      "ElevenLabs (Indonesian Neural Voice)",
+      "Adobe Premiere Pro (NLE Timeline & Mastering)",
+      "Adobe After Effects (Kinetic Typography & HUD)",
+      "CapCut Desktop (Dynamic Captions)",
+    ],
+    creativeBrief: {
+      clientObjective: {
+        id: "Merancang video iklan direct response format vertikal (9:16, 30 detik) yang menonjolkan Oximus Hydra ZDP1118 sebagai solusi utama untuk mengatasi meja kerja sempit, kabel berantakan, dan postur leher kaku bagi pengguna setup workstation di Indonesia.",
+        en: "Produce a 30-second vertical direct response video ad (9:16) establishing the Oximus Hydra ZDP1118 monitor arm as the definitive solution for cluttered desks, tangled cords, and ergonomic neck fatigue among Indonesian remote professionals.",
+      },
+      targetAudience: {
+        id: "Pekerja remote/WFH, software engineer, desainer visual, dan desk setup enthusiast berusia 22–38 tahun yang menghabiskan 8+ jam di depan meja kerja dan terganggu oleh stand bawaan layar yang memakan area meja.",
+        en: "Remote professionals, developers, designers, and desk setup enthusiasts aged 22–38 spending 8+ hours at their workstations, frustrated by bulky monitor stands stealing desktop space.",
+      },
+      coreProblem: {
+        id: "Kaki stand monitor bawaan pabrik (OEM) memakan hingga 40% area fungsional meja, membatasi posisi keyboard/mousepad, menciptakan kabel ruwet yang merusak fokus, dan memaksa posisi leher kaku karena minimnya fleksibilitas sudut pandang.",
+        en: "Bulky OEM monitor stands consume up to 40% of usable desk surface, crowd keyboard and mousepad space, create distracting cable clutter, and trap users in rigid, non-ergonomic viewing angles.",
+      },
+      angleHookStrategy: {
+        id: "Membuka video dengan Hook Friksi Spasial: 'Meja Lu Sempit Bukan Karena Kurang Lebar...' untuk mematahkan asumsi penonton bahwa mereka perlu meja baru, lalu memperkenalkan mekanisme gas spring dan pelepasan ruang meja secara kontras dan memuaskan (spatial relief).",
+        en: "Opening with a Spatial Friction Hook: 'Your desk feels cramped not because it's too small...' to challenge assumptions about needing a bigger desk, immediately demonstrating one-finger gas spring levitation and dramatic 40% spatial reclamation.",
+      },
+      keyDifferentiators: [
+        {
+          id: "Mekanisme gas spring counterbalance presisi untuk beban monitor 2–9 kg (layar 19\" hingga 34\")",
+          en: "Precision gas spring counterbalance mechanism supporting 2–9 kg displays (19\" to 34\")",
+        },
+        {
+          id: "Pelepasan area meja instan hingga 40% dengan pemasangan clamp kokoh tanpa merusak meja (10–65 mm)",
+          en: "Instant 40% desk space relief with a solid non-damaging clamp/grommet mount (10–65 mm)",
+        },
+        {
+          id: "Integrated cable management tersembunyi di dalam lengan arm untuk estetika meja clean setup",
+          en: "Internal integrated cable management channels for a clean, wire-free desk aesthetic",
+        },
+        {
+          id: "Artikulasi gerak 360° penuh: tilt ±90°, swivel 180°, rotasi layar landscape ke portrait dengan sentuhan satu jari",
+          en: "Full 360° motion: tilt ±90°, swivel 180°, and portrait/landscape rotation with a single finger touch",
+        },
+      ],
+      deliverables: [
+        {
+          id: "Variasi 1: Video Vertikal 'Meja Sempit Bukan Kurang Lebar' (30 Detik, 1080×1920 9:16 @ 30fps)",
+          en: "Variation 1: Vertical Video 'Cluttered Desk Friction' (30s, 1080×1920 9:16 @ 30fps)",
+        },
+        {
+          id: "Variasi 2: Video Vertikal 'Say Goodbye to Tech-Neck' (30 Detik, 1080×1920 9:16 @ 30fps)",
+          en: "Variation 2: Vertical Video 'Say Goodbye to Tech-Neck' (30s, 1080×1920 9:16 @ 30fps)",
+        },
+        {
+          id: "5 Dynamic Cinematic POVs (OTS Leher Pegal, Frontal Eye-Level, Tabletop Low-Angle, POV Layar, Studio Sweep)",
+          en: "5 Dynamic Cinematic POVs (OTS Neck Strain, Frontal Eye-Level, Tabletop Low-Angle, Driver's POV, Studio Sweep)",
+        },
+        {
+          id: "Paket Desain Suara Taktil (7 Cues Foley ASMR + BGM Chillhop 95 BPM mastered to -14 LUFS)",
+          en: "Tactile Audio Package (7 ASMR Foley Cues + 95 BPM Chillhop mastered to -14 LUFS)",
+        },
+        {
+          id: "Blueprint Handoff Produksi & Safe-Zone Compliance Guide untuk TikTok Ads & Meta Reels",
+          en: "Production Handoff Blueprint & Safe-Zone Compliance Guide for TikTok Ads & Meta Reels",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec ad independen / AI Direct Response Video Ad",
+        en: "Independent Spec Ad / AI Direct Response Video Ad",
+      },
+      objective: {
+        id: "Memicu konversi pembelian langsung (klik keranjang kuning / link checkout) dengan menonjolkan transformasi visual instan dari meja berantakan menjadi setup melayang yang lega.",
+        en: "Drive direct-response purchases (cart/bio link clicks) by showcasing the instant visual transformation from a crowded desk to a floating, spacious setup.",
+      },
+      targetAudience: {
+        id: "Pengguna workstation di Indonesia (usia 22–38) yang membutuhkan ruang kerja lebih luas dan ergonomis tanpa harus membeli meja baru.",
+        en: "Workstation users in Indonesia (aged 22–38) seeking ergonomic comfort and expanded workspace without buying an expensive new desk.",
+      },
+      audienceInsight: {
+        id: "Banyak orang mengira mereka butuh meja lebih besar saat meja kerja terasa sempit, padahal masalah sebenarnya adalah stand monitor bawaan yang statis dan 'memakan' area kerja paling berharga.",
+        en: "Many professionals believe they need a bigger desk when cramped, unaware that their bulky OEM monitor stand is stealing the most valuable desk real estate.",
+      },
+      coreAngle: {
+        id: "Spatial Relief & Effortless Fluid Adjustment — 'Meja Lu Sempit Bukan Karena Kurang Lebar, Kaki Stand Bawaan Itu yang Makan Ruang'",
+        en: "Spatial Relief & Effortless Fluid Adjustment — 'Your desk isn't too small, the factory monitor stand is eating your space'",
+      },
+      hookStrategy: {
+        id: "Visual Hook 0–3 detik yang memperlihatkan meja penuh sesak dan frustrasi menaruh barang, dipadukan headline tebal 2 baris All-Caps dan audio room tone teredam untuk memicu thumb-stop instan.",
+        en: "Visual hook in seconds 0–3 showing a cramped desk and crowded peripherals, paired with bold 2-line All-Caps captions and muffled room tone to trigger instant thumb-stops.",
+      },
+      valueProposition: {
+        id: "Oximus Hydra ZDP1118 membebaskan 40% area meja seketika, memungkinkan monitor digerakkan ringan hanya dengan satu jari, dan menyembunyikan semua kabel.",
+        en: "Oximus Hydra ZDP1118 instantly frees 40% of desk space, lets you glide heavy monitors with one finger, and hides all cable clutter.",
+      },
+      callToAction: {
+        id: "“Upgrade setup meja kerja lu sekarang. Klik keranjang kuning atau link di bio sebelum kehabisan.”",
+        en: "“Upgrade your desk setup now. Click the link in bio or cart before stock runs out.”",
+      },
+      creativeRationale: {
+        id: "Format direct response pendek (30 detik) memaksimalkan completion rate pada feed TikTok & Reels, sementara pacing cepat dengan pergantian shot setiap 2–3 detik dan efek audio ASMR taktil (clamp click, gas spring hiss) menjaga dopamin visual penonton.",
+        en: "A 30-second duration optimizes completion rates across TikTok and Reels feeds, while 2–3 second shot pacing and tactile ASMR audio cues (clamp click, gas spring hiss) sustain visual momentum.",
+      },
+    },
+    assetBreakdown: [
+      {
+        id: "oximus-shot-01",
+        name: {
+          id: "Visual Meja Penuh Sesak & Stand OEM Boros Ruang",
+          en: "Cluttered Desk & Bulky OEM Monitor Stand",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Midjourney v6.1 + Kling AI Diffusion",
+        myContribution: {
+          id: "Penyusunan prompt visual sinematik meja sempit, rendering difusi gerak, color grading kontras hangat, dan sound design ruang pengap.",
+          en: "Cinematic prompt engineering for cramped desk, motion diffusion generation, warm claustrophobic color grade, and muffled room tone audio design.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Aset pembuka hook 0–3 detik (CLIP-001A & CLIP-001B).",
+          en: "Opening 0–3s hook asset (CLIP-001A & CLIP-001B).",
+        },
+      },
+      {
+        id: "oximus-shot-02",
+        name: {
+          id: "Demonstrasi Pemasangan Clamp Kokoh di Pinggir Meja",
+          en: "Solid Desk Clamp Lock-in Demonstration",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Midjourney v6.1 + Kling AI Diffusion",
+        myContribution: {
+          id: "Generasi visual makro mekanisme pengencangan clamp, sinkronisasi foley taktil metalik 'clack-click', dan overlay teks penjelas.",
+          en: "Macro visual generation of clamp tightening mechanism, tactile metallic 'clack-click' foley synchronization, and explanatory text overlay.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Visual bukti instalasi kokoh 10–65 mm (CLIP-002).",
+          en: "Visual proof of solid 10–65 mm installation (CLIP-002).",
+        },
+      },
+      {
+        id: "oximus-shot-03",
+        name: {
+          id: "Sentuhan Satu Jari Dorongan Gas Spring Melayang",
+          en: "One-Finger Smooth Gas Spring Glide & Push",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Midjourney v6.1 + Kling AI Diffusion",
+        myContribution: {
+          id: "Animasi difusi gerak pergeseran monitor melayang tanpa usaha, foley desis pneumatik gas spring halus, dan efek speed-ramp dramatis.",
+          en: "Motion diffusion animation of effortless floating monitor adjustment, subtle pneumatic gas spring hiss foley, and dramatic speed-ramping.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Inti USP mekanis Oximus Hydra ZDP1118 (CLIP-003).",
+          en: "Core mechanical USP of Oximus Hydra ZDP1118 (CLIP-003).",
+        },
+      },
+      {
+        id: "oximus-shot-04",
+        name: {
+          id: "Manajemen Kabel Terintegrasi & Penyesuaian Ergonomis",
+          en: "Integrated Cable Routing & Ergonomic Adjustment",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Midjourney v6.1 + Kling AI Diffusion",
+        myContribution: {
+          id: "Visualisasi kabel rapi terselip di balik lengan arm, foley snap pengunci plastik, dan transisi sudut pandang mata rileks.",
+          en: "Visualization of clean concealed cables in arm channels, snap foley cues, and eye-level posture relaxation transition.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Demonstrasi fitur fungsional manajemen kabel (CLIP-004).",
+          en: "Functional cable routing demonstration (CLIP-004).",
+        },
+      },
+      {
+        id: "oximus-shot-05",
+        name: {
+          id: "Setup Meja Melayang Luas & Clean Desk Hero End-Card",
+          en: "Expansive Clean Floating Desk Setup & Urgent CTA",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Midjourney v6.1 + Kling AI + Premiere Pro",
+        myContribution: {
+          id: "Komposisi sudut wide setup meja melayang luas bebas hambatan, tipografi kinetik penawaran akhir, dan transisi lock CTA.",
+          en: "Wide-angle hero framing of clean floating desk surface, kinetic typography offer, and CTA lock transition.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Adegan penutup resolusi spasial dan CTA belanja (CLIP-005).",
+          en: "Closing spatial relief resolution scene and purchase CTA (CLIP-005).",
+        },
+      },
+      {
+        id: "oximus-shot-06",
+        name: {
+          id: "Desain Audio Taktil ASMR & Narasi Neural AI Bahasa Indonesia",
+          en: "Tactile ASMR Sound Design & Indonesian Neural Voiceover",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "ElevenLabs + Foley Suite + Premiere Pro Audio EQ",
+        myContribution: {
+          id: "Kalibrasi naskah VO tempo 130 WPM, balancing 7 efek suara foley taktil, mastering BGM Lo-Fi 95 BPM ducking ke -18 dB, dan output -14 LUFS.",
+          en: "Voiceover tempo calibration (~130 WPM), balancing 7 tactile foley sound cues, 95 BPM Lo-Fi music ducking to -18 dB, and -14 LUFS broadcast mastering.",
+        },
+        licenseStatus: "Verified Commercial",
+        notes: {
+          id: "Master audio terintegrasi penuh untuk performa sound-on.",
+          en: "Fully integrated master audio track engineered for sound-on impact.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "angle-con-001",
+        name: {
+          id: "Angle CON-001: The Cluttered Desk Friction (Spatial Relief)",
+          en: "Angle CON-001: The Cluttered Desk Friction (Spatial Relief)",
+        },
+        hookType: {
+          id: "Pola Interupsi / Friksi Spasial Meja Sempit",
+          en: "Pattern-Interrupt / Desk Space Friction",
+        },
+        duration: "30s",
+        concept: {
+          id: "Membongkar friksi meja kerja sempit akibat stand monitor bawaan yang boros ruang, mendemonstrasikan kebebasan gerak gas spring satu jari, dan menampilkan hasil transformasi clean desk setup.",
+          en: "Exposing bulky OEM monitor stand clutter, demonstrating one-finger gas spring counterbalance, and showcasing a pristine floating desk transformation.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:04",
+            visual: {
+              id: "Meja kerja penuh sesak, keyboard terdesak kaki stand bawaan monitor yang besar, secangkir kopi hampir tumpah.",
+              en: "Cluttered desk surface, keyboard squeezed by bulky factory monitor feet, coffee cup almost knocked over.",
+            },
+            audio: {
+              id: "“Meja kerja lu kerasa sempit dan bikin sesak? Bukan karena mejanya kekecilan.”",
+              en: "“Does your desk feel cramped and overwhelming? It's not because your desk is too small.”",
+            },
+            psychologyIntent: {
+              id: "Mematahkan asumsi penonton (pola interupsi) dan mengidentifikasi rasa frustrasi ruang kerja di 3 detik pertama.",
+              en: "Disrupting viewer assumptions (pattern-interrupt) and validating workspace frustration in the crucial first 3 seconds.",
+            },
+          },
+          {
+            time: "00:04 - 00:09",
+            visual: {
+              id: "Kamera menyorot dekat kaki stand monitor bawaan yang boros tempat, lalu bertransisi ke pemasangan clamp Oximus Hydra di bibir meja.",
+              en: "Camera zooms in on bulky OEM monitor feet consuming desk space, cutting to solid Oximus Hydra clamp locking onto the desk edge.",
+            },
+            audio: {
+              id: "“Kaki monitor bawaan itu yang makan hampir setengah ruang kerja lu.”",
+              en: "“That factory monitor stand is eating up almost half of your usable workspace.”",
+            },
+            psychologyIntent: {
+              id: "Menyalahkan 'kambing hitam' yang tepat (stand bawaan) agar penonton menyadari akar masalah sesungguhnya.",
+              en: "Isolating the real culprit (bulky factory stand) so viewers clearly recognize the root problem.",
+            },
+          },
+          {
+            time: "00:09 - 00:16",
+            visual: {
+              id: "Monitor terpasang kokoh pada arm putih Oximus Hydra ZDP1118, didorong halus hanya dengan satu jari naik-turun dan maju-mundur secara melayang.",
+              en: "Monitor mounted on sleek white Oximus Hydra ZDP1118 arm, effortlessly pushed up, down, forward and backward with a single finger.",
+            },
+            audio: {
+              id: "“Ganti pakai Oximus Hydra ZDP1118. Gas spring mechanism-nya bikin monitor lu serasa melayang dan bisa digeser cuma pakai satu jari.”",
+              en: "“Upgrade to Oximus Hydra ZDP1118. Its gas spring mechanism makes your monitor feel weightless, moving smoothly with a single finger touch.”",
+            },
+            psychologyIntent: {
+              id: "Menampilkan USP inti produk (gas spring counterbalance) dengan sensasi visual yang memuaskan dan effortless.",
+              en: "Demonstrating the core mechanical USP (gas spring counterbalance) with a highly satisfying, effortless visual glide.",
+            },
+          },
+          {
+            time: "00:16 - 00:23",
+            visual: {
+              id: "Kabel daya dan HDMI dirapikan ke dalam jalur kabel internal arm, lalu monitor diposisikan sejajar mata dengan postur duduk tegak.",
+              en: "Power and HDMI cables tucked neatly inside internal arm channels, monitor adjusted to eye level for relaxed ergonomic posture.",
+            },
+            audio: {
+              id: "“Ada integrated cable management biar meja bebas kabel kusut, plus pengaturan posisi bebas bikin leher gak gampang pegal.”",
+              en: "“Integrated cable management keeps cords invisible, while full ergonomic adjustment eliminates neck and shoulder strain.”",
+            },
+            psychologyIntent: {
+              id: "Menjawab kebutuhan estetika (kabel rapi) sekaligus kesehatan jangka panjang (kenyamanan leher & postur tubuh).",
+              en: "Addressing both aesthetic desires (clean cable-free desk) and health priorities (ergonomic posture relief).",
+            },
+          },
+          {
+            time: "00:23 - 00:30",
+            visual: {
+              id: "Pemandangan wide setup meja melayang yang super lapang dan minimalis, logo Oximus tampil percaya diri dengan teks ajakan checkout.",
+              en: "Expansive wide shot of a spacious, minimalist floating desk setup, Oximus badge locked in with clear checkout prompt.",
+            },
+            audio: {
+              id: "“Upgrade setup meja kerja lu sekarang. Klik keranjang kuning atau link di bio sebelum kehabisan.”",
+              en: "“Upgrade your desk setup today. Tap the yellow cart or link in bio before stocks run out.”",
+            },
+            psychologyIntent: {
+              id: "Memberikan kepuasan visual spatial relief maksimal dan mengarahkan dorongan belanja dengan call-to-action yang tegas.",
+              en: "Delivering maximum spatial relief satisfaction and driving direct purchase momentum with an explicit direct-response CTA.",
+            },
+          },
+        ],
+      },
+      {
+        id: "angle-con-003",
+        name: {
+          id: "Angle CON-003: Say Goodbye to Tech-Neck (Ergonomic Relief)",
+          en: "Angle CON-003: Say Goodbye to Tech-Neck (Ergonomic Relief)",
+        },
+        hookType: {
+          id: "Pola Interupsi / Friksi Fisik Leher Pegal Jam 3 Sore",
+          en: "Pattern-Interrupt / 3 PM Stiff Neck Physical Friction",
+        },
+        duration: "30s",
+        concept: {
+          id: "Mengangkat friksi fisik leher kaku akibat monitor terlalu pendek yang diganjal tumpukan buku, membuktikan mekanisme gas spring naik sejajar mata di detik ke-3 (Trust Anchor), serta mendemonstrasikan tilt anti-silau dan manajemen kabel tersembunyi.",
+          en: "Targeting acute physical neck strain from book-propped low screens, proving one-finger eye-level gas spring rise at second 3 (Trust Anchor), and demonstrating anti-glare tilt and hidden cable routing.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:03",
+            visual: {
+              id: "Talent duduk membungkuk di meja kerja memijat leher belakang yang kaku dari sudut Over-The-Shoulder (OTS), menatap tumpukan buku tebal di bawah monitor pendek.",
+              en: "Talent slouching at desk massaging stiff neck from an Over-The-Shoulder (OTS) angle, looking down at thick books propping up a low monitor.",
+            },
+            audio: {
+              id: "“Lehermu kaku tiap sore karena monitormu kurang tinggi.”",
+              en: "“Your neck is stiff every afternoon because your monitor sits too low.”",
+            },
+            psychologyIntent: {
+              id: "Membangkitkan empati kinestetik instan di 2 detik awal melalui rasa sakit fisik harian yang dialami jutaan pekerja meja.",
+              en: "Triggering instant kinesthetic empathy in the first 2 seconds through relatable physical pain felt by millions of desk workers.",
+            },
+          },
+          {
+            time: "00:03 - 00:08",
+            visual: {
+              id: "Kamera frontal horizon eye-level: tangan mendorong bingkai monitor naik vertikal, berhenti kaku tepat sejajar mata, postur tubuh seketika tegak lurus sempurna.",
+              en: "Frontal horizon eye-level camera: hands push monitor frame vertically, locking precisely at eye line, instantly correcting spine posture.",
+            },
+            audio: {
+              id: "“Ganjal buku tebal cuma bikin meja berantakan. Pakai arm Oximus putih ini, monitor langsung naik pas sejajar mata.”",
+              en: "“Stacking books looks messy and still strains your neck. This white Oximus arm glides your screen right to true eye level.”",
+            },
+            psychologyIntent: {
+              id: "Lock-in Zone & Trust Anchor: membongkar kekeliruan ganjal buku dan memberikan bukti visual kelegaan postur seketika.",
+              en: "Lock-in Zone & Trust Anchor: discrediting the book-stack workaround and providing immediate visual proof of postural relief.",
+            },
+          },
+          {
+            time: "00:08 - 00:15",
+            visual: {
+              id: "Sudut ultra low-angle dari permukaan meja: talent bersandar santai di kursi ergonomis, jari telunjuk menarik monitor turun-maju mengikuti posisi mata baru tanpa usaha.",
+              en: "Ultra low-angle tabletop view: talent reclines comfortably in ergonomic chair, one index finger effortlessly guiding screen forward and down.",
+            },
+            audio: {
+              id: "“Piston gas spring-nya nahan beban sampai 9 kilo. Mau duduk tegak atau selonjoran, tinggal geser pakai satu jari.”",
+              en: "“The internal gas spring holds up to 9 kilos. Sit upright or recline back, it adjusts smoothly with just one finger.”",
+            },
+            psychologyIntent: {
+              id: "Menjelaskan mekanisme unik (piston gas spring 2–9 kg) dan fleksibilitas gerak di segala posisi duduk.",
+              en: "Explaining the unique mechanism (gas spring counterbalance 2–9 kg) and fluid adjustability across any seating posture.",
+            },
+          },
+          {
+            time: "00:15 - 00:22",
+            visual: {
+              id: "First-person POV: kedua tangan memiringkan layar (tilt) 15°, pantulan silau lampu seketika lenyap dari layar kode, kamera memperlihatkan jalur kabel tertata rapi.",
+              en: "First-person POV: hands tilt display 15°, room glare vanishes from screen code instantly, camera pans down to clean concealed cable channel.",
+            },
+            audio: {
+              id: "“Bisa tilt bebas silau lampu, dan semua kabel power sama HDMI tersimpan rapi di dalam arm.”",
+              en: "“Tilt the screen to kill room glare, while all your power and display cables hide neatly inside.”",
+            },
+            psychologyIntent: {
+              id: "Sensory proof & craftsmanship: menghilangkan masalah pantulan silau dan kekacauan kabel yang merusak fokus.",
+              en: "Sensory proof & craftsmanship: eliminating distracting glare reflections and unsightly wire clutter.",
+            },
+          },
+          {
+            time: "00:22 - 00:30",
+            visual: {
+              id: "High-angle studio sweep: ruang kerja estetik luas, talent mengetik tegak dan memberi jempol ramah ke kamera didampingi badge garansi resmi Oximus.",
+              en: "High-angle studio sweep: spacious clean workstation, talent typing upright and flashing a friendly thumbs-up alongside official Oximus warranty badge.",
+            },
+            audio: {
+              id: "“Lindungi leher dan postur kerjamu sekarang. Dapatkan Oximus Hydra ZDP1118 di official store.”",
+              en: "“Save your neck and posture today. Check out the Oximus Hydra ZDP1118 at the official store.”",
+            },
+            psychologyIntent: {
+              id: "Aspirational resolution dan call to action tegas dengan jaminan garansi resmi untuk menghilangkan keraguan checkout.",
+              en: "Aspirational resolution and decisive call to action backed by official warranty to eliminate checkout friction.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "oximus-sb-1",
+        scene: {
+          id: "Adegan 1A: The Cluttered Desk Hook",
+          en: "Scene 1A: The Cluttered Desk Hook",
+        },
+        timecode: "00:00 - 00:02",
+        visualDescription: {
+          id: "Meja kerja sempit penuh barang, keyboard terjepit, dan rasa sesak yang langsung menarik perhatian pengguna workstation.",
+          en: "Cramped desk packed with peripherals, squeezed keyboard, and immediate visual tension capturing workstation users.",
+        },
+        technicalNote: {
+          id: "CLIP-001A: Rasio 9:16 vertikal, headline All-Caps tebal 2 baris 'MEJA SEMPIT? / BUKAN KURANG LEBAR', audio room tone teredam.",
+          en: "CLIP-001A: 9:16 vertical ratio, bold 2-line All-Caps headline 'MEJA SEMPIT? / BUKAN KURANG LEBAR', muffled room tone audio.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-sb-2",
+        scene: {
+          id: "Adegan 1B: Stand OEM Agitation",
+          en: "Scene 1B: Stand OEM Agitation",
+        },
+        timecode: "00:02 - 00:04",
+        visualDescription: {
+          id: "Close-up sudut tajam kaki stand monitor bawaan pabrik yang memakan hampir setengah luas permukaan meja fungsional.",
+          en: "Close-up on wide OEM monitor stand legs eating almost half of functional desktop surface.",
+        },
+        technicalNote: {
+          id: "CLIP-001B: Zoom lambat mempertegas friksi ruang, transisi cepat ke solusi produk di detik ke-4.",
+          en: "CLIP-001B: Slow push-in emphasizing spatial waste, rapid cut to product solution at second 4.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-sb-3",
+        scene: {
+          id: "Adegan 2: Clamp Lock-in Installation",
+          en: "Scene 2: Clamp Lock-in Installation",
+        },
+        timecode: "00:04 - 00:09",
+        visualDescription: {
+          id: "Mekanisme clamp Oximus dikencangkan di pinggir meja dengan kokoh dan presisi tanpa merusak permukaan meja kayu.",
+          en: "Oximus heavy-duty clamp tightened securely onto the desk edge with precision stability and zero surface damage.",
+        },
+        technicalNote: {
+          id: "CLIP-002: SFX foley taktil 'clack-click' penguncian logam clamp, teks penjelas 'SOLID CLAMP 10-65MM'.",
+          en: "CLIP-002: Tactile metallic 'clack-click' clamp lock foley, explanatory on-screen badge 'SOLID CLAMP 10-65MM'.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-sb-4",
+        scene: {
+          id: "Adegan 3: One-Finger Gas Spring Glide",
+          en: "Scene 3: One-Finger Gas Spring Glide",
+        },
+        timecode: "00:09 - 00:16",
+        visualDescription: {
+          id: "Layar monitor melayang digeser dan didorong turun-naik sangat ringan hanya memakai satu jari tangan.",
+          en: "Floating display smoothly repositioned up, down, and forward with the gentle touch of a single finger.",
+        },
+        technicalNote: {
+          id: "CLIP-003: Core USP shot, SFX desis pneumatik gas spring halus berpadu melodi chillhop 95 BPM.",
+          en: "CLIP-003: Core USP demonstration, subtle pneumatic gas spring hiss blended with 95 BPM chillhop melody.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-sb-5",
+        scene: {
+          id: "Adegan 4: Cable Routing & Ergonomic Comfort",
+          en: "Scene 4: Cable Routing & Ergonomic Comfort",
+        },
+        timecode: "00:16 - 00:23",
+        visualDescription: {
+          id: "Kabel monitor diselipkan rapi ke dalam klip manajemen kabel tersembunyi, posisi monitor sejajar mata demi kenyamanan leher.",
+          en: "Monitor cables clipped into concealed internal arm channels, display set at ergonomic eye-level posture.",
+        },
+        technicalNote: {
+          id: "CLIP-004: SFX plastik snap foley yang renyah, transisi santai menghadirkan rasa lega dan kepuasan visual.",
+          en: "CLIP-004: Crisp snap plastic clip foley, relaxed transition delivering calm and visual satisfaction.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-sb-6",
+        scene: {
+          id: "Adegan 5: Clean Floating Desk & Urgent CTA",
+          en: "Scene 5: Clean Floating Desk & Urgent CTA",
+        },
+        timecode: "00:23 - 00:30",
+        visualDescription: {
+          id: "Tampilan wide setup meja kerja minimalis putih yang sangat luas dan bersih, monitor melayang bebas di atas meja.",
+          en: "Wide shot of a clean, minimalist white floating setup with vast open desk space and zero cable clutter.",
+        },
+        technicalNote: {
+          id: "CLIP-005: Hold statis dengan branding Oximus Hydra ZDP1118, audio riser lembut mengunci ajakan checkout keranjang kuning.",
+          en: "CLIP-005: Clean hold with Oximus Hydra ZDP1118 branding, subtle audio riser locking the cart checkout CTA.",
+        },
+        toolUsed: "Adobe Premiere Pro + After Effects",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-v2-sb-1",
+        scene: {
+          id: "Cut 02 · Adegan 1: Over-The-Shoulder Neck Fatigue Hook",
+          en: "Cut 02 · Scene 1: Over-The-Shoulder Neck Fatigue Hook",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "Kamera Over-The-Shoulder (OTS) di belakang bahu talent: memijat leher tegang menatap monitor pendek yang diganjal tumpukan buku.",
+          en: "Over-The-Shoulder (OTS) camera behind talent: massaging stiff neck looking down at low book-stacked monitor.",
+        },
+        technicalNote: {
+          id: "POV 1 OTS: Headline 2 baris 'LEHER KAKU TIAP SORE / MONITOR KURANG TINGGI', SFX sub-bass tension thud.",
+          en: "POV 1 OTS: 2-line headline 'STIFF NECK EVERY AFTERNOON / MONITOR SITS TOO LOW', sub-bass tension thud SFX.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-v2-sb-2",
+        scene: {
+          id: "Cut 02 · Adegan 2: Frontal Horizon Eye-Level Lock-in",
+          en: "Cut 02 · Scene 2: Frontal Horizon Eye-Level Lock-in",
+        },
+        timecode: "00:03 - 00:08",
+        visualDescription: {
+          id: "Kamera frontal horizon eye-level: tangan mendorong monitor naik vertikal ke tengah lensa, postur punggung seketika tegak sempurna.",
+          en: "Frontal horizon eye-level camera: hands push monitor vertically to lens center, posture instantly straightening.",
+        },
+        technicalNote: {
+          id: "POV 2 Frontal: SFX desis pneumatik hidrolik mulus + teks highlight kuning 'PAS SEJAJAR MATA'.",
+          en: "POV 2 Frontal: Smooth hydraulic pneumatic air hiss SFX + yellow highlight text 'TRUE EYE LEVEL'.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-v2-sb-3",
+        scene: {
+          id: "Cut 02 · Adegan 3: Tabletop Low-Angle Recline Glide",
+          en: "Cut 02 · Scene 3: Tabletop Low-Angle Recline Glide",
+        },
+        timecode: "00:08 - 00:15",
+        visualDescription: {
+          id: "Kamera ultra low-angle dari atas meja: talent bersandar rileks di kursi dan menarik monitor dengan satu jari telunjuk.",
+          en: "Ultra low-angle tabletop camera: talent reclines in chair, pulling monitor forward-down with a single finger.",
+        },
+        technicalNote: {
+          id: "POV 3 Low-Angle: Demonstrasi piston gas spring 2–9 kg, gerakan stabil tanpa goyang (zero drift).",
+          en: "POV 3 Low-Angle: 2–9 kg gas spring piston demonstration, stable glide with zero drift.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-v2-sb-4",
+        scene: {
+          id: "Cut 02 · Adegan 4: Driver's POV Anti-Glare Tilt & Cable Concealment",
+          en: "Cut 02 · Scene 4: Driver's POV Anti-Glare Tilt & Cable Concealment",
+        },
+        timecode: "00:15 - 00:22",
+        visualDescription: {
+          id: "Sudut pandang mata penonton (POV): kedua tangan memiringkan layar 15°, silau lampu lenyap seketika, jalur kabel tersembunyi rapi.",
+          en: "First-person driver's POV: hands tilt screen 15°, room glare vanishes instantly, concealed cable routing revealed.",
+        },
+        technicalNote: {
+          id: "POV 4 First-Person: SFX rotasi engsel VESA + snap kabel plastik renyah.",
+          en: "POV 4 First-Person: Tactile VESA hinge rotation click + clean plastic cable snap SFX.",
+        },
+        toolUsed: "Midjourney v6.1 + Kling AI",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "oximus-v2-sb-5",
+        scene: {
+          id: "Cut 02 · Adegan 5: High-Angle Studio Sweep & CTA",
+          en: "Cut 02 · Scene 5: High-Angle Studio Sweep & CTA",
+        },
+        timecode: "00:22 - 00:30",
+        visualDescription: {
+          id: "Kamera high-angle menyapu dari atas serong kanan: talent mengetik tegak dan memberi jempol ramah ke kamera dengan badge garansi resmi.",
+          en: "High-angle camera sweeping from top-right: talent typing upright and flashing a thumbs-up with official warranty badge.",
+        },
+        technicalNote: {
+          id: "POV 5 High-Angle: Resolusi aspirasional, musik chillhop swell menuju akord penutup + UI chime bell.",
+          en: "POV 5 High-Angle: Aspirational resolution, chillhop swell to final chord + positive UI chime bell.",
+        },
+        toolUsed: "Adobe Premiere Pro + After Effects",
+        assetType: "Motion Graphic",
+      },
+    ],
+    videoVariations: [
+      {
+        id: "oximus-con-001",
+        label: {
+          id: "Variasi 1: Spatial Relief & Gas Spring Glide (30s)",
+          en: "Variation 1: Spatial Relief & Gas Spring Glide (30s)",
+        },
+        hookHeadline: {
+          id: "“Meja Lu Sempit Bukan Karena Kurang Lebar!”",
+          en: "“Your Desk Feels Cramped Not Because It's Too Small!”",
+        },
+        angleDescription: {
+          id: "Membongkar friksi stand monitor bawaan pabrik yang memakan 40% area meja, dialihkan ke sensasi monitor melayang bebas dengan Oximus Hydra ZDP1118.",
+          en: "Deconstructing OEM monitor stand bulk that steals 40% of workspace, shifting to one-finger floating ergonomic freedom with Oximus Hydra ZDP1118.",
+        },
+        videoSrc: "/videos/oximus/oximus-hydra-zdp1118-v1.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080 × 1920 (9:16)",
+          voiceModel: "ElevenLabs Indonesian Neural Voice (Tempo Natural ~130 WPM)",
+        },
+        keyTakeaway: {
+          id: "Transisi dari meja sempit berantakan ke setup melayang bersih menciptakan kepuasan visual instan (spatial relief). Didukung 7 efek suara taktil (clamp clack, gas spring hiss) dan musik chillhop 95 BPM yang menjaga retensi hingga detik ke-30.",
+          en: "The immediate transition from a cluttered desk to a clean floating setup triggers powerful spatial relief satisfaction. Reinforced by 7 tactile ASMR sound effects (clamp lock, gas spring glide) and 95 BPM chillhop keeping retention high through 30 seconds.",
+        },
+      },
+      {
+        id: "oximus-con-003",
+        label: {
+          id: "Variasi 2: Say Goodbye to Tech-Neck (30s)",
+          en: "Variation 2: Say Goodbye to Tech-Neck (30s)",
+        },
+        hookHeadline: {
+          id: "“Lehermu Kaku Tiap Sore Karena Monitormu Kurang Tinggi!”",
+          en: "“Your Neck is Stiff Every Afternoon Because Your Monitor Sits Too Low!”",
+        },
+        angleDescription: {
+          id: "Mengangkat friksi fisik leher pegal jam 3 sore akibat monitor rendah diganjal buku, dibuktikan dengan dorongan gas spring satu jari naik sejajar mata (Eye-Level Trust Anchor) dan 5 variasi sudut kamera sinematik dinamis.",
+          en: "Targeting acute physical neck ache from book-stacked screens, proven by one-finger gas spring rise to true eye level (Trust Anchor) across 5 dynamic cinematic POVs.",
+        },
+        videoSrc: "/videos/oximus/oximus-hydra-zdp1118-v2.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080 × 1920 (9:16)",
+          voiceModel: "ElevenLabs Indonesian Neural Voice (Tempo Natural ~132 WPM)",
+        },
+        keyTakeaway: {
+          id: "Membangkitkan empati kinestetik di detik awal dengan gestur memijat leher dan pembuktian postur tegak di detik ke-3. Menggunakan 5 variasi sudut kamera sinematik (OTS, Frontal, Tabletop Low-Angle, POV Mata, dan Studio Sweep) yang menghilangkan kebosanan visual.",
+          en: "Triggers immediate kinesthetic empathy with a neck-massage gesture and rapid eye-level trust anchor at second 3. Driven by 5 dynamic cinematic camera POVs (OTS, Frontal Horizon, Tabletop Low-Angle, First-Person POV, and Studio Sweep) ensuring zero visual monotony.",
+        },
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "01",
+        title: {
+          id: "Riset Friksi Spasial & Formula Hook Naskah",
+          en: "Spatial Friction Research & Script Hook Formulation",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: ["Notion", "Shopee/Tokopedia VOC", "Competitive Intelligence"],
+        summary: {
+          id: "Membedah keluhan pengguna monitor stand bawaan (meja sempit, kabel ruwet, leher pegal) untuk merumuskan hook pola interupsi 'Bukan Mejanya yang Kekecilan'.",
+          en: "Analyzing customer complaints regarding stock monitor stands (cramped desks, cable mess, neck ache) to engineer the 'Not because your desk is too small' pattern-interrupt hook.",
+        },
+        keyDeliverable: {
+          id: "Master Script CON-001 (5 Beats, VO Bahasa Indonesia, Safe-Zone Captions)",
+          en: "Master Script CON-001 (5 Beats, Indonesian VO, Safe-Zone Captions)",
+        },
+      },
+      {
+        phase: "02",
+        title: {
+          id: "Pembangkitan Aset Visual AI & Motion Diffusion",
+          en: "AI Visual Asset Generation & Motion Diffusion",
+        },
+        turnaroundTime: {
+          id: "2 Hari",
+          en: "2 Days",
+        },
+        tools: ["Midjourney v6.1", "Kling AI", "Prompt Engineering"],
+        summary: {
+          id: "Menghasilkan keyframe visual fotorealistis untuk 6 adegan terarah (meja sempit, clamp lock, gas spring push, cable management, clean setup) dan menganimasikannya dengan motion diffusion.",
+          en: "Generating photorealistic keyframes for 6 choreographed scenes (cluttered desk, clamp lock, gas spring push, cable routing, clean desk) animated with motion diffusion.",
+        },
+        keyDeliverable: {
+          id: "6 Render Klip Gerak Resolusi Tinggi (CLIP-001A hingga CLIP-005)",
+          en: "6 High-Resolution Motion Clips (CLIP-001A through CLIP-005)",
+        },
+      },
+      {
+        phase: "03",
+        title: {
+          id: "Desain Audio Taktil ASMR & Narasi Neural AI Bahasa Indonesia",
+          en: "Tactile ASMR Sound Design & Neural Voiceover",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: ["ElevenLabs", "Adobe Audition", "Tactile Foley Suite"],
+        summary: {
+          id: "Memproduksi vokal AI bahasa Indonesia dengan intonasi kasual natural (~130 WPM), memadukan 7 efek suara foley mekanik (clamp clack, gas spring hiss, cable snap), dan mengalibrasi BGM Lo-Fi 95 BPM.",
+          en: "Producing natural Indonesian neural voiceover (~130 WPM), layering 7 tactile mechanical foley effects (clamp click, gas spring hiss, cable snap), and calibrating 95 BPM Lo-Fi music.",
+        },
+        keyDeliverable: {
+          id: "Stem Audio Terkalibrasi (-14 LUFS, Ducking Musik ke -18 dB)",
+          en: "Calibrated Audio Stems (-14 LUFS, Music Ducked to -18 dB)",
+        },
+      },
+      {
+        phase: "04",
+        title: {
+          id: "Editing Timeline NLE & Tipografi Dinamis",
+          en: "NLE Timeline Assembly & Dynamic Typography",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: ["Adobe Premiere Pro", "CapCut Desktop", "Adobe After Effects"],
+        summary: {
+          id: "Menyusun timeline 30 detik dengan transisi cepat 2–3 detik per klip, menempelkan teks kinetik All-Caps 2 baris dalam Safe Zone TikTok, dan menyelaraskan ketukan beat musik dengan pergantian visual.",
+          en: "Assembling the 30s timeline with brisk 2–3s cuts, applying 2-line All-Caps kinetic captions within TikTok safe zones, and synchronizing visual beats to music accents.",
+        },
+        keyDeliverable: {
+          id: "Rough Cut & Final Assembly Timeline Premiere Pro",
+          en: "Rough Cut & Final Assembly Premiere Pro Timeline",
+        },
+      },
+      {
+        phase: "05",
+        title: {
+          id: "Safe-Zone Compliance & Final Master Export",
+          en: "Safe-Zone Compliance & Final Master Export",
+        },
+        turnaroundTime: {
+          id: "4 Jam",
+          en: "4 Hours",
+        },
+        tools: ["Premiere Pro", "Safe-Zone Mobile Overlays"],
+        summary: {
+          id: "Memverifikasi seluruh elemen visual dan teks bebas dari obstruksi antarmuka TikTok Ads & Instagram Reels (tombol like, caption bawah, username), lalu mengekspor master MP4 1080×1920 30fps siap pakai.",
+          en: "Verifying all visual and caption elements stay clear of TikTok Ads and Instagram Reels UI elements (likes, bottom caption, username), exporting the master MP4 1080×1920 30fps ready for deployment.",
+        },
+        keyDeliverable: {
+          id: "File Master Video MP4 Vertikal Siap Iklan Direct Response",
+          en: "Ad-Ready Master Direct Response Vertical MP4 Video File",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Hook CON-001 ('Meja Lu Sempit Bukan Karena Kurang Lebar') dan Hook CON-003 ('Lehermu Kaku Tiap Sore') memberikan dua sudut pengujian konversi yang saling melengkapi (spasial kerapian meja vs. empati kinestetik kesehatan fisik).",
+          en: "Hook CON-001 ('Your desk isn't too small') and Hook CON-003 ('Your neck is stiff every afternoon') deliver two complementary conversion angles (spatial desk transformation vs. kinesthetic physical empathy).",
+        },
+        {
+          id: "Demonstrasi gas spring satu jari (one-finger push) pada kedua variasi memberikan bukti visual tak terbantahkan terhadap klaim kemudahan gerak dan fleksibilitas ergonomis.",
+          en: "The one-finger gas spring push demonstration across both variations provides irrefutable visual proof of effortless counterbalance and ergonomic adaptability.",
+        },
+        {
+          id: "Penerapan 5 variasi sudut kamera sinematik pada Cut 02 (OTS, Frontal Horizon, Low-Angle Tabletop, First-Person POV, dan High-Angle Studio Sweep) sukses mengeliminasi kebosanan visual penonton.",
+          en: "Implementing 5 dynamic cinematic POVs on Cut 02 (OTS, Frontal Horizon, Low-Angle Tabletop, First-Person POV, and Studio Sweep) successfully eliminated visual monotony.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Karena diproduksi melalui pipeline AI diffusion, detail visual mekanisme sekrup klem dan ganjalan buku memerlukan tipografi layar yang tegas agar penonton awam memahami pesan tanpa kebingungan.",
+          en: "Due to AI diffusion generation, fine mechanical clamp threading and book-stack textures benefit from bold on-screen captions to prevent viewer ambiguity.",
+        },
+        {
+          id: "Durasi kedua cut yang tepat 30.0 detik memerlukan hook 0–2 detik yang sangat padat kata agar penonton tidak melakukan scroll-away sebelum Trust Anchor di detik ke-3.",
+          en: "A strict 30.0-second cut duration requires hyper-compressed 0–2s spoken words so viewers never scroll away before the Trust Anchor at second 3.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Evaluasi ini difokuskan pada analisis keputusan kreatif, ritme pacing, dan kekuatan narasi naskah. Karena ini merupakan spec ad independen yang belum dijalankan pada dashboard iklan berbayar (paid media), tidak ada klaim ROAS atau konversi semu yang dibuat.",
+        en: "This evaluation focuses strictly on creative decision-making, editorial pacing, and narrative strength. As an independent spec ad not yet run in active paid ad accounts, no synthetic ROAS or conversion metrics are claimed.",
+      },
+      creativeLearnings: [
+        {
+          id: "Pada produk workstation, membandingkan Cut 01 (Kerapian Meja) dengan Cut 02 (Kesehatan Leher) membuktikan bahwa audiens WFH merespons empati kinestetik (memijat leher) sama kuatnya dengan kepuasan visual sebelum-sesudah.",
+          en: "In workstation accessories, pitting Cut 01 (Desk Clutter) against Cut 02 (Neck Health) proves remote audiences respond to kinesthetic empathy (massaging neck) just as intensely as visual before-and-after contrast.",
+        },
+        {
+          id: "Desain audio foley taktil (ASMR klik logam, desis gas spring hidrolik, dan snap kabel) secara konsisten meningkatkan persepsi nilai produk premium pada audiens yang menonton dalam mode sound-on.",
+          en: "Tactile ASMR foley sound design (metal click, hydraulic gas spring hiss, cable snap) consistently elevates perceived product craftsmanship for sound-on mobile audiences.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Menjalankan Meta Dynamic Creative Ads (DCT) dengan membandingkan rasio Thumbstop 3 detik pertama antara Hook Spasial CON-001 dan Hook Postur Leher CON-003 untuk menentukan pemenang retensi skala besar.",
+        en: "Deploy a Meta Dynamic Creative (DCT) split-test pitting the 3-second Thumbstop rate of Spatial Hook CON-001 against Neck Posture Hook CON-003 to identify the conversion winner at scale.",
+      },
+    },
+  },
+  {
+    id: "agoda-weekend-getaway",
+    slug: "agoda-weekend-getaway",
+    title: "Agoda: Weekend Getaway",
+    client: "Agoda (Spec Ad / AI Creative Sprint)",
+    category: {
+      id: "Hospitality & Travel / AI Drama Ads",
+      en: "Hospitality & Travel / AI Drama Ads",
+    },
+    year: "2026",
+    tagline: {
+      id: "Iklan micro-drama sinematik AI 30 detik untuk mematahkan mitos lonjakan harga hotel akhir pekan lewat diskon App-Only Deals Agoda.",
+      en: "A 30-second cinematic AI micro-drama busting the weekend hotel surcharge myth using Agoda's App-Only Deals and instant booking.",
+    },
+    heroSummary: {
+      id: "Studi kasus creative advertising untuk Agoda Mobile App (CON-005: The Weekend Surcharge Myth). Menggabungkan drama perkotaan yang relatable di warkop terik antara dua sahabat pekerja, pembuktian mekanisme diskon aplikasi 35%, hingga kepuasan emosional relaksasi di infinity pool lereng bukit berkabut.",
+      en: "A creative advertising case study for the Agoda Mobile App (CON-005: The Weekend Surcharge Myth). Bridging a relatable urban drama at a sweltering roadside coffee stall, verifiable in-app 35% discount proof, and an emotional sensory payoff at a misty hillside infinity pool.",
+    },
+    featured: true,
+    primaryHighlight: {
+      value: "1 Master Cut",
+      label: {
+        id: "Cinematic AI Micro-Drama",
+        en: "Cinematic AI Micro-Drama",
+      },
+      subtext: {
+        id: "30s Vertikal 9:16 (5 Klip AI Terkalibrasi Pacing)",
+        en: "30s 9:16 Vertical (5 Calibrated AI Paced Clips)",
+      },
+    },
+    secondaryHighlights: [
+      {
+        value: "9:16",
+        label: {
+          id: "Format Vertikal Mobile",
+          en: "Mobile Vertical Format",
+        },
+      },
+      {
+        value: "Google Flow",
+        label: {
+          id: "Omni Flash Video Gen",
+          en: "Omni Flash Video Gen",
+        },
+      },
+      {
+        value: "5 Beats",
+        label: {
+          id: "Arsitektur Direct Response",
+          en: "Direct Response Architecture",
+        },
+      },
+    ],
+    toolsUsed: [
+      "Google Flow Omni Flash",
+      "Midjourney v6.1",
+      "ElevenLabs (Indonesian & English VO)",
+      "Adobe Premiere Pro",
+      "Adobe After Effects",
+    ],
+    creativeBrief: {
+      clientObjective: {
+        id: "Merancang video iklan direct response format vertikal (9:16, 30 detik) yang mematahkan persepsi bahwa liburan akhir pekan (weekend getaway) selalu mahal karena weekend surcharge, serta mendorong instalasi dan reservasi via Agoda Mobile App.",
+        en: "Produce a 30-second vertical direct response video ad (9:16) dispelling the myth that weekend getaways are cost-prohibitive due to surcharges, driving Agoda Mobile App installs and bookings.",
+      },
+      targetAudience: {
+        id: "Karyawan swasta, pekerja kreatif/agency, dan profesional urban berusia 23–34 tahun yang mengalami kejenuhan rutinitas kantor di hari Jumat namun sensitif terhadap lonjakan harga akhir pekan.",
+        en: "Corporate employees, creative agency workers, and urban professionals aged 23–34 burning out by Friday but sensitive to weekend price surges.",
+      },
+      coreProblem: {
+        id: "Konsumen percaya bahwa tarif hotel akhir pekan melonjak drastis (weekend surcharge myth), membuat mereka membatalkan rencana liburan singkat dan berakhir menghabiskan akhir pekan di kamar dengan rasa lelah.",
+        en: "Consumers believe weekend hotel rates double unavoidably, causing millions to cancel getaway plans and spend weekends stuck indoors with mounting burnout.",
+      },
+      angleHookStrategy: {
+        id: "Cognitive Disruption & Smart Shopper Victory: Membuka dengan emosi frustrasi nyata di warkop siang bolong, membedakan pencarian web biasa dengan diskon aplikasi eksklusif (App-Only Deals), lalu menguncinya dengan bukti potongan 35% dan pemandangan kolam renang infinity.",
+        en: "Cognitive Disruption & Smart Shopper Victory: Opening with authentic frustration in a scorching roadside stall, contrasting generic web browsing with exclusive App-Only Deals, locked in with 35% discount proof and an infinity pool payoff.",
+      },
+      keyDifferentiators: [
+        {
+          id: "App-Only Deals dengan diskon hingga 35% khusus aplikasi seluler",
+          en: "Exclusive App-Only Deals with up to 35% off on mobile",
+        },
+        {
+          id: "Layanan EasyCancel (Jaminan Pembatalan Gratis tanpa cemas)",
+          en: "EasyCancel free cancellation guarantee for zero-risk bookings",
+        },
+        {
+          id: "Benefit sarapan pagi gratis (Free Breakfast Included)",
+          en: "Complimentary breakfast included across selected 4-star properties",
+        },
+        {
+          id: "Status AgodaVIP dan konfirmasi reservasi kamar instan",
+          en: "AgodaVIP tiered perks and instant one-tap room confirmation",
+        },
+      ],
+      deliverables: [
+        {
+          id: "Master Cut: 30 Detik Vertikal 9:16 (1080x1920 @ 30 FPS)",
+          en: "Master Cut: 30s Vertical 9:16 (1080x1920 @ 30 FPS)",
+        },
+        {
+          id: "Naskah & Voiceover Bilingual (Bahasa Indonesia & English)",
+          en: "Bilingual Master Script & ElevenLabs VO (Indonesian & English)",
+        },
+        {
+          id: "Storyboard 5 Adegan dengan Kontinuitas Karakter & Lokasi",
+          en: "5-Scene Storyboard with Character & Location Continuity Locks",
+        },
+        {
+          id: "Paket Handoff Produksi & Blueprint Direct Response NLE",
+          en: "Production Handoff Package & NLE Direct Response Blueprint",
+        },
+      ],
+    },
+    creativeStrategy: {
+      projectType: {
+        id: "Spec Ad / AI Creative Sprint",
+        en: "Spec Ad / AI Creative Sprint",
+      },
+      objective: {
+        id: "Membuktikan efektivitas format Cinematic AI Drama untuk memicu konversi unduhan Agoda App dan pemesanan hotel akhir pekan dengan pacing direct-response 30 detik.",
+        en: "Validate Cinematic AI Drama ad formats driving Agoda App downloads and weekend bookings with a strict 30-second direct-response pacing curve.",
+      },
+      targetAudience: {
+        id: "The Skeptical Deal Seeker (23–34 tahun): pekerja urban yang lelah di penghujung minggu, membutuhkan jeda liburan singkat, dan bangga saat menemukan celah diskon cerdas.",
+        en: "The Skeptical Deal Seeker (ages 23–34): urban workers fatigued by the workweek, seeking a quick escape, and taking pride in smart-shopper hacks.",
+      },
+      audienceInsight: {
+        id: "Sebagian besar orang memeriksa tarif hotel di browser desktop atau situs biasa di mana harga akhir pekan terlihat melonjak, tanpa menyadari bahwa diskon terbesar diproteksi di dalam aplikasi seluler.",
+        en: "Most travelers search hotel rates on generic desktop browsers where weekend rates appear inflated, unaware that the steepest discounts are mobile-exclusive.",
+      },
+      coreAngle: {
+        id: "Smart-Shopper Drama (CON-005): Kontras ekstrem antara 'Si Skeptis' yang mengeluhkan weekend surcharge di warkop terik dan 'Si Smart Booker' yang menikmati resort mewah lewat Agoda App.",
+        en: "Smart-Shopper Drama (CON-005): Sharp contrast between 'The Skeptic' complaining about surcharges at a hot stall and 'The Smart Booker' unwinding at a luxury resort via the Agoda App.",
+      },
+      hookStrategy: {
+        id: "Pattern Interrupt & Emosional Panas Terik (0–3s): Rian menghempaskan ponsel ke meja warkop kayu di samping es teh manis, memvalidasi kejengkelan audiens dengan headline 'WEEKEND SURCHARGE / BIKIN DOMPET BONCOS?'.",
+        en: "Pattern Interrupt & Heatwave Agitation (0–3s): Rian slams his phone onto a rustic stall table next to iced tea, validating viewer pain with 'WEEKEND SURCHARGE / DRAINING YOUR WALLET?'.",
+      },
+      valueProposition: {
+        id: "Diskon App-Only Agoda hingga 35% + Free Breakfast + Free Cancellation mengubah liburan akhir pekan mewah menjadi realistis dan terjangkau.",
+        en: "Agoda App-Only Deals up to 35% off + Free Breakfast + Free Cancellation turns luxury weekend getaways into an accessible, stress-free reality.",
+      },
+      callToAction: {
+        id: "“Weekend escape mewah gak harus boncos. Buka aplikasi Agoda sekarang.”",
+        en: "“Luxury weekend escapes don't have to break the bank. Open the Agoda app today.”",
+      },
+      creativeRationale: {
+        id: "Iklan pariwisata tradisional sering kali terasa generik dan klise. Dengan membingkainya dalam mikro-drama dua sahabat dan kontras sensorik (warkop panas 35°C vs kolam infinity sejuk), penonton merasakan 'dopamine relief' yang kuat dan terdorong membuka aplikasi.",
+        en: "Conventional travel ads rely on generic scenic montages devoid of tension. Framing this through a two-friend micro-drama and sensory contrast (35°C sweltering warkop vs refreshing infinity pool) creates a powerful dopamine relief hook that drives app installs.",
+      },
+    },
+    assetBreakdown: [
+      {
+        id: "agoda-asset-01",
+        name: {
+          id: "Visual Warkop Terik & Pattern Interrupt Hook (CLIP-001)",
+          en: "Sweltering Street Stall Visual & Pattern Interrupt Hook (CLIP-001)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + Midjourney v6.1",
+        myContribution: {
+          id: "Sutradara visual: prompting ekspresi frustrasi Rian, meja kayu rustic berpeluh, gelas es teh manis berembun, dan audio taktil hempasan ponsel.",
+          en: "Visual directing: prompting Rian's exasperation, sweating rustic table, frosty iced tea, and tactile phone slap audio.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Mempertegas suhu panas 35°C di pelipis karakter untuk memvalidasi keletihan pekerja kantoran di hari Jumat.",
+          en: "Accentuating 35°C heat sweat on temples to validate Friday desk-worker fatigue.",
+        },
+      },
+      {
+        id: "agoda-asset-02",
+        name: {
+          id: "Reverse Shot Dimas & Penyingkapan Aplikasi Agoda (CLIP-002)",
+          en: "Dimas Reverse Shot & Agoda App Reveal (CLIP-002)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + Midjourney v6.1",
+        myContribution: {
+          id: "Penyusunan adegan over-the-shoulder, ekspresi tenang Dimas, dan gerakan mulus menyodorkan layar smartphone melintasi meja.",
+          en: "OTS blocking, Dimas's relaxed posture, and fluid camera tracking phone sliding across rustic tabletop.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Kontras karakter: Dimas tetap tenang dan segar di bawah naungan tenda warkop, merepresentasikan smart booker.",
+          en: "Character contrast: Dimas stays poised under shade, embodying the smart-shopper avatar.",
+        },
+      },
+      {
+        id: "agoda-asset-03",
+        name: {
+          id: "Macro UI Agoda App: Diskon 35% & Booking Instan (CLIP-003)",
+          en: "Macro Agoda App UI: 35% Off & Instant Booking (CLIP-003)",
+        },
+        category: "Motion graphics and compositing",
+        sourceOrTool: "Adobe After Effects + Midjourney v6.1",
+        myContribution: {
+          id: "Rekayasa motion UI: animasi coret harga diskon 35%, lencana ungu App-Only Deals, ikon sarapan gratis, dan centang konfirmasi reservasi.",
+          en: "Motion UI engineering: 35% price cut animation, purple App-Only badge, free breakfast icon, and verified checkmark.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Fokus makro pada layar smartphone di atas meja kayu warkop untuk mempertahankan kesinambungan latar.",
+          en: "Macro focus on smartphone surface atop the stall table maintaining location continuity.",
+        },
+      },
+      {
+        id: "agoda-asset-04",
+        name: {
+          id: "Resort Bintang 4 & Infinity Pool Lereng Bukit (CLIP-004)",
+          en: "4-Star Hillside Resort & Infinity Pool Payoff (CLIP-004)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + Premiere Pro",
+        myContribution: {
+          id: "Sutradara visual lanskap alam megah: perbukitan Lembang berkabut, air kolam renang berkilau toska, dan relaksasi Rian menyeruput kelapa muda.",
+          en: "Visual directing scenic landscape: misty hills, shimmering aqua infinity pool, and Rian sipping fresh coconut.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Titik balik emosional: Hard cut di detik 15.0 melepaskan dopamin penonton setelah ketegangan di warkop.",
+          en: "Emotional turning point: second 15.0 hard cut triggers massive dopamine relief after urban friction.",
+        },
+      },
+      {
+        id: "agoda-asset-05",
+        name: {
+          id: "Two-Shot Bersulang Kelapa Muda & End-Card CTA (CLIP-005)",
+          en: "Two-Shot Coconut Toast & End-Card CTA (CLIP-005)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + Adobe Premiere Pro",
+        myContribution: {
+          id: "Komposisi kamera slow pedestal pull-back, foley benturan kelapa muda, dan penempatan kartu konversi unduhan Agoda di area aman mobile.",
+          en: "Slow pedestal pull-back framing, tactile coconut toast foley, and mobile-safe Agoda CTA card overlay.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Penutup mantap dengan tatapan percaya diri kedua karakter ke lensa penonton, mempertegas smart shopper victory.",
+          en: "Confident direct eye contact from both characters cementing smart-shopper triumph.",
+        },
+      },
+      {
+        id: "agoda-asset-06",
+        name: {
+          id: "Master Character & Location Consistency Bible",
+          en: "Master Character & Location Consistency Bible",
+        },
+        category: "Product images or external assets",
+        sourceOrTool: "Midjourney v6.1 + Prompt Engineering",
+        myContribution: {
+          id: "Penguncian atribut visual permanen untuk Karakter Rian (CHAR-001), Dimas (CHAR-002), Warkop (LOC-001A/B), dan Resort Tropis (LOC-002).",
+          en: "Permanent attribute locking for Rian (CHAR-001), Dimas (CHAR-002), Warkop (LOC-001A/B), and Resort (LOC-002).",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Menjamin kontinuitas wajah, pakaian, dan palet pencahayaan di seluruh 5 adegan tanpa inkonsistensi AI.",
+          en: "Guarantees face, apparel, and lighting consistency across all 5 discrete AI generation clips.",
+        },
+      },
+    ],
+    scriptAngles: [
+      {
+        id: "agoda-con-005",
+        name: {
+          id: "CON-005: The Weekend Surcharge Myth (Smart-Shopper Drama)",
+          en: "CON-005: The Weekend Surcharge Myth (Smart-Shopper Drama)",
+        },
+        hookType: {
+          id: "Pattern Interrupt & Frustrasi Warkop Terik",
+          en: "Pattern Interrupt & Sweltering Stall Frustration",
+        },
+        duration: "30s",
+        concept: {
+          id: "Membongkar anggapan salah bahwa liburan akhir pekan selalu mahal karena surcharge, dialihkan ke penawaran eksklusif App-Only Deals Agoda.",
+          en: "Dismantling the myth that weekend trips are inherently overpriced due to surcharges, shifting to Agoda App-Only Deals.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:03",
+            visual: {
+              id: "CLIP-001: Rian gerah berpeluh di warkop terik, menghempaskan smartphone ke meja kayu di samping es teh manis berembun.",
+              en: "CLIP-001: Rian sweating in a roadside coffee stall, slamming his phone onto the rustic wooden table beside iced tea.",
+            },
+            audio: {
+              id: "Rian (On-Camera): 'Weekend ini pengen kabur, tapi liat deh! Harga hotel pada gila-gilaan semua!'",
+              en: "Rian (On-Camera): 'I need a weekend escape, but look at this! Hotel prices are completely insane!'",
+            },
+            psychologyIntent: {
+              id: "Pattern Interrupt & Pain Agitation: Memvalidasi kepenatan kerja dan frustrasi harga akhir pekan untuk menahan jempol penonton.",
+              en: "Pattern Interrupt & Pain Agitation: Validating work burnout and weekend price frustration to stop mobile scrolling.",
+            },
+          },
+          {
+            time: "00:03 - 00:08",
+            visual: {
+              id: "CLIP-002: Dimas tersenyum tenang di seberang meja warkop, meluncurkan smartphone-nya membuka antarmuka promo Agoda.",
+              en: "CLIP-002: Dimas smiles calmly across the table, smoothly sliding his phone displaying Agoda's promotion screen.",
+            },
+            audio: {
+              id: "Dimas (On-Camera to VO): 'Itu kalau lo nyarinya di web biasa! Coba buka aplikasi Agoda di HP, langsung keluar App-Only Deals.'",
+              en: "Dimas (On-Camera to VO): 'That’s because you’re browsing regular websites! Open the Agoda app on your phone for exclusive App-Only Deals.'",
+            },
+            psychologyIntent: {
+              id: "Cognitive Disruption & Secret Weapon: Menyadarkan kesalahan umum audiens dan menyodorkan solusi cerdas dalam aplikasi.",
+              en: "Cognitive Disruption & Secret Weapon: Shifting perspective from generic browsers to exclusive app savings.",
+            },
+          },
+          {
+            time: "00:08 - 00:15",
+            visual: {
+              id: "CLIP-003: Macro insert ke layar Agoda: filter resort bintang 4, diskon 35% App-Only Deal, gratis sarapan, dan centang booking instan.",
+              en: "CLIP-003: Macro screen insert of Agoda: 4-star resort filter, 35% App-Only discount, free breakfast, and instant booking tick.",
+            },
+            audio: {
+              id: "Voiceover: 'Resort bintang empat ini dipotong tiga puluh lima persen, plus sarapan gratis dan garansi pembatalan tanpa cemas.'",
+              en: "Voiceover: 'This four-star resort is slashed thirty-five percent, with free breakfast included and zero-stress free cancellation.'",
+            },
+            psychologyIntent: {
+              id: "Mechanism Proof & Frictionless Action: Menghilangkan keraguan harga dengan bukti diskon visual dan kepastian pembatalan gratis.",
+              en: "Mechanism Proof & Frictionless Action: Dispelling price doubts through tangible UI verification and risk reversal.",
+            },
+          },
+          {
+            time: "00:15 - 00:22",
+            visual: {
+              id: "CLIP-004: Hard Cut keesokan harinya di resort sejuk: Rian bersantai di lounger tepi infinity pool megah berlatar perbukitan berkabut, menyeruput kelapa muda.",
+              en: "CLIP-004: Hard Cut to the next day: Rian lounging by a tranquil infinity pool overlooking misty hills, sipping fresh coconut.",
+            },
+            audio: {
+              id: "Voiceover: 'Sabtu siang udah bisa rebahan di infinity pool sejuk, pemandangan bukit asri, tanpa mikirin dompet boncos.'",
+              en: "Voiceover: 'By Saturday noon you're lounging by an infinity pool with mountain breezes, without breaking the bank.'",
+            },
+            psychologyIntent: {
+              id: "Sensory Dopamine Payoff: Kontras sensorik ekstrem dari warkop panas terik ke kemewahan sejuk melepaskan kepuasan emosional.",
+              en: "Sensory Dopamine Payoff: Radical sensory contrast from hot stall to misty retreat releasing emotional reward.",
+            },
+          },
+          {
+            time: "00:22 - 00:30",
+            visual: {
+              id: "CLIP-005: Rian dan Dimas bersulang kelapa muda, tersenyum mantap ke arah kamera saat kartu CTA Agoda 'Download Sekarang' muncul.",
+              en: "CLIP-005: Rian and Dimas clink fresh coconut glasses, smiling confidently into camera as the Agoda 'Download Now' card appears.",
+            },
+            audio: {
+              id: "Rian & Dimas + VO: 'Mau weekend escape mewah tanpa bayar mahal? Buka aplikasi Agoda sekarang. Agoda, temukan penginapan impianmu.'",
+              en: "Rian & Dimas + VO: 'Want a luxury weekend escape without the crazy price? Open the Agoda app today. Agoda, find your dream getaway.'",
+            },
+            psychologyIntent: {
+              id: "Smart Shopper Pride & Conversion CTA: Merayakan kemenangan belanja cerdas dengan dorongan instalasi aplikasi tanpa hambatan.",
+              en: "Smart Shopper Pride & Conversion CTA: Celebrating smart booking triumph paired with low-friction download prompt.",
+            },
+          },
+        ],
+      },
+    ],
+    storyboard: [
+      {
+        id: "agoda-sb-1",
+        scene: {
+          id: "Adegan 1: The Frustration Hook (Warkop Terik)",
+          en: "Scene 1: The Frustration Hook (Sweltering Stall)",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "CLIP-001: Tight medium close-up Rian berkeringat di warkop panas terik, menghempaskan smartphone ke meja kayu di samping es teh manis berembun.",
+          en: "CLIP-001: Tight medium close-up of sweating Rian slamming his phone onto a rustic stall table beside frosty iced tea.",
+        },
+        technicalNote: {
+          id: "50mm f/2.4, shallow depth of field, micro push-in ke ekspresi frustrasi Rian. Text super: 'WEEKEND SURCHARGE / BIKIN DOMPET BONCOS?'.",
+          en: "50mm f/2.4, shallow depth of field, micro push-in on Rian's exasperation. Super: 'WEEKEND SURCHARGE / DRAINING YOUR WALLET?'.",
+        },
+        toolUsed: "Google Flow Omni Flash + Midjourney v6.1",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-sb-2",
+        scene: {
+          id: "Adegan 2: The Lock-In Zone & Secret App Reveal",
+          en: "Scene 2: The Lock-In Zone & Secret App Reveal",
+        },
+        timecode: "00:03 - 00:08",
+        visualDescription: {
+          id: "CLIP-002: Reverse angle OTS dari bahu Rian. Dimas tersenyum santai di bawah tenda warkop, menyodorkan smartphone membuka aplikasi Agoda.",
+          en: "CLIP-002: Reverse OTS angle over Rian's shoulder. Dimas chuckles calmly under the stall awning, sliding his phone showing the Agoda app.",
+        },
+        technicalNote: {
+          id: "Framing stabil meja warkop, match cut / zoom-in transition ke layar smartphone di detik 00:07.8.",
+          en: "Stable tabletop framing, match cut / zoom-in transition to mobile screen insert at second 00:07.8.",
+        },
+        toolUsed: "Google Flow Omni Flash + Premiere Pro",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-sb-3",
+        scene: {
+          id: "Adegan 3: The Mechanism & Price Slash Proof",
+          en: "Scene 3: The Mechanism & Price Slash Proof",
+        },
+        timecode: "00:08 - 00:15",
+        visualDescription: {
+          id: "CLIP-003: Macro top-down ke layar Agoda: animasi coret harga diskon 35% App-Only Deal, free breakfast, dan tap tombol 'Pesan Sekarang' hingga centang hijau.",
+          en: "CLIP-003: Macro top-down screen insert of Agoda app: 35% App-Only Deal strikeout animation, free breakfast, and instant confirmed reservation tick.",
+        },
+        technicalNote: {
+          id: "UI animation sync, tactile screen tap SFX, hard flash cut / dopamine snap di detik 00:15.0 langsung ke resort sejuk.",
+          en: "UI animation sync, tactile screen tap SFX, hard flash cut / dopamine snap at second 00:15.0 straight to hillside resort.",
+        },
+        toolUsed: "Adobe After Effects + Midjourney v6.1",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-sb-4",
+        scene: {
+          id: "Adegan 4: Sensory Proof & Paradise Payoff",
+          en: "Scene 4: Sensory Proof & Paradise Payoff",
+        },
+        timecode: "00:15 - 00:22",
+        visualDescription: {
+          id: "CLIP-004: Wide majestic nature sweep di resort lereng bukit. Rian bersantai di lounger tepi infinity pool berkilau, menyeruput kelapa muda dingin.",
+          en: "CLIP-004: Wide majestic nature sweep at a hillside resort. Rian lounging beside a sparkling infinity pool, sipping fresh coconut.",
+        },
+        technicalNote: {
+          id: "Slow panoramic camera glide, transisi grading dari 5800K hangat terik ke 4800K sejuk segar, BGM swell audio ke summer chill house.",
+          en: "Slow panoramic camera glide, grading shift from 5800K warm stall to 4800K crisp cool retreat, BGM swells into chill summer house.",
+        },
+        toolUsed: "Google Flow Omni Flash + Lumetri Color",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-sb-5",
+        scene: {
+          id: "Adegan 5: Resolution & Conversion End-Card",
+          en: "Scene 5: Resolution & Conversion End-Card",
+        },
+        timecode: "00:22 - 00:30",
+        visualDescription: {
+          id: "CLIP-005: Medium two-shot Rian dan Dimas bersulang kelapa muda, tersenyum mantap ke kamera. Slow pedestal pull-back membuka ruang kartu CTA Agoda.",
+          en: "CLIP-005: Medium two-shot of Rian and Dimas clinking coconut glasses, smiling into camera. Slow pedestal pull-back reveals Agoda CTA card.",
+        },
+        technicalNote: {
+          id: "Slow pedestal pull-back, end-card badge 'App-Only Deals & Free Cancellation', pulsing download CTA button, fade to black di 00:30.0.",
+          en: "Slow pedestal pull-back, end-card badge 'App-Only Deals & Free Cancellation', pulsing download CTA button, 0.3s fade to black at 00:30.0.",
+        },
+        toolUsed: "Adobe Premiere Pro + After Effects",
+        assetType: "Motion Graphic",
+      },
+    ],
+    videoVariations: [
+      {
+        id: "agoda-con-005",
+        label: {
+          id: "Master Cut: The Weekend Surcharge Myth (30s)",
+          en: "Master Cut: The Weekend Surcharge Myth (30s)",
+        },
+        hookHeadline: {
+          id: "Weekend Ini Mau Kabur Tapi Hotel Pada Gila-Gilaan?",
+          en: "Planning a Weekend Escape But Hotel Prices Suddenly Doubled?",
+        },
+        angleDescription: {
+          id: "Mikro-drama dua sahabat di warkop terik yang membongkar mitos tarif akhir pekan lewat diskon eksklusif aplikasi Agoda hingga relaksasi di infinity pool lereng bukit.",
+          en: "Two-friend micro-drama at a sweltering coffee stall dismantling the weekend surcharge myth through Agoda App-Only Deals and hillside pool relaxation.",
+        },
+        videoSrc: "/videos/agoda/agoda-weekend-getaway-v1.mp4",
+        aspectRatio: "9:16",
+        duration: "30s",
+        specs: {
+          durationFrames: "900 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080x1920 (9:16 Mobile Vertical)",
+          voiceModel: "ElevenLabs Neural Voiceover & Live Dialogue Sync",
+        },
+        keyTakeaway: {
+          id: "Kontras visual tajam (hard cut) antara warkop panas terik dan kolam renang infinity pool menciptakan kepuasan dopamin yang mendorong aksi konversi unduhan seketika.",
+          en: "A sharp hard-cut contrast between a sweltering 35°C warkop and a tranquil infinity pool produces a powerful dopamine payoff that spurs instant app downloads.",
+        },
+      },
+    ],
+    productionWorkflow: [
+      {
+        phase: "Phase 01",
+        title: {
+          id: "Riset Audiens & Dekonstruksi Mitos Surcharge",
+          en: "Audience Research & Surcharge Myth Deconstruction",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: [
+          "Google Maps Travel Reviews",
+          "OTA Pricing Competitor Benchmark",
+          "Voice of Customer Social Listening",
+        ],
+        summary: {
+          id: "Menganalisis resistensi harga karyawan urban terhadap kenaikan tarif hotel di akhir pekan dan mengidentifikasi keunggulan App-Only Deals Agoda sebagai value wedge pembeda.",
+          en: "Analyzing urban employee price sensitivity toward weekend hotel surcharges, positioning Agoda's mobile App-Only Deals as the definitive value wedge.",
+        },
+        keyDeliverable: {
+          id: "Dokumen Riset Audiens & Matriks Seleksi Konsep (CON-001 s/d CON-005)",
+          en: "Audience Research Dossier & Candidate Concept Selection Matrix",
+        },
+      },
+      {
+        phase: "Phase 02",
+        title: {
+          id: "Perumusan Naskah & Pacing Direct-Response 30s",
+          en: "Direct-Response Scriptwriting & 30s Pacing Curve",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: [
+          "Bilingual Direct-Response Framework",
+          "ElevenLabs Neural Voiceover",
+          "Adobe Audition",
+        ],
+        summary: {
+          id: "Menulis naskah mikro-drama percakapan alami 5 beat yang mematuhi kurva direct-response (Hook warkop terik, Lock-in Agoda App, UI Proof, Sensory Payoff kolam renang, dan CTA).",
+          en: "Writing a natural 5-beat conversational drama script adhering to direct-response curves (Sweltering stall Hook, Lock-in Zone, UI Proof, Pool Payoff, and CTA).",
+        },
+        keyDeliverable: {
+          id: "Naskah Master Dwibahasa (ID/EN) & Voiceover Terkalibrasi -14 LUFS",
+          en: "Bilingual Master Script (ID/EN) & Audio Mix Normalized to -14 LUFS",
+        },
+      },
+      {
+        phase: "Phase 03",
+        title: {
+          id: "Penguncian Karakter & Master Visual Asset Bible",
+          en: "Character Consistency & Master Visual Asset Bible",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: [
+          "Midjourney v6.1",
+          "Character Reference Sheets",
+          "Location Blueprinting",
+        ],
+        summary: {
+          id: "Mengunci fitur visual permanen untuk Rian (CHAR-001), Dimas (CHAR-002), Warkop (LOC-001A/B), dan Resort Mewah (LOC-002) guna mencegah variasi wajah dan pakaian di lintas adegan.",
+          en: "Locking permanent visual attributes for Rian (CHAR-001), Dimas (CHAR-002), Stall (LOC-001A/B), and Resort (LOC-002) to prevent cross-scene AI drift.",
+        },
+        keyDeliverable: {
+          id: "Master Visual Asset Bible & 5 Keyframe Disetujui (CP4 Gate)",
+          en: "Master Visual Asset Bible & 5 Approved Reference Keyframes",
+        },
+      },
+      {
+        phase: "Phase 04",
+        title: {
+          id: "Generasi Video AI Google Flow & NLE Direct-Response Edit",
+          en: "Google Flow Video Generation & NLE Direct-Response Edit",
+        },
+        turnaroundTime: {
+          id: "2 Hari",
+          en: "2 Days",
+        },
+        tools: [
+          "Google Flow Omni Flash",
+          "Adobe Premiere Pro",
+          "Adobe After Effects",
+        ],
+        summary: {
+          id: "Merender 5 klip video vertikal resolusi tinggi dengan prompt kamera presisi, lalu merakitnya di timeline Premiere Pro dengan hard cut on action dan motion graphic Agoda UI.",
+          en: "Generating 5 high-fidelity vertical video clips via prompt engineering, then cutting in Premiere Pro with hard cut on action and Agoda UI motion graphics.",
+        },
+        keyDeliverable: {
+          id: "Master Video 30s Vertikal 9:16 (1080x1920 @ 30 FPS)",
+          en: "Ad-Ready 30s Vertical Master Cut 9:16 (1080x1920 @ 30 FPS)",
+        },
+      },
+      {
+        phase: "Phase 05",
+        title: {
+          id: "Multi-Track Sound Engineering & Color Contrast",
+          en: "Multi-Track Sound Engineering & Color Contrast",
+        },
+        turnaroundTime: {
+          id: "1 Hari",
+          en: "1 Day",
+        },
+        tools: [
+          "Adobe Premiere Pro NLE",
+          "Lumetri Color Grade",
+          "ASMR & Environmental Foley Library",
+        ],
+        summary: {
+          id: "Menyelaraskan 4 trek audio (dialog, voiceover brand, taktil foley es batu/hempasan ponsel/kelapa muda, dan BGM summer chill) serta transisi grading warna dari 5800K warkop terik ke 4800K resort sejuk.",
+          en: "Engineering 4 audio tracks (dialogue, brand VO, tactile foley clinks/slaps, and chill BGM) and color grading transition from 5800K stall heat to 4800K resort cool.",
+        },
+        keyDeliverable: {
+          id: "Master Broadcast File & Color Master Grade",
+          en: "Broadcast-Ready Master Deliverable & Final Color Grade",
+        },
+      },
+    ],
+    honestEvaluation: {
+      topPerformers: [
+        {
+          id: "Transisi kontras tajam (hard cut) di detik ke-15 dari warkop panas 35°C ke sejuknya infinity pool berhasil memberikan pelepasan dopamin sensori yang sangat kuat.",
+          en: "The second-15 hard cut from the sweltering 35°C stall to the misty hillside infinity pool delivers an intense sensory dopamine payoff.",
+        },
+        {
+          id: "Pembuktian UI Agoda di Klip 3 dengan animasi coret harga diskon 35% dan centang reservasi instan menghilangkan keraguan penonton terhadap klaim promo.",
+          en: "The in-app UI proof in Clip 3 showcasing the 35% price slash and instant green checkmark eliminates viewer skepticism toward promotional claims.",
+        },
+      ],
+      underperformers: [
+        {
+          id: "Sinkronisasi gerak bibir pada dialog mikro-drama AI memerlukan pemilihan take vokal yang ketat agar artikulasi kata tetap natural di kecepatan tinggi.",
+          en: "Lip-sync fidelity on AI drama dialogue requires rigorous vocal take alignment to keep cadence natural at high speeds.",
+        },
+        {
+          id: "Pacing 30 detik menuntut kompresi teks super di bawah 40 karakter per adegan agar tidak mengganggu ekspresi karakter di layar smartphone.",
+          en: "A strict 30-second runtime demands on-screen supers stay under 40 characters to avoid cluttering mobile character framing.",
+        },
+      ],
+      creativeAssessment: {
+        id: "Evaluasi difokuskan pada kekuatan narasi mikro-drama, akurasi kontinuitas karakter, dan presisi ritme editing direct response. Sebagai spec ad independen, tidak ada klaim ROAS atau metrik palsu.",
+        en: "Evaluation centers on micro-drama narrative strength, character continuity locks, and direct-response editing rhythm. As an independent spec ad, no fabricated ROAS or vanity metrics are presented.",
+      },
+      creativeLearnings: [
+        {
+          id: "Memecah mitos harga (The Myth Buster) jauh lebih efektif memicu retensi daripada sekadar memamerkan keindahan fasilitas hotel secara konvensional.",
+          en: "Disrupting common price myths (The Myth Buster) drives significantly higher mobile retention than generic hotel luxury showcases.",
+        },
+        {
+          id: "Dua karakter dengan kepribadian kontras ('Si Skeptis' vs 'Si Smart Booker') menciptakan dinamika drama yang membuat penonton betah hingga kartu CTA terakhir.",
+          en: "Pitting two contrasting character personas ('The Skeptic' vs 'The Smart Booker') creates engaging dramatic tension that retains viewers through the final CTA card.",
+        },
+      ],
+      nextIterationStrategy: {
+        id: "Menguji variasi pembuka (Hook Sprint) dengan skenario kamar kos sempit di malam hari untuk membandingkan thumbstop rate terhadap versi warkop terik.",
+        en: "Test an alternative opening hook in a cramped boarding room late at night to benchmark thumb-stop rates against the sweltering roadside warkop.",
       },
     },
   },

@@ -63,6 +63,57 @@ const FEATURED_CAROUSEL_ITEMS: FeaturedCut[] = [
     poster: "/images/nespresso/nespresso_v1_poster.jpg",
     videoSrc: "/videos/nespresso/nespresso-vertuo-v1.mp4",
   },
+  {
+    id: "oximus-feature",
+    projectSlug: "oximus-hydra-zdp1118",
+    projectTitle: "Oximus Hydra ZDP1118",
+    categoryLabel: { id: "AI Direct Response", en: "AI Direct Response" },
+    cutTitle: {
+      id: "Cut 01: Meja Sempit Bukan Kurang Lebar (CON-001)",
+      en: "Cut 01: The Cluttered Desk Friction Hook (CON-001)",
+    },
+    angleLabel: {
+      id: "Spatial Relief & Gas Spring",
+      en: "Spatial Relief & Gas Spring",
+    },
+    duration: "30s",
+    poster: "/images/oximus/oximus_cover_poster.jpg",
+    videoSrc: "/videos/oximus/oximus-hydra-zdp1118-v1.mp4",
+  },
+  {
+    id: "oximus-v2-feature",
+    projectSlug: "oximus-hydra-zdp1118",
+    projectTitle: "Oximus Hydra ZDP1118",
+    categoryLabel: { id: "AI Direct Response", en: "AI Direct Response" },
+    cutTitle: {
+      id: "Cut 02: Say Goodbye to Tech-Neck (CON-003)",
+      en: "Cut 02: Say Goodbye to Tech-Neck (CON-003)",
+    },
+    angleLabel: {
+      id: "Ergonomic Pain-Relief",
+      en: "Ergonomic Pain-Relief",
+    },
+    duration: "30s",
+    poster: "/images/oximus/oximus_v2_tech_neck_hook.jpg",
+    videoSrc: "/videos/oximus/oximus-hydra-zdp1118-v2.mp4",
+  },
+  {
+    id: "agoda-feature",
+    projectSlug: "agoda-weekend-getaway",
+    projectTitle: "Agoda: Weekend Getaway",
+    categoryLabel: { id: "AI Cinematic Drama", en: "AI Cinematic Drama" },
+    cutTitle: {
+      id: "CON-005: The Weekend Surcharge Myth (30s)",
+      en: "CON-005: The Weekend Surcharge Myth (30s)",
+    },
+    angleLabel: {
+      id: "Smart-Shopper Drama & App-Only Deals",
+      en: "Smart-Shopper Drama & App-Only Deals",
+    },
+    duration: "30s",
+    poster: "/images/agoda/agoda_cover_poster.jpg",
+    videoSrc: "/videos/agoda/agoda-weekend-getaway-v1.mp4",
+  },
 ];
 
 interface CarouselCardProps {

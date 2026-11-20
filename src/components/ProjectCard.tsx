@@ -29,6 +29,16 @@ const PROJECT_PREVIEWS: Record<
     videoSrc: "/videos/nespresso/nespresso-vertuo-v2.mp4",
     badge: "9:16 Vertical Cut",
   },
+  "oximus-hydra-zdp1118": {
+    poster: "/images/oximus/oximus_cover_poster.jpg",
+    videoSrc: "/videos/oximus/oximus-hydra-zdp1118-v1.mp4",
+    badge: "9:16 Direct Response",
+  },
+  "agoda-weekend-getaway": {
+    poster: "/images/agoda/agoda_cover_poster.jpg",
+    videoSrc: "/videos/agoda/agoda-weekend-getaway-v1.mp4",
+    badge: "9:16 Cinematic Drama",
+  },
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {

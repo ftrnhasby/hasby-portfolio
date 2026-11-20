@@ -86,6 +86,18 @@ export const TRANSLATIONS = {
           info: "Spec ad · 2 angle iklan",
           cta: "Tonton & bandingkan kedua iklan",
         },
+        "oximus-hydra-zdp1118": {
+          title: "Oximus Hydra ZDP1118",
+          description: "Dua cara memicu konversi: satu iklan dibuka dengan meja sempit berantakan, satu lagi dengan leher kaku jam 3 sore yang diselesaikan monitor naik sejajar mata.",
+          info: "Spec ad · 2 angle iklan",
+          cta: "Tonton & bandingkan kedua video",
+        },
+        "agoda-weekend-getaway": {
+          title: "Agoda: Weekend Getaway",
+          description: "Mikro-drama AI 30 detik: mematahkan mitos harga hotel akhir pekan mahal lewat drama warkop terik yang beralih ke diskon 35% App-Only Deals dan infinity pool sejuk.",
+          info: "Spec ad · 1 master cut sinematik",
+          cta: "Tonton iklan & studi kasus",
+        },
       },
       capabilities: {
         eyebrow: "Kapabilitas Inti & Alur Kerja",
@@ -744,6 +756,18 @@ export const TRANSLATIONS = {
           description: "Two ways to catch a remote worker’s attention. One ad opens just before a meeting, the other with a close-up of the crema.",
           info: "Spec ad · 2 creative angles",
           cta: "Watch & compare both ads",
+        },
+        "oximus-hydra-zdp1118": {
+          title: "Oximus Hydra ZDP1118",
+          description: "Two ways to convert WFH professionals: one ad exposes cluttered desk bulk, the other targets 3 PM stiff neck strain relieved by one-finger eye-level lift.",
+          info: "Spec ad · 2 creative angles",
+          cta: "Watch & compare both videos",
+        },
+        "agoda-weekend-getaway": {
+          title: "Agoda: Weekend Getaway",
+          description: "A 30-second AI micro-drama: busting the weekend hotel surcharge myth through a sweltering coffee stall drama switching to 35% App-Only Deals and hillside infinity pool.",
+          info: "Spec ad · 1 cinematic master cut",
+          cta: "Watch ad & case study",
         },
       },
       capabilities: {
