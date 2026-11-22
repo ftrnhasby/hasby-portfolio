@@ -1,55 +1,70 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Play, Pause, RotateCcw, Volume2, VolumeX, Sparkles, Smartphone, Monitor, ExternalLink, AlertOctagon } from "lucide-react";
-import { VideoVariation, LocalizedString } from "@/types/project";
+import {
+  Play,
+  Pause,
+  RotateCcw,
+  Volume2,
+  VolumeX,
+  ExternalLink,
+  AlertOctagon,
+  Clock,
+  Film,
+  Sparkles,
+} from "lucide-react";
+import { VideoVariation } from "@/types/project";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
 interface VideoPlayerMockProps {
   variations: VideoVariation[];
   clientName: string;
-  projectTitle?: string;
-  projectType?: LocalizedString;
-  toolsUsed?: string[];
+  selectedIndex?: number;
+  onSelectIndex?: (idx: number) => void;
 }
 
 export function VideoPlayerMock({
   variations,
   clientName,
-  projectTitle,
-  projectType,
-  toolsUsed,
+  selectedIndex,
+  onSelectIndex,
 }: VideoPlayerMockProps) {
   const { lang } = useLanguage();
+  const isId = lang === "id";
   const t = TRANSLATIONS[lang].player;
 
-  const [selectedVarIndex, setSelectedVarIndex] = useState(0);
+  const [internalIndex, setInternalIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [aspectMode, setAspectMode] = useState<"9:16" | "16:9">("9:16");
   const [hasError, setHasError] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const currentVar = variations[selectedVarIndex] || variations[0];
+  const activeIndex = selectedIndex !== undefined ? selectedIndex : internalIndex;
+  const currentVar = variations[activeIndex] || variations[0];
 
   const handleSelectVariation = (idx: number) => {
-    setSelectedVarIndex(idx);
+    if (idx === activeIndex) return;
+    if (onSelectIndex) {
+      onSelectIndex(idx);
+    } else {
+      setInternalIndex(idx);
+    }
     setHasError(false);
     setCurrentTime(0);
+    setDuration(0);
     setIsPlaying(false);
   };
 
-  // When selected variation changes, reload video element
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.load();
     }
-  }, [selectedVarIndex]);
+  }, [activeIndex]);
 
   const togglePlay = () => {
     if (!videoRef.current || hasError) return;
@@ -57,11 +72,10 @@ export function VideoPlayerMock({
       videoRef.current.pause();
       setIsPlaying(false);
     } else {
-      videoRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch((err) => {
-        console.warn("Autoplay was prevented:", err);
-      });
+      videoRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {});
     }
   };
 
@@ -75,9 +89,10 @@ export function VideoPlayerMock({
     if (!videoRef.current || hasError) return;
     videoRef.current.currentTime = 0;
     setCurrentTime(0);
-    videoRef.current.play().then(() => {
-      setIsPlaying(true);
-    }).catch(() => {});
+    videoRef.current
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch(() => {});
   };
 
   const handleTimeUpdate = () => {
@@ -114,97 +129,47 @@ export function VideoPlayerMock({
     return `${mins.toString().padStart(2, "0")}:${remainder.toString().padStart(2, "0")}`;
   };
 
+  if (!currentVar) return null;
+
   return (
-    <div className="rounded-2xl bg-[#09090b] border border-white/[0.08] p-5 sm:p-8 space-y-6 sm:space-y-8 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
-      {/* Header Bar with prominent metadata */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.06] pb-6">
-        <div className="space-y-1.5">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400">
-            <span className="flex items-center gap-1.5 text-zinc-300 uppercase tracking-wider font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{t.title}</span>
-            </span>
-            {projectType && (
-              <>
-                <span className="text-zinc-600">•</span>
-                <span className="px-2 py-0.5 rounded text-[10px] bg-purple-950/40 text-purple-300 border border-purple-500/25">
-                  {projectType[lang]}
-                </span>
-              </>
-            )}
-            {toolsUsed && toolsUsed.length > 0 && (
-              <>
-                <span className="text-zinc-600 hidden sm:inline">•</span>
-                <span className="text-[11px] text-zinc-400 hidden sm:inline">
-                  {toolsUsed.slice(0, 3).join(" • ")}
-                </span>
-              </>
-            )}
-          </div>
-          <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight">
-            {projectTitle ? `${projectTitle} — ${t.subtitle}` : t.subtitle}
-          </h3>
+    <div className="rounded-2xl bg-[#09090b] border border-white/[0.08] p-5 sm:p-8 space-y-6 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+      {/* Variation Selector Tabs (only when multiple cuts exist) */}
+      {variations.length > 1 && (
+        <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-5">
+          {variations.map((v, idx) => {
+            const isSelected = activeIndex === idx;
+            return (
+              <button
+                key={v.id}
+                type="button"
+                onClick={() => handleSelectVariation(idx)}
+                className={`text-left px-4 py-2.5 rounded-xl border text-xs transition-all duration-200 cursor-pointer ${
+                  isSelected
+                    ? "bg-white text-black border-white font-semibold shadow-sm"
+                    : "bg-white/[0.03] border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.06]"
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <span>{v.label[lang]}</span>
+                  <span
+                    className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
+                      isSelected ? "bg-black/10 text-black/80" : "bg-white/[0.06] text-zinc-400"
+                    }`}
+                  >
+                    {v.duration}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
         </div>
+      )}
 
-        {/* Aspect Ratio Switcher */}
-        <div className="flex items-center gap-1 bg-white/[0.04] border border-white/[0.08] p-1 rounded-lg self-start sm:self-auto">
-          <button
-            onClick={() => setAspectMode("9:16")}
-            className={`flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono transition-all ${
-              aspectMode === "9:16"
-                ? "bg-white text-black font-medium"
-                : "text-zinc-400 hover:text-white"
-            }`}
-          >
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>9:16 Vertikal</span>
-          </button>
-          <button
-            onClick={() => setAspectMode("16:9")}
-            className={`flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono transition-all ${
-              aspectMode === "16:9"
-                ? "bg-white text-black font-medium"
-                : "text-zinc-400 hover:text-white"
-            }`}
-          >
-            <Monitor className="w-3.5 h-3.5" />
-            <span>16:9 Container</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Variation Selection Tabs */}
-      <div className="flex flex-wrap gap-2.5">
-        {variations.map((v, idx) => (
-          <button
-            key={v.id}
-            onClick={() => handleSelectVariation(idx)}
-            className={`text-left px-4 py-3 rounded-xl border text-xs transition-all duration-200 ${
-              selectedVarIndex === idx
-                ? "bg-white/[0.08] border-white/20 text-white shadow-sm"
-                : "bg-white/[0.02] border-white/[0.06] text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04]"
-            }`}
-          >
-            <div className="font-semibold text-zinc-200">{v.label[lang]}</div>
-            <div className="text-[11px] text-zinc-500 mt-0.5 font-mono">
-              {v.duration} • {v.specs.durationFrames}
-            </div>
-          </button>
-        ))}
-      </div>
-
-      {/* Main Player Display + Real Video Playback */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Video Player Container */}
-        <div className="lg:col-span-7 flex flex-col items-center justify-center">
-          <div
-            className={`relative rounded-2xl overflow-hidden border border-white/[0.12] bg-[#000000] shadow-[0_20px_60px_rgba(0,0,0,0.8)] transition-all duration-300 ${
-              aspectMode === "9:16"
-                ? "w-full max-w-[340px] aspect-[9/16]"
-                : "w-full aspect-[16/9] flex items-center justify-center bg-zinc-950"
-            }`}
-          >
-            {/* Real HTML5 Video Element */}
+      {/* Main 2-Column Showcase: Native 9:16 Video + Clean Editorial Cut Summary */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Left: Native 9:16 Video Player */}
+        <div className="lg:col-span-5 flex justify-center">
+          <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/[0.12] bg-black shadow-[0_20px_60px_rgba(0,0,0,0.85)]">
             {!hasError ? (
               <video
                 ref={videoRef}
@@ -217,15 +182,13 @@ export function VideoPlayerMock({
                 onError={() => setHasError(true)}
                 onEnded={() => setIsPlaying(false)}
                 onClick={togglePlay}
-                className={`h-full w-full object-contain cursor-pointer ${
-                  aspectMode === "16:9" ? "max-h-[500px]" : ""
-                }`}
+                className="h-full w-full object-cover cursor-pointer"
               />
             ) : (
               <div className="p-6 text-center space-y-3 flex flex-col items-center justify-center h-full">
                 <AlertOctagon className="w-8 h-8 text-amber-400" />
                 <div className="text-xs text-white font-medium">
-                  {lang === "id" ? "Berkas Video Tidak Ditemukan" : "Video File Not Found"}
+                  {isId ? "Berkas Video Tidak Ditemukan" : "Video File Not Found"}
                 </div>
                 <div className="text-[11px] font-mono text-zinc-400 break-all max-w-xs">
                   {currentVar.videoSrc}
@@ -233,33 +196,33 @@ export function VideoPlayerMock({
               </div>
             )}
 
-            {/* Play/Pause Overlay indicator when paused */}
+            {/* Center Play Overlay when Paused */}
             {!isPlaying && !hasError && (
               <button
+                type="button"
                 onClick={togglePlay}
-                className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/60 border border-white/20 backdrop-blur-md flex items-center justify-center text-white hover:scale-105 transition-all shadow-xl z-20"
+                className="absolute inset-0 m-auto w-15 h-15 rounded-full bg-black/60 border border-white/20 backdrop-blur-md flex items-center justify-center text-white hover:scale-105 transition-all shadow-xl z-20 cursor-pointer"
                 aria-label="Play video"
               >
-                <Play className="w-7 h-7 fill-white translate-x-0.5" />
+                <Play className="w-6 h-6 fill-white translate-x-0.5" />
               </button>
             )}
 
-            {/* Top Watermark Badge */}
-            <div className="absolute top-4 inset-x-4 flex items-center justify-between z-10 pointer-events-none">
-              <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded bg-black/70 backdrop-blur-md border border-white/10 text-zinc-300">
-                {clientName.split("(")[0]}
+            {/* Minimal Top Badge */}
+            <div className="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10 pointer-events-none">
+              <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/10 text-zinc-200">
+                {clientName.split("(")[0].trim()}
               </span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/70 backdrop-blur-md border border-emerald-500/30 px-2 py-0.5 rounded">
-                Remotion Render
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-black/65 backdrop-blur-md border border-white/10 text-emerald-300">
+                {currentVar.aspectRatio} · {currentVar.duration}
               </span>
             </div>
 
-            {/* Bottom Controls Bar */}
+            {/* Bottom Controls */}
             {!hasError && (
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/85 to-transparent p-4 z-20 space-y-2">
-                {/* Scrubber Bar */}
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-3.5 z-20 space-y-2">
                 <div
-                  className="w-full h-2 bg-white/20 hover:h-2.5 rounded-full overflow-hidden cursor-pointer relative transition-all"
+                  className="w-full h-1.5 hover:h-2 bg-white/20 rounded-full overflow-hidden cursor-pointer transition-all"
                   onClick={handleSeek}
                 >
                   <div
@@ -268,48 +231,50 @@ export function VideoPlayerMock({
                   />
                 </div>
 
-                {/* Bottom Buttons */}
-                <div className="flex items-center justify-between text-zinc-300 pt-1">
-                  <div className="flex items-center gap-3">
+                <div className="flex items-center justify-between text-zinc-300">
+                  <div className="flex items-center gap-1.5">
                     <button
+                      type="button"
                       onClick={togglePlay}
-                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-white"
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-white cursor-pointer"
                       aria-label={isPlaying ? t.paused : t.playing}
                     >
                       {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
                     </button>
 
                     <button
+                      type="button"
                       onClick={handleRestart}
-                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white cursor-pointer"
                       aria-label={t.loop}
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                     </button>
 
                     <button
+                      type="button"
                       onClick={toggleMute}
-                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white"
+                      className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-zinc-400 hover:text-white cursor-pointer"
                       aria-label={isMuted ? t.unmute : t.mute}
                     >
                       {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
                     </button>
                   </div>
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2.5">
                     <a
                       href={currentVar.videoSrc}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] font-mono text-zinc-400 hover:text-white flex items-center gap-1"
-                      title="Buka file video di tab baru"
+                      className="text-[10px] font-mono text-zinc-400 hover:text-white inline-flex items-center gap-1 transition-colors"
+                      title={isId ? "Buka file MP4 di tab baru" : "Open MP4 in new tab"}
                     >
                       <ExternalLink className="w-3 h-3" />
-                      <span>MP4 File</span>
+                      <span>MP4</span>
                     </a>
-                    <div className="text-[11px] font-mono text-zinc-400">
+                    <span className="text-[11px] font-mono text-zinc-400">
                       {formatTime(currentTime)} / {formatTime(duration)}
-                    </div>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -317,74 +282,62 @@ export function VideoPlayerMock({
           </div>
         </div>
 
-        {/* Technical & Creative Strategy Sidebar */}
-        <div className="lg:col-span-5 space-y-6">
-          <div className="p-6 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-5">
-            <div>
-              <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
-                {t.angleBadge}
-              </div>
-              <h4 className="text-base font-semibold text-white tracking-tight mt-1">
-                {currentVar.label[lang]}
-              </h4>
-              <p className="text-xs text-zinc-300 leading-relaxed mt-1 italic">
-                {currentVar.hookHeadline[lang]}
-              </p>
+        {/* Right: Clean, Focused Cut Details */}
+        <div className="lg:col-span-7 space-y-5">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>
+                {variations.length > 1
+                  ? `${isId ? "Variasi Aktif" : "Active Cut"} · 0${activeIndex + 1} / 0${variations.length}`
+                  : isId
+                    ? "Master Cut"
+                    : "Final Cut"}
+              </span>
             </div>
 
-            {/* Technical Specifications Grid */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div className="text-[10px] font-mono text-zinc-400 uppercase">{t.durationLabel}</div>
-                <div className="text-base font-semibold text-emerald-400 mt-1">
-                  {currentVar.duration}
-                </div>
-                <div className="text-[10px] text-zinc-500 mt-0.5">{currentVar.specs.durationFrames}</div>
-              </div>
-
-              <div className="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div className="text-[10px] font-mono text-zinc-400 uppercase">{t.resolutionLabel}</div>
-                <div className="text-base font-semibold text-white mt-1">
-                  1080 × 1920
-                </div>
-                <div className="text-[10px] text-zinc-500 mt-0.5">{currentVar.aspectRatio} Vertikal</div>
-              </div>
-
-              <div className="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div className="text-[10px] font-mono text-zinc-400 uppercase">{t.fpsLabel}</div>
-                <div className="text-base font-semibold text-zinc-200 mt-1">
-                  {currentVar.specs.fps}
-                </div>
-                <div className="text-[10px] text-zinc-500 mt-0.5">Smooth Motion Sync</div>
-              </div>
-
-              <div className="p-3 rounded-lg bg-black/40 border border-white/[0.06]">
-                <div className="text-[10px] font-mono text-zinc-400 uppercase">{t.codeEngineLabel}</div>
-                <div className="text-base font-semibold text-zinc-200 mt-1 truncate">
-                  Remotion 4.0
-                </div>
-                <div className="text-[10px] text-zinc-500 mt-0.5">React + TypeScript</div>
-              </div>
-            </div>
-
-            {/* Qualitative Post-Mortem Note */}
-            <div className="pt-4 border-t border-white/[0.06] space-y-2">
-              <div className="text-[11px] font-mono text-zinc-300 uppercase tracking-wider">
-                {t.takeawayLabel}
-              </div>
-              <p className="text-xs text-zinc-400 leading-relaxed">
-                {currentVar.keyTakeaway[lang]}
-              </p>
-            </div>
+            <h2 className="text-xl sm:text-2xl font-semibold text-white tracking-tight leading-snug">
+              {currentVar.label[lang]}
+            </h2>
           </div>
 
-          {/* Direct Response Angle Context Box */}
-          <div className="p-5 rounded-xl bg-white/[0.015] border border-white/[0.05] text-xs space-y-2">
-            <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
-              {lang === "id" ? "Fokus Pengujian Pesan" : "Message Testing Focus"}
-            </div>
-            <p className="text-zinc-400 leading-relaxed">
-              {currentVar.angleDescription[lang]}
+          {/* 0-3s Hook Callout */}
+          <div className="pl-4 py-1 border-l-2 border-emerald-400/70 space-y-1">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 block">
+              {isId ? "Hook 0–3 Detik" : "0–3s Opening Hook"}
+            </span>
+            <p className="text-sm sm:text-base text-zinc-100 font-medium italic leading-relaxed">
+              &ldquo;{currentVar.hookHeadline[lang]}&rdquo;
+            </p>
+          </div>
+
+          {/* Angle Overview */}
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            {currentVar.angleDescription[lang]}
+          </p>
+
+          {/* Compact Inline Spec Strip (Replaces 4 heavy spec boxes) */}
+          <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono text-zinc-300">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08]">
+              <Clock className="w-3 h-3 text-emerald-400" />
+              <span>{currentVar.duration}</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08]">
+              <Film className="w-3 h-3 text-zinc-400" />
+              <span>1080×1920 ({currentVar.aspectRatio})</span>
+            </span>
+            <span className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] text-zinc-400">
+              {currentVar.specs.fps}
+            </span>
+          </div>
+
+          {/* Key Takeaway Highlight */}
+          <div className="p-4 rounded-xl bg-emerald-500/[0.05] border border-emerald-500/20 space-y-1.5">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 block">
+              {isId ? "Poin Kunci Kreatif" : "Creative Takeaway"}
+            </span>
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+              {currentVar.keyTakeaway[lang]}
             </p>
           </div>
         </div>

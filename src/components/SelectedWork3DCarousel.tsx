@@ -103,8 +103,8 @@ const FEATURED_CAROUSEL_ITEMS: FeaturedCut[] = [
     projectTitle: "Agoda: Weekend Getaway",
     categoryLabel: { id: "AI Cinematic Drama", en: "AI Cinematic Drama" },
     cutTitle: {
-      id: "CON-005: The Weekend Surcharge Myth (30s)",
-      en: "CON-005: The Weekend Surcharge Myth (30s)",
+      id: "Cut 01: The Weekend Surcharge Myth (CON-005)",
+      en: "Cut 01: The Weekend Surcharge Myth (CON-005)",
     },
     angleLabel: {
       id: "Smart-Shopper Drama & App-Only Deals",
@@ -113,6 +113,23 @@ const FEATURED_CAROUSEL_ITEMS: FeaturedCut[] = [
     duration: "30s",
     poster: "/images/agoda/agoda_cover_poster.jpg",
     videoSrc: "/videos/agoda/agoda-weekend-getaway-v1.mp4",
+  },
+  {
+    id: "agoda-v2-feature",
+    projectSlug: "agoda-weekend-getaway",
+    projectTitle: "Agoda: Weekend Getaway",
+    categoryLabel: { id: "AI Cinematic Drama", en: "AI Cinematic Drama" },
+    cutTitle: {
+      id: "Cut 02: The Secret Solo Sanctuary (CON-004)",
+      en: "Cut 02: The Secret Solo Sanctuary (CON-004)",
+    },
+    angleLabel: {
+      id: "The Human Mute Button & Map View",
+      en: "The Human Mute Button & Map View",
+    },
+    duration: "36s",
+    poster: "/images/agoda/agoda_v2_cabin_poster.jpg",
+    videoSrc: "/videos/agoda/agoda-weekend-getaway-v2.mp4",
   },
 ];
 

@@ -94,9 +94,9 @@ export const TRANSLATIONS = {
         },
         "agoda-weekend-getaway": {
           title: "Agoda: Weekend Getaway",
-          description: "Mikro-drama AI 30 detik: mematahkan mitos harga hotel akhir pekan mahal lewat drama warkop terik yang beralih ke diskon 35% App-Only Deals dan infinity pool sejuk.",
-          info: "Spec ad · 1 master cut sinematik",
-          cta: "Tonton iklan & studi kasus",
+          description: "Dua micro-drama AI: satu mematahkan mitos harga hotel akhir pekan di warkop terik (CON-005), satu lagi menekan tombol MUTE remot TV ke kerumunan food court menuju kabin pinus sepi via Map View (CON-004).",
+          info: "Spec ad · 2 angle iklan",
+          cta: "Tonton & bandingkan kedua video",
         },
       },
       capabilities: {
@@ -765,9 +765,9 @@ export const TRANSLATIONS = {
         },
         "agoda-weekend-getaway": {
           title: "Agoda: Weekend Getaway",
-          description: "A 30-second AI micro-drama: busting the weekend hotel surcharge myth through a sweltering coffee stall drama switching to 35% App-Only Deals and hillside infinity pool.",
-          info: "Spec ad · 1 cinematic master cut",
-          cta: "Watch ad & case study",
+          description: "Two AI micro-dramas: one busts the weekend hotel surcharge myth at a hot street stall (CON-005), the other presses a TV remote MUTE button at a loud food court escaping to a pine cabin via Map View (CON-004).",
+          info: "Spec ad · 2 creative angles",
+          cta: "Watch & compare both videos",
         },
       },
       capabilities: {

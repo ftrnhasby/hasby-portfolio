@@ -387,12 +387,12 @@ export const COLLECTIONS: CreativeCollection[] = [
     title: "Agoda: Weekend Getaway",
     brand: "Agoda Indonesia",
     subtitle: {
-      id: "Cinematic AI Micro-Drama Ads (The Weekend Surcharge Myth)",
-      en: "Cinematic AI Micro-Drama Ads (The Weekend Surcharge Myth)",
+      id: "Rangkaian 2 Video AI Micro-Drama (Weekend Surcharge Myth vs. Secret Solo Sanctuary)",
+      en: "2-Part AI Micro-Drama System (Weekend Surcharge Myth vs. Secret Solo Sanctuary)",
     },
     description: {
-      id: "Iklan mikro-drama sinematik AI 30 detik format vertikal (9:16) untuk Agoda Mobile App. Mematahkan mitos lonjakan harga hotel akhir pekan melalui drama warkop terik yang beralih ke diskon 35% App-Only Deals dan relaksasi infinity pool.",
-      en: "A 30-second cinematic AI vertical micro-drama (9:16) for the Agoda Mobile App. Dismantling the weekend hotel surcharge myth through a sweltering coffee stall drama switching to exclusive 35% App-Only Deals and hillside pool relaxation.",
+      id: "Rangkaian 2 iklan mikro-drama sinematik AI format vertikal (9:16) untuk Agoda Mobile App. Menguji 2 hook kontras: (1) drama warkop terik mematahkan mitos weekend surcharge (CON-005), dan (2) komedi fisik menekan tombol MUTE remot TV di food court bising menuju kabin hutan pinus via Agoda Map View (CON-004).",
+      en: "A 2-part vertical cinematic AI micro-drama series (9:16) for the Agoda Mobile App. Testing 2 contrasting hooks: (1) sweltering street stall drama busting the weekend surcharge myth (CON-005), and (2) physical comedy pressing a TV remote MUTE button at a loud food court escaping to a pine forest cabin via Agoda Map View (CON-004).",
     },
     coverImage: "/images/agoda/agoda_cover_poster.jpg",
     categories: ["ai-ads"],
@@ -409,14 +409,16 @@ export const COLLECTIONS: CreativeCollection[] = [
       "ElevenLabs",
       "Adobe Premiere Pro",
       "Adobe After Effects",
+      "CapCut Desktop",
+      "Remotion",
     ],
     caseStudyHref: "/projects/agoda-weekend-getaway",
     videos: [
       {
         id: "agoda-con-005",
         title: {
-          id: "Master Cut: The Weekend Surcharge Myth (CON-005)",
-          en: "Master Cut: The Weekend Surcharge Myth (CON-005)",
+          id: "Cut 01: The Weekend Surcharge Myth (CON-005)",
+          en: "Cut 01: The Weekend Surcharge Myth (CON-005)",
         },
         src: "/videos/agoda/agoda-weekend-getaway-v1.mp4",
         poster: "/images/agoda/agoda_cover_poster.jpg",
@@ -429,6 +431,26 @@ export const COLLECTIONS: CreativeCollection[] = [
           en: "Sweltering stall price frustration hook, followed by Agoda 35% App-Only discount discovery, free cancellation guarantee, and a celebratory resort cheers.",
         },
         duration: "30s",
+        aspectRatio: "9:16",
+        status: "published",
+      },
+      {
+        id: "agoda-con-004",
+        title: {
+          id: "Cut 02: The Secret Solo Sanctuary (CON-004)",
+          en: "Cut 02: The Secret Solo Sanctuary (CON-004)",
+        },
+        src: "/videos/agoda/agoda-weekend-getaway-v2.mp4",
+        poster: "/images/agoda/agoda_v2_cabin_poster.jpg",
+        angle: {
+          id: "The Human Mute Button & Agoda Map View",
+          en: "The Human Mute Button & Agoda Map View",
+        },
+        description: {
+          id: "Hook komedi absurd menekan tombol MUTE remot TV ke kerumunan food court bising, bergeser via Agoda Map View & diskon 35% menuju silence drop di balkon kabin hutan pinus berkabut.",
+          en: "Absurd physical hook pressing a TV remote MUTE button at a loud office food court, shifting via Agoda Map View & 35% off into an acoustic silence drop on a misty pine cabin balcony.",
+        },
+        duration: "36s",
         aspectRatio: "9:16",
         status: "published",
       },

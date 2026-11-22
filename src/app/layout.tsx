@@ -42,8 +42,8 @@ export const metadata: Metadata = {
       "Turning customer research into high-retention video ads ready for testing on TikTok and Instagram Reels.",
     url: "https://hasby-portfolio.pages.dev/",
     siteName: "Fitran Hasby Portfolio",
-    locale: "id_ID",
-    alternateLocale: ["en_US"],
+    locale: "en_US",
+    alternateLocale: ["id_ID"],
     type: "website",
     images: [
       {
@@ -81,7 +81,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="id"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -91,9 +91,9 @@ export default function RootLayout({
             __html: `
               try {
                 var saved = localStorage.getItem('hasby_portfolio_lang');
-                if (saved === 'en') {
+                if (saved === 'id') {
                   document.documentElement.classList.add('lang-loading');
-                  document.documentElement.lang = 'en';
+                  document.documentElement.lang = 'id';
                 }
                 setTimeout(function() {
                   document.documentElement.classList.remove('lang-loading');

@@ -2767,12 +2767,12 @@ export const PROJECTS: Project[] = [
       },
     ],
     toolsUsed: [
+      "Google Flow (Scene & Video Gen)",
       "Midjourney v6.1 (Visual Keyframes)",
       "Kling AI (Motion Diffusion)",
-      "ElevenLabs (Indonesian Neural Voice)",
-      "Adobe Premiere Pro (NLE Timeline & Mastering)",
-      "Adobe After Effects (Kinetic Typography & HUD)",
-      "CapCut Desktop (Dynamic Captions)",
+      "ElevenLabs (Neural Voiceover)",
+      "CapCut Desktop (12-Track NLE & Captions)",
+      "Adobe Premiere Pro & After Effects",
     ],
     creativeBrief: {
       clientObjective: {
@@ -3572,6 +3572,36 @@ export const PROJECTS: Project[] = [
         en: "Deploy a Meta Dynamic Creative (DCT) split-test pitting the 3-second Thumbstop rate of Spatial Hook CON-001 against Neck Posture Hook CON-003 to identify the conversion winner at scale.",
       },
     },
+    productionProof: [
+      {
+        id: "oximus-con003-google-flow",
+        imageSrc: "/images/oximus/oximus_con003_bts_google_flow.jpg",
+        toolBadge: "Google Flow",
+        cutLabel: "CON-003",
+        title: {
+          id: "Penguncian Produk, Karakter & Klip 5-POV",
+          en: "Product, Character & 5-POV Clip Generation",
+        },
+        caption: {
+          id: "Ruang kerja Google Flow menggabungkan referensi produk Oximus Hydra ZDP1118 putih, konsistensi wajah talent & workstation kayu, hingga 5 sudut kamera sinematik ergonomi.",
+          en: "Google Flow workspace combining the isolated white Oximus Hydra ZDP1118 arm reference, talent & wooden desk continuity, and 5 dynamic ergonomic camera POVs.",
+        },
+      },
+      {
+        id: "oximus-con003-capcut-timeline",
+        imageSrc: "/images/oximus/oximus_con003_bts_capcut_timeline.jpg",
+        toolBadge: "CapCut Desktop",
+        cutLabel: "CON-003",
+        title: {
+          id: "Perakitan 12-Track Timeline Direct Response (30s)",
+          en: "12-Track Direct Response Timeline Assembly (30s)",
+        },
+        caption: {
+          id: "Timeline Oximus-CON-003-DR-30s-v01 (1080×1920 @ 30 FPS, 12 track, 39 klip) dengan pemisahan SFX foley, BGM Lo-Fi mid-scoop + ducking, dan 5 beat VO ElevenLabs.",
+          en: "Oximus-CON-003-DR-30s-v01 timeline (1080×1920 @ 30 FPS, 12 tracks, 39 clips) separating tactile SFX hits, mid-scooped ducked Lo-Fi BGM, and 5 ElevenLabs VO beats.",
+        },
+      },
+    ],
   },
   {
     id: "agoda-weekend-getaway",
@@ -3584,23 +3614,23 @@ export const PROJECTS: Project[] = [
     },
     year: "2026",
     tagline: {
-      id: "Iklan micro-drama sinematik AI 30 detik untuk mematahkan mitos lonjakan harga hotel akhir pekan lewat diskon App-Only Deals Agoda.",
-      en: "A 30-second cinematic AI micro-drama busting the weekend hotel surcharge myth using Agoda's App-Only Deals and instant booking.",
+      id: "Rangkaian 2 iklan micro-drama sinematik AI vertikal (9:16) untuk Agoda Mobile App: mematahkan mitos weekend surcharge (CON-005) & tombol mute kebisingan kota menuju kabin hutan pinus (CON-004).",
+      en: "A 2-part vertical cinematic AI micro-drama series (9:16) for the Agoda Mobile App: busting the weekend surcharge myth (CON-005) & muting city noise into a silent pine cabin sanctuary (CON-004).",
     },
     heroSummary: {
-      id: "Studi kasus creative advertising untuk Agoda Mobile App (CON-005: The Weekend Surcharge Myth). Menggabungkan drama perkotaan yang relatable di warkop terik antara dua sahabat pekerja, pembuktian mekanisme diskon aplikasi 35%, hingga kepuasan emosional relaksasi di infinity pool lereng bukit berkabut.",
-      en: "A creative advertising case study for the Agoda Mobile App (CON-005: The Weekend Surcharge Myth). Bridging a relatable urban drama at a sweltering roadside coffee stall, verifiable in-app 35% discount proof, and an emotional sensory payoff at a misty hillside infinity pool.",
+      id: "Studi kasus creative advertising multi-variasi untuk Agoda Mobile App. Menguji 2 sudut pandang micro-drama AI independen: (1) CON-005 The Weekend Surcharge Myth — drama warkop terik antara dua sahabat yang beralih ke diskon App-Only 35% dan infinity pool; serta (2) CON-004 The Secret Solo Sanctuary — hook komedi absurd menekan tombol MUTE remot TV ke kerumunan food court yang dijembatani Agoda Map View menuju kabin hutan pinus berkabut.",
+      en: "A multi-variation creative advertising case study for the Agoda Mobile App. Testing 2 distinct AI micro-drama angles: (1) CON-005 The Weekend Surcharge Myth — a sweltering street stall debate transitioning to 35% App-Only Deals and an infinity pool; and (2) CON-004 The Secret Solo Sanctuary — an absurd physical hook pressing a TV remote MUTE button at a loud food court bridged by Agoda Map View into a misty pine forest cabin.",
     },
     featured: true,
     primaryHighlight: {
-      value: "1 Master Cut",
+      value: "2 Video Cuts",
       label: {
-        id: "Cinematic AI Micro-Drama",
-        en: "Cinematic AI Micro-Drama",
+        id: "Variasi Angle AI Micro-Drama",
+        en: "AI Micro-Drama Angle Variations",
       },
       subtext: {
-        id: "30s Vertikal 9:16 (5 Klip AI Terkalibrasi Pacing)",
-        en: "30s 9:16 Vertical (5 Calibrated AI Paced Clips)",
+        id: "30s & 36s Vertikal 9:16 (CON-005 & CON-004)",
+        en: "30s & 36s 9:16 Vertical (CON-005 & CON-004)",
       },
     },
     secondaryHighlights: [
@@ -3632,23 +3662,25 @@ export const PROJECTS: Project[] = [
       "ElevenLabs (Indonesian & English VO)",
       "Adobe Premiere Pro",
       "Adobe After Effects",
+      "CapCut Desktop",
+      "Remotion",
     ],
     creativeBrief: {
       clientObjective: {
-        id: "Merancang video iklan direct response format vertikal (9:16, 30 detik) yang mematahkan persepsi bahwa liburan akhir pekan (weekend getaway) selalu mahal karena weekend surcharge, serta mendorong instalasi dan reservasi via Agoda Mobile App.",
-        en: "Produce a 30-second vertical direct response video ad (9:16) dispelling the myth that weekend getaways are cost-prohibitive due to surcharges, driving Agoda Mobile App installs and bookings.",
+        id: "Merancang rangkaian 2 video iklan direct response format vertikal (9:16) yang mematahkan hambatan psikologis liburan akhir pekan (mitos weekend surcharge & kelelahan sosial/bising kota) serta mendorong instalasi dan reservasi via Agoda Mobile App.",
+        en: "Produce a 2-part vertical direct response video ad series (9:16) overcoming weekend travel barriers (weekend surcharge myths & urban sensory burnout) to drive Agoda Mobile App installs and bookings.",
       },
       targetAudience: {
-        id: "Karyawan swasta, pekerja kreatif/agency, dan profesional urban berusia 23–34 tahun yang mengalami kejenuhan rutinitas kantor di hari Jumat namun sensitif terhadap lonjakan harga akhir pekan.",
-        en: "Corporate employees, creative agency workers, and urban professionals aged 23–34 burning out by Friday but sensitive to weekend price surges.",
+        id: "Karyawan swasta, desainer grafis, pekerja kreatif/agency, dan profesional urban berusia 23–34 tahun yang mengalami kejenuhan rutinitas kantor serta kebisingan kota namun tetap sensitif terhadap harga penginapan akhir pekan.",
+        en: "Corporate employees, graphic designers, creative agency workers, and urban professionals aged 23–34 experiencing workweek burnout and urban noise fatigue while remaining price-sensitive on weekend stays.",
       },
       coreProblem: {
-        id: "Konsumen percaya bahwa tarif hotel akhir pekan melonjak drastis (weekend surcharge myth), membuat mereka membatalkan rencana liburan singkat dan berakhir menghabiskan akhir pekan di kamar dengan rasa lelah.",
-        en: "Consumers believe weekend hotel rates double unavoidably, causing millions to cancel getaway plans and spend weekends stuck indoors with mounting burnout.",
+        id: "Pekerja urban terjebak dua friksi utama: (1) persepsi bahwa tarif hotel akhir pekan selalu melonjak mahal (weekend surcharge myth), dan (2) kelelahan sensorik akibat kebisingan kantin/kota sehari-hari tanpa tahu cara cepat menemukan penginapan sunyi di luar keramaian.",
+        en: "Urban workers face two core frictions: (1) the belief that weekend hotel rates unavoidably surge, and (2) daily sensory overload from crowded lunch halls and city noise without an easy way to locate peaceful hidden retreats.",
       },
       angleHookStrategy: {
-        id: "Cognitive Disruption & Smart Shopper Victory: Membuka dengan emosi frustrasi nyata di warkop siang bolong, membedakan pencarian web biasa dengan diskon aplikasi eksklusif (App-Only Deals), lalu menguncinya dengan bukti potongan 35% dan pemandangan kolam renang infinity.",
-        en: "Cognitive Disruption & Smart Shopper Victory: Opening with authentic frustration in a scorching roadside stall, contrasting generic web browsing with exclusive App-Only Deals, locked in with 35% discount proof and an infinity pool payoff.",
+        id: "Menguji 2 mekanisme persuasi kontras: (1) CON-005 Cognitive Disruption & Smart Shopper Victory — membuka dengan frustrasi harga di warkop terik menuju infinity pool; dan (2) CON-004 Absurd Pattern Interrupt to Sensory Silence — aksi fisik deadpan menekan tombol MUTE remot TV ke kerumunan food court lalu memakai Agoda Map View menuju kabin hutan pinus sunyi.",
+        en: "Testing 2 contrasting persuasion mechanisms: (1) CON-005 Cognitive Disruption & Smart Shopper Victory — sweltering street stall price frustration shifting to an infinity pool; and (2) CON-004 Absurd Pattern Interrupt to Sensory Silence — deadpan physical comedy pressing a TV remote MUTE button at a loud food court, shifting via Agoda Map View to a silent pine cabin.",
       },
       keyDifferentiators: [
         {
@@ -3656,34 +3688,34 @@ export const PROJECTS: Project[] = [
           en: "Exclusive App-Only Deals with up to 35% off on mobile",
         },
         {
+          id: "Fitur Agoda Map View untuk menggeser peta keluar dari keramaian kota menuju kabin & resort tenang (rating ketenangan 9.2+)",
+          en: "Agoda Map View feature letting travelers slide past crowded city hubs directly to quiet nature retreats (9.2+ quiet rating)",
+        },
+        {
           id: "Layanan EasyCancel (Jaminan Pembatalan Gratis tanpa cemas)",
           en: "EasyCancel free cancellation guarantee for zero-risk bookings",
         },
         {
-          id: "Benefit sarapan pagi gratis (Free Breakfast Included)",
-          en: "Complimentary breakfast included across selected 4-star properties",
-        },
-        {
-          id: "Status AgodaVIP dan konfirmasi reservasi kamar instan",
-          en: "AgodaVIP tiered perks and instant one-tap room confirmation",
+          id: "Benefit sarapan pagi gratis (Free Breakfast Included) & konfirmasi reservasi instan",
+          en: "Complimentary breakfast included & instant one-tap room confirmation",
         },
       ],
       deliverables: [
         {
-          id: "Master Cut: 30 Detik Vertikal 9:16 (1080x1920 @ 30 FPS)",
-          en: "Master Cut: 30s Vertical 9:16 (1080x1920 @ 30 FPS)",
+          id: "Variasi 1 (CON-005): Video Vertikal 'The Weekend Surcharge Myth' (30s, 1080x1920 @ 30 FPS)",
+          en: "Variation 1 (CON-005): Vertical Video 'The Weekend Surcharge Myth' (30s, 1080x1920 @ 30 FPS)",
         },
         {
-          id: "Naskah & Voiceover Bilingual (Bahasa Indonesia & English)",
-          en: "Bilingual Master Script & ElevenLabs VO (Indonesian & English)",
+          id: "Variasi 2 (CON-004): Video Vertikal 'The Secret Solo Sanctuary / The Human Mute Button' (36s, 1080x1920 @ 30 FPS)",
+          en: "Variation 2 (CON-004): Vertical Video 'The Secret Solo Sanctuary / The Human Mute Button' (36s, 1080x1920 @ 30 FPS)",
         },
         {
-          id: "Storyboard 5 Adegan dengan Kontinuitas Karakter & Lokasi",
-          en: "5-Scene Storyboard with Character & Location Continuity Locks",
+          id: "Naskah Dwibahasa (ID/EN), Voiceover Brand Narrator ElevenLabs, & Storyboard 5-POV untuk kedua konsep",
+          en: "Bilingual Master Scripts (ID/EN), ElevenLabs Brand Narrator VO, & 5-POV Storyboards for both concepts",
         },
         {
-          id: "Paket Handoff Produksi & Blueprint Direct Response NLE",
-          en: "Production Handoff Package & NLE Direct Response Blueprint",
+          id: "Paket Handoff Produksi, Visual Asset Bible, & Blueprint Direct Response Editing",
+          en: "Production Handoff Package, Visual Asset Bible, & Direct Response Editing Blueprints",
         },
       ],
     },
@@ -3693,36 +3725,36 @@ export const PROJECTS: Project[] = [
         en: "Spec Ad / AI Creative Sprint",
       },
       objective: {
-        id: "Membuktikan efektivitas format Cinematic AI Drama untuk memicu konversi unduhan Agoda App dan pemesanan hotel akhir pekan dengan pacing direct-response 30 detik.",
-        en: "Validate Cinematic AI Drama ad formats driving Agoda App downloads and weekend bookings with a strict 30-second direct-response pacing curve.",
+        id: "Menguji performa 2 angle Cinematic AI Micro-Drama (Price Myth Buster vs. Absurd Silence Escape) dalam mendorong unduhan aplikasi Agoda dan reservasi weekend getaway.",
+        en: "Test 2 distinct Cinematic AI Micro-Drama angles (Price Myth Buster vs. Absurd Silence Escape) driving Agoda App downloads and weekend getaway bookings.",
       },
       targetAudience: {
-        id: "The Skeptical Deal Seeker (23–34 tahun): pekerja urban yang lelah di penghujung minggu, membutuhkan jeda liburan singkat, dan bangga saat menemukan celah diskon cerdas.",
-        en: "The Skeptical Deal Seeker (ages 23–34): urban workers fatigued by the workweek, seeking a quick escape, and taking pride in smart-shopper hacks.",
+        id: "The Skeptical Deal Seeker & Overstimulated Urban Creative (23–34 tahun): pekerja urban yang lelah oleh rutinitas serta bising kota, mendambakan liburan singkat yang terjangkau sekaligus menenangkan.",
+        en: "The Skeptical Deal Seeker & Overstimulated Urban Creative (ages 23–34): city workers drained by work routines and noise, seeking affordable yet restorative short escapes.",
       },
       audienceInsight: {
-        id: "Sebagian besar orang memeriksa tarif hotel di browser desktop atau situs biasa di mana harga akhir pekan terlihat melonjak, tanpa menyadari bahwa diskon terbesar diproteksi di dalam aplikasi seluler.",
-        en: "Most travelers search hotel rates on generic desktop browsers where weekend rates appear inflated, unaware that the steepest discounts are mobile-exclusive.",
+        id: "Konsumen kerap membatalkan rencana liburan karena melihat tarif akhir pekan tinggi di browser biasa, dan di sisi lain pekerja kreatif yang kelelahan sosial merasa kesulitan mencari penginapan sunyi di luar kepadatan kota secara cepat.",
+        en: "Travelers frequently abort trips after seeing high weekend web rates, while socially drained creatives struggle to quickly pinpoint quiet nature stays away from dense urban zones.",
       },
       coreAngle: {
-        id: "Smart-Shopper Drama (CON-005): Kontras ekstrem antara 'Si Skeptis' yang mengeluhkan weekend surcharge di warkop terik dan 'Si Smart Booker' yang menikmati resort mewah lewat Agoda App.",
-        en: "Smart-Shopper Drama (CON-005): Sharp contrast between 'The Skeptic' complaining about surcharges at a hot stall and 'The Smart Booker' unwinding at a luxury resort via the Agoda App.",
+        id: "Pengujian 2 sudut narasi: (1) CON-005 Smart-Shopper Drama — kontras warkop terik vs infinity pool lewat App-Only Deals; (2) CON-004 The Secret Solo Sanctuary — komedi fisik tombol MUTE remot TV di food court bising vs keheningan kabin hutan pinus lewat Agoda Map View.",
+        en: "Testing 2 narrative angles: (1) CON-005 Smart-Shopper Drama — sweltering street stall vs infinity pool via App-Only Deals; (2) CON-004 The Secret Solo Sanctuary — absurd TV remote MUTE button in a loud food court vs misty pine forest silence via Agoda Map View.",
       },
       hookStrategy: {
-        id: "Pattern Interrupt & Emosional Panas Terik (0–3s): Rian menghempaskan ponsel ke meja warkop kayu di samping es teh manis, memvalidasi kejengkelan audiens dengan headline 'WEEKEND SURCHARGE / BIKIN DOMPET BONCOS?'.",
-        en: "Pattern Interrupt & Heatwave Agitation (0–3s): Rian slams his phone onto a rustic stall table next to iced tea, validating viewer pain with 'WEEKEND SURCHARGE / DRAINING YOUR WALLET?'.",
+        id: "Dual Pattern Interrupt (0–3s): Cut 01 membuka dengan hempasan ponsel frustrasi di warkop panas ('WEEKEND SURCHARGE / BIKIN DOMPET BONCOS?'); Cut 02 membuka dengan 2-shot FPP tangan Maya menekan tombol merah MUTE remot TV ke kerumunan food court ('KOTA GAK PUNYA TOMBOL MUTE / CARI BUKIT SEPI DI AGODA').",
+        en: "Dual Pattern Interrupt (0–3s): Cut 01 opens with a frustrated phone slap at a sweltering stall ('WEEKEND SURCHARGE / DRAINING YOUR WALLET?'); Cut 02 opens with a 2-shot FPP of Maya pressing a TV remote red MUTE button at a loud food court ('CITIES HAVE NO MUTE BUTTON / FIND QUIET CABINS ON AGODA').",
       },
       valueProposition: {
-        id: "Diskon App-Only Agoda hingga 35% + Free Breakfast + Free Cancellation mengubah liburan akhir pekan mewah menjadi realistis dan terjangkau.",
-        en: "Agoda App-Only Deals up to 35% off + Free Breakfast + Free Cancellation turns luxury weekend getaways into an accessible, stress-free reality.",
+        id: "Agoda Map View + App-Only Deals hingga 35% + Free Breakfast + Free Cancellation menjadikan liburan akhir pekan mewah maupun solo retreat sunyi mudah ditemukan dan ramah di dompet.",
+        en: "Agoda Map View + App-Only Deals up to 35% off + Free Breakfast + Free Cancellation makes both luxury getaways and quiet solo retreats easy to locate and budget-friendly.",
       },
       callToAction: {
-        id: "“Weekend escape mewah gak harus boncos. Buka aplikasi Agoda sekarang.”",
-        en: "“Luxury weekend escapes don't have to break the bank. Open the Agoda app today.”",
+        id: "“Butuh waktu tenang buat diri sendiri atau weekend escape mewah? Buka aplikasi Agoda sekarang.”",
+        en: "“Need quiet time for yourself or a luxury weekend escape? Open the Agoda app today.”",
       },
       creativeRationale: {
-        id: "Iklan pariwisata tradisional sering kali terasa generik dan klise. Dengan membingkainya dalam mikro-drama dua sahabat dan kontras sensorik (warkop panas 35°C vs kolam infinity sejuk), penonton merasakan 'dopamine relief' yang kuat dan terdorong membuka aplikasi.",
-        en: "Conventional travel ads rely on generic scenic montages devoid of tension. Framing this through a two-friend micro-drama and sensory contrast (35°C sweltering warkop vs refreshing infinity pool) creates a powerful dopamine relief hook that drives app installs.",
+        id: "Iklan travel konvensional terlalu sering langsung menampilkan montase pemandangan tanpa konflik. Dengan membangun ketegangan relatable terlebih dahulu (panas terik warkop & bising food court) lalu memotongnya secara drastis (Hard Cut / Acoustic Dopamine Snap) ke resort sejuk dan kabin hutan pinus hening, penonton merasakan pelepasan emosi instan yang mendorong aksi unduh aplikasi.",
+        en: "Conventional travel ads jump straight into generic scenic montages without tension. By establishing relatable urban friction first (35°C street heat & food court noise) and snapping abruptly via Hard Cut / Acoustic Dopamine Snap into a cool resort and silent pine cabin, viewers feel instant emotional relief that drives app installs.",
       },
     },
     assetBreakdown: [
@@ -3825,13 +3857,67 @@ export const PROJECTS: Project[] = [
         category: "Product images or external assets",
         sourceOrTool: "Midjourney v6.1 + Prompt Engineering",
         myContribution: {
-          id: "Penguncian atribut visual permanen untuk Karakter Rian (CHAR-001), Dimas (CHAR-002), Warkop (LOC-001A/B), dan Resort Tropis (LOC-002).",
-          en: "Permanent attribute locking for Rian (CHAR-001), Dimas (CHAR-002), Warkop (LOC-001A/B), and Resort (LOC-002).",
+          id: "Penguncian atribut visual permanen untuk Rian (CHAR-001), Dimas (CHAR-002), Maya (CHAR-003), Warkop (LOC-001A/B), Food Court (LOC-003A/B), Resort (LOC-002), dan Kabin Hutan Pinus (LOC-004).",
+          en: "Permanent attribute locking for Rian (CHAR-001), Dimas (CHAR-002), Maya (CHAR-003), Stall (LOC-001A/B), Food Court (LOC-003A/B), Resort (LOC-002), and Pine Forest Cabin (LOC-004).",
         },
         licenseStatus: "Self-Created / Original",
         notes: {
-          id: "Menjamin kontinuitas wajah, pakaian, dan palet pencahayaan di seluruh 5 adegan tanpa inkonsistensi AI.",
-          en: "Guarantees face, apparel, and lighting consistency across all 5 discrete AI generation clips.",
+          id: "Menjamin kontinuitas wajah, pakaian, properti remot TV hitam, dan palet pencahayaan di seluruh klip AI pada CON-005 dan CON-004.",
+          en: "Guarantees face, apparel, matte black TV remote prop, and lighting consistency across all discrete AI generation clips in CON-005 and CON-004.",
+        },
+      },
+      {
+        id: "agoda-v2-asset-01",
+        name: {
+          id: "CON-004 · 2-Shot FPP Remot TV Mute & Reaksi Maya Merengut (CLIP-001A/B)",
+          en: "CON-004 · 2-Shot FPP TV Remote Mute & Maya Pout Reaction (CLIP-001A/B)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + ElevenLabs VO-0",
+        myContribution: {
+          id: "Penyutradaraan hook absurd 2-shot: POV tangan kanan menekan tombol merah MUTE 3x ke kerumunan food court kantor, disusul fast cut Maya merengut menaruh remot di meja.",
+          en: "Absurd 2-shot hook direction: FPP right hand pressing red MUTE button 3x toward loud office food court crowd, cut sharply to Maya pouting and setting down the remote.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Dilapisi Brand Narrator VO-0 ('Eh, eh, mana bisa di-mute gitu!') serta foley klik tombol remot dan keriuhan meja sebelah.",
+          en: "Layered with Brand Narrator VO-0 tease alongside tactile remote clicks and ambient lunch hall chatter.",
+        },
+      },
+      {
+        id: "agoda-v2-asset-02",
+        name: {
+          id: "CON-004 · OTS Agoda Map View & Macro UI Kabin Hutan Pinus (CLIP-002 & CLIP-003)",
+          en: "CON-004 · OTS Agoda Map View & Macro Pine Cabin UI (CLIP-002 & CLIP-003)",
+        },
+        category: "Motion graphics and compositing",
+        sourceOrTool: "Google Flow Omni Flash + Remotion / CapCut Desktop",
+        myContribution: {
+          id: "Transisi 45° OTS geser peta Agoda Map View dari kota menuju pin hijau 'IDR 680K - Pine Cabin 9.2', dilanjutkan 90° macro screen insert diskon 35% hingga centang Booking Confirmed!",
+          en: "45° OTS Agoda Map View swipe out of city clusters to green 'IDR 680K - Pine Cabin 9.2' pin, transitioning to 90° macro screen insert showing 35% discount and Booking Confirmed! tick.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Ujung remot TV hitam dipertahankan di sudut kiri atas meja kantin pada CLIP-003 sebagai jangkar kontinuitas ruang.",
+          en: "Edge of the black TV remote stays visible at top-left of canteen table in CLIP-003 as a spatial continuity anchor.",
+        },
+      },
+      {
+        id: "agoda-v2-asset-03",
+        name: {
+          id: "CON-004 · Balkon Kabin Hutan Pinus Berkabut & Zero Lip-Clash CTA (CLIP-004 & CLIP-005)",
+          en: "CON-004 · Misty Pine Forest Cabin Balcony & Zero Lip-Clash CTA (CLIP-004 & CLIP-005)",
+        },
+        category: "AI-generated footage or audio",
+        sourceOrTool: "Google Flow Omni Flash + ElevenLabs VO-2/VO-3 + Remotion",
+        myContribution: {
+          id: "Hard cut silence drop ke teras kabin pinus berkabut dengan god rays pagi, kardigan krem & uap teh keramik, ditutup pedestal pull-back 30 cm Maya tersenyum tanpa gerak bibir.",
+          en: "Hard-cut acoustic silence drop to misty pine cabin balcony with morning god rays, knit cardigan & steaming ceramic tea, closed by a 30cm pedestal pull-back with silent smile.",
+        },
+        licenseStatus: "Self-Created / Original",
+        notes: {
+          id: "Menerapkan Zero Lip-Clash Guarantee: Maya hanya tersenyum dan melakukan gentle toast cangkir teh sementara Brand Narrator VO-3 menyampaikan CTA.",
+          en: "Enforces Zero Lip-Clash Guarantee: Maya smiles silently and raises her tea mug in a gentle toast while Brand Narrator VO-3 delivers the CTA.",
         },
       },
     ],
@@ -3929,6 +4015,99 @@ export const PROJECTS: Project[] = [
           },
         ],
       },
+      {
+        id: "agoda-con-004",
+        name: {
+          id: "CON-004: The Secret Solo Sanctuary (The Human Mute Button)",
+          en: "CON-004: The Secret Solo Sanctuary (The Human Mute Button)",
+        },
+        hookType: {
+          id: "Absurd Pattern Interrupt & Komedi Fisik Remot TV",
+          en: "Absurd Pattern Interrupt & TV Remote Physical Comedy",
+        },
+        duration: "36s",
+        concept: {
+          id: "Pekerja kreatif urban yang lelah oleh kebisingan food court mencoba men-mute kerumunan memakai remot TV, lalu menemukan pelarian sunyi di kabin hutan pinus via Agoda Map View.",
+          en: "An overstimulated urban creative tries muting a noisy office food court with a TV remote before escaping to a misty pine forest cabin via Agoda Map View.",
+        },
+        lines: [
+          {
+            time: "00:00 - 00:03",
+            visual: {
+              id: "CLIP-001A/B (2-Shot Split): FPP tangan kanan Maya mengarahkan remot TV hitam ke rombongan food court berisik dan menekan MUTE 3x, lalu fast cut Maya merengut menaruh remot di meja.",
+              en: "CLIP-001A/B (2-Shot Split): FPP right hand pointing a black TV remote at a noisy food court crowd pressing MUTE 3x, hard-cutting to Maya pouting and placing the remote on the table.",
+            },
+            audio: {
+              id: "VO-0 + Foley: 'Eh, eh, mana bisa di-mute gitu!' + 3x klik tombol remot, tawa berisik meja sebelah, & desahan kesal Maya.",
+              en: "VO-0 + Foley: 'Wait, you can't mute real people like that!' + 3x remote button clicks, loud canteen chatter, & Maya's frustrated sigh.",
+            },
+            psychologyIntent: {
+              id: "Absurd Pattern Interrupt: Visual ganjil memencet remot TV ke arah kerumunan menghentikan scroll jempol secara instan dan memvalidasi kelelahan sosial.",
+              en: "Absurd Pattern Interrupt: Unexpected visual comedy aiming a TV remote at a loud crowd arrests mobile scrolling and validates social burnout.",
+            },
+          },
+          {
+            time: "00:03 - 00:08",
+            visual: {
+              id: "CLIP-002 (45° High-Angle OTS): Maya menaruh remot di samping es kopi susu, membuka Agoda Map View di HP, dan menggeser peta keluar kota menuju pin hijau 'IDR 680K - Pine Cabin 9.2'.",
+              en: "CLIP-002 (45° High-Angle OTS): Maya sets the remote beside her iced coffee, opens Agoda Map View, and slides out of the crowded city to a green 'IDR 680K - Pine Cabin 9.2' pin.",
+            },
+            audio: {
+              id: "Maya (On-Camera): 'Buka peta Agoda di HP, geser keluar kota, langsung ketemu kabin tengah hutan.'",
+              en: "Maya (On-Camera): 'Open Agoda Map View on your phone, slide past the city, and pick a forest cabin.'",
+            },
+            psychologyIntent: {
+              id: "Lock-In Zone & Feature Discovery: Memperkenalkan Agoda Map View sebagai mekanisme visual paling mudah untuk kabur dari keramaian kota.",
+              en: "Lock-In Zone & Feature Discovery: Positioning Agoda Map View as an intuitive visual escape tool away from urban noise.",
+            },
+          },
+          {
+            time: "00:08 - 00:15",
+            visual: {
+              id: "CLIP-003 (90° Macro Top-Down): Layar Agoda 'Lembang Pine Forest Cabin' (4.8/5 Quiet & Peaceful), diskon 35% (IDR 1,050,000 → IDR 682,500), Free Breakfast & Free Cancellation, tap Book Now → Booking Confirmed!.",
+              en: "CLIP-003 (90° Macro Top-Down): Agoda screen for 'Lembang Pine Forest Cabin' (4.8/5 Quiet & Peaceful), 35% App-Only slash, Free Breakfast & Free Cancellation, tapping Book Now → Booking Confirmed!.",
+            },
+            audio: {
+              id: "Brand Narrator (VO-1): 'Di aplikasi Agoda, nikmati diskon App-Only Deals hingga tiga puluh lima persen, lengkap sarapan gratis dan bebas pembatalan.'",
+              en: "Brand Narrator (VO-1): 'On the Agoda app, unlock App-Only Deals up to thirty-five percent off, with free breakfast and free cancellation.'",
+            },
+            psychologyIntent: {
+              id: "Proof & Zero-Risk Mechanism: Mengonfirmasi potongan harga nyata, rating ketenangan 9.2+, dan pembatalan bebas cemas tanpa friksi.",
+              en: "Proof & Zero-Risk Mechanism: Verifying tangible 35% savings, 9.2+ quiet rating, and zero-risk cancellation in-app.",
+            },
+          },
+          {
+            time: "00:15 - 00:22",
+            visual: {
+              id: "CLIP-004 (28mm Wide Balcony Glide): Hard Cut tanpa dissolve. Maya duduk memakai kardigan rajut krem di teras kabin kayu menghadap hutan pinus berkabut pagi, memegang cangkir teh beruap.",
+              en: "CLIP-004 (28mm Wide Balcony Glide): Hard Cut with zero dissolve. Maya in a cream knit cardigan relaxes on a wooden cabin balcony facing misty morning pine trees, cradling steaming ceramic tea.",
+            },
+            audio: {
+              id: "Silence Drop + VO-2: Bising kota putus total berganti angin hutan & kicau burung. 'Besok paginya, ganti suara bising kota dengan kabut hutan pinus yang sunyi dan udara bukit yang dingin.'",
+              en: "Silence Drop + VO-2: City noise cuts dead into pine breeze & morning birdsong. 'By tomorrow morning, trade city noise for silent pine mist and crisp mountain air.'",
+            },
+            psychologyIntent: {
+              id: "The Acoustic Dopamine Snap: Pemutusan total suara bising menuju keheningan hutan menciptakan kelegaan sensorik mendalam.",
+              en: "The Acoustic Dopamine Snap: Abrupt cutoff from urban din to serene pine-forest ambience triggers immediate sensory relief.",
+            },
+          },
+          {
+            time: "00:22 - 00:30",
+            visual: {
+              id: "CLIP-005 (35mm Medium Portrait + Pedestal Pull-Back): Maya tersenyum tenang mengangkat cangkir teh (gentle toast, bibir tertutup) sementara kamera mundur 30 cm membuka ruang End-Card CTA Agoda.",
+              en: "CLIP-005 (35mm Medium Portrait + Pedestal Pull-Back): Maya smiles calmly raising her tea mug in a gentle silent toast as the camera glides back 30cm revealing the Agoda End-Card CTA.",
+            },
+            audio: {
+              id: "Brand Narrator (VO-3): 'Butuh waktu tenang buat diri sendiri? Buka aplikasi Agoda sekarang! Agoda. Temukan penginapan impianmu.'",
+              en: "Brand Narrator (VO-3): 'Need quiet time for yourself? Open the Agoda app today! Agoda. Find your dream stay.'",
+            },
+            psychologyIntent: {
+              id: "Solo Recharge Satisfaction & Frictionless CTA: Mengunci aspirasi self-recharge tanpa bentrokan gerak bibir (Zero Lip-Clash) menuju tombol Download.",
+              en: "Solo Recharge Satisfaction & Frictionless CTA: Locking solo-recharge aspiration with zero lip-sync clash leading into app download.",
+            },
+          },
+        ],
+      },
     ],
     storyboard: [
       {
@@ -4021,13 +4200,103 @@ export const PROJECTS: Project[] = [
         toolUsed: "Adobe Premiere Pro + After Effects",
         assetType: "Motion Graphic",
       },
+      {
+        id: "agoda-v2-sb-1",
+        scene: {
+          id: "Cut 02 · Adegan 1: The Human Mute Button (2-Shot FPP & Reaction)",
+          en: "Cut 02 · Scene 1: The Human Mute Button (2-Shot FPP & Reaction)",
+        },
+        timecode: "00:00 - 00:03",
+        visualDescription: {
+          id: "CLIP-001A/B: FPP tangan kanan Maya mengacungkan remot TV hitam ke kerumunan food court bising menekan tombol MUTE 3x, lalu fast cut close-up Maya merengut menurunkan remot ke meja.",
+          en: "CLIP-001A/B: FPP right hand aiming a matte black TV remote at a noisy food court crowd pressing MUTE 3x, hard-cutting to Maya pouting and placing the remote on the table.",
+        },
+        technicalNote: {
+          id: "POV 1 FPP (~35mm) + Fast Cut Reaction: Super kuning 'KOTA GAK PUNYA TOMBOL MUTE / CARI BUKIT SEPI DI AGODA', Brand Narrator VO-0 & 3x remote click foley.",
+          en: "POV 1 FPP (~35mm) + Fast Cut Reaction: Yellow super 'CITIES HAVE NO MUTE BUTTON / FIND QUIET CABINS ON AGODA', Brand Narrator VO-0 & 3x remote click foley.",
+        },
+        toolUsed: "Google Flow Omni Flash + ElevenLabs VO",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-v2-sb-2",
+        scene: {
+          id: "Cut 02 · Adegan 2: Lock-In Zone — Agoda Map View Escape",
+          en: "Cut 02 · Scene 2: Lock-In Zone — Agoda Map View Escape",
+        },
+        timecode: "00:03 - 00:08",
+        visualDescription: {
+          id: "CLIP-002: 45° High-Angle Over-The-Shoulder (OTS) di meja kantin. Maya menaruh remot di samping es kopi susu, lalu menggeser peta Agoda Map View menuju pin hijau 'IDR 680K - Pine Cabin 9.2'.",
+          en: "CLIP-002: 45° High-Angle OTS at canteen table. Maya places the remote beside her iced coffee and swipes Agoda Map View out of the city to a green 'IDR 680K - Pine Cabin 9.2' pin.",
+        },
+        technicalNote: {
+          id: "POV 2 45° OTS (~40mm): 2 sequential cues ('GESER PETA KELUAR KOTA' → 'PAKAI AGODA MAP VIEW' kapsul ungu-putih), match cut ke macro insert layar.",
+          en: "POV 2 45° OTS (~40mm): 2 sequential cues ('SLIDE PAST THE CITY' → 'USE AGODA MAP VIEW' purple-white pill), match cut into macro screen insert.",
+        },
+        toolUsed: "Google Flow Omni Flash + CapCut Desktop",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-v2-sb-3",
+        scene: {
+          id: "Cut 02 · Adegan 3: Macro UI Price Slash & Instant Confirmation",
+          en: "Cut 02 · Scene 3: Macro UI Price Slash & Instant Confirmation",
+        },
+        timecode: "00:08 - 00:15",
+        visualDescription: {
+          id: "CLIP-003: 90° Macro Top-Down layar Agoda 'Lembang Pine Forest Cabin' (4.8/5 Quiet & Peaceful), diskon 35% App-Only Deal, Free Breakfast & Free Cancellation, tap Book Now hingga Booking Confirmed!.",
+          en: "CLIP-003: 90° Macro Top-Down Agoda screen for 'Lembang Pine Forest Cabin' (4.8/5 Quiet & Peaceful), 35% App-Only Deal, Free Breakfast & Free Cancellation, tapping Book Now to Booking Confirmed!.",
+        },
+        technicalNote: {
+          id: "POV 3 Macro (~60mm): Ujung remot TV hitam terlihat di sudut kiri meja sebagai kontinuitas ruang; SFX tap & success chime menuju hard cut detik 15.",
+          en: "POV 3 Macro (~60mm): Edge of black TV remote remains top-left for spatial continuity; tap & success chime SFX leading into the second-15 hard cut.",
+        },
+        toolUsed: "Google Flow Omni Flash + Remotion",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-v2-sb-4",
+        scene: {
+          id: "Cut 02 · Adegan 4: Acoustic Dopamine Snap — Misty Pine Cabin",
+          en: "Cut 02 · Scene 4: Acoustic Dopamine Snap — Misty Pine Cabin",
+        },
+        timecode: "00:15 - 00:22",
+        visualDescription: {
+          id: "CLIP-004: 28mm Low-Angle Wide lateral glide di teras kabin kayu hutan pinus berkabut pagi dengan god rays. Maya berkardigan rajut krem memejamkan mata sambil menggenggam cangkir teh beruap.",
+          en: "CLIP-004: 28mm Low-Angle Wide lateral glide across a wooden cabin balcony facing misty morning pine forest with god rays. Maya in cream knit cardigan closes her eyes cradling steaming tea.",
+        },
+        technicalNote: {
+          id: "POV 4 Wide Balcony (~28mm): Hard cut tanpa dissolve; kebisingan kantin terputus total berganti angin hutan & kicau burung pagi + Brand Narrator VO-2.",
+          en: "POV 4 Wide Balcony (~28mm): Zero-dissolve hard cut; canteen noise drops completely into pine wind & morning birdsong + Brand Narrator VO-2.",
+        },
+        toolUsed: "Google Flow Omni Flash + ElevenLabs VO",
+        assetType: "Motion Graphic",
+      },
+      {
+        id: "agoda-v2-sb-5",
+        scene: {
+          id: "Cut 02 · Adegan 5: Peaceful Tea Toast & Zero Lip-Clash CTA",
+          en: "Cut 02 · Scene 5: Peaceful Tea Toast & Zero Lip-Clash CTA",
+        },
+        timecode: "00:22 - 00:30",
+        visualDescription: {
+          id: "CLIP-005: 35mm Three-Quarter Medium Portrait Maya bersandar di balkon kayu, menoleh tersenyum tenang (bibir tertutup) mengangkat cangkir teh, diikuti slow pedestal pull-back 30 cm untuk End-Card Agoda.",
+          en: "CLIP-005: 35mm Three-Quarter Medium Portrait of Maya leaning on wooden balcony, turning with a silent serene smile raising her tea mug, followed by 30cm pedestal pull-back for Agoda End-Card.",
+        },
+        technicalNote: {
+          id: "POV 5 Medium Portrait (~35mm): Zero Lip-Clash Guarantee agar Brand Narrator VO-3 & tombol oranye 'DOWNLOAD SEKARANG' tampil bersih di safe zone bawah.",
+          en: "POV 5 Medium Portrait (~35mm): Zero Lip-Clash Guarantee keeping Brand Narrator VO-3 & orange 'DOWNLOAD NOW' button crystal clear in lower safe zone.",
+        },
+        toolUsed: "Remotion + CapCut Desktop",
+        assetType: "Motion Graphic",
+      },
     ],
     videoVariations: [
       {
         id: "agoda-con-005",
         label: {
-          id: "Master Cut: The Weekend Surcharge Myth (30s)",
-          en: "Master Cut: The Weekend Surcharge Myth (30s)",
+          id: "Variasi 1: The Weekend Surcharge Myth (CON-005)",
+          en: "Variation 1: The Weekend Surcharge Myth (CON-005)",
         },
         hookHeadline: {
           id: "Weekend Ini Mau Kabur Tapi Hotel Pada Gila-Gilaan?",
@@ -4049,6 +4318,34 @@ export const PROJECTS: Project[] = [
         keyTakeaway: {
           id: "Kontras visual tajam (hard cut) antara warkop panas terik dan kolam renang infinity pool menciptakan kepuasan dopamin yang mendorong aksi konversi unduhan seketika.",
           en: "A sharp hard-cut contrast between a sweltering 35°C warkop and a tranquil infinity pool produces a powerful dopamine payoff that spurs instant app downloads.",
+        },
+      },
+      {
+        id: "agoda-con-004",
+        label: {
+          id: "Variasi 2: The Secret Solo Sanctuary (CON-004)",
+          en: "Variation 2: The Secret Solo Sanctuary (CON-004)",
+        },
+        hookHeadline: {
+          id: "Kota Gak Punya Tombol Mute — Cari Bukit Sepi di Agoda",
+          en: "Cities Have No Mute Button — Find Quiet Cabins on Agoda",
+        },
+        angleDescription: {
+          id: "Hook komedi fisik 2-shot menekan tombol MUTE remot TV ke kerumunan food court bising, dijembatani fitur Agoda Map View dan diskon 35% menuju keheningan kabin hutan pinus berkabut.",
+          en: "Absurd 2-shot physical comedy pressing a TV remote MUTE button at a loud food court, bridged via Agoda Map View and 35% App-Only Deals into a misty pine forest cabin sanctuary.",
+        },
+        videoSrc: "/videos/agoda/agoda-weekend-getaway-v2.mp4",
+        aspectRatio: "9:16",
+        duration: "36s",
+        specs: {
+          durationFrames: "1095 Frames",
+          fps: "30.00 FPS",
+          resolution: "1080x1920 (9:16 Mobile Vertical)",
+          voiceModel: "ElevenLabs Brand Narrator (VO-0/1/2/3) & Native Speech",
+        },
+        keyTakeaway: {
+          id: "Pola 'Absurd Pattern Interrupt to Acoustic Silence Drop' memutus kebisingan food court secara instan menjadi hening hutan pinus, memicu retensi tinggi bagi segmen pekerja urban yang kelelahan sosial.",
+          en: "The 'Absurd Pattern Interrupt to Acoustic Silence Drop' abruptly severs food-court din into serene pine-forest stillness, driving strong retention for socially fatigued urban workers.",
         },
       },
     ],
@@ -4177,43 +4474,73 @@ export const PROJECTS: Project[] = [
     honestEvaluation: {
       topPerformers: [
         {
-          id: "Transisi kontras tajam (hard cut) di detik ke-15 dari warkop panas 35°C ke sejuknya infinity pool berhasil memberikan pelepasan dopamin sensori yang sangat kuat.",
-          en: "The second-15 hard cut from the sweltering 35°C stall to the misty hillside infinity pool delivers an intense sensory dopamine payoff.",
+          id: "Hard cut kontras sensori di detik ke-15 pada kedua variasi — warkop panas 35°C ke infinity pool (CON-005) dan riuh food court ke silence drop kabin hutan pinus (CON-004) — menghadirkan pelepasan dopamin visual dan audio yang sangat kuat.",
+          en: "The second-15 sensory hard cut across both cuts — 35°C sweltering stall to infinity pool (CON-005) and noisy food court to pine cabin silence drop (CON-004) — delivers intense visual and acoustic dopamine relief.",
         },
         {
-          id: "Pembuktian UI Agoda di Klip 3 dengan animasi coret harga diskon 35% dan centang reservasi instan menghilangkan keraguan penonton terhadap klaim promo.",
-          en: "The in-app UI proof in Clip 3 showcasing the 35% price slash and instant green checkmark eliminates viewer skepticism toward promotional claims.",
+          id: "Penerapan Zero Lip-Clash Guarantee di Klip 5 CON-004 (Maya tersenyum sunyi mengangkat cangkir teh sementara Brand Narrator VO-3 berbicara) dan 2-shot FPP hook remot TV membuat ritme editing terasa bersih layaknya iklan live-action.",
+          en: "Applying the Zero Lip-Clash Guarantee on CON-004 Clip 5 (Maya smiling silently with a gentle tea toast under Brand Narrator VO-3) alongside the 2-shot FPP TV remote hook delivers live-action editorial polish.",
         },
       ],
       underperformers: [
         {
-          id: "Sinkronisasi gerak bibir pada dialog mikro-drama AI memerlukan pemilihan take vokal yang ketat agar artikulasi kata tetap natural di kecepatan tinggi.",
-          en: "Lip-sync fidelity on AI drama dialogue requires rigorous vocal take alignment to keep cadence natural at high speeds.",
+          id: "Sinkronisasi gerak bibir pada dialog on-camera AI di Klip 1–2 tetap membutuhkan seleksi take ketat agar artikulasi kata terasa natural di tempo cepat.",
+          en: "Lip-sync fidelity on AI on-camera dialogue in Clips 1–2 still demands strict take selection to keep spoken cadence natural at fast social pacing.",
         },
         {
-          id: "Pacing 30 detik menuntut kompresi teks super di bawah 40 karakter per adegan agar tidak mengganggu ekspresi karakter di layar smartphone.",
-          en: "A strict 30-second runtime demands on-screen supers stay under 40 characters to avoid cluttering mobile character framing.",
+          id: "Kepadatan elemen visual antarmuka peta (Agoda Map View) dan banner promo pada layar 9:16 memerlukan penempatan safe zone super yang disiplin agar tidak saling bertabrakan.",
+          en: "Visual density of in-app map pins (Agoda Map View) and promo banners on 9:16 screens requires disciplined text safe-zone placement to avoid visual clutter.",
         },
       ],
       creativeAssessment: {
-        id: "Evaluasi difokuskan pada kekuatan narasi mikro-drama, akurasi kontinuitas karakter, dan presisi ritme editing direct response. Sebagai spec ad independen, tidak ada klaim ROAS atau metrik palsu.",
-        en: "Evaluation centers on micro-drama narrative strength, character continuity locks, and direct-response editing rhythm. As an independent spec ad, no fabricated ROAS or vanity metrics are presented.",
+        id: "Evaluasi difokuskan pada kekuatan narasi mikro-drama dua konsep, akurasi kontinuitas karakter dan properti (termasuk remot TV & cangkir teh), serta presisi ritme direct response. Sebagai spec ad independen, tidak ada klaim ROAS atau metrik palsu.",
+        en: "Evaluation centers on dual-concept micro-drama strength, character and prop continuity (including TV remote & ceramic mug invariants), and direct-response editing rhythm. As an independent spec ad, no fabricated ROAS or vanity metrics are presented.",
       },
       creativeLearnings: [
         {
-          id: "Memecah mitos harga (The Myth Buster) jauh lebih efektif memicu retensi daripada sekadar memamerkan keindahan fasilitas hotel secara konvensional.",
-          en: "Disrupting common price myths (The Myth Buster) drives significantly higher mobile retention than generic hotel luxury showcases.",
+          id: "Menggabungkan dua sudut pandang berbeda — rasional harga ('Weekend Surcharge Myth', CON-005) dan emosional sensorik ('The Human Mute Button', CON-004) — membuktikan satu produk aplikasi bisa menjangkau dua motivasi liburan yang kontras.",
+          en: "Pairing two distinct persuasion triggers — rational pricing ('Weekend Surcharge Myth', CON-005) and sensory relief ('The Human Mute Button', CON-004) — proves one app product can unlock two very different travel motivations.",
         },
         {
-          id: "Dua karakter dengan kepribadian kontras ('Si Skeptis' vs 'Si Smart Booker') menciptakan dinamika drama yang membuat penonton betah hingga kartu CTA terakhir.",
-          en: "Pitting two contrasting character personas ('The Skeptic' vs 'The Smart Booker') creates engaging dramatic tension that retains viewers through the final CTA card.",
+          id: "Menggunakan Broadcast Hybrid Audio (dialog karakter asli di 0–8 detik pertama, lalu beralih ke Brand Narrator VO profesional di detik 8–30) secara signifikan meningkatkan kejernihan pesan promo dan konversi CTA.",
+          en: "Using Broadcast Hybrid Audio (native character speech in seconds 0–8, handing off to a dedicated Brand Narrator VO in seconds 8–30) markedly sharpens promotional clarity and CTA authority.",
         },
       ],
       nextIterationStrategy: {
-        id: "Menguji variasi pembuka (Hook Sprint) dengan skenario kamar kos sempit di malam hari untuk membandingkan thumbstop rate terhadap versi warkop terik.",
-        en: "Test an alternative opening hook in a cramped boarding room late at night to benchmark thumb-stop rates against the sweltering roadside warkop.",
+        id: "Menjalankan Meta Dynamic Creative Testing (DCT) untuk mengadu Thumbstop Rate 3 detik pertama antara Hook Frustrasi Harga Warkop (CON-005) melawan Hook Komedi Absurd Remot TV Mute (CON-004) guna memetakan pemenang akuisisi aplikasi.",
+        en: "Run a Meta Dynamic Creative Test (DCT) pitting the 3-second Thumbstop Rate of the Sweltering Stall Price Hook (CON-005) against the Absurd TV Remote Mute Hook (CON-004) to identify the top app-install driver.",
       },
     },
+    productionProof: [
+      {
+        id: "agoda-con004-google-flow",
+        imageSrc: "/images/agoda/agoda_con004_bts_google_flow.jpg",
+        toolBadge: "Google Flow",
+        cutLabel: "CON-004",
+        title: {
+          id: "Konsistensi Karakter & Generasi Adegan (Maya)",
+          en: "Character Consistency & Scene Generation (Maya)",
+        },
+        caption: {
+          id: "Generasi keyframe & klip video 5-POV di Google Flow dengan penguncian wajah Maya, properti remot TV hitam, meja food court, UI Agoda, hingga balkon kabin hutan pinus.",
+          en: "5-POV keyframe & video generation in Google Flow locking Maya's likeness, matte black TV remote, food court table, Agoda UI, and misty pine cabin balcony.",
+        },
+      },
+      {
+        id: "agoda-con004-remotion-studio",
+        imageSrc: "/images/agoda/agoda_con004_bts_remotion_timeline.jpg",
+        toolBadge: "Remotion Studio",
+        cutLabel: "CON-004",
+        title: {
+          id: "Komposisi Multi-Track Timeline (AgodaCON004)",
+          en: "Multi-Track Timeline Composition (AgodaCON004)",
+        },
+        caption: {
+          id: "Perakitan presisi 1080×1920 @ 30 FPS dengan layer terpisah: V1 (Beat 1A–5), MG (Comedic Remote HUD), T1 (Direct-Response Copy), A1 (Brand Narrator VO), dan A2 (Native Foley & Ambience).",
+          en: "Frame-accurate 1080×1920 @ 30 FPS assembly across dedicated tracks: V1 (Beats 1A–5), MG (Comedic Remote HUD), T1 (Direct-Response Copy), A1 (Brand Narrator VO), and A2 (Native Foley & Ambience).",
+        },
+      },
+    ],
   },
 ];
 

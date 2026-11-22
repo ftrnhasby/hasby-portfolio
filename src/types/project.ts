@@ -108,6 +108,15 @@ export interface HonestEvaluation {
   nextIterationStrategy: LocalizedString;
 }
 
+export interface ProductionProofItem {
+  id: string;
+  imageSrc: string;
+  toolBadge: string;
+  cutLabel?: string;
+  title: LocalizedString;
+  caption: LocalizedString;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -139,6 +148,7 @@ export interface Project {
   videoVariations: VideoVariation[];
   productionWorkflow: ProductionPhase[];
   honestEvaluation: HonestEvaluation;
+  productionProof?: ProductionProofItem[];
   
   toolsUsed: string[];
 }

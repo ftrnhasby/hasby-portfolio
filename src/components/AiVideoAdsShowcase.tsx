@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { ArrowRight, Sparkles, Play, Pause, Film, ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -58,8 +58,21 @@ const REEL_ITEMS: ReelItem[] = [
     targetHref: "/projects/agoda-weekend-getaway",
   },
   {
-    id: "product-macro-render",
+    id: "agoda-solo-sanctuary-reel",
     frameCode: "FRM // 04",
+    tag: { id: "AI SOLO SANCTUARY", en: "AI SOLO SANCTUARY" },
+    title: "Agoda: The Human Mute Button",
+    technique: {
+      id: "Hook Remot TV FPP · Silence Drop Hutan Pinus",
+      en: "FPP TV Remote Hook · Pine Forest Silence Drop",
+    },
+    videoSrc: "/videos/agoda/agoda-weekend-getaway-v2.mp4",
+    poster: "/images/agoda/agoda_v2_cabin_poster.jpg",
+    targetHref: "/projects/agoda-weekend-getaway",
+  },
+  {
+    id: "product-macro-render",
+    frameCode: "FRM // 05",
     tag: { id: "HYPER-REAL PRODUCT", en: "HYPER-REAL PRODUCT" },
     title: "Sensory Coffee Craft",
     technique: {
@@ -72,7 +85,7 @@ const REEL_ITEMS: ReelItem[] = [
   },
   {
     id: "cinematic-drama-beat",
-    frameCode: "FRM // 05",
+    frameCode: "FRM // 06",
     tag: { id: "CINEMATIC MINI-DRAMA", en: "CINEMATIC MINI-DRAMA" },
     title: "Midnight Deadline Rush",
     technique: {
@@ -123,59 +136,152 @@ function SprocketRail() {
   );
 }
 
+interface ButtonTween {
+  startPos: number;
+  delta: number;
+  startTime: number;
+  duration: number;
+}
+
+const AUTO_SCROLL_PX_PER_SEC = 42; // Consistent speed across 60Hz/120Hz/144Hz monitors
+
+function wrapPosition(pos: number, loopWidth: number): { pos: number; shift: number } {
+  if (loopWidth <= 0) return { pos, shift: 0 };
+  const minBound = loopWidth * 0.5;
+  const maxBound = loopWidth * 2;
+  let shift = 0;
+  let wrapped = pos;
+  while (wrapped >= maxBound) {
+    wrapped -= loopWidth;
+    shift -= loopWidth;
+  }
+  while (wrapped < minBound) {
+    wrapped += loopWidth;
+    shift += loopWidth;
+  }
+  return { pos: wrapped, shift };
+}
+
 export function AiVideoAdsShowcase() {
   const { lang } = useLanguage();
   const isId = lang === "id";
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isPausedRef = useRef(false);
   const isDraggingRef = useRef(false);
+  const isInteractingRef = useRef(false);
   const startXRef = useRef(0);
   const scrollLeftStartRef = useRef(0);
   const dragDistanceRef = useRef(0);
-  const userInteractingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const isInteractingRef = useRef(false);
+  const virtualScrollRef = useRef(0);
+  const loopWidthRef = useRef(0);
+  const cardStepRef = useRef(320);
+  const tweenRef = useRef<ButtonTween | null>(null);
+  const userInteractingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Triple the items for continuous seamless infinite wrap
   const displayItems = [...REEL_ITEMS, ...REEL_ITEMS, ...REEL_ITEMS];
 
-  const pauseAutoScrollTemporarily = (durationMs = 3500) => {
-    isInteractingRef.current = true;
+  const measureLoopMetrics = useCallback((container: HTMLDivElement) => {
+    const cards = container.querySelectorAll<HTMLElement>(".reel-card");
+    const count = REEL_ITEMS.length;
+    if (cards.length > count) {
+      const stride = cards[count].offsetLeft - cards[0].offsetLeft;
+      if (stride > 0) loopWidthRef.current = stride;
+    } else if (container.scrollWidth > 0) {
+      loopWidthRef.current = container.scrollWidth / 3;
+    }
+
+    if (cards.length >= 2) {
+      const step = cards[1].offsetLeft - cards[0].offsetLeft;
+      if (step > 0) cardStepRef.current = step;
+    }
+
+    return {
+      loopWidth: loopWidthRef.current,
+      cardStep: cardStepRef.current,
+    };
+  }, []);
+
+  const clearInteractionTimer = useCallback(() => {
     if (userInteractingTimeoutRef.current) {
       clearTimeout(userInteractingTimeoutRef.current);
+      userInteractingTimeoutRef.current = null;
     }
-    userInteractingTimeoutRef.current = setTimeout(() => {
-      isInteractingRef.current = false;
-    }, durationMs);
-  };
+  }, []);
 
+  const pauseAutoScrollTemporarily = useCallback(
+    (durationMs = 2500) => {
+      isInteractingRef.current = true;
+      clearInteractionTimer();
+      userInteractingTimeoutRef.current = setTimeout(() => {
+        if (scrollRef.current) {
+          virtualScrollRef.current = scrollRef.current.scrollLeft;
+        }
+        isInteractingRef.current = false;
+        userInteractingTimeoutRef.current = null;
+      }, durationMs);
+    },
+    [clearInteractionTimer]
+  );
+
+  // Unified RAF loop (sub-pixel float accumulation + delta-time + smooth Prev/Next tween)
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
-    // Center in middle third initially
-    const initScroll = () => {
-      const oneThird = container.scrollWidth / 3;
-      if (container.scrollLeft === 0 && oneThird > 0) {
-        container.scrollLeft = oneThird;
+    const { loopWidth: initialLoopWidth } = measureLoopMetrics(container);
+    if (initialLoopWidth > 0) {
+      virtualScrollRef.current = initialLoopWidth;
+      container.scrollLeft = initialLoopWidth;
+    }
+
+    const resizeObserver = new ResizeObserver(() => {
+      const prevLoopWidth = loopWidthRef.current;
+      const { loopWidth: nextLoopWidth } = measureLoopMetrics(container);
+      if (prevLoopWidth === 0 && nextLoopWidth > 0 && container.scrollLeft === 0) {
+        virtualScrollRef.current = nextLoopWidth;
+        container.scrollLeft = nextLoopWidth;
       }
-    };
-    initScroll();
+    });
+    resizeObserver.observe(container);
 
-    let animationFrameId: number;
-    const speed = 0.65; // pixels per frame
+    let animationFrameId = 0;
+    let lastTime = performance.now();
 
-    const step = () => {
-      if (!isPaused && !isInteractingRef.current && container) {
-        container.scrollLeft += speed;
-        const oneThird = container.scrollWidth / 3;
-        if (oneThird > 0) {
-          if (container.scrollLeft >= oneThird * 2) {
-            container.scrollLeft -= oneThird;
-          } else if (container.scrollLeft <= 0) {
-            container.scrollLeft += oneThird;
-          }
+    const step = (now: number) => {
+      const dt = Math.min((now - lastTime) / 1000, 0.05);
+      lastTime = now;
+
+      const loopWidth = loopWidthRef.current || measureLoopMetrics(container).loopWidth;
+
+      if (tweenRef.current) {
+        const tween = tweenRef.current;
+        const elapsed = now - tween.startTime;
+        const progress = Math.min(1, elapsed / tween.duration);
+        const eased = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
+
+        const raw = tween.startPos + tween.delta * eased;
+        const { pos, shift } = wrapPosition(raw, loopWidth);
+        if (shift !== 0) {
+          tween.startPos += shift;
         }
+        virtualScrollRef.current = pos;
+        container.scrollLeft = pos;
+
+        if (progress >= 1) {
+          tweenRef.current = null;
+          pauseAutoScrollTemporarily(2500);
+        }
+      } else if (!isDraggingRef.current && !isInteractingRef.current && !isPausedRef.current && loopWidth > 0) {
+        const raw = virtualScrollRef.current + AUTO_SCROLL_PX_PER_SEC * dt;
+        const { pos } = wrapPosition(raw, loopWidth);
+        virtualScrollRef.current = pos;
+        container.scrollLeft = pos;
       }
+
       animationFrameId = requestAnimationFrame(step);
     };
 
@@ -183,77 +289,157 @@ export function AiVideoAdsShowcase() {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      if (userInteractingTimeoutRef.current) {
-        clearTimeout(userInteractingTimeoutRef.current);
-      }
+      resizeObserver.disconnect();
+      clearInteractionTimer();
     };
-  }, [isPaused]);
+  }, [measureLoopMetrics, pauseAutoScrollTemporarily, clearInteractionTimer]);
+
+  // Global window mouse listeners while dragging so pointer can't lose capture vertically
+  useEffect(() => {
+    if (!isDragging) return;
+
+    const handleWindowMouseMove = (e: MouseEvent) => {
+      if (!isDraggingRef.current) return;
+      const container = scrollRef.current;
+      if (!container) return;
+
+      e.preventDefault();
+      const dx = e.clientX - startXRef.current;
+      dragDistanceRef.current = Math.max(dragDistanceRef.current, Math.abs(dx));
+
+      const loopWidth = loopWidthRef.current || measureLoopMetrics(container).loopWidth;
+      const raw = scrollLeftStartRef.current - dx * 1.15;
+      const { pos, shift } = wrapPosition(raw, loopWidth);
+      if (shift !== 0) {
+        scrollLeftStartRef.current += shift;
+      }
+
+      virtualScrollRef.current = pos;
+      container.scrollLeft = pos;
+    };
+
+    const handleWindowMouseUp = () => {
+      if (!isDraggingRef.current) return;
+      isDraggingRef.current = false;
+      setIsDragging(false);
+      pauseAutoScrollTemporarily(2500);
+
+      // Reset dragDistance right after click phase so keyboard activation always works
+      setTimeout(() => {
+        dragDistanceRef.current = 0;
+      }, 0);
+    };
+
+    window.addEventListener("mousemove", handleWindowMouseMove, { passive: false });
+    window.addEventListener("mouseup", handleWindowMouseUp);
+    window.addEventListener("blur", handleWindowMouseUp);
+
+    return () => {
+      window.removeEventListener("mousemove", handleWindowMouseMove);
+      window.removeEventListener("mouseup", handleWindowMouseUp);
+      window.removeEventListener("blur", handleWindowMouseUp);
+    };
+  }, [isDragging, measureLoopMetrics, pauseAutoScrollTemporarily]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return; // Primary mouse button only
     const container = scrollRef.current;
     if (!container) return;
+
+    tweenRef.current = null;
+    clearInteractionTimer();
+
     isDraggingRef.current = true;
     isInteractingRef.current = true;
+    setIsDragging(true);
+
     dragDistanceRef.current = 0;
-    startXRef.current = e.pageX - container.offsetLeft;
+    startXRef.current = e.clientX;
     scrollLeftStartRef.current = container.scrollLeft;
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDraggingRef.current) return;
-    const container = scrollRef.current;
-    if (!container) return;
-    e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startXRef.current) * 1.35;
-    dragDistanceRef.current = Math.abs(x - startXRef.current);
-    container.scrollLeft = scrollLeftStartRef.current - walk;
-
-    // Seamless boundary wrapping while dragging
-    const oneThird = container.scrollWidth / 3;
-    if (oneThird > 0) {
-      if (container.scrollLeft >= oneThird * 2) {
-        container.scrollLeft -= oneThird;
-        scrollLeftStartRef.current -= oneThird;
-      } else if (container.scrollLeft <= 0) {
-        container.scrollLeft += oneThird;
-        scrollLeftStartRef.current += oneThird;
-      }
-    }
-  };
-
-  const handleMouseUpOrLeave = () => {
-    if (isDraggingRef.current) {
-      isDraggingRef.current = false;
-      pauseAutoScrollTemporarily(3000);
-    }
+    virtualScrollRef.current = container.scrollLeft;
   };
 
   const handleTouchStart = () => {
+    tweenRef.current = null;
+    clearInteractionTimer();
     isInteractingRef.current = true;
   };
 
   const handleTouchEnd = () => {
-    pauseAutoScrollTemporarily(3500);
+    pauseAutoScrollTemporarily(2500);
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey) {
+      tweenRef.current = null;
+      pauseAutoScrollTemporarily(2500);
+    }
+  };
+
+  const handleNativeScroll = () => {
+    const container = scrollRef.current;
+    if (!container || isDraggingRef.current || tweenRef.current || !isInteractingRef.current) {
+      return;
+    }
+
+    const loopWidth = loopWidthRef.current;
+    if (loopWidth <= 0) return;
+
+    const current = container.scrollLeft;
+    if (current < loopWidth * 0.25 || current > loopWidth * 2.15) {
+      const { pos } = wrapPosition(current, loopWidth);
+      container.scrollLeft = pos;
+      virtualScrollRef.current = pos;
+    } else {
+      virtualScrollRef.current = current;
+    }
   };
 
   const handleLinkClick = (e: React.MouseEvent) => {
-    if (dragDistanceRef.current > 8) {
+    if (dragDistanceRef.current > 6) {
       e.preventDefault();
       e.stopPropagation();
+    }
+  };
+
+  const handleTogglePause = () => {
+    const nextPaused = !isPausedRef.current;
+    isPausedRef.current = nextPaused;
+    setIsPaused(nextPaused);
+
+    if (nextPaused) {
+      tweenRef.current = null;
+    } else {
+      clearInteractionTimer();
+      isInteractingRef.current = false;
+      if (scrollRef.current) {
+        virtualScrollRef.current = scrollRef.current.scrollLeft;
+      }
     }
   };
 
   const scrollByCard = (direction: "left" | "right") => {
     const container = scrollRef.current;
     if (!container) return;
-    pauseAutoScrollTemporarily(4000);
 
-    const firstCard = container.querySelector(".reel-card") as HTMLElement | null;
-    const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 320;
-    const delta = direction === "right" ? cardWidth : -cardWidth;
+    const { cardStep } = measureLoopMetrics(container);
+    const stepDelta = direction === "right" ? cardStep : -cardStep;
 
-    container.scrollBy({ left: delta, behavior: "smooth" });
+    clearInteractionTimer();
+    isInteractingRef.current = true;
+
+    const currentPos = tweenRef.current ? virtualScrollRef.current : container.scrollLeft;
+    const targetPos = tweenRef.current
+      ? tweenRef.current.startPos + tweenRef.current.delta + stepDelta
+      : currentPos + stepDelta;
+
+    tweenRef.current = {
+      startPos: currentPos,
+      delta: targetPos - currentPos,
+      startTime: performance.now(),
+      duration: 380,
+    };
+    virtualScrollRef.current = currentPos;
   };
 
   return (
@@ -328,7 +514,7 @@ export function AiVideoAdsShowcase() {
               {/* Pause / Resume Button */}
               <button
                 type="button"
-                onClick={() => setIsPaused((prev) => !prev)}
+                onClick={handleTogglePause}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/[0.1] bg-white/[0.04] hover:bg-white/[0.08] hover:border-emerald-500/30 text-xs font-mono text-zinc-300 transition-colors cursor-pointer"
                 title={isPaused ? "Play infinite reel" : "Pause infinite reel"}
               >
@@ -367,16 +553,20 @@ export function AiVideoAdsShowcase() {
           <div
             ref={scrollRef}
             onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUpOrLeave}
-            onMouseLeave={handleMouseUpOrLeave}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
-            className="flex flex-row flex-nowrap items-stretch gap-6 px-6 overflow-x-auto select-none no-scrollbar cursor-grab active:cursor-grabbing w-full scroll-smooth"
+            onTouchCancel={handleTouchEnd}
+            onWheel={handleWheel}
+            onScroll={handleNativeScroll}
+            onDragStart={(e) => e.preventDefault()}
+            className={`flex flex-row flex-nowrap items-stretch gap-6 px-6 overflow-x-auto select-none no-scrollbar w-full ${
+              isDragging ? "cursor-grabbing" : "cursor-grab"
+            }`}
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
+              scrollBehavior: "auto",
             }}
           >
             {displayItems.map((item, idx) => (
@@ -386,7 +576,9 @@ export function AiVideoAdsShowcase() {
                 onClick={handleLinkClick}
                 draggable={false}
                 onDragStart={(e) => e.preventDefault()}
-                className="reel-card group relative w-[240px] sm:w-[280px] md:w-[310px] aspect-[9/16] shrink-0 rounded-2xl overflow-hidden border border-white/[0.1] bg-[#0c0c0e] transition-all duration-300 hover:border-emerald-400/50 hover:shadow-[0_12px_40px_rgba(52,211,153,0.18)] hover:-translate-y-1 flex flex-col justify-between p-4 select-none cursor-pointer"
+                className={`reel-card group relative w-[240px] sm:w-[280px] md:w-[310px] aspect-[9/16] shrink-0 rounded-2xl overflow-hidden border border-white/[0.1] bg-[#0c0c0e] transition-all duration-300 hover:border-emerald-400/50 hover:shadow-[0_12px_40px_rgba(52,211,153,0.18)] hover:-translate-y-1 flex flex-col justify-between p-4 select-none ${
+                  isDragging ? "cursor-grabbing" : "cursor-pointer"
+                }`}
               >
                 {/* Looping Video Background */}
                 <video

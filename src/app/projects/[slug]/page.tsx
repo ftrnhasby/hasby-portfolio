@@ -35,7 +35,7 @@ export async function generateMetadata({
       description,
       url: canonicalUrl,
       siteName: "Fitran Hasby Portfolio",
-      locale: "id_ID",
+      locale: "en_US",
       type: "article",
       images: [
         {
@@ -67,5 +67,17 @@ export default async function ProjectPage({
     notFound();
   }
 
-  return <ProjectDetailView project={project} />;
+  const featuredProjects = PROJECTS.filter((p) => p.featured);
+  const currentIdx = featuredProjects.findIndex((p) => p.slug === project.slug);
+  const nextRaw =
+    currentIdx >= 0
+      ? featuredProjects[(currentIdx + 1) % featuredProjects.length]
+      : featuredProjects[0];
+
+  const nextProject =
+    nextRaw && nextRaw.slug !== project.slug
+      ? { slug: nextRaw.slug, title: nextRaw.title, category: nextRaw.category }
+      : undefined;
+
+  return <ProjectDetailView project={project} nextProject={nextProject} />;
 }

@@ -17,7 +17,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  lang: "id",
+  lang: "en",
   setLang: () => {},
   toggleLang: () => {},
 });
@@ -41,7 +41,7 @@ function subscribe(callback: () => void) {
 }
 
 function getSnapshot(): Language {
-  if (typeof window === "undefined") return "id";
+  if (typeof window === "undefined") return "en";
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "id" || saved === "en") {
@@ -50,11 +50,11 @@ function getSnapshot(): Language {
   } catch {
     // LocalStorage unavailable in certain environments
   }
-  return "id";
+  return "en";
 }
 
 function getServerSnapshot(): Language {
-  return "id";
+  return "en";
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
