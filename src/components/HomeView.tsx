@@ -221,7 +221,7 @@ export function HomeView() {
       {/* SECTION 03B: AI VIDEO ADS (MADE WITH AI, EDITED LIKE REAL)   */}
       {/* ============================================================ */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <AiVideoAdsShowcase />
+        <AiVideoAdsShowcase isCinemaOpen={isCinemaOpen} />
       </div>
 
       {/* Subtle Section Divider */}

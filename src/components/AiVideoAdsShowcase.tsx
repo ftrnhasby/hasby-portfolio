@@ -162,13 +162,16 @@ function wrapPosition(pos: number, loopWidth: number): { pos: number; shift: num
   return { pos: wrapped, shift };
 }
 
-export function AiVideoAdsShowcase() {
+export function AiVideoAdsShowcase({ isCinemaOpen = false }: { isCinemaOpen?: boolean }) {
   const { lang } = useLanguage();
   const isId = lang === "id";
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
 
+  const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isSectionInViewRef = useRef(false);
+  const isCinemaOpenRef = useRef(isCinemaOpen);
   const isPausedRef = useRef(false);
   const isDraggingRef = useRef(false);
   const isInteractingRef = useRef(false);
@@ -442,8 +445,65 @@ export function AiVideoAdsShowcase() {
     virtualScrollRef.current = currentPos;
   };
 
+  // Keep marquee videos paused unless section is actually in viewport AND Cinema Mode is closed.
+  // Prevents 18 simultaneous autoPlay decoders from exhausting Android MediaCodec & stealing bandwidth.
+  const syncVisibleReelVideos = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const videos = container.querySelectorAll<HTMLVideoElement>("video");
+
+    if (isCinemaOpenRef.current || !isSectionInViewRef.current) {
+      videos.forEach((v) => {
+        if (!v.paused) v.pause();
+      });
+      return;
+    }
+
+    const containerRect = container.getBoundingClientRect();
+    videos.forEach((v) => {
+      const rect = v.getBoundingClientRect();
+      const isCardVisible =
+        rect.right > containerRect.left - 120 && rect.left < containerRect.right + 120;
+
+      if (isCardVisible) {
+        if (v.preload === "none") v.preload = "metadata";
+        if (v.paused) {
+          v.play().catch(() => {});
+        }
+      } else if (!v.paused) {
+        v.pause();
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    isCinemaOpenRef.current = isCinemaOpen;
+    syncVisibleReelVideos();
+  }, [isCinemaOpen, syncVisibleReelVideos]);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isSectionInViewRef.current = Boolean(entries[0]?.isIntersecting);
+        syncVisibleReelVideos();
+      },
+      { rootMargin: "120px 0px", threshold: 0.05 }
+    );
+
+    observer.observe(section);
+    const intervalId = setInterval(syncVisibleReelVideos, 700);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(intervalId);
+    };
+  }, [syncVisibleReelVideos]);
+
   return (
-    <section className="space-y-8 scroll-mt-24" id="ai-video-ads">
+    <section ref={sectionRef} className="space-y-8 scroll-mt-24" id="ai-video-ads">
       <style jsx>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
@@ -580,15 +640,14 @@ export function AiVideoAdsShowcase() {
                   isDragging ? "cursor-grabbing" : "cursor-pointer"
                 }`}
               >
-                {/* Looping Video Background */}
+                {/* Looping Video Background (Lazy-played only when visible & cinema closed) */}
                 <video
                   src={item.videoSrc}
                   poster={item.poster}
                   muted
                   loop
                   playsInline
-                  autoPlay
-                  preload="metadata"
+                  preload="none"
                   draggable={false}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.05] pointer-events-none"
                 />

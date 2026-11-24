@@ -86,6 +86,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="preconnect"
+          href="https://pub-ce549553bdcb4e28bf63c02be337f07b.r2.dev"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

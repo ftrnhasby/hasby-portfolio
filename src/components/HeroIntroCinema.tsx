@@ -27,8 +27,9 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
-const INTRO_VIDEO_SRC =
+const INTRO_VIDEO_DESKTOP_SRC =
   "https://pub-ce549553bdcb4e28bf63c02be337f07b.r2.dev/one%20last%20cut/1124(3).mp4";
+const INTRO_VIDEO_MOBILE_SRC = "/videos/intro/one-last-cut-mobile.mp4";
 const INTRO_POSTER_SRC = "/images/intro/one-last-cut-poster.jpg";
 const INTRO_DURATION_LABEL = "01:17";
 
@@ -1396,6 +1397,8 @@ export function HeroIntroCinemaModal({
   const prerollTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const prerollActiveRef = useRef(false);
   const isOpenRef = useRef(false);
+  const isPlayingRef = useRef(false);
+  const sessionRef = useRef(0);
 
   const [stageSize, setStageSize] = useState({ width: 1600, height: 900 });
   const [isPlaying, setIsPlaying] = useState(false);
@@ -1409,6 +1412,12 @@ export function HeroIntroCinemaModal({
   const [prerollPhase, setPrerollPhase] = useState<PrerollPhase>("idle");
   const [prerollRunId, setPrerollRunId] = useState(0);
   const [isLightsDimmed, setIsLightsDimmed] = useState(false);
+  const [preloadMode, setPreloadMode] = useState<"none" | "auto">("none");
+
+  const updatePlayingState = useCallback((playing: boolean) => {
+    isPlayingRef.current = playing;
+    setIsPlaying(playing);
+  }, []);
 
   // Track exact viewport dimensions so SVG walls & mounted 16:9 screen share one unified geometry
   useEffect(() => {
@@ -1456,6 +1465,74 @@ export function HeroIntroCinemaModal({
     scheduleHideControls();
   }, [scheduleHideControls]);
 
+  const attemptPlayWithFallback = useCallback(
+    (preferUnmuted: boolean) => {
+      const video = videoRef.current;
+      if (!video || !isOpenRef.current) return;
+
+      const activeSession = sessionRef.current;
+      video.preload = "auto";
+      video.volume = 1;
+      if (preferUnmuted) {
+        video.muted = false;
+      }
+
+      if (video.error) {
+        video.load();
+      }
+
+      if (video.readyState < 3) {
+        setIsBuffering(true);
+      }
+
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            if (!isOpenRef.current || sessionRef.current !== activeSession) {
+              video.pause();
+              return;
+            }
+            updatePlayingState(true);
+            setIsBuffering(false);
+            setIsMuted(video.muted);
+            scheduleHideControls();
+          })
+          .catch(() => {
+            if (!isOpenRef.current || sessionRef.current !== activeSession) return;
+            // Mobile autoplay fallback: retry muted if browser policy blocked unmuted playback
+            if (!video.muted) {
+              video.muted = true;
+              setIsMuted(true);
+              const mutedPromise = video.play();
+              if (mutedPromise !== undefined) {
+                mutedPromise
+                  .then(() => {
+                    if (!isOpenRef.current || sessionRef.current !== activeSession) {
+                      video.pause();
+                      return;
+                    }
+                    updatePlayingState(true);
+                    setIsBuffering(false);
+                    scheduleHideControls();
+                  })
+                  .catch(() => {
+                    updatePlayingState(false);
+                    setIsBuffering(false);
+                    setShowControls(true);
+                  });
+              }
+            } else {
+              updatePlayingState(false);
+              setIsBuffering(false);
+              setShowControls(true);
+            }
+          });
+      }
+    },
+    [scheduleHideControls, updatePlayingState, videoRef]
+  );
+
   const startMainFilm = useCallback(() => {
     clearPrerollTimers();
     prerollActiveRef.current = false;
@@ -1465,52 +1542,67 @@ export function HeroIntroCinemaModal({
     const video = videoRef.current;
     if (!video || !isOpenRef.current) return;
 
-    video.currentTime = 0;
-    video.volume = 1;
-    video.muted = false;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        if (!isOpenRef.current) return;
-        video.muted = true;
-        setIsMuted(true);
-        video.play().catch(() => {});
-      });
+    // Avoid unnecessary seek-to-0 flush on Android Chromium when already at frame 0
+    if (video.currentTime > 0.12) {
+      video.currentTime = 0;
     }
-    scheduleHideControls();
-  }, [clearPrerollTimers, scheduleHideControls, videoRef]);
+
+    // If the video is already actively playing from the gesture unlock, simply unmute & sync UI
+    if (!video.paused && video.readyState >= 3) {
+      video.volume = 1;
+      video.muted = false;
+      updatePlayingState(true);
+      setIsBuffering(false);
+      setIsMuted(false);
+      scheduleHideControls();
+      return;
+    }
+
+    attemptPlayWithFallback(true);
+  }, [attemptPlayWithFallback, clearPrerollTimers, scheduleHideControls, updatePlayingState, videoRef]);
 
   const startPreroll = useCallback(() => {
     clearHideTimer();
     clearPrerollTimers();
+    const session = ++sessionRef.current;
     isOpenRef.current = true;
     prerollActiveRef.current = true;
 
-    setIsPlaying(false);
+    updatePlayingState(false);
     setIsBuffering(false);
     setCurrentTime(0);
     setShowControls(true);
     setIsLightsDimmed(false);
+    setPreloadMode("auto");
     setPrerollPhase("ident");
     setPrerollRunId((prev) => prev + 1);
 
-    // Silently unlock browser audio gesture & pre-buffer 2K R2 video during the 3s studio ident
+    // Pre-buffer cleanly during the 5s studio ident & prime user-gesture audio permission
     const video = videoRef.current;
     if (video) {
-      video.currentTime = 0;
+      video.preload = "auto";
+      if (video.currentTime > 0.12) {
+        video.currentTime = 0;
+      }
       video.muted = false;
       video.volume = 0;
       const unlockPromise = video.play();
       if (unlockPromise !== undefined) {
         unlockPromise
           .then(() => {
-            if (prerollActiveRef.current || !isOpenRef.current) {
+            if (sessionRef.current !== session || !isOpenRef.current) {
               video.pause();
-              video.currentTime = 0;
+              return;
+            }
+            if (prerollActiveRef.current) {
+              video.pause();
+              if (video.currentTime > 0.12) {
+                video.currentTime = 0;
+              }
             }
           })
           .catch(() => {
-            if (prerollActiveRef.current && isOpenRef.current) {
+            if (sessionRef.current === session && isOpenRef.current && video.readyState === 0) {
               video.load();
             }
           });
@@ -1519,29 +1611,29 @@ export function HeroIntroCinemaModal({
 
     // Phase 2: Feature presentation + 2K technical spec bumper
     const tFeature = setTimeout(() => {
-      if (!prerollActiveRef.current) return;
+      if (!prerollActiveRef.current || sessionRef.current !== session) return;
       setPrerollPhase("feature");
     }, 2350);
 
     // Keep house sconces warmly lit during the bumper, then smoothly dim (1.1s) right before the film begins
     const tDim = setTimeout(() => {
-      if (!prerollActiveRef.current) return;
+      if (!prerollActiveRef.current || sessionRef.current !== session) return;
       setIsLightsDimmed(true);
     }, 3750);
 
     // Brief theatrical dip to black before frame 1 hits
     const tBlackout = setTimeout(() => {
-      if (!prerollActiveRef.current) return;
+      if (!prerollActiveRef.current || sessionRef.current !== session) return;
       setPrerollPhase("blackout");
     }, 4550);
 
     const tStart = setTimeout(() => {
-      if (!prerollActiveRef.current) return;
+      if (!prerollActiveRef.current || sessionRef.current !== session) return;
       startMainFilm();
     }, 5000);
 
     prerollTimersRef.current = [tFeature, tDim, tBlackout, tStart];
-  }, [clearHideTimer, clearPrerollTimers, startMainFilm, videoRef]);
+  }, [clearHideTimer, clearPrerollTimers, startMainFilm, updatePlayingState, videoRef]);
 
   useImperativeHandle(
     controllerRef,
@@ -1554,6 +1646,7 @@ export function HeroIntroCinemaModal({
   const handleClose = useCallback(() => {
     clearHideTimer();
     clearPrerollTimers();
+    sessionRef.current += 1;
     isOpenRef.current = false;
     prerollActiveRef.current = false;
 
@@ -1565,7 +1658,7 @@ export function HeroIntroCinemaModal({
       video.pause();
       video.volume = 1;
     }
-    setIsPlaying(false);
+    updatePlayingState(false);
     setIsBuffering(false);
     setPrerollPhase("idle");
     setIsLightsDimmed(false);
@@ -1574,11 +1667,13 @@ export function HeroIntroCinemaModal({
 
     setTimeout(() => {
       if (videoRef.current && videoRef.current.paused && !isOpenRef.current) {
-        videoRef.current.currentTime = 0;
+        if (videoRef.current.currentTime > 0.12) {
+          videoRef.current.currentTime = 0;
+        }
         setCurrentTime(0);
       }
     }, 520);
-  }, [clearHideTimer, clearPrerollTimers, onClose, videoRef]);
+  }, [clearHideTimer, clearPrerollTimers, onClose, updatePlayingState, videoRef]);
 
   const togglePlay = useCallback(() => {
     if (prerollActiveRef.current) {
@@ -1587,20 +1682,25 @@ export function HeroIntroCinemaModal({
     }
     const video = videoRef.current;
     if (!video) return;
-    video.volume = 1;
-    if (video.paused) {
-      video.play().catch(() => {});
+
+    // If UI shows paused/stalled OR video is paused, always play (never silently pause on a Play button tap!)
+    const shouldPlay = video.paused || !isPlayingRef.current;
+    if (shouldPlay) {
+      attemptPlayWithFallback(!video.muted);
       revealControls();
     } else {
       video.pause();
+      updatePlayingState(false);
+      setIsBuffering(false);
       clearHideTimer();
       setShowControls(true);
     }
-  }, [clearHideTimer, revealControls, startMainFilm, videoRef]);
+  }, [attemptPlayWithFallback, clearHideTimer, revealControls, startMainFilm, updatePlayingState, videoRef]);
 
   const toggleMute = useCallback(() => {
     const video = videoRef.current;
     if (!video) return;
+    video.volume = 1;
     video.muted = !video.muted;
     setIsMuted(video.muted);
     revealControls();
@@ -1609,12 +1709,11 @@ export function HeroIntroCinemaModal({
   const handleRestart = useCallback(() => {
     const video = videoRef.current;
     if (!video) return;
-    video.volume = 1;
     video.currentTime = 0;
     setCurrentTime(0);
-    video.play().catch(() => {});
+    attemptPlayWithFallback(!video.muted);
     revealControls();
-  }, [revealControls, videoRef]);
+  }, [attemptPlayWithFallback, revealControls, videoRef]);
 
   const toggleNativeFullscreen = useCallback(() => {
     if (!stageRef.current) return;
@@ -1691,6 +1790,10 @@ export function HeroIntroCinemaModal({
   const roomLightsDimmed = isPlaying || (isPrerollActive && isLightsDimmed);
   const geo = computeRoomGeometry(stageSize.width, stageSize.height);
   const isPortraitMobile = geo.W < 640 && geo.H > geo.W;
+  // Phones (both portrait & landscape) use the H.264 Level 3.1 +faststart mobile stream
+  // so Android hardware decoders never stall and rotating the phone never reloads the video.
+  const isPhoneDevice = Math.min(geo.W, geo.H) < 600;
+  const activeVideoSrc = isPhoneDevice ? INTRO_VIDEO_MOBILE_SRC : INTRO_VIDEO_DESKTOP_SRC;
 
   return (
     <div
@@ -1746,10 +1849,10 @@ export function HeroIntroCinemaModal({
         >
           <video
             ref={videoRef}
-            src={INTRO_VIDEO_SRC}
+            src={activeVideoSrc}
             poster={INTRO_POSTER_SRC}
             playsInline
-            preload="none"
+            preload={preloadMode}
             onLoadStart={() => {
               if (isOpen && !prerollActiveRef.current) setIsBuffering(true);
             }}
@@ -1757,22 +1860,28 @@ export function HeroIntroCinemaModal({
               if (!prerollActiveRef.current) setIsBuffering(true);
             }}
             onCanPlay={() => setIsBuffering(false)}
+            onCanPlayThrough={() => setIsBuffering(false)}
+            onError={() => {
+              setIsBuffering(false);
+              updatePlayingState(false);
+              setShowControls(true);
+            }}
             onPlaying={() => {
               if (prerollActiveRef.current) return;
-              setIsPlaying(true);
+              updatePlayingState(true);
               setIsBuffering(false);
               setIsMuted(Boolean(videoRef.current?.muted));
               scheduleHideControls();
             }}
             onPlay={() => {
               if (prerollActiveRef.current) return;
-              setIsPlaying(true);
+              updatePlayingState(true);
               setIsMuted(Boolean(videoRef.current?.muted));
               scheduleHideControls();
             }}
             onPause={() => {
               if (prerollActiveRef.current) return;
-              setIsPlaying(false);
+              updatePlayingState(false);
               setIsBuffering(false);
               clearHideTimer();
               setShowControls(true);
@@ -1785,6 +1894,7 @@ export function HeroIntroCinemaModal({
             onTimeUpdate={() => {
               if (videoRef.current && !prerollActiveRef.current) {
                 setCurrentTime(videoRef.current.currentTime);
+                if (isBuffering) setIsBuffering(false);
               }
             }}
             onEnded={handleClose}
@@ -1794,14 +1904,16 @@ export function HeroIntroCinemaModal({
             } ${showControls || !isPlaying ? "cursor-pointer" : "cursor-none"}`}
           />
 
-          {/* 5-Second Boutique Studio Ident Bumper (or Rotate-Phone Prompt on Portrait Mobile) */}
-          <StudioIdentPrerollOverlay
-            phase={prerollPhase}
-            runId={prerollRunId}
-            isId={isId}
-            isPortraitMobile={isPortraitMobile}
-            onSkip={startMainFilm}
-          />
+          {/* 5-Second Boutique Studio Ident Bumper (unmounted completely once finished) */}
+          {isPrerollActive && (
+            <StudioIdentPrerollOverlay
+              phase={prerollPhase}
+              runId={prerollRunId}
+              isId={isId}
+              isPortraitMobile={isPortraitMobile}
+              onSkip={startMainFilm}
+            />
+          )}
 
           {/* Subtle Buffering Spinner Inside Screen */}
           {isOpen && !isPrerollActive && isBuffering && (
@@ -1812,13 +1924,25 @@ export function HeroIntroCinemaModal({
             </div>
           )}
 
+          {/* One-Tap Unmute Pill if Mobile Browser Forced Muted Autoplay */}
+          {isOpen && !isPrerollActive && isPlaying && isMuted && (
+            <button
+              type="button"
+              onClick={toggleMute}
+              className="absolute bottom-3 left-3 z-30 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/75 hover:bg-black/90 border border-amber-400/40 text-[10px] font-mono text-amber-200 backdrop-blur-md shadow-lg transition-all cursor-pointer"
+            >
+              <VolumeX className="w-3.5 h-3.5 text-amber-400" />
+              <span>{isId ? "Ketuk untuk nyalakan suara" : "Tap to unmute"}</span>
+            </button>
+          )}
+
           {/* Center Play Indicator When Paused Inside Screen */}
           {isOpen && !isPrerollActive && !isPlaying && !isBuffering && (
             <button
               type="button"
               onClick={togglePlay}
-              aria-label={isId ? "Lanjutkan video" : "Resume video"}
-              className="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/65 border border-white/25 backdrop-blur-md flex items-center justify-center text-white hover:scale-105 hover:border-emerald-400/60 transition-all shadow-2xl z-20 cursor-pointer"
+              aria-label={isId ? "Putar video" : "Play video"}
+              className="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/70 border border-white/25 backdrop-blur-md flex items-center justify-center text-white hover:scale-105 hover:border-emerald-400/60 transition-all shadow-2xl z-30 cursor-pointer"
             >
               <Play className="w-7 h-7 sm:w-8 sm:h-8 fill-white translate-x-0.5" />
             </button>
