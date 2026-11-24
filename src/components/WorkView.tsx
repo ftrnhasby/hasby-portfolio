@@ -102,14 +102,14 @@ export function WorkView() {
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight">
               {lang === "id"
-                ? "Koleksi Portofolio Iklan Direct Response"
-                : "Direct Response Video Ad Portfolio"}
+                ? "Portofolio Video & Iklan Direct Response"
+                : "Selected Video & Direct-Response Work"}
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed pt-1">
               {lang === "id"
-                ? "Kampanye iklan video format vertikal 9:16 untuk brand DTC & agensi, mencakup AI Ads, UGC Ads, serta Product and review. Setiap proyek dirancang dengan fokus retensi tinggi dan kecepatan iterasi sprint."
-                : "Vertical 9:16 video ad campaigns for DTC brands and performance agencies, covering AI Ads, UGC Ads, and Product & Review ads. Built for high feed retention and fast iteration sprints."}
+                ? "Kumpulan iklan video direct-response, AI brand spot, UGC, dan review produk untuk brand serta agensi. Dirancang untuk retensi kuat dan uji variasi hook yang cepat."
+                : "Direct-response video ads, AI brand spots, UGC, and product reviews for brands and agencies. Built for strong retention and fast hook testing."}
             </p>
           </div>
 
@@ -176,12 +176,12 @@ export function WorkView() {
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#111114] to-[#0a0a0c] border border-white/[0.08] text-center space-y-6">
           <div className="max-w-xl mx-auto space-y-3">
             <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-              {lang === "id" ? "Membutuhkan Editor Video Iklan?" : "Looking for a Direct Response Editor?"}
+              {lang === "id" ? "Butuh Video Editor atau AI Filmmaker?" : "Need a Video Editor or AI Filmmaker?"}
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
               {lang === "id"
-                ? "Tersedia untuk posisi remote internasional, agensi performa, dan tim kreatif brand DTC."
-                : "Available for international remote roles, performance marketing agencies, and DTC brand creative teams."}
+                ? "Tersedia untuk peran remote internasional, agensi performance creative, dan tim brand."
+                : "Available for international remote roles, performance agencies, and in-house brand teams."}
             </p>
           </div>
 
@@ -198,7 +198,7 @@ export function WorkView() {
               href="/#workflow"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all"
             >
-              <span>{lang === "id" ? "Pelajari Alur Kerja 5 Tahap" : "Explore 5-Stage Process"}</span>
+              <span>{lang === "id" ? "Pelajari Alur Kerja 6 Tahap" : "Explore 6-Step Workflow"}</span>
             </Link>
           </div>
         </div>

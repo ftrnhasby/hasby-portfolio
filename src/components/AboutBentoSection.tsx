@@ -85,7 +85,7 @@ export function AboutBentoSection() {
           <div className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/[0.08] border border-emerald-500/20 text-xs font-mono uppercase tracking-[0.18em] text-emerald-400">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>{isId ? "TENTANG SAYA // OPERATOR DOSSIER" : "ABOUT // OPERATOR DOSSIER"}</span>
+              <span>{isId ? "TENTANG // FITRAN HASBY" : "ABOUT // FITRAN HASBY"}</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
@@ -99,8 +99,8 @@ export function AboutBentoSection() {
           <div className="max-w-md space-y-3 flex flex-col md:items-end">
             <p className="text-xs sm:text-sm text-zinc-400 md:text-right font-normal leading-relaxed">
               {isId
-                ? "Menjembatani estetika video berkualitas tinggi dengan strategi direct-response yang terukur untuk brand DTC dan agensi global."
-                : "Bridging premium commercial aesthetics with disciplined direct-response performance for DTC brands and creative agencies."}
+                ? "Menggabungkan cita rasa film dengan strategi video iklan yang jelas untuk brand dan agensi."
+                : "Combining cinema craft with focused direct-response editing for modern brands and agencies."}
             </p>
           </div>
         </div>
@@ -207,7 +207,9 @@ export function AboutBentoSection() {
             {/* Lead Hook with Editorial Quote Rail Accent */}
             <div className="border-l-2 border-emerald-400/80 pl-4 py-0.5">
               <p className="text-base sm:text-lg font-bold text-white leading-snug">
-                {isId ? "Saya tidak hanya sekadar mengedit video." : "I don't just edit videos."}
+                {isId
+                  ? "Setiap potongan punya satu tugas: membuat orang berhenti, merasakan ceritanya, lalu bertindak."
+                  : "Every cut has one job: stop the scroll, make people feel something, and move them to act."}
               </p>
             </div>
 
@@ -215,13 +217,15 @@ export function AboutBentoSection() {
             <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
               {isId ? (
                 <>
-                  Saya merancang alur kerja produksi video direct-response yang membantu brand, agensi, dan kreator{" "}
-                  <strong className="text-white font-semibold">memproduksi konten berkinerja tinggi, lebih cepat</strong>.
+                  Saya membantu brand, agensi, dan kreator memproduksi{" "}
+                  <strong className="text-white font-semibold">iklan video dan karya AI filmmaking</strong>{" "}
+                  dengan standar visual sinematik dan ritme pengerjaan yang cepat.
                 </>
               ) : (
                 <>
-                  I build production workflows that help brands, agencies, and video creators{" "}
-                  <strong className="text-white font-semibold">produce better content, faster</strong>.
+                  I help brands, agencies, and creators produce{" "}
+                  <strong className="text-white font-semibold">performance video ads and AI-directed brand films</strong>{" "}
+                  with cinema-level craft and fast turnarounds.
                 </>
               )}
             </p>
@@ -230,17 +234,19 @@ export function AboutBentoSection() {
             <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
               {isId ? (
                 <>
-                  Memadukan presisi editing timeline dengan{" "}
-                  <strong className="text-white font-semibold">alur kerja berbasis AI modern</strong>, saya menciptakan iklan UGC
-                  berkinerja tinggi, VSL, konten media sosial, dan variasi hook yang dirancang untuk{" "}
-                  <strong className="text-white font-semibold">merebut perhatian, meningkatkan retensi, dan mendorong hasil konversi nyata</strong>.
+                  Di ruang edit, saya memadukan ketelitian timeline{" "}
+                  <strong className="text-white font-semibold">Premiere Pro dan After Effects</strong> dengan
+                  perangkat produksi AI modern. Mulai dari film pendek brand dan iklan cerita hingga UGC dan uji
+                  variasi hook, semuanya berangkat dari{" "}
+                  <strong className="text-white font-semibold">riset audiens dan tata suara yang rapi</strong>.
                 </>
               ) : (
                 <>
-                  Using timeline editing precision alongside modern{" "}
-                  <strong className="text-white font-semibold">AI-powered workflows</strong>, I create high-performing UGC ads,
-                  VSLs, social content, and performance creatives designed to{" "}
-                  <strong className="text-white font-semibold">capture attention, improve retention, and drive measurable business results</strong>.
+                  In the edit, I pair{" "}
+                  <strong className="text-white font-semibold">Premiere Pro and After Effects</strong> with modern
+                  AI production tools. From short brand films and narrative spots to UGC and hook-testing sprints,
+                  every cut starts with{" "}
+                  <strong className="text-white font-semibold">audience insight and clean sound design</strong>.
                 </>
               )}
             </p>
@@ -248,8 +254,8 @@ export function AboutBentoSection() {
             {/* Value Punchline */}
             <p className="text-xs sm:text-sm font-semibold text-zinc-200 tracking-tight pt-1">
               {isId
-                ? "Eksekusi terpercaya. Komunikasi jelas. Tanpa revisi yang berlarut-larut."
-                : "Reliable execution. Clear communication. No unnecessary revisions."}
+                ? "Komunikasi terbuka, jadwal jelas, dan hasil yang siap langsung tayang."
+                : "Clear timelines, direct communication, and files ready to publish."}
             </p>
           </div>
 
@@ -275,6 +281,10 @@ export function AboutBentoSection() {
               {
                 name: "CapCut Desktop",
                 icon: <Scissors className="w-3.5 h-3.5 text-emerald-400 shrink-0" />,
+              },
+              {
+                name: "AI Filmmaking",
+                icon: <Clapperboard className="w-3.5 h-3.5 text-emerald-400 shrink-0" />,
               },
               {
                 name: "Color Grading",
@@ -369,8 +379,8 @@ export function AboutBentoSection() {
               </div>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
                 {isId
-                  ? "Siap bergabung dalam tim in-house maupun agensi."
-                  : "Seamlessly integrates into in-house teams or agency squads."}
+                  ? "Siap langsung bergabung dengan tim brand in-house maupun agensi."
+                  : "Ready to plug straight into in-house brand teams or agency squads."}
               </p>
             </div>
 
@@ -387,8 +397,8 @@ export function AboutBentoSection() {
               </div>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
                 {isId
-                  ? "Review terstruktur tanpa revisi berlarut-larut."
-                  : "Structured feedback rounds with zero endless back-and-forth."}
+                  ? "Milestone jelas dan putaran review ringkas dari rough cut hingga master final."
+                  : "Clear milestones and crisp review rounds from first cut to final master."}
               </p>
             </div>
 
@@ -405,8 +415,8 @@ export function AboutBentoSection() {
               </div>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
                 {isId
-                  ? "Respon cepat dalam 24 jam kerja via Slack atau Email."
-                  : "Guaranteed response within 24 business hours."}
+                  ? "Balasan dalam 24 jam kerja via Slack atau Email."
+                  : "Replies within 24 business hours via Email or Slack."}
               </p>
             </div>
           </div>
@@ -415,8 +425,8 @@ export function AboutBentoSection() {
           <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
             <div className="text-xs text-zinc-400 text-center sm:text-left font-normal">
               {isId
-                ? "Terbuka untuk diskusi proyek iklan, sprint kreatif, atau peran remote jangka panjang."
-                : "Open for ad creative sprints, trial projects, or long-term remote team placement."}
+                ? "Terbuka untuk sprint iklan, AI brand film, uji coba edit, atau peran remote jangka panjang."
+                : "Open for ad sprints, AI brand films, trial edits, or long-term remote roles."}
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">

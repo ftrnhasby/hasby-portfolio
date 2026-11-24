@@ -155,6 +155,107 @@ body {
   animation-play-state: paused !important;
 }
 
+/* ==========================================================================
+   Cinema Pre-Roll Studio Ident (IMAX / A24 Bumper) Animations
+   ========================================================================== */
+
+@keyframes identFlareSweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-95%, 0, 0) scaleX(0.65);
+  }
+  25% {
+    opacity: 0.95;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(95%, 0, 0) scaleX(1.15);
+  }
+}
+
+@keyframes identTextReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+    filter: blur(5px);
+  }
+  32% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(0px);
+  }
+}
+
+@keyframes identLineExpand {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cinemaProgressFill {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cinemaRotatePhone {
+  0%,
+  18% {
+    transform: rotate(0deg);
+  }
+  48%,
+  74% {
+    transform: rotate(-90deg);
+  }
+  92%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-ident-flare {
+  animation: identFlareSweep 2350ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-ident-reveal {
+  animation: identTextReveal 2200ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.animate-ident-line {
+  animation: identLineExpand 1600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform-origin: center;
+}
+
+.animate-cinema-progress {
+  animation: cinemaProgressFill 5000ms linear forwards;
+  transform-origin: left center;
+}
+
+.animate-cinema-rotate-phone {
+  animation: cinemaRotatePhone 2200ms cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
 /* Respect user's system preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -68,26 +68,26 @@ export function ContactView() {
     {
       q: lang === "id" ? "Bahan rekaman apa yang perlu disediakan klien?" : "What footage or assets need to be provided?",
       a: lang === "id"
-        ? "Jika Anda memiliki rekaman B-roll produk, footage kreator, atau aset brand, Anda dapat mengirimkannya via Google Drive atau Frame.io. Grafis gerak, sound design, dan alur kerja AI dapat dirancang langsung sesuai brief."
-        : "If you have existing raw product footage, creator B-roll, or brand assets, you can share them via Google Drive or Frame.io. Motion graphics, sound design, and AI-assisted creative workflows will be integrated seamlessly based on your brief.",
+        ? "Kirimkan rekaman produk, klip kreator, atau aset brand lewat Google Drive atau Frame.io. Motion graphics, sound design, dan visual AI saya tangani langsung sesuai brief."
+        : "Share your raw product footage, creator clips, or brand assets via Google Drive or Frame.io. I handle motion graphics, sound design, and AI visuals directly from your brief.",
     },
     {
       q: lang === "id" ? "Berapa lama estimasi pengerjaan satu batch video?" : "What is the typical turnaround timeline for a video batch?",
       a: lang === "id"
-        ? "Satu konsep iklan dengan tiga pembuka (hook) berbeda. Anda menerima tiga file video siap uji performa di TikTok, Reels, atau Shorts. Estimasi pengerjaan 36–48 jam kerja setelah brief disetujui."
-        : "One core ad concept with three distinct opening hooks. You receive three high-retention video files ready for conversion testing on TikTok, Reels, or Shorts. Estimated turnaround 36–48 business hours once the brief is approved.",
+        ? "Sprint standar 3 variasi hook biasanya selesai dalam 36–48 jam kerja setelah brief disetujui. Untuk brand film atau film pendek AI, jadwal kita sepakati di awal."
+        : "A standard 3-hook ad sprint takes 36 to 48 business hours after brief sign-off. Longer brand spots or AI short films follow a clear schedule we agree on upfront.",
     },
     {
       q: lang === "id" ? "Software dan teknologi apa yang Anda gunakan?" : "What software and production stack do you use?",
       a: lang === "id"
-        ? "Saya mengedit menggunakan Adobe Premiere Pro, After Effects, dan CapCut Desktop untuk presisi timeline, dikombinasikan dengan alur kerja AI modern untuk eksplorasi hook dan iterasi cepat. Pendekatan hybrid ini menghasilkan video berkualitas komersial tinggi dengan efisiensi maksimal."
-        : "I edit with Adobe Premiere Pro, After Effects, and CapCut Desktop for timeline precision, paired with modern AI-powered workflows for rapid hook testing and asset iteration. This hybrid approach ensures premium commercial finish with maximum agility.",
+        ? "Saya mengedit di Adobe Premiere Pro, After Effects, dan CapCut Desktop, dipadukan dengan perangkat video dan suara AI saat konsep membutuhkan adegan sinematik atau iterasi hook cepat."
+        : "I cut in Adobe Premiere Pro, After Effects, and CapCut Desktop, paired with modern AI video and voice tools when a concept calls for generated scenes or fast hook testing.",
     },
     {
       q: lang === "id" ? "Apakah format video siap tayang langsung di TikTok, Meta, dan platform lain?" : "Are deliverables ready for direct deployment on TikTok, Meta, and YouTube?",
       a: lang === "id"
-        ? "Ya, seluruh video diekspor sesuai standar platform (rasio vertikal 9:16 untuk TikTok/Reels, atau 16:9 untuk VSL/YouTube) dengan audio termaster -14 LUFS, teks dengan keterbacaan tinggi dalam mode sound-off, dan komposisi modular untuk pengujian performa."
-        : "Yes, all assets are exported to platform specifications (vertical 9:16 for TikTok/Reels, or 16:9 for VSL/YouTube) mastered to -14 LUFS, featuring sound-off legibility and modular structure engineered for performance creative testing.",
+        ? "Ya. File diekspor sesuai rasio dan standar platform yang Anda butuhkan (9:16 untuk Reels/TikTok/Shorts atau 16:9 untuk YouTube dan brand film), dengan audio -14 LUFS dan subtitle yang jelas tanpa suara."
+        : "Yes. I export to the aspect ratio and platform specs you need (9:16 for Reels, TikTok, and Shorts, or 16:9 for YouTube and brand films), mastered to -14 LUFS with clean sound-off captions.",
     },
   ];
 

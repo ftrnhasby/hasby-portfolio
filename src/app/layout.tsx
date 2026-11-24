@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasby-portfolio.pages.dev"),
   title: {
-    default: "Fitran Hasby — AI Direct Response Creative Specialist",
+    default: "Fitran Hasby | Video Editor & AI Filmmaker",
     template: "%s | Fitran Hasby",
   },
   description:
-    "Portfolio of Fitran Hasby, an AI Direct Response Creative Specialist turning customer research into testable video ads for TikTok and Instagram Reels.",
+    "Portfolio of Fitran Hasby, a video editor and AI filmmaker crafting cinematic brand spots, AI short films, and direct-response video ads.",
   alternates: {
     canonical: "https://hasby-portfolio.pages.dev/",
   },
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Fitran Hasby — AI Direct Response Creative Specialist",
+    title: "Fitran Hasby | Video Editor & AI Filmmaker",
     description:
-      "Turning customer research into high-retention video ads ready for testing on TikTok and Instagram Reels.",
+      "Cinematic brand spots, AI short films, and direct-response video ads cut for attention and action.",
     url: "https://hasby-portfolio.pages.dev/",
     siteName: "Fitran Hasby Portfolio",
     locale: "en_US",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "https://hasby-portfolio.pages.dev/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fitran Hasby — AI Direct Response Creative Specialist",
+        alt: "Fitran Hasby — Video Editor & AI Filmmaker",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fitran Hasby — AI Direct Response Creative Specialist",
+    title: "Fitran Hasby | Video Editor & AI Filmmaker",
     description:
-      "Turning customer research into high-retention video ads ready for testing on TikTok and Instagram Reels.",
+      "Cinematic brand spots, AI short films, and direct-response video ads cut for attention and action.",
     images: ["https://hasby-portfolio.pages.dev/og-image.png"],
   },
   robots: {

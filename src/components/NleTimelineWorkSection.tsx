@@ -451,8 +451,8 @@ export function NleTimelineWorkSection() {
           <div className="max-w-md space-y-3 flex flex-col md:items-end">
             <p className="text-xs sm:text-sm text-zinc-400 md:text-right font-normal leading-relaxed">
               {isId
-                ? "AI drama, AI UGC, claymation, UGC dan product ads. Pilih sekuensi di bawah atau geser playhead timeline untuk menelusuri tiap potongan video."
-                : "AI drama, AI UGC, claymation, UGC and product ads. Select a sequence below or drag the playhead to scrub through cuts."}
+                ? "AI mini-drama, UGC, dan iklan produk. Pilih sekuensi di bawah atau geser playhead timeline untuk menelusuri tiap potongan video."
+                : "AI mini-drama, UGC, and product ads. Pick a sequence below or drag the playhead to scrub through each cut."}
             </p>
 
             <Link

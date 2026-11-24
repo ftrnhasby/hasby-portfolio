@@ -14,7 +14,7 @@ export function ContactForm() {
   const pkg = searchParams.get("package");
   const scopeParam = searchParams.get("scope");
   const isPackagePreselected = pkg === "3-hook" || scopeParam === "hook-testing";
-  const defaultScope = isPackagePreselected ? t.scopeOptions[1] : t.scopeOptions[0];
+  const defaultScope = isPackagePreselected ? t.scopeOptions[2] : t.scopeOptions[0];
 
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);

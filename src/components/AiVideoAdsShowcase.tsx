@@ -463,16 +463,16 @@ export function AiVideoAdsShowcase() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
               {isId ? (
                 <>
-                  Eksplorasi Visual AI.{" "}
+                  Visual AI.{" "}
                   <span className="text-zinc-500 font-normal">
-                    Diproses Presisi Linimasa Editing.
+                    Dipotong dengan Ritme Manusia.
                   </span>
                 </>
               ) : (
                 <>
-                  Where AI Visuals Meet{" "}
+                  AI-Generated Footage.{" "}
                   <span className="text-zinc-500 font-normal">
-                    Human Timeline Precision.
+                    Human-Cut Pacing.
                   </span>
                 </>
               )}
@@ -483,8 +483,8 @@ export function AiVideoAdsShowcase() {
           <div className="max-w-md space-y-3.5 lg:text-right">
             <p className="text-xs sm:text-sm text-zinc-400 font-normal leading-relaxed">
               {isId
-                ? "Iklan naratif, karakter, dan kreator yang di-generate dengan AI — lalu diedit dengan pacing, captions, dan audio layaknya rekaman live-action asli."
-                : "Story ads, characters, and creators generated with AI — then cut with the same pacing, captions, and sound as a live-action ad."}
+                ? "Iklan cerita, karakter, dan visual yang dihasilkan dengan AI, lalu disunting dengan tempo, subtitle, dan tata suara layaknya produksi live-action."
+                : "Story ads, characters, and brand spots generated with AI, then cut with the pacing, captions, and sound design of live-action film."}
             </p>
 
             {/* Interactive Navigation Controls: Prev / Next / Pause */}

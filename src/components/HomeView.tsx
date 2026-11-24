@@ -1,19 +1,17 @@
 "use client";
 
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ArrowRight, Download } from "lucide-react";
 import {
-  ArrowRight,
-  ArrowUpRight,
-  Download,
-  Sparkles,
-  Mail,
-} from "lucide-react";
+  HeroIntroPreviewCard,
+  HeroIntroCinemaModal,
+  HeroIntroCinemaHandle,
+} from "@/components/HeroIntroCinema";
 import { NleTimelineWorkSection } from "@/components/NleTimelineWorkSection";
 import { AiVideoAdsShowcase } from "@/components/AiVideoAdsShowcase";
 import { InteractiveProductionWorkflow } from "@/components/InteractiveProductionWorkflow";
 import { AboutBentoSection } from "@/components/AboutBentoSection";
-import { ScrollReveal } from "@/components/ScrollReveal";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 
@@ -22,63 +20,99 @@ export function HomeView() {
   const isId = lang === "id";
   const t = TRANSLATIONS[lang].home;
 
+  const [isCinemaOpen, setIsCinemaOpen] = useState(false);
+  const introVideoRef = useRef<HTMLVideoElement | null>(null);
+  const cinemaControllerRef = useRef<HeroIntroCinemaHandle | null>(null);
+
+  const handleOpenCinema = () => {
+    setIsCinemaOpen(true);
+    cinemaControllerRef.current?.startPreroll();
+  };
+
+  const handleCloseCinema = useCallback(() => {
+    setIsCinemaOpen(false);
+  }, []);
+
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
-      {/* ============================================================ */}
-      {/* SECTION 02: HERO SECTION                                     */}
+    <>
+      {/* Fullscreen 16:9 Intro Cinema Overlay (rendered outside space-y wrapper so margin-block-end never clips height) */}
+      <HeroIntroCinemaModal
+        isOpen={isCinemaOpen}
+        onClose={handleCloseCinema}
+        videoRef={introVideoRef}
+        controllerRef={cinemaControllerRef}
+      />
+
+      <div className="space-y-24 sm:space-y-32 pb-24">
+        {/* ============================================================ */}
+        {/* SECTION 02: HERO SECTION (EDITORIAL SPLIT -> CINEMA MODE)    */}
       {/* ============================================================ */}
       <section className="pt-16 sm:pt-24 pb-12 border-b border-white/[0.08] relative overflow-hidden">
-        {/* Subtle background glow */}
+        {/* Subtle background glow (Clean dark background — Option B) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-64 bg-emerald-500/[0.03] blur-3xl pointer-events-none rounded-full" />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
-          <div className="max-w-4xl space-y-6">
-            {/* Eyebrow Pill */}
-            <div className="animate-hero-up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse" />
-              <span>{t.eyebrow}</span>
-              {t.eyebrowTag && (
-                <>
-                  <span className="text-zinc-600">•</span>
-                  <span className="text-zinc-500">{t.eyebrowTag}</span>
-                </>
-              )}
+        <div
+          className={`max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isCinemaOpen
+              ? "opacity-0 scale-[0.98] -translate-y-2 pointer-events-none"
+              : "opacity-100 scale-100 translate-y-0"
+          }`}
+        >
+          {/* Editorial 2-Column Split: Left Typography + Right 16:9 Intro Preview Card */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              {/* Eyebrow Pill */}
+              <div className="animate-hero-up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse" />
+                <span>{t.eyebrow}</span>
+                {t.eyebrowTag && (
+                  <>
+                    <span className="text-zinc-600">•</span>
+                    <span className="text-zinc-500">{t.eyebrowTag}</span>
+                  </>
+                )}
+              </div>
+
+              {/* Main Headline - Structured as 3 crisp lines */}
+              <div className="space-y-5">
+                <h1 className="animate-hero-up animation-delay-60 text-3xl sm:text-5xl lg:text-[3.05rem] xl:text-[3.4rem] font-bold tracking-[-0.035em] text-white leading-[1.08]">
+                  <span className="block">{t.heroHeadline}</span>
+                  <span className="block text-zinc-400 font-medium tracking-[-0.03em] pt-1">
+                    <span className="block">{t.heroHeadlineAccent1}</span>
+                    <span className="block">{t.heroHeadlineAccent2}</span>
+                  </span>
+                </h1>
+                <p className="animate-hero-up animation-delay-120 text-base sm:text-lg text-zinc-300/90 font-normal leading-[1.65] pt-1 max-w-xl">
+                  {t.heroSubheadline}
+                </p>
+              </div>
+
+              {/* Clear Call-To-Action Row */}
+              <div className="animate-hero-up animation-delay-180 flex flex-wrap items-center gap-3 pt-2">
+                <Link
+                  href="/work"
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-md cursor-pointer"
+                >
+                  <span>{t.watchSampleBtn}</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+
+                <a
+                  href="/Hasby_Assyadiqi_CV.pdf"
+                  download="Hasby_Assyadiqi_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all cursor-pointer"
+                >
+                  <Download className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition-transform group-hover:translate-y-0.5" />
+                  <span>Download CV</span>
+                </a>
+              </div>
             </div>
 
-            {/* Main Headline - Structured as 3 crisp lines */}
-            <div className="space-y-5">
-              <h1 className="animate-hero-up animation-delay-60 text-3xl sm:text-5xl lg:text-[3.75rem] font-bold tracking-[-0.035em] text-white leading-[1.06]">
-                <span className="block">{t.heroHeadline}</span>
-                <span className="block text-zinc-400 font-medium tracking-[-0.03em] pt-1">
-                  <span className="block">{t.heroHeadlineAccent1}</span>
-                  <span className="block">{t.heroHeadlineAccent2}</span>
-                </span>
-              </h1>
-              <p className="animate-hero-up animation-delay-120 text-base sm:text-lg text-zinc-300/90 font-normal leading-[1.65] pt-1 max-w-2xl">
-                {t.heroSubheadline}
-              </p>
-            </div>
-
-            {/* Clear Call-To-Action Row */}
-            <div className="animate-hero-up animation-delay-180 flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="/work"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-md cursor-pointer"
-              >
-                <span>{t.watchSampleBtn}</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-
-              <a
-                href="/Hasby_Assyadiqi_CV.pdf"
-                download="Hasby_Assyadiqi_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-xs font-medium hover:bg-white/[0.08] transition-all cursor-pointer"
-              >
-                <Download className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition-transform group-hover:translate-y-0.5" />
-                <span>Download CV</span>
-              </a>
+            {/* Right Column: 16:9 Intro Film Preview Card */}
+            <div className="lg:col-span-5 animate-hero-scale animation-delay-120">
+              <HeroIntroPreviewCard onPlay={handleOpenCinema} />
             </div>
           </div>
 
@@ -214,12 +248,13 @@ export function HomeView() {
         <InteractiveProductionWorkflow />
       </div>
 
-      {/* ============================================================ */}
-      {/* SECTION 09: ABOUT HASBY UNIFIED BENTO DOSSIER                */}
-      {/* ============================================================ */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <AboutBentoSection />
+        {/* ============================================================ */}
+        {/* SECTION 09: ABOUT HASBY UNIFIED BENTO DOSSIER                */}
+        {/* ============================================================ */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <AboutBentoSection />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
